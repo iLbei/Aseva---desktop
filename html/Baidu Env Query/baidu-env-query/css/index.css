@@ -1,0 +1,16 @@
+.container>div:nth-child(2) {
+  margin-top: 20px;
+}
+
+.container>div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container>div:nth-child(2) span {
+  padding-top: 2px;
+}
+
+.container>div:nth-child(2) select {
+  width: 149px;
+}

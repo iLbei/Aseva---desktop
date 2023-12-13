@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kvaser Scheduled Transmitter</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="kvaser-scheduled-transmitter/css/common.css">
+  <link rel="stylesheet" href="kvaser-scheduled-transmitter/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="enable" id="enable">
+      <label for="enable" language="enable"></label>
+    </div>
+    <div>
+      <span><b language="channel"></b>1</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 2</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 3</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 4</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 5</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 6</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 7</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 8</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 9</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 10</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 11</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 12</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 13</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 14</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 15</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+    <div>
+      <span><b language="channel"></b> 16</span>
+      <span>can_ps:</span>
+      <input type="number" name="can_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>can_tseg1:</span>
+      <input type="number" name="can_tseg1" value="0" max="256" min="0" step="1" id="">
+      <span>can_tseg2:</span>
+      <input type="number" name="can_tseg2" value="0" max="128" min="0" step="1" id="">
+      <span>can_sjw:</span>
+      <input type="number" name="can_sjw" value="0" max="128" min="0" step="1" id="">
+      <span>canFD_ps:</span>
+      <input type="number" name="canFD_ps" value="0" max="1024" min="0" step="1" id="">
+      <span>canFD_tseg1:</span>
+      <input type="number" name="canFD_tseg1" value="0" max="32" min="0" step="1" id="">
+      <span>canFD_tseg2:</span>
+      <input type="number" name="canFD_tseg2" value="0" max="16" min="0" step="1" id="">
+      <span>canFD_sjw:</span>
+      <input type="number" name="canFD_sjw" value="0" max="16" min="0" step="1" id="">
+    </div>
+  </div>
+  <script src="kvaser-scheduled-transmitter/js/jquery-2.14.js"></script>
+  <script src="kvaser-scheduled-transmitter/js/bi-common.js"></script>
+  <script src="kvaser-scheduled-transmitter/js/text.js"></script>
+  <script src="kvaser-scheduled-transmitter/js/index.js"></script>
+</body>
+
+</html>

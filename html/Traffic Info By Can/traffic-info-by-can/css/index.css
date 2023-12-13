@@ -1,0 +1,434 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 485px;
+  height: 713px;
+  margin: -356.5px 0 0 -242.5px;
+}
+
+.container>.label>div>button:not(:last-child) {
+  border-right: none;
+}
+
+.container>.content {
+  padding: 5px 10px 10px;
+  border: 1px solid rgb(220, 220, 220);
+  display: none;
+}
+
+
+.container>input {
+  display: none;
+}
+
+.container>.label>label {
+  display: block;
+  float: left;
+  width: 47px;
+  text-indent: 5px;
+}
+
+button {
+  float: left;
+  border: 1px solid #cfcccc;
+  border-bottom: none;
+  outline: 0;
+  border-radius: 0px;
+}
+
+.container>.label>.right>select {
+  width: 52px;
+  margin-left: 10px;
+}
+
+.title>input {
+  text-align: center;
+}
+
+.title>a {
+  padding-top: 4px;
+  height: 22px;
+}
+
+#r1:checked~.label>.l1 {
+  background-color: #fff;
+}
+
+#r2:checked~.label>.l2 {
+  background-color: #fff;
+}
+
+#r3:checked~.label>.l3 {
+  background-color: #fff;
+}
+
+#r4:checked~.label>.l4 {
+  background-color: #fff;
+}
+
+#r1:checked~#c1,
+#r2:checked~#c2,
+#r3:checked~#c3,
+#r4:checked~#c4 {
+  display: block;
+}
+
+.container>.content>.title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.container>.content>.title>input {
+  width: 100%;
+  display: none;
+}
+
+.container>.content li {
+  float: left;
+  width: 135px;
+  height: 26px;
+  border: 1px solid rgb(124, 121, 121);
+  text-align: center;
+  line-height: 26px;
+  background-color: #dfdfdf;
+}
+
+.container>.content li:hover {
+  border: 1px solid blue;
+  background-color: #e5f1fb;
+  cursor: default;
+}
+
+.container>.content [name=out_channel] {
+  width: 154px;
+}
+
+.container>.content>.fixclear>.left>div {
+  margin-bottom: 10px;
+}
+
+.container>.content>.fixclear>.left [type=number] {
+  width: 70px;
+}
+
+.container>.content>.fixclear>.right {
+  position: relative;
+  width: 150px;
+  height: 184px;
+  background-color: #fff;
+}
+
+.canvas2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.element {
+  position: relative;
+  width: 457px;
+  height: 450px;
+  border: 1px solid rgb(220, 220, 220);
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.element>p {
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  padding: 0 2px;
+  background-color: #f0f0f0;
+}
+
+.element>div {
+  padding: 15px 10px;
+}
+
+.element>div>ul>li:nth-of-type(2),
+.element>div>ul>li:nth-of-type(5),
+.element>div>ul>li:nth-of-type(8) {
+  margin: 0 15px;
+}
+
+.element>div>ul>li:nth-of-type(4),
+.element>div>ul>li:nth-of-type(5),
+.element>div>ul>li:nth-of-type(6) {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.element>div>.bottom {
+  height: 316px;
+  overflow: auto;
+}
+
+.element img {
+  vertical-align: sub;
+}
+
+[type=checkbox] {
+  vertical-align: middle;
+}
+
+.remove {
+  position: absolute;
+  right: 10px;
+}
+
+.bottom>div {
+  margin-top: 5px;
+}
+
+.scale_change {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+}
+
+
+/********nox1,box2,box4,box5,box7.box8,box9**********/
+
+.bottom>div {
+  padding: 5px;
+  border: 1px solid transparent;
+}
+
+.box1 input,
+.box9 input,
+.box5 input,
+.box2 input,
+.box7 input,
+.box8 input,
+.box4 input {
+  width: 40px;
+  height: 23px;
+}
+
+.box1>div:first-of-type,
+.box9>div:first-of-type,
+.box7>div:first-of-type,
+.box8>div:first-of-type,
+.box5>div:first-of-type,
+.box2>div:first-of-type,
+.box4>div:first-of-type {
+  padding-left: 8px;
+}
+
+
+/* .box1>div:last-of-type,
+.box9>div:last-of-type,
+.box7>div:last-of-type,
+.box8>div:last-of-type,
+.box5>div:last-of-type,
+.box2>div:last-of-type,
+.box4>div:last-of-type {
+    padding-left: 20px;
+} */
+
+.box1 .sig,
+.box9 .sig,
+.box7 .sig,
+.box5 .sig,
+.box8 .sig,
+.box2 .sig,
+.box4 .sig {
+  width: 180px;
+  margin-right: 10px;
+}
+
+.box1 a,
+.box7 a,
+.box9 a,
+.box5 a,
+.box2 a,
+.box8 a,
+.box4 a {
+  margin-left: 3px;
+}
+
+.box5>div:last-of-type>div,
+.box9>div:last-of-type>div,
+.box7>div:last-of-type>div,
+.box1>div:last-of-type>div,
+.box2>div:last-of-type>div,
+.box8>div:last-of-type>div,
+.box4>div:last-of-type>div {
+  line-height: 19px;
+}
+
+.box1 .speed~div,
+.box2 .speed~div,
+.box7 .speed~div,
+.box6 .speed~div,
+.box8 .speed~div,
+.speed {
+  line-height: 18px !important;
+}
+
+.speed {
+  margin-top: 5px;
+}
+
+/*******box3,box6********/
+
+.box3 input,
+.box6 input {
+  width: 56px;
+}
+
+.box3 .arrow,
+.box6 .arrow {
+  position: relative;
+  width: 346px;
+  height: 70px;
+  border: 1px solid rgb(220, 220, 220);
+  margin-top: 15px !important;
+  padding: 10px;
+}
+
+.box3 a,
+.box6 a {
+  margin-left: 3px;
+}
+
+.box3 .arrow>p,
+.box6 .arrow>p {
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  padding: 0 2px;
+  background-color: #f0f0f0;
+}
+
+.box3>div:nth-of-type(2)>div,
+.box6>div:nth-of-type(2)>div {
+  margin-top: 4px;
+}
+
+.box3 .arrow>div>div>div:first-of-type {
+  width: 154px;
+}
+
+.box6 .arrow>div>div>div:first-of-type {
+  width: 160px;
+}
+
+.box6 .arrow>div>div:first-of-type .box3 .arrow>div>div:first-of-type {
+  margin-bottom: 3px;
+}
+
+.box6 .arrow {
+  margin-left: 25px;
+}
+
+.bottom>div:nth-of-type(1),
+.bottom>div:nth-of-type(2),
+.bottom>div:nth-of-type(3),
+.bottom>div:nth-of-type(4),
+.bottom>div:nth-of-type(5),
+.bottom>div:nth-of-type(6),
+.bottom>div:nth-of-type(7),
+.bottom>div:nth-of-type(8),
+.bottom>div:nth-of-type(9) {
+  display: none;
+}
+
+.border {
+  border: 1px solid #868686 !important;
+}
+
+
+.width {
+  width: 190px;
+}
+
+.width3 {
+  width: 225px;
+}
+
+.w240 {
+  width: 240px;
+}
+
+.width4 {
+  width: 200px;
+}
+
+.w140 {
+  width: 160px;
+  margin-right: 5px;
+}
+
+.w170 {
+  width: 170px;
+}
+
+.w130 {
+  width: 130px;
+}
+
+.w190 {
+  width: 190px;
+}
+
+.w120 {
+  width: 121px;
+}
+
+.w145 {
+  width: 157px;
+}
+
+.w110 {
+  width: 114px;
+}
+
+.w1102 {
+  width: 103px;
+  line-height: 23px;
+  margin-right: 5px;
+}
+
+.w1102+.space_a {
+  line-height: 25px;
+}
+
+.w100 {
+  width: 103px;
+}
+
+.w90 {
+  width: 95px;
+}
+
+[name=allow_uturn_val],
+[name=allow_right_val] {
+  margin-left: 5px;
+}
+
+.width2,
+.width,
+.width3,
+.w240,
+.width4,
+.w190 {
+  width: 280px !important;
+}
+
+.space_a>a {
+  max-width: 118px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.arrow>div>div {
+  margin-bottom: 3px;
+}
+
+.white {
+  background: white;
+}

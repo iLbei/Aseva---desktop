@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="lane-evaluation/css/common.css">
+  <link rel="stylesheet" href="lane-evaluation/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="leEnable">
+        <span language="leEnable"></span>
+    </div>
+    <ul>
+      <li>
+        <span language="gtLanesChannel"></span>
+        <select name="gtLanesChannel">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+          <option value="6">Channel G</option>
+          <option value="7">Channel H</option>
+        </select>
+      </li>
+      <li>
+        <span language="evaluationLanesChannel"></span>
+        <select name="evaluationLanesChannel">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+          <option value="6">Channel G</option>
+          <option value="7">Channel H</option>
+        </select>
+      </li>
+      <li>
+        <span language="roadSource"></span>
+        <select name="roadSource">
+          <option value="0">EnvSample</option>
+          <option value="1">Highway</option>
+          <option value="2">CityExpress</option>
+          <option value="3">CityMain</option>
+          <option value="4">GeneralRoad</option>
+          <option value="5">CountryRoad</option>
+        </select>
+      </li>
+      <li>
+        <span language="lineType"></span>
+        <select name="lineType">
+          <option value="0">Straight</option>
+          <option value="1">Bend</option>
+        </select>
+      </li>
+      <li>
+        <span language="dayTime"></span>
+        <span language="start"></span>
+        <input type="number" name="dayTimeStart" value="0" max="24" min="0" step="1">
+        <span language="end"></span>
+        <input type="number" name="dayTimeEnd" value="18" max="24" min="0" step="1">
+      </li>
+      <li>
+        <span language="nightTime"></span>
+        <span language="start"></span>
+        <input type="number" name="nightTimeStart" value="19" max="24" min="0" step="1">
+        <span language="end"></span>
+        <input type="number" name="nightTimeEnd" value="24" max="24" min="0" step="1">
+      </li>
+      <li>
+        <span language="absZeroPowerLimit"></span>
+        <input type="number" value="20" min="0" max="10000" step="0.000001" name="absZeroPowerLimit">
+      </li>
+      <li>
+        <span language="absFirstPowerLimit"></span>
+        <input type="number" value="1" min="0" max="10000" step="0.000001" name="absFirstPowerLimit">
+      </li>
+      <li>
+        <span language="absSecondPowerLimit"></span>
+        <input type="number" value="0.1" min="0" max="10000" step="0.000001" name="absSecondPowerLimit">
+      </li>
+      <li>
+        <span language="absThirdPowerLimit"></span>
+        <input type="number" value="0.00005" min="0" max="10000" step="0.000001" name="absThirdPowerLimit">
+      </li>
+    </ul>
+  </div>
+  <script src="lane-evaluation/js/jquery-2.14.js"></script>
+  <script src="lane-evaluation/js/bi-common.js"></script>
+  <script src="lane-evaluation/js/text.js"></script>
+  <script src="lane-evaluation/js/index.js"></script>
+</body>
+
+</html>

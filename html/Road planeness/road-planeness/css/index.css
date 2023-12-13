@@ -1,0 +1,16 @@
+ul>li:not(:last-child){
+  margin-bottom: 15px;
+}
+ul>li>span{
+  width: 180px;
+}
+ul>li>a{
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  vertical-align: -5px;
+}
+ul>li>select{
+  width: 200px;
+}

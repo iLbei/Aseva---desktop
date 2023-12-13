@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="bus/css/common.css">
+  <link rel="stylesheet" href="bus/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container fixclear">
+    <div class="left">
+      <div class="bus">
+        <p language="bus_devices"></p>
+        <ul class="busList">
+        </ul>
+        <h5 language="unnecessary"></h5>
+      </div>
+      <div class="message_bindings">
+        <p language="message_bindings"></p>
+        <a href="javascript:;" language="add_binding"></a>
+        <h5 language="unnecessary"></h5>
+        <div class="message_bindings_content">
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="protocol">
+        <p language="channel_protocols"></p>
+        <ul class="protocolList left"></ul>
+        <ul class="protocolList right"></ul>
+      </div>
+    </div>
+  </div>
+  <a href="javascript:;" language='bus_information'></a>
+  <script src="bus/js/jquery-2.14.js"></script>
+  <script src="bus/js/bi-common.js"></script>
+  <script src="bus/js/text.js"></script>
+  <script src="bus/js/index.js"></script>
+</body>
+
+</html>

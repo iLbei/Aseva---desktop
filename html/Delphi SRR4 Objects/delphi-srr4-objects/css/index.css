@@ -1,0 +1,65 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 374px;
+  height: 256px;
+  margin: -128px 0 0 -187px;
+}
+
+.container>ul {
+  height: 256px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.myCanvas {
+  background-color: #fff;
+  width: 150px;
+  height: 151px;
+  border: 2px solid #e9e9e9;
+}
+
+div>ul>li:nth-child(2) input {
+  margin-left: 8px;
+}
+
+div>ul>li:nth-child(3) select {
+  width: 185px;
+}
+
+#canvas {
+  position: relative;
+}
+
+a[language="scale"] {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.container>ul>li:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div>p {
+  margin-top: 22px;
+  margin-right: 11px;
+}
+.container>ul>li:nth-child(4)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(2) {
+  margin: 15px 0px;
+}
+
+.container>ul>li:nth-child(4)>div:nth-child(1) {
+  margin-top: 22px;
+}
+
+.container>ul>li:nth-child(4) input {
+  width: 70px;
+  margin-left: 8px;
+}
+
+.container>ul>li:nth-child(4)>div.left>div>div.right>div,
+.container>ul>li:nth-child(3),
+.container>ul>li:nth-child(4)>div.left>div:nth-child(2) {
+  height: 26px;
+  line-height: 26px;
+}

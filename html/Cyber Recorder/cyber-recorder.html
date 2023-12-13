@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Recorder</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="cyber-recorder/css/common.css">
+  <link rel="stylesheet" href="cyber-recorder/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="enabled" id="enabled">
+      <label for="enabled" language="enabled"></label>
+    </div>
+    <ul>
+      <li>
+        <span language="dockerID"></span>
+        <input type="text" name="dockerID" pattern="[0-9A-Za-z]+$">
+      </li>
+      <li>
+        <span language="splitTime"></span>
+        <input type="text" name="splitTime" pattern="[0-9]+$">
+      </li>
+      <li>
+        <span language="dataPath"></span>
+        <input type="text" name="dataPath" pattern="^([a-zA-Z]:)(\\[^/\\:*?)*$">
+      </li>
+    </ul>
+  </div>
+  <script src="cyber-recorder/js/jquery-2.14.js"></script>
+  <script src="cyber-recorder/js/bi-common.js"></script>
+  <script src="cyber-recorder/js/text.js"></script>
+  <script src="cyber-recorder/js/index.js"></script>
+</body>
+
+</html>

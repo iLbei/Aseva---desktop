@@ -1,0 +1,135 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 971px;
+  height: 476px;
+  margin: -238px 0 0 -485.5px;
+}
+
+.container>.left>.top>a {
+  height: 22px;
+  padding-top: 4px;
+}
+
+[language="angle_alpha"] {
+  margin-right: 3px;
+}
+
+.container>.left>.top>input {
+  text-align: center;
+}
+
+[type=text] {
+  width: 376px;
+}
+
+.bottom {
+  padding: 4px;
+  width: 376px;
+  height: 381px;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.bottom>div:first-of-type {
+  display: none;
+}
+
+.box {
+  height: 168px;
+  border: 1px solid #868686;
+  margin: 0 auto;
+  margin-bottom: 3px;
+}
+
+.box>div:nth-of-type(1) {
+  padding: 0 5px;
+}
+
+.box>div:nth-of-type(2) {
+  padding: 0px 5px;
+}
+
+.box>div:nth-of-type(2)>div {
+  margin-bottom: 8px;
+}
+
+.box>div:nth-of-type(2)>div:not(:first-of-type)>div {
+  margin-bottom: 3px;
+}
+
+[type=number] {
+  width: 64px;
+}
+
+.container>.right {
+  position: relative;
+  width: 580px;
+  height: 475px;
+  background-color: #fff;
+}
+
+.container>.right>div {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+}
+
+.container>.right>div>.left {
+  margin-left: 5px;
+}
+
+.container>.right>div>.right {
+  margin-right: 5px;
+}
+
+.container>.left>div:not(:last-child)  {
+  margin-bottom: 4px;
+}
+
+.angle {
+  width: 153px;
+}
+
+.down {
+  margin: 0 10px;
+}
+
+.add {
+  margin-right: 10px;
+}
+
+[type=checkbox] {
+  vertical-align: middle;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.top {
+  text-align: center;
+}
+
+#canvas1,
+#canvas2,
+#canvas3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.signal {
+  vertical-align: -2px;
+  width: 230px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

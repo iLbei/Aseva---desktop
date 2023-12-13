@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COM Transmitter</title>
+  <link rel="stylesheet" href="com-transmitter/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="com-transmitter/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul class="item fixclear">
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+    <div class="content">
+      <p>COM</p>
+      <ul>
+        <li>
+          <input type="checkbox" name="enable" id="enabled"><label for="enabled" language="enable"></label>
+        </li>
+        <li>
+          <span language="comPort" class="left"></span>
+          <input type="number" name="comPort" class="right" value="5002" max="65535" min="0" step="1"></li>
+        <li>
+          <span language="comBaudRate" class="left"></span>
+          <select name="comBaudRate" class="right">
+            <option value="0">2400 Baud</option>
+            <option value="1">4800 Baud</option>
+            <option value="2">9600 Baud</option>
+            <option value="3">19200 Baud</option>
+            <option value="4">38400 Baud</option>
+            <option value="5">57600 Baud</option>
+            <option value="6">115200 Baud</option>
+            <option value="7">230400 Baud</option>
+            <option value="8">460800 Baud</option>
+          </select></li>
+        <li>
+          <span language="protocolName" class="left"></span>
+          <input type="text" name="protocolName" class="right"></li>
+        <li>
+          <span class="left" language="transmit_mode"></span>
+          <select class="right" name="transmit_mode">
+            <option value="0" language="Instantaneous">Instantaneous</option>
+            <option value="1" language="Scheduled">Scheduled</option>
+          </select></li>
+      </ul>
+    </div>
+  </div>
+  <script src="com-transmitter/js/jquery-2.14.js"></script>
+  <script src="com-transmitter/js/bi-common.js"></script>
+  <script src="com-transmitter/js/text.js"></script>
+  <script src="com-transmitter/js/index.js"></script>
+</body>
+
+</html>

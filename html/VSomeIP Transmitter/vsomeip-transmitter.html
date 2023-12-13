@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vsomeip Transmitter</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="vsomeip-transmitter/css/common.css">
+  <link rel="stylesheet" href="vsomeip-transmitter/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="left">
+      <p language="server"></p>
+      <ul>
+        <li>
+          <input type="checkbox" name="serverEnable" id="serverEnable">
+          <label language="Enable" for="serverEnable"></label>
+          <select class="right" name="transmit_mode">
+            <option value="0">Instantaneous</option>
+            <option value="1">Scheduled</option>
+          </select>
+          <span class="right" language="transmit_mode"></span>
+        </li>
+        <li><span language="ServiceId" class="left"></span><input type="text" class="right" name="serverServiceId"></li>
+        <li><span language="InstanceId" class="left"></span><input type="text" class="right" name="serverInstanceId">
+        </li>
+        <li><span language="MethodId" class="left"></span><input type="text" class="right" name="serverMethodId"></li>
+        <li><span language="EventId" class="left"></span><input type="text" class="right" name="serverEventId"></li>
+        <li><span language="EventGroupId" class="left"></span><input type="text" class="right"
+            name="serverEventGroupId"></li>
+        <li><span language="ApplicationName" class="left"></span><input type="text" class="right"
+            name="serverApplicationName"></li>
+        <li><span language="ConfigFile" class="left"></span></li>
+        <li><a href="javascript:;" name="serverConfigFile" language="not_config"></a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <p language="client"></p>
+      <ul>
+        <li><input type="checkbox" name="clientEnable" id="clientEnable"><label language="Enable"
+            for="clientEnable"></label></li>
+        <li><span language="ServiceId" class="left"></span><input type="text" class="right" name="clientServiceId"></li>
+        <li><span language="InstanceId" class="left"></span><input type="text" class="right" name="clientInstanceId">
+        </li>
+        <li><span language="MethodId" class="left"></span><input type="text" class="right" name="clientMethodId"></li>
+        <li><span language="EventId" class="left"></span><input type="text" class="right" name="clientEventId"></li>
+        <li><span language="EventGroupId" class="left"></span><input type="text" class="right"
+            name="clientEventGroupId"></li>
+        <li><span language="ApplicationName" class="left"></span><input type="text" class="right"
+            name="clientApplicationName"></li>
+        <li><span language="ConfigFile" class="left"></span></li>
+        <li><a href="javascript:;" name="clientConfigFile" language="not_config"></a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="vsomeip-transmitter/js/jquery-2.14.js"></script>
+  <script src="vsomeip-transmitter/js/bi-common.js"></script>
+  <script src="vsomeip-transmitter/js/text.js"></script>
+  <script src="vsomeip-transmitter/js/index.js"></script>
+</body>
+
+</html>

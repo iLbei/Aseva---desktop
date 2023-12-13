@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Default File I/O</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="default-file-io/css/common.css">
+  <link rel="stylesheet" href="default-file-io/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="bus">
+    <ul>
+      <li class="fixclear">
+        <span>CAN:</span>
+        <select name="can_rec_format">
+          <option value="3" language="mixed_ascii"></option>
+          <option value="2" language="multiple_ascii"></option>
+          <option value="1" language="single_ascii"></option>
+          <option value="13" language="mixed_binary"></option>
+          <option value="12" language="multiple_binary"></option>
+          <option value="11" language="single_binary"></option>
+          <option value="22" language="multiple_encrypted"></option>
+          <option value="21" language="single_encrypted"></option>
+        </select>
+        <input type="checkbox" id="small_0" name="can_small_seg">
+        <label for="small_0" language="small"></label>
+      </li>
+      <li class="fixclear">
+        <span>CAN-FD:</span>
+        <select name="canfd_rec_format">
+          <option value="3" language="mixed_ascii"></option>
+          <option value="2" language="multiple_ascii"></option>
+          <option value="1" language="single_ascii"></option>
+          <option value="13" language="mixed_binary"></option>
+          <option value="12" language="multiple_binary"></option>
+          <option value="11" language="single_binary"></option>
+          <option value="22" language="multiple_encrypted"></option>
+          <option value="21" language="single_encrypted"></option>
+        </select>
+        <input type="checkbox" id="small_1" name="canfd_small_seg">
+        <label for="small_1" language="small"></label>
+      </li>
+      <li class="fixclear">
+        <span>LIN:</span>
+        <select name="lin_rec_format">
+          <option value="13" language="mixed_binary"></option>
+          <option value="12" language="multiple_binary"></option>
+          <option value="11" language="single_binary"></option>
+          <option value="22" language="multiple_encrypted"></option>
+          <option value="21" language="single_encrypted"></option>
+        </select>
+        <input type="checkbox" id="small_2" name="lin_small_seg">
+        <label for="small_2" language="small"></label>
+      </li>
+      <li class="fixclear">
+        <span>Flexray:</span>
+        <select name="flexray_rec_format">
+          <option value="3" language="mixed_ascii"></option>
+          <option value="2" language="multiple_ascii"></option>
+          <option value="1" language="single_ascii"></option>
+          <option value="13" language="mixed_binary"></option>
+          <option value="12" language="multiple_binary"></option>
+          <option value="11" language="single_binary"></option>
+        </select>
+        <input type="checkbox" id="small_3" name="flexray_small_seg">
+        <label for="small_3" language="small"></label>
+      </li>
+      <li class="fixclear">
+        <span>Ethernet:</span>
+        <select name="ethernet_rec_format">
+          <option value="13" language="mixed_binary"></option>
+          <option value="12" language="multiple_binary"></option>
+          <option value="11" language="single_binary"></option>
+          <option value="31" language="single_pcap"></option>
+        </select>
+        <input type="checkbox" id="small_4" name="ethernet_small_seg">
+        <label for="small_4" language="small"></label>
+      </li>
+      <li class="fixclear">
+        <span>SOME/IP:</span>
+        <select name="someip_rec_format">
+          <option value="13" language="mixed_binary"></option>
+          <option value="12" language="multiple_binary"></option>
+          <option value="11" language="single_binary"></option>
+          <option value="31" language="single_pcap"></option>
+        </select>
+        <input type="checkbox" id="small_5" name="someip_small_seg">
+        <label for="small_5" language="small"></label>
+      </li>
+      <li>
+        <input type="checkbox" id="asc">
+        <label for="asc" language="mixed_ascii_6min"></label>
+        <input type="checkbox" id="blf">
+        <label for="blf" language="mixed_binary_6min"></label>
+      </li>
+    </ul>
+  </div>
+  <script src="default-file-io/js/jquery-2.14.js"></script>
+  <script src="default-file-io/js/bi-common.js"></script>
+  <script src="default-file-io/js/text.js"></script>
+  <script src="default-file-io/js/default-file-io.bus.js"></script>
+</body>
+
+</html>

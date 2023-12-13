@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location By CAN</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="location-by-can/css/common.css">
+  <link rel="stylesheet" href="location-by-can/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="top fixclear">
+      <div class="left fixclear">
+        <button name="rad" id="r1" class="white">1</button>
+        <button name="rad" id="r2">2</button>
+        <button name="rad" id="r3">3</button>
+        <button name="rad" id="r4">4</button>
+        <button name="rad" id="r5">5</button>
+        <button name="rad" id="r6">6</button>
+      </div>
+    </div>
+    <div class="content">
+      <div class="c1 c">
+        <div class="top">
+          <div class="title">
+            <a href="javascript:;" class="alias"></a>
+            <input type="text" name="alias">
+          </div>
+          <div class="opt fixclear">
+            <div class="left">
+              <input type="checkbox" name="enabled" id="enabled0">
+              <label for="enabled0" language="enabled"></label>
+            </div>
+            <div class="left">
+              <span language="channel"></span>
+              <select name="channel">
+                <option value="0" selected language="gnss_a"></option>
+                <option value="1" language="gnss_b"></option>
+                <option value="2" language="gnss_c"></option>
+                <option value="3" language="gnss_d"></option>
+                <option value="4" language="gnss_e"></option>
+                <option value="5" language="gnss_f"></option>
+              </select>
+            </div>
+            <div class="right">
+              <span language="sampling_msg"></span>
+              <a href="javascript:;" signalName="sampling_msg" onclick="selectBus(this)" class="red"
+                language="not_config"></a>
+            </div>
+          </div>
+        </div>
+        <div class="fixclear">
+          <div class="left">
+            <div class="gnss">
+              <p>GNSS</p>
+              <div>
+                <div>
+                  <span language="longitude"></span>
+                  <a href="javascript:;" title="" unit="°E" onclick="selectSignal(this)" signalName="lng_value"
+                    scale="1" scaleVal="lng_scale" sign="" signVal="lng_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="latitude"></span>
+                  <a href="javascript:;" title="" unit="°N" onclick="selectSignal(this)" signalName="lat_value"
+                    scale="1" scaleVal="lat_scale" sign="" signVal="lat_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="altitude"></span>
+                  <a href="javascript:;" title="" unit="m" onclick="selectSignal(this)" signalName="altitude_value"
+                    scale="1" scaleVal="altitude_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="speed"></span>
+                  <a href="javascript:;" title="" unit="KPH" onclick="selectSignal(this)" signalName="speed_value"
+                    scale="1" scaleVal="speed_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_deg"></span>
+                  <a href="javascript:;" title="" unit="deg" onclick="selectSignal(this)" signalName="orient_value"
+                    scale="1" scaleVal="orient_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_offset"></span>
+                  <input type="number" name="orient_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+                </div>
+                <div>
+                  <span language="satellite_count"></span>
+                  <a href="javascript:;" signalName="satellite_count" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="mode">
+              <p language="location_mode"></p>
+              <div>
+                <div>
+                  <span language="locmode"></span>
+                  <a href="javascript:;" signalName="locmode_signal" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="locmode_rtkfix"></span>
+                  <input type="text" name="locmode_rtkfix_value">
+                </div>
+                <div>
+                  <span language="locmode_rtkfloat"></span>
+                  <input type="text" name="locmode_rtkfloat_value">
+                </div>
+                <div>
+                  <span language="locmode_rtd"></span>
+                  <input type="text" name="locmode_rtd_value">
+                </div>
+                <div>
+                  <span language="locmode_imuonly"></span>
+                  <input type="text" name="locmode_imuonly_value">
+                </div>
+                <div>
+                  <span language="hor_err"></span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="herror_value" scale="1" scaleVal="herror_scale"></a>
+                </div>
+                <div>
+                  <span language="ver_err">Vertical err.[m]:</span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="verror_value" scale="1" scaleVal="verror_scale"></a>
+                </div>
+              </div>
+            </div>
+            <div class="antenna">
+              <p language="antenna"></p>
+              <div class="fixclear">
+                <div class="left">
+                  <div>
+                    <span>X: </span>
+                    <input type="number" name="antenna_x" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-20.000" max="1.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Y: </span>
+                    <input type="number" name="antenna_y" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-3.000" max="3.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Z: </span>
+                    <input type="number" name="antenna_z" value="0.000" min="0.000" max="10.000" step="0.001">
+                  </div>
+                </div>
+                <div class="right">
+                  <canvas class="myCanvas" width="142" height="200"></canvas>
+                  <a href="javascript:;" scale="large" onclick="scaleCanvas(this)"
+                    language="scale_small">Scale:small</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="imu">
+              <p>IMU</p>
+              <div>
+                <div>
+                  <span language="yaw_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="yaw_rate_value" scale="1" scaleVal="yaw_rate_scale"
+                    sign="" signVal="yaw_rate_sign" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch"></span>
+                  <a href="javascript:;" unit="deg" signalName="pitch_value" scale="1" scaleVal="pitch_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="pitch_rate_value" scale="1"
+                    scaleVal="pitch_rate_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll"></span>
+                  <a href="javascript:;" unit="deg" signalName="roll_value" scale="1" scaleVal="roll_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="roll_rate_value" scale="1" scaleVal="roll_rate_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ax"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ax_value" scale="1" scaleVal="ax_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ay"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ay_value" scale="1" scaleVal="ay_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="az"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="az_value" scale="1" scaleVal="az_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerkx"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerkx_value" scale="1" scaleVal="jerkx_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerky"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerky_value" scale="1" scaleVal="jerky_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="slip"></span>
+                  <a href="javascript:;" unit="deg" signalName="slip_value" scale="1" scaleVal="slip_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="yaw_rate_offset"></span>
+                  <input type="number" name="yaw_rate_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="pitch_offset"></span>
+                  <input type="number" name="pitch_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="roll_offset"></span>
+                  <input type="number" name="roll_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+              </div>
+            </div>
+            <div class="time">
+              <p language="time"></p>
+              <div>
+                <div>
+                  <span language="gps_time_mode"></span>
+                  <select name="gps_time_mode" onchange="getGpsTimeMode(this)">
+                    <option value="Disabled" selected language="disabled"></option>
+                    <option value="Absolute" language="absolute"></option>
+                    <option value="Posix" language="posix"></option>
+                    <option value="InDay" language="week"></option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_type"></span>
+                  <select name="gnss_time_type">
+                    <option value="UTC">UTC</option>
+                    <option value="GPS">GPS</option>
+                    <option value="TAI">TAI</option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_year"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_year" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_month"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_month" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_week"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_week" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_day"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_day" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_hour"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_hour" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_minute"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_minute" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_second"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_second" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_ms"></span>
+                  <a href="javascript:;" unit="ms" class="red" signalName="gps_time_ms" scale="1"
+                    scaleVal="gps_time_ms_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="bottom fixclear">
+              <button class="left" onclick="importAsmc(this)" language="import"></button>
+              <button class="right" onclick="exportAsmc(this)" language="export"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c2 c">
+        <div class="top">
+          <div class="title">
+            <a href="javascript:;" class="alias"></a>
+            <input type="text" name="alias">
+          </div>
+          <div class="opt fixclear">
+            <div class="left">
+              <input type="checkbox" name="enabled" id="enabled1">
+              <label for="enabled1" language="enabled"></label>
+            </div>
+            <div class="left">
+              <span language="channel"></span>
+              <select name="channel">
+                <option value="0" selected language="gnss_a"></option>
+                <option value="1" language="gnss_b"></option>
+                <option value="2" language="gnss_c"></option>
+                <option value="3" language="gnss_d"></option>
+                <option value="4" language="gnss_e"></option>
+                <option value="5" language="gnss_f"></option>
+              </select>
+            </div>
+            <div class="right">
+              <span language="sampling_msg"></span>
+              <a href="javascript:;" signalName="sampling_msg" onclick="selectBus(this)" class="red"
+                language="not_config"></a>
+            </div>
+          </div>
+        </div>
+        <div class="fixclear">
+          <div class="left">
+            <div class="gnss">
+              <p>GNSS</p>
+              <div>
+                <div>
+                  <span language="longitude"></span>
+                  <a href="javascript:;" title="" unit="°E" onclick="selectSignal(this)" signalName="lng_value"
+                    scale="1" scaleVal="lng_scale" sign="" signVal="lng_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="latitude"></span>
+                  <a href="javascript:;" title="" unit="°N" onclick="selectSignal(this)" signalName="lat_value"
+                    scale="1" scaleVal="lat_scale" sign="" signVal="lat_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="altitude"></span>
+                  <a href="javascript:;" title="" unit="m" onclick="selectSignal(this)" signalName="altitude_value"
+                    scale="1" scaleVal="altitude_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="speed"></span>
+                  <a href="javascript:;" title="" unit="KPH" onclick="selectSignal(this)" signalName="speed_value"
+                    scale="1" scaleVal="speed_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_deg"></span>
+                  <a href="javascript:;" title="" unit="deg" onclick="selectSignal(this)" signalName="orient_value"
+                    scale="1" scaleVal="orient_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_offset"></span>
+                  <input type="number" name="orient_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+                </div>
+                <div>
+                  <span language="satellite_count"></span>
+                  <a href="javascript:;" signalName="satellite_count" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="mode">
+              <p language="location_mode"></p>
+              <div>
+                <div>
+                  <span language="locmode"></span>
+                  <a href="javascript:;" signalName="locmode_signal" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="locmode_rtkfix"></span>
+                  <input type="text" name="locmode_rtkfix_value">
+                </div>
+                <div>
+                  <span language="locmode_rtkfloat"></span>
+                  <input type="text" name="locmode_rtkfloat_value">
+                </div>
+                <div>
+                  <span language="locmode_rtd"></span>
+                  <input type="text" name="locmode_rtd_value">
+                </div>
+                <div>
+                  <span language="locmode_imuonly"></span>
+                  <input type="text" name="locmode_imuonly_value">
+                </div>
+                <div>
+                  <span language="hor_err"></span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="herror_value" scale="1" scaleVal="herror_scale"></a>
+                </div>
+                <div>
+                  <span language="ver_err">Vertical err.[m]:</span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="verror_value" scale="1" scaleVal="verror_scale"></a>
+                </div>
+              </div>
+            </div>
+            <div class="antenna">
+              <p language="antenna"></p>
+              <div class="fixclear">
+                <div class="left">
+                  <div>
+                    <span>X: </span>
+                    <input type="number" name="antenna_x" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-20.000" max="1.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Y: </span>
+                    <input type="number" name="antenna_y" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-3.000" max="3.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Z: </span>
+                    <input type="number" name="antenna_z" value="0.000" min="0.000" max="10.000" step="0.001">
+                  </div>
+                </div>
+                <div class="right">
+                  <canvas class="myCanvas" width="142" height="200"></canvas>
+                  <a href="javascript:;" scale="large" onclick="scaleCanvas(this)"
+                    language="scale_small">Scale:small</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="imu">
+              <p>IMU</p>
+              <div>
+                <div>
+                  <span language="yaw_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="yaw_rate_value" scale="1" scaleVal="yaw_rate_scale"
+                    sign="" signVal="yaw_rate_sign" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch"></span>
+                  <a href="javascript:;" unit="deg" signalName="pitch_value" scale="1" scaleVal="pitch_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="pitch_rate_value" scale="1"
+                    scaleVal="pitch_rate_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll"></span>
+                  <a href="javascript:;" unit="deg" signalName="roll_value" scale="1" scaleVal="roll_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="roll_rate_value" scale="1" scaleVal="roll_rate_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ax"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ax_value" scale="1" scaleVal="ax_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ay"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ay_value" scale="1" scaleVal="ay_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="az"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="az_value" scale="1" scaleVal="az_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerkx"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerkx_value" scale="1" scaleVal="jerkx_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerky"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerky_value" scale="1" scaleVal="jerky_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="slip"></span>
+                  <a href="javascript:;" unit="deg" signalName="slip_value" scale="1" scaleVal="slip_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="yaw_rate_offset"></span>
+                  <input type="number" name="yaw_rate_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="pitch_offset"></span>
+                  <input type="number" name="pitch_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="roll_offset"></span>
+                  <input type="number" name="roll_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+              </div>
+            </div>
+            <div class="time">
+              <p language="time"></p>
+              <div>
+                <div>
+                  <span language="gps_time_mode"></span>
+                  <select name="gps_time_mode" onchange="getGpsTimeMode(this)">
+                    <option value="Disabled" selected language="disabled"></option>
+                    <option value="Absolute" language="absolute"></option>
+                    <option value="Posix" language="posix"></option>
+                    <option value="InDay" language="week"></option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_type"></span>
+                  <select name="gnss_time_type">
+                    <option value="UTC">UTC</option>
+                    <option value="GPS">GPS</option>
+                    <option value="TAI">TAI</option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_year"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_year" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_month"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_month" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_week"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_week" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_day"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_day" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_hour"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_hour" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_minute"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_minute" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_second"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_second" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_ms"></span>
+                  <a href="javascript:;" unit="ms" class="red" signalName="gps_time_ms" scale="1"
+                    scaleVal="gps_time_ms_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="bottom fixclear">
+              <button class="left" onclick="importAsmc(this)" language="import"></button>
+              <button class="right" onclick="exportAsmc(this)" language="export"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c3 c">
+        <div class="top">
+          <div class="title">
+            <a href="javascript:;" class="alias"></a>
+            <input type="text" name="alias">
+          </div>
+          <div class="opt fixclear">
+            <div class="left">
+              <input type="checkbox" name="enabled" id="enabled2">
+              <label for="enabled2" language="enabled"></label>
+            </div>
+            <div class="left">
+              <span language="channel"></span>
+              <select name="channel">
+                <option value="0" selected language="gnss_a"></option>
+                <option value="1" language="gnss_b"></option>
+                <option value="2" language="gnss_c"></option>
+                <option value="3" language="gnss_d"></option>
+                <option value="4" language="gnss_e"></option>
+                <option value="5" language="gnss_f"></option>
+              </select>
+            </div>
+            <div class="right">
+              <span language="sampling_msg"></span>
+              <a href="javascript:;" signalName="sampling_msg" onclick="selectBus(this)" class="red"
+                language="not_config"></a>
+            </div>
+          </div>
+        </div>
+        <div class="fixclear">
+          <div class="left">
+            <div class="gnss">
+              <p>GNSS</p>
+              <div>
+                <div>
+                  <span language="longitude"></span>
+                  <a href="javascript:;" title="" unit="°E" onclick="selectSignal(this)" signalName="lng_value"
+                    scale="1" scaleVal="lng_scale" sign="" signVal="lng_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="latitude"></span>
+                  <a href="javascript:;" title="" unit="°N" onclick="selectSignal(this)" signalName="lat_value"
+                    scale="1" scaleVal="lat_scale" sign="" signVal="lat_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="altitude"></span>
+                  <a href="javascript:;" title="" unit="m" onclick="selectSignal(this)" signalName="altitude_value"
+                    scale="1" scaleVal="altitude_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="speed"></span>
+                  <a href="javascript:;" title="" unit="KPH" onclick="selectSignal(this)" signalName="speed_value"
+                    scale="1" scaleVal="speed_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_deg"></span>
+                  <a href="javascript:;" title="" unit="deg" onclick="selectSignal(this)" signalName="orient_value"
+                    scale="1" scaleVal="orient_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_offset"></span>
+                  <input type="number" name="orient_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+                </div>
+                <div>
+                  <span language="satellite_count"></span>
+                  <a href="javascript:;" signalName="satellite_count" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="mode">
+              <p language="location_mode"></p>
+              <div>
+                <div>
+                  <span language="locmode"></span>
+                  <a href="javascript:;" signalName="locmode_signal" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="locmode_rtkfix"></span>
+                  <input type="text" name="locmode_rtkfix_value">
+                </div>
+                <div>
+                  <span language="locmode_rtkfloat"></span>
+                  <input type="text" name="locmode_rtkfloat_value">
+                </div>
+                <div>
+                  <span language="locmode_rtd"></span>
+                  <input type="text" name="locmode_rtd_value">
+                </div>
+                <div>
+                  <span language="locmode_imuonly"></span>
+                  <input type="text" name="locmode_imuonly_value">
+                </div>
+                <div>
+                  <span language="hor_err"></span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="herror_value" scale="1" scaleVal="herror_scale"></a>
+                </div>
+                <div>
+                  <span language="ver_err">Vertical err.[m]:</span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="verror_value" scale="1" scaleVal="verror_scale"></a>
+                </div>
+              </div>
+            </div>
+            <div class="antenna">
+              <p language="antenna"></p>
+              <div class="fixclear">
+                <div class="left">
+                  <div>
+                    <span>X: </span>
+                    <input type="number" name="antenna_x" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-20.000" max="1.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Y: </span>
+                    <input type="number" name="antenna_y" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-3.000" max="3.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Z: </span>
+                    <input type="number" name="antenna_z" value="0.000" min="0.000" max="10.000" step="0.001">
+                  </div>
+                </div>
+                <div class="right">
+                  <canvas class="myCanvas" width="142" height="200"></canvas>
+                  <a href="javascript:;" scale="large" onclick="scaleCanvas(this)"
+                    language="scale_small">Scale:small</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="imu">
+              <p>IMU</p>
+              <div>
+                <div>
+                  <span language="yaw_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="yaw_rate_value" scale="1" scaleVal="yaw_rate_scale"
+                    sign="" signVal="yaw_rate_sign" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch"></span>
+                  <a href="javascript:;" unit="deg" signalName="pitch_value" scale="1" scaleVal="pitch_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="pitch_rate_value" scale="1"
+                    scaleVal="pitch_rate_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll"></span>
+                  <a href="javascript:;" unit="deg" signalName="roll_value" scale="1" scaleVal="roll_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="roll_rate_value" scale="1" scaleVal="roll_rate_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ax"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ax_value" scale="1" scaleVal="ax_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ay"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ay_value" scale="1" scaleVal="ay_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="az"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="az_value" scale="1" scaleVal="az_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerkx"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerkx_value" scale="1" scaleVal="jerkx_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerky"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerky_value" scale="1" scaleVal="jerky_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="slip"></span>
+                  <a href="javascript:;" unit="deg" signalName="slip_value" scale="1" scaleVal="slip_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="yaw_rate_offset"></span>
+                  <input type="number" name="yaw_rate_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="pitch_offset"></span>
+                  <input type="number" name="pitch_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="roll_offset"></span>
+                  <input type="number" name="roll_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+              </div>
+            </div>
+            <div class="time">
+              <p language="time"></p>
+              <div>
+                <div>
+                  <span language="gps_time_mode"></span>
+                  <select name="gps_time_mode" onchange="getGpsTimeMode(this)">
+                    <option value="Disabled" selected language="disabled"></option>
+                    <option value="Absolute" language="absolute"></option>
+                    <option value="Posix" language="posix"></option>
+                    <option value="InDay" language="week"></option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_type"></span>
+                  <select name="gnss_time_type">
+                    <option value="UTC">UTC</option>
+                    <option value="GPS">GPS</option>
+                    <option value="TAI">TAI</option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_year"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_year" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_month"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_month" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_week"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_week" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_day"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_day" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_hour"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_hour" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_minute"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_minute" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_second"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_second" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_ms"></span>
+                  <a href="javascript:;" unit="ms" class="red" signalName="gps_time_ms" scale="1"
+                    scaleVal="gps_time_ms_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="bottom fixclear">
+              <button class="left" onclick="importAsmc(this)" language="import"></button>
+              <button class="right" onclick="exportAsmc(this)" language="export"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c4 c">
+        <div class="top">
+          <div class="title">
+            <a href="javascript:;" class="alias"></a>
+            <input type="text" name="alias">
+          </div>
+          <div class="opt fixclear">
+            <div class="left">
+              <input type="checkbox" name="enabled" id="enabled3">
+              <label for="enabled3" language="enabled"></label>
+            </div>
+            <div class="left">
+              <span language="channel"></span>
+              <select name="channel">
+                <option value="0" selected language="gnss_a"></option>
+                <option value="1" language="gnss_b"></option>
+                <option value="2" language="gnss_c"></option>
+                <option value="3" language="gnss_d"></option>
+                <option value="4" language="gnss_e"></option>
+                <option value="5" language="gnss_f"></option>
+              </select>
+            </div>
+            <div class="right">
+              <span language="sampling_msg"></span>
+              <a href="javascript:;" signalName="sampling_msg" onclick="selectBus(this)" class="red"
+                language="not_config"></a>
+            </div>
+          </div>
+        </div>
+        <div class="fixclear">
+          <div class="left">
+            <div class="gnss">
+              <p>GNSS</p>
+              <div>
+                <div>
+                  <span language="longitude"></span>
+                  <a href="javascript:;" title="" unit="°E" onclick="selectSignal(this)" signalName="lng_value"
+                    scale="1" scaleVal="lng_scale" sign="" signVal="lng_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="latitude"></span>
+                  <a href="javascript:;" title="" unit="°N" onclick="selectSignal(this)" signalName="lat_value"
+                    scale="1" scaleVal="lat_scale" sign="" signVal="lat_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="altitude"></span>
+                  <a href="javascript:;" title="" unit="m" onclick="selectSignal(this)" signalName="altitude_value"
+                    scale="1" scaleVal="altitude_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="speed"></span>
+                  <a href="javascript:;" title="" unit="KPH" onclick="selectSignal(this)" signalName="speed_value"
+                    scale="1" scaleVal="speed_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_deg"></span>
+                  <a href="javascript:;" title="" unit="deg" onclick="selectSignal(this)" signalName="orient_value"
+                    scale="1" scaleVal="orient_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_offset"></span>
+                  <input type="number" name="orient_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+                </div>
+                <div>
+                  <span language="satellite_count"></span>
+                  <a href="javascript:;" signalName="satellite_count" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="mode">
+              <p language="location_mode"></p>
+              <div>
+                <div>
+                  <span language="locmode"></span>
+                  <a href="javascript:;" signalName="locmode_signal" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="locmode_rtkfix"></span>
+                  <input type="text" name="locmode_rtkfix_value">
+                </div>
+                <div>
+                  <span language="locmode_rtkfloat"></span>
+                  <input type="text" name="locmode_rtkfloat_value">
+                </div>
+                <div>
+                  <span language="locmode_rtd"></span>
+                  <input type="text" name="locmode_rtd_value">
+                </div>
+                <div>
+                  <span language="locmode_imuonly"></span>
+                  <input type="text" name="locmode_imuonly_value">
+                </div>
+                <div>
+                  <span language="hor_err"></span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="herror_value" scale="1" scaleVal="herror_scale"></a>
+                </div>
+                <div>
+                  <span language="ver_err">Vertical err.[m]:</span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="verror_value" scale="1" scaleVal="verror_scale"></a>
+                </div>
+              </div>
+            </div>
+            <div class="antenna">
+              <p language="antenna"></p>
+              <div class="fixclear">
+                <div class="left">
+                  <div>
+                    <span>X: </span>
+                    <input type="number" name="antenna_x" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-20.000" max="1.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Y: </span>
+                    <input type="number" name="antenna_y" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-3.000" max="3.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Z: </span>
+                    <input type="number" name="antenna_z" value="0.000" min="0.000" max="10.000" step="0.001">
+                  </div>
+                </div>
+                <div class="right">
+                  <canvas class="myCanvas" width="142" height="200"></canvas>
+                  <a href="javascript:;" scale="large" onclick="scaleCanvas(this)"
+                    language="scale_small">Scale:small</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="imu">
+              <p>IMU</p>
+              <div>
+                <div>
+                  <span language="yaw_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="yaw_rate_value" scale="1" scaleVal="yaw_rate_scale"
+                    sign="" signVal="yaw_rate_sign" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch"></span>
+                  <a href="javascript:;" unit="deg" signalName="pitch_value" scale="1" scaleVal="pitch_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="pitch_rate_value" scale="1"
+                    scaleVal="pitch_rate_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll"></span>
+                  <a href="javascript:;" unit="deg" signalName="roll_value" scale="1" scaleVal="roll_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="roll_rate_value" scale="1" scaleVal="roll_rate_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ax"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ax_value" scale="1" scaleVal="ax_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ay"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ay_value" scale="1" scaleVal="ay_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="az"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="az_value" scale="1" scaleVal="az_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerkx"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerkx_value" scale="1" scaleVal="jerkx_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerky"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerky_value" scale="1" scaleVal="jerky_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="slip"></span>
+                  <a href="javascript:;" unit="deg" signalName="slip_value" scale="1" scaleVal="slip_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="yaw_rate_offset"></span>
+                  <input type="number" name="yaw_rate_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="pitch_offset"></span>
+                  <input type="number" name="pitch_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="roll_offset"></span>
+                  <input type="number" name="roll_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+              </div>
+            </div>
+            <div class="time">
+              <p language="time"></p>
+              <div>
+                <div>
+                  <span language="gps_time_mode"></span>
+                  <select name="gps_time_mode" onchange="getGpsTimeMode(this)">
+                    <option value="Disabled" selected language="disabled"></option>
+                    <option value="Absolute" language="absolute"></option>
+                    <option value="Posix" language="posix"></option>
+                    <option value="InDay" language="week"></option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_type"></span>
+                  <select name="gnss_time_type">
+                    <option value="UTC">UTC</option>
+                    <option value="GPS">GPS</option>
+                    <option value="TAI">TAI</option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_year"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_year" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_month"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_month" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_week"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_week" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_day"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_day" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_hour"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_hour" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_minute"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_minute" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_second"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_second" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_ms"></span>
+                  <a href="javascript:;" unit="ms" class="red" signalName="gps_time_ms" scale="1"
+                    scaleVal="gps_time_ms_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="bottom fixclear">
+              <button class="left" onclick="importAsmc(this)" language="import"></button>
+              <button class="right" onclick="exportAsmc(this)" language="export"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c5 c">
+        <div class="top">
+          <div class="title">
+            <a href="javascript:;" class="alias"></a>
+            <input type="text" name="alias">
+          </div>
+          <div class="opt fixclear">
+            <div class="left">
+              <input type="checkbox" name="enabled" id="enabled4">
+              <label for="enabled4" language="enabled"></label>
+            </div>
+            <div class="left">
+              <span language="channel"></span>
+              <select name="channel">
+                <option value="0" selected language="gnss_a"></option>
+                <option value="1" language="gnss_b"></option>
+                <option value="2" language="gnss_c"></option>
+                <option value="3" language="gnss_d"></option>
+                <option value="4" language="gnss_e"></option>
+                <option value="5" language="gnss_f"></option>
+              </select>
+            </div>
+            <div class="right">
+              <span language="sampling_msg"></span>
+              <a href="javascript:;" signalName="sampling_msg" onclick="selectBus(this)" class="red"
+                language="not_config"></a>
+            </div>
+          </div>
+        </div>
+        <div class="fixclear">
+          <div class="left">
+            <div class="gnss">
+              <p>GNSS</p>
+              <div>
+                <div>
+                  <span language="longitude"></span>
+                  <a href="javascript:;" title="" unit="°E" onclick="selectSignal(this)" signalName="lng_value"
+                    scale="1" scaleVal="lng_scale" sign="" signVal="lng_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="latitude"></span>
+                  <a href="javascript:;" title="" unit="°N" onclick="selectSignal(this)" signalName="lat_value"
+                    scale="1" scaleVal="lat_scale" sign="" signVal="lat_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="altitude"></span>
+                  <a href="javascript:;" title="" unit="m" onclick="selectSignal(this)" signalName="altitude_value"
+                    scale="1" scaleVal="altitude_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="speed"></span>
+                  <a href="javascript:;" title="" unit="KPH" onclick="selectSignal(this)" signalName="speed_value"
+                    scale="1" scaleVal="speed_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_deg"></span>
+                  <a href="javascript:;" title="" unit="deg" onclick="selectSignal(this)" signalName="orient_value"
+                    scale="1" scaleVal="orient_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_offset"></span>
+                  <input type="number" name="orient_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+                </div>
+                <div>
+                  <span language="satellite_count"></span>
+                  <a href="javascript:;" signalName="satellite_count" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="mode">
+              <p language="location_mode"></p>
+              <div>
+                <div>
+                  <span language="locmode"></span>
+                  <a href="javascript:;" signalName="locmode_signal" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="locmode_rtkfix"></span>
+                  <input type="text" name="locmode_rtkfix_value">
+                </div>
+                <div>
+                  <span language="locmode_rtkfloat"></span>
+                  <input type="text" name="locmode_rtkfloat_value">
+                </div>
+                <div>
+                  <span language="locmode_rtd"></span>
+                  <input type="text" name="locmode_rtd_value">
+                </div>
+                <div>
+                  <span language="locmode_imuonly"></span>
+                  <input type="text" name="locmode_imuonly_value">
+                </div>
+                <div>
+                  <span language="hor_err"></span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="herror_value" scale="1" scaleVal="herror_scale"></a>
+                </div>
+                <div>
+                  <span language="ver_err">Vertical err.[m]:</span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="verror_value" scale="1" scaleVal="verror_scale"></a>
+                </div>
+              </div>
+            </div>
+            <div class="antenna">
+              <p language="antenna"></p>
+              <div class="fixclear">
+                <div class="left">
+                  <div>
+                    <span>X: </span>
+                    <input type="number" name="antenna_x" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-20.000" max="1.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Y: </span>
+                    <input type="number" name="antenna_y" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-3.000" max="3.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Z: </span>
+                    <input type="number" name="antenna_z" value="0.000" min="0.000" max="10.000" step="0.001">
+                  </div>
+                </div>
+                <div class="right">
+                  <canvas class="myCanvas" width="142" height="200"></canvas>
+                  <a href="javascript:;" scale="large" onclick="scaleCanvas(this)"
+                    language="scale_small">Scale:small</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="imu">
+              <p>IMU</p>
+              <div>
+                <div>
+                  <span language="yaw_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="yaw_rate_value" scale="1" scaleVal="yaw_rate_scale"
+                    sign="" signVal="yaw_rate_sign" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch"></span>
+                  <a href="javascript:;" unit="deg" signalName="pitch_value" scale="1" scaleVal="pitch_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="pitch_rate_value" scale="1"
+                    scaleVal="pitch_rate_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll"></span>
+                  <a href="javascript:;" unit="deg" signalName="roll_value" scale="1" scaleVal="roll_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="roll_rate_value" scale="1" scaleVal="roll_rate_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ax"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ax_value" scale="1" scaleVal="ax_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ay"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ay_value" scale="1" scaleVal="ay_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="az"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="az_value" scale="1" scaleVal="az_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerkx"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerkx_value" scale="1" scaleVal="jerkx_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerky"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerky_value" scale="1" scaleVal="jerky_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="slip"></span>
+                  <a href="javascript:;" unit="deg" signalName="slip_value" scale="1" scaleVal="slip_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="yaw_rate_offset"></span>
+                  <input type="number" name="yaw_rate_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="pitch_offset"></span>
+                  <input type="number" name="pitch_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="roll_offset"></span>
+                  <input type="number" name="roll_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+              </div>
+            </div>
+            <div class="time">
+              <p language="time"></p>
+              <div>
+                <div>
+                  <span language="gps_time_mode"></span>
+                  <select name="gps_time_mode" onchange="getGpsTimeMode(this)">
+                    <option value="Disabled" selected language="disabled"></option>
+                    <option value="Absolute" language="absolute"></option>
+                    <option value="Posix" language="posix"></option>
+                    <option value="InDay" language="week"></option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_type"></span>
+                  <select name="gnss_time_type">
+                    <option value="UTC">UTC</option>
+                    <option value="GPS">GPS</option>
+                    <option value="TAI">TAI</option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_year"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_year" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_month"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_month" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_week"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_week" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_day"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_day" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_hour"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_hour" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_minute"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_minute" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_second"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_second" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_ms"></span>
+                  <a href="javascript:;" unit="ms" class="red" signalName="gps_time_ms" scale="1"
+                    scaleVal="gps_time_ms_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="bottom fixclear">
+              <button class="left" onclick="importAsmc(this)" language="import"></button>
+              <button class="right" onclick="exportAsmc(this)" language="export"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c6 c">
+        <div class="top">
+          <div class="title">
+            <a href="javascript:;" class="alias"></a>
+            <input type="text" name="alias">
+          </div>
+          <div class="opt fixclear">
+            <div class="left">
+              <input type="checkbox" name="enabled" id="enabled5">
+              <label for="enabled5" language="enabled"></label>
+            </div>
+            <div class="left">
+              <span language="channel"></span>
+              <select name="channel">
+                <option value="0" selected language="gnss_a"></option>
+                <option value="1" language="gnss_b"></option>
+                <option value="2" language="gnss_c"></option>
+                <option value="3" language="gnss_d"></option>
+                <option value="4" language="gnss_e"></option>
+                <option value="5" language="gnss_f"></option>
+              </select>
+            </div>
+            <div class="right">
+              <span language="sampling_msg"></span>
+              <a href="javascript:;" signalName="sampling_msg" onclick="selectBus(this)" class="red"
+                language="not_config"></a>
+            </div>
+          </div>
+        </div>
+        <div class="fixclear">
+          <div class="left">
+            <div class="gnss">
+              <p>GNSS</p>
+              <div>
+                <div>
+                  <span language="longitude"></span>
+                  <a href="javascript:;" title="" unit="°E" onclick="selectSignal(this)" signalName="lng_value"
+                    scale="1" scaleVal="lng_scale" sign="" signVal="lng_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="latitude"></span>
+                  <a href="javascript:;" title="" unit="°N" onclick="selectSignal(this)" signalName="lat_value"
+                    scale="1" scaleVal="lat_scale" sign="" signVal="lat_sign" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="altitude"></span>
+                  <a href="javascript:;" title="" unit="m" onclick="selectSignal(this)" signalName="altitude_value"
+                    scale="1" scaleVal="altitude_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="speed"></span>
+                  <a href="javascript:;" title="" unit="KPH" onclick="selectSignal(this)" signalName="speed_value"
+                    scale="1" scaleVal="speed_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_deg"></span>
+                  <a href="javascript:;" title="" unit="deg" onclick="selectSignal(this)" signalName="orient_value"
+                    scale="1" scaleVal="orient_scale" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="orientation_offset"></span>
+                  <input type="number" name="orient_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+                </div>
+                <div>
+                  <span language="satellite_count"></span>
+                  <a href="javascript:;" signalName="satellite_count" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="mode">
+              <p language="location_mode"></p>
+              <div>
+                <div>
+                  <span language="locmode"></span>
+                  <a href="javascript:;" signalName="locmode_signal" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="locmode_rtkfix"></span>
+                  <input type="text" name="locmode_rtkfix_value">
+                </div>
+                <div>
+                  <span language="locmode_rtkfloat"></span>
+                  <input type="text" name="locmode_rtkfloat_value">
+                </div>
+                <div>
+                  <span language="locmode_rtd"></span>
+                  <input type="text" name="locmode_rtd_value">
+                </div>
+                <div>
+                  <span language="locmode_imuonly"></span>
+                  <input type="text" name="locmode_imuonly_value">
+                </div>
+                <div>
+                  <span language="hor_err"></span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="herror_value" scale="1" scaleVal="herror_scale"></a>
+                </div>
+                <div>
+                  <span language="ver_err">Vertical err.[m]:</span>
+                  <a href="javascript:;" onclick="selectSignal(this)" language="not_config" unit="m"
+                    signalName="verror_value" scale="1" scaleVal="verror_scale"></a>
+                </div>
+              </div>
+            </div>
+            <div class="antenna">
+              <p language="antenna"></p>
+              <div class="fixclear">
+                <div class="left">
+                  <div>
+                    <span>X: </span>
+                    <input type="number" name="antenna_x" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-20.000" max="1.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Y: </span>
+                    <input type="number" name="antenna_y" oninput="changeAntenna(this)" onchange="changeAntenna(this)"
+                      onblur="changeAntenna(this)" value="0.000" min="-3.000" max="3.000" step="0.001">
+                  </div>
+                  <div>
+                    <span>Z: </span>
+                    <input type="number" name="antenna_z" value="0.000" min="0.000" max="10.000" step="0.001">
+                  </div>
+                </div>
+                <div class="right">
+                  <canvas class="myCanvas" width="142" height="200"></canvas>
+                  <a href="javascript:;" scale="large" onclick="scaleCanvas(this)"
+                    language="scale_small">Scale:small</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="imu">
+              <p>IMU</p>
+              <div>
+                <div>
+                  <span language="yaw_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="yaw_rate_value" scale="1" scaleVal="yaw_rate_scale"
+                    sign="" signVal="yaw_rate_sign" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch"></span>
+                  <a href="javascript:;" unit="deg" signalName="pitch_value" scale="1" scaleVal="pitch_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="pitch_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="pitch_rate_value" scale="1"
+                    scaleVal="pitch_rate_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll"></span>
+                  <a href="javascript:;" unit="deg" signalName="roll_value" scale="1" scaleVal="roll_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="roll_rate"></span>
+                  <a href="javascript:;" unit="deg/s" signalName="roll_rate_value" scale="1" scaleVal="roll_rate_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ax"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ax_value" scale="1" scaleVal="ax_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="ay"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="ay_value" scale="1" scaleVal="ay_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="az"></span>
+                  <a href="javascript:;" unit="m/s2" signalName="az_value" scale="1" scaleVal="az_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerkx"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerkx_value" scale="1" scaleVal="jerkx_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="jerky"></span>
+                  <a href="javascript:;" unit="m/s3" signalName="jerky_value" scale="1" scaleVal="jerky_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="slip"></span>
+                  <a href="javascript:;" unit="deg" signalName="slip_value" scale="1" scaleVal="slip_scale"
+                    onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+                <div>
+                  <span language="yaw_rate_offset"></span>
+                  <input type="number" name="yaw_rate_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="pitch_offset"></span>
+                  <input type="number" name="pitch_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+                <div>
+                  <span language="roll_offset"></span>
+                  <input type="number" name="roll_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+                </div>
+              </div>
+            </div>
+            <div class="time">
+              <p language="time"></p>
+              <div>
+                <div>
+                  <span language="gps_time_mode"></span>
+                  <select name="gps_time_mode" onchange="getGpsTimeMode(this)">
+                    <option value="Disabled" selected language="disabled"></option>
+                    <option value="Absolute" language="absolute"></option>
+                    <option value="Posix" language="posix"></option>
+                    <option value="InDay" language="week"></option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_type"></span>
+                  <select name="gnss_time_type">
+                    <option value="UTC">UTC</option>
+                    <option value="GPS">GPS</option>
+                    <option value="TAI">TAI</option>
+                  </select>
+                </div>
+                <div>
+                  <span language="gps_time_year"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_year" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_month"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_month" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_week"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_week" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_day"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_day" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_hour"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_hour" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_minute"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_minute" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_second"></span>
+                  <a href="javascript:;" class="red" signalName="gps_time_second" onclick="selectSignal(this)"
+                    language="not_config"></a>
+                </div>
+                <div>
+                  <span language="gps_time_ms"></span>
+                  <a href="javascript:;" unit="ms" class="red" signalName="gps_time_ms" scale="1"
+                    scaleVal="gps_time_ms_scale" onclick="selectSignal(this)" language="not_config"></a>
+                </div>
+              </div>
+            </div>
+            <div class="bottom fixclear">
+              <button class="left" onclick="importAsmc(this)" language="import"></button>
+              <button class="right" onclick="exportAsmc(this)" language="export"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="location-by-can/js/jquery-2.14.min.js"></script>
+  <script src="location-by-can/js/text.js"></script>
+  <script src="location-by-can/js/bi-common.js"></script>
+  <script src="location-by-can/js/index.js"></script>
+</body>
+
+</html>

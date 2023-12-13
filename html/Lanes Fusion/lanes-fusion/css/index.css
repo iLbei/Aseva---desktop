@@ -1,0 +1,31 @@
+.container {
+  width: 326px;
+  height: 368px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -184px 0 0 -163px;
+}
+
+.container>ul>li>span:nth-child(1) {
+  width: 180px;
+}
+
+.container>ul>li>input[type=number],
+.container select {
+  width: 133px;
+}
+
+[language="end"],
+.container>ul>li>span:nth-child(1) {
+  padding-top: 3px;
+  margin-right: 5px;
+}
+
+.container>ul{
+  height: 335px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 15px;
+}

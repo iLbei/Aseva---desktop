@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CATARC Json Label</title>
+  <link rel="stylesheet" href="catarclabel/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="catarclabel/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="enabled" id="enabled">
+      <label for="enabled" language="enabled"></label>
+    </div>
+    <ul>
+      <li class="fixclear">
+        <span language="object_source"></span>
+        <select name="object_source" class="right">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+          <option value="6">Channel G</option>
+          <option value="7">Channel H</option>
+          <option value="8">Channel I</option>
+          <option value="9">Channel J</option>
+          <option value="10">Channel K</option>
+          <option value="11">Channel L</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="lane_source"></span>
+        <select name="lane_source" class="right">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="gnssimu_source"></span>
+        <select name="gnssimu_source" class="right">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="straight_line_radius"></span>
+        <input type="number" name="straight_line_radius" max="10000000" min="0" step="50" value="100" class="right" />
+      </li>
+    </ul>
+  </div>
+  <script src="catarclabel/js/jquery-2.14.js"></script>
+  <script src="catarclabel/js/bi-common.js"></script>
+  <script src="catarclabel/js/text.js"></script>
+  <script src="catarclabel/js/index.js"></script>
+</body>
+
+</html>

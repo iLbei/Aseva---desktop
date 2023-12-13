@@ -1,0 +1,111 @@
+.detail {
+  padding: 10px;
+}
+
+.detail>div>div {
+  position: relative;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 15px 10px 10px;
+  width: 278px;
+}
+
+.detail>div.left>div>div>div {
+  height: 30px;
+}
+
+.detail>div>div:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.detail>div>div>p {
+  position: absolute;
+  left: 4px;
+  background-color: #f0f0f0;
+  padding: 0 2px;
+  top: -10px;
+}
+
+.detail input {
+  width: 102px;
+}
+
+.detail>.right select {
+  width: 106px;
+}
+
+.w195 {
+  width: 240px;
+}
+
+.w100 {
+  width: 110px;
+  margin-right: 5px;
+}
+
+.space_a {
+  position: relative;
+  width: 123px;
+}
+
+a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.space_a>a {
+  max-width: 134px;
+}
+
+.space_a>p {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+  border: 1px solid rgb(66, 65, 65);
+  background-color: #fff;
+  z-index: 1;
+  padding: 0 3px;
+  color: rgb(59, 59, 59);
+  white-space: nowrap;
+}
+
+.not_a {
+  text-decoration: none;
+  color: rgb(66, 65, 65);
+}
+
+.springgreen {
+  color: rgb(62, 114, 78);
+  margin: 0;
+}
+
+.a {
+  text-decoration: none;
+  color: darkgrey;
+}
+
+.detail>.bottom {
+  text-align: right;
+}
+
+.detail>.bottom>input {
+  width: 75px;
+  margin-right: 12px;
+}
+
+.container>.right>div>div>div:nth-child(1),
+.container>.right>div>div>div:nth-child(2),
+.container>.right>div>div>div:nth-child(3),
+.container>.right>div>div>div:nth-child(6),
+.container>.right>div>div>div:nth-child(4)>div,
+.container>.right>div>div>div:nth-child(5)>div,
+.container>.right>div>div>div:nth-child(7)>div {
+  height: 24.36px;
+}
+
+[language="valid_value"],
+[language="flag_value"],
+[language="fix_class"] {
+  padding-top: 2px;
+}

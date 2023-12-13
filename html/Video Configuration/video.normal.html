@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html language="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="video/css/common.css" />
+    <link rel="stylesheet" href="video/css/index.css" />
+  </head>
+
+  <body
+    oncontextmenu="return false"
+    ondragstart="return false"
+    onselectstart="return false"
+    onbeforecopy="return false"
+  >
+    <div class="normal">
+      <div class="left">
+        <ul>
+          <li class="fixclear">
+            <span class="left" language="position"></span>
+            <ul class="left">
+              <li>
+                <input
+                  type="radio"
+                  name="special_hint"
+                  value="0"
+                  id="undefined"
+                  checked
+                />
+                <label for="undefined" language="undefined"></label>
+              </li>
+              <li>
+                <input type="radio" name="special_hint" id="any" value="1" />
+                <label for="any" language="any"></label>
+              </li>
+              <li>
+                <input type="radio" name="special_hint" value="2" id="front" />
+                <label for="front" language="front"></label>
+              </li>
+            </ul>
+          </li>
+          <li class="fixclear">
+            <span class="left" language="origin"></span>
+            <ul class="left">
+              <li>
+                <span>X</span
+                ><input
+                  type="number"
+                  name="ox"
+                  max="1"
+                  min="-21"
+                  value="0.00"
+                  step="0.01"
+                />
+              </li>
+              <li>
+                <span>Y</span
+                ><input
+                  type="number"
+                  name="oy"
+                  max="5"
+                  min="-5"
+                  value="0.00"
+                  step="0.01"
+                />
+              </li>
+              <li>
+                <span>H</span
+                ><input
+                  type="number"
+                  name="oz"
+                  max="5"
+                  min="0"
+                  value="1.00"
+                  step="0.01"
+                />
+              </li>
+            </ul>
+          </li>
+          <li class="fixclear">
+            <span class="left" language="posture"></span>
+            <ul class="left">
+              <li>
+                <span language="yaw"></span
+                ><input
+                  type="number"
+                  min="-180"
+                  max="180"
+                  name="yaw"
+                  value="0.0"
+                  step="0.1"
+                />
+              </li>
+              <li>
+                <span language="pitch"></span
+                ><input
+                  type="number"
+                  min="-90"
+                  max="90"
+                  name="pitch"
+                  value="0.0"
+                  step="0.1"
+                />
+              </li>
+              <li>
+                <span language="roll"></span
+                ><input
+                  type="number"
+                  min="-90"
+                  max="90"
+                  name="roll"
+                  value="0.0"
+                  step="0.1"
+                />
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <button language="import_front" class="normal_import"></button>
+      </div>
+      <div class="right">
+        <canvas class="canvas" width="218" height="324"></canvas>
+      </div>
+    </div>
+    <script src="video/js/jquery-2.14.js"></script>
+    <script src="video/js/bi-common.js"></script>
+    <script src="video/js/text.js"></script>
+    <script src="video/js/normal.js"></script>
+  </body>
+</html>

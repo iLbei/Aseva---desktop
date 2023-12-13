@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOA Evaluation</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="noa-evaluation/css/common.css">
+  <link rel="stylesheet" href="noa-evaluation/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="noaEvaluationEnable" id="noaEvaluationEnable">
+      <label for="noaEvaluationEnable" language="noaEvaluationEnable"></label>
+    </div>
+    <div>
+      <div class="left">
+        <fieldset class="noa">
+          <legend>NOA</legend>
+          <ul>
+            <li>
+              <span language="noaEnableSignal"></span>
+              <a href="javascript:;" name="noaEnableSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="noaEnableTargetValue"></span>
+              <input type="number" name="noaEnableTargetValue" value="0" step="1">
+            </li>
+            <li>
+              <span language="accEnableSignal"></span>
+              <a href="javascript:;" name="accEnableSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="accEnableTargetValue"></span>
+              <input type="number" name="accEnableTargetValue" value="0" step="1">
+            </li>
+            <li>
+              <span language="accObjectDetectSignal"></span>
+              <a href="javascript:;" name="accObjectDetectSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="accObjectDetectTargetValue"></span>
+              <input type="number" name="accObjectDetectTargetValue" value="0" step="1">
+            </li>
+            <li>
+              <span language="accDistanceTargetValue"></span>
+              <input type="number" name="accDistanceTargetValue" value="50" step="0.1">
+            </li>
+            <li>
+              <span language="noaAbortSignal"></span><a href="javascript:;" name="noaAbortSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="autoLaneChangeStateSignal"></span><a href="javascript:;" name="autoLaneChangeStateSignal"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="tackoverSignal"></span><a href="javascript:;" name="tackoverSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="downgradesSignal"></span><a href="javascript:;" name="downgradesSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="laneChangeSignal"></span><a href="javascript:;" name="laneChangeSignal" language="not_config"></a>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="vehicle">
+          <legend language="vehicle">Vehicle</legend>
+          <ul>
+            <li>
+              <span language="egoSpeedSignal"></span><a href="javascript:;" name="egoSpeedSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="laneChangeBehaviorSignal"></span><a href="javascript:;" name="laneChangeBehaviorSignal"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="leftTurnLightSignal"></span><a href="javascript:;" name="leftTurnLightSignal"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="rightTurnLightSignal"></span><a href="javascript:;" name="rightTurnLightSignal"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="passageStartSignal"></span><a href="javascript:;" name="passageStartSignal"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="passageEndSignal"></span><a href="javascript:;" name="passageEndSignal" language="not_config"></a>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="env">
+          <legend language="env">Environment</legend>
+          <ul>
+            <li>
+              <span language="weatherTypeSignal"></span><a href="javascript:;" name="weatherTypeSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="roadSurfaceTypeSignal"></span><a href="javascript:;" name="roadSurfaceTypeSignal"
+                language="not_config"></a>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="right">
+        <fieldset class="road">
+          <legend language="road">Road</legend>
+          <ul>
+            <li>
+              <span language="roadClassSignal"></span><a href="javascript:;" name="roadClassSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="roadTypeSignal"></span><a href="javascript:;" name="roadTypeSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="upperSpeedSignal"></span><a href="javascript:;" name="upperSpeedSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="lowerSpeedSignal"></span><a href="javascript:;" name="lowerSpeedSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="distanceToRampSignal"></span><a href="javascript:;" name="distanceToRampSignal"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="rampMergingDistanceSignal"></span><a href="javascript:;" name="rampMergingDistanceSignal"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="laneAngleSignal"></span><a href="javascript:;" name="laneAngleSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="laneTypeSignal"></span><a href="javascript:;" name="laneTypeSignal"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="laneLineContactThresh"></span><input type="number" name="laneLineContactThresh" value="0.15" step="0.1">
+            </li>
+            <li>
+              <span language="leftLaneLineDistanceSignal"></span><a href="javascript:;" name="leftLaneLineDistanceSignal"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="rightLaneLineDistanceSignal"></span><a href="javascript:;" name="rightLaneLineDistanceSignal"
+                language="not_config"></a>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="traffic">
+          <legend language="traffic">Traffic State</legend>
+          <ul>
+            <li>
+              <span language="trafficStateSignal"></span><a href="javascript:;" name="trafficStateSignal"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="leftFrontVehiclePosX"></span><a href="javascript:;" name="leftFrontVehiclePosX"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="leftRearVehiclePosX"></span><a href="javascript:;" name="leftRearVehiclePosX"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="rightFrontVehiclePosX"></span><a href="javascript:;" name="rightFrontVehiclePosX"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="rightRearVehiclePosX"></span><a href="javascript:;" name="rightRearVehiclePosX"
+                language="not_config"></a>
+            </li>
+            <li>
+              <span language="cipvPosSignal"></span><a href="javascript:;" name="cipvPosSignal" language="not_config"></a>
+            </li>
+            <li>
+              <span language="cipvTTCSafeThresh"></span><input type="number" name="cipvTTCSafeThresh" value="10" step="0.1">
+            </li>
+            <li>
+              <span language="cipvTTCSignal"></span><a href="javascript:;" name="cipvTTCSignal" language="not_config"></a>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+
+    </div>
+  </div>
+  <script src="noa-evaluation/js/jquery-2.14.js"></script>
+  <script src="noa-evaluation/js/bi-common.js"></script>
+  <script src="noa-evaluation/js/text.js"></script>
+  <script src="noa-evaluation/js/index.js"></script>
+</body>
+
+</html>

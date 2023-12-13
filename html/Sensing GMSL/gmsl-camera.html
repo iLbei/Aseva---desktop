@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>森云GMSL</title>
+  <link rel="stylesheet" href="gmsl-camera/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="gmsl-camera/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="connect" id="connect">
+      <label for="connect" language="connect"></label>
+      <label for="isUpdate" language="isUpdate" class="right"></label>
+      <input type="checkbox" name="isUpdate" class="right" id="isUpdate">
+    </div>
+    <div id="table">
+      <div class="fixclear">
+        <div onclick="onClick(this)" class="all"></div>
+        <div language="ip"></div>
+        <div language="user"></div>
+        <div language="pass"></div>
+      </div>
+      <div class="table">
+        <div>
+          <div class="fixclear input">
+            <div onclick="onClick(this)" class="select"></div>
+            <div>
+              <input type="text" class="text" name="ip" id="">
+            </div>
+            <div>
+              <input type="text" class="text" name="user" id="">
+            </div>
+            <div>
+              <input type="text" class="text" name="pass" id="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="gmsl-camera/js/jquery-2.14.js"></script>
+  <script src="gmsl-camera/js/text.js"></script>
+  <script src="gmsl-camera/js/bi-common.js"></script>
+  <script src="gmsl-camera/js/index.js"></script>
+</body>
+
+</html>

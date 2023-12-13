@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wlan Info</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="wlan-info/css/common.css">
+  <style>
+    .container {
+      width: 315px;
+      height: 70px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    select {
+      width: 211px;
+    }
+
+    span {
+      width: 100px;
+    }
+
+    .container>div:nth-child(2) {
+      margin-top:27px;
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="wlan_enable" id="wlan_enable">
+      <label for="wlan_enable" language="wlan_enable"></label>
+    </div>
+    <div>
+      <span language="profileName"></span>
+      <select name="wlan_profileName">
+
+      </select>
+    </div>
+  </div>
+  <script src="wlan-info/js/jquery-2.14.js"></script>
+  <script src="wlan-info/js/bi-common.js"></script>
+  <script src="wlan-info/js/text.js"></script>
+  <script src="wlan-info/js/index.js"></script>
+</body>
+
+</html>

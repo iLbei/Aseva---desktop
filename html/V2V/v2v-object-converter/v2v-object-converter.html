@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v2v object converter</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="v2v-object-converter/css/common.css">
+  <link rel="stylesheet" href="v2v-object-converter/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container fixclear">
+    <input type="checkbox" name="Enabled" id="Enabled">
+    <label for="Enabled" language="Enabled"></label>
+    <div>
+      <div class="left fixclear">
+        <span language="SubjectGNSS_IMUChannel"></span>
+        <select name="SubjectGNSS_IMUChannel">
+          <option value="0">(Disabled)</option>
+          <option value="1">Channel A</option>
+          <option value="2">Channel B</option>
+          <option value="3">Channel C</option>
+          <option value="4">Channel D</option>
+          <option value="5">Channel E</option>
+          <option value="6">Channel F</option>
+        </select>
+        <div class="target">
+          <p><span language="target"></span>1 <span language="config"></span></p>
+          <ul>
+            <li class="fixclear">
+              <span language="target"></span>1 <span language="CNSS_IMUOutputChannel"></span>
+              <select name="target0GNSS_IMUChannel" class="right">
+                <option value="0">(Disabled)</option>
+                <option value="1">Channel A</option>
+                <option value="2">Channel B</option>
+                <option value="3">Channel C</option>
+                <option value="4">Channel D</option>
+                <option value="5">Channel E</option>
+                <option value="6">Channel F</option>
+              </select>
+            </li>
+            <li class="fixclear">
+              <span language="target"></span>1 <span language="object_type"></span>
+              <select name="target0Type" class="right">
+                <option value="0">Car</option>
+                <option value="1">Pedestrian</option>
+              </select>
+            </li>
+            <li class="fixclear">
+              <div class="left">
+                <span language="vehicle_width"></span>
+                <input type="number" step="0.001" name="target0VehicleWidth" max="10" min="0" value="2">
+              </div>
+              <div class="right">
+                <span language="vehicle_height"></span>
+                <input type="number" step="0.001" name="target0VehicleLength" max="20" min="0" value="5">
+              </div>
+            </li>
+            <li class="fixclear">
+              <div class="left">
+                <span language="dxoffset"></span><input type="text" value="0" name="target0DxOffset">
+              </div>
+              <div class="right">
+                <span language="dyoffset"></span><input type="text" value="0" name="target0DyOffset">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="target">
+          <p><span language="target"></span>3 <span language="config"></span></p>
+          <ul>
+            <li class="fixclear">
+              <span language="target"></span>3 <span language="CNSS_IMUOutputChannel"></span>
+              <select name="target2GNSS_IMUChannel" class="right">
+                <option value="0">(Disabled)</option>
+                <option value="1">Channel A</option>
+                <option value="2">Channel B</option>
+                <option value="3">Channel C</option>
+                <option value="4">Channel D</option>
+                <option value="5">Channel E</option>
+                <option value="6">Channel F</option>
+              </select>
+            </li>
+            <li class="fixclear">
+              <span language="target"></span>3 <span language="object_type"></span>
+              <select name="target2Type" class="right">
+                <option value="0">Car</option>
+                <option value="1">Pedestrian</option>
+              </select>
+            </li>
+            <li class="fixclear">
+              <div class="left">
+                <span language="vehicle_width"></span>
+                <input type="number" step="0.001" name="target2VehicleWidth" max="10" min="0" value="2">
+              </div>
+              <div class="right">
+                <span language="vehicle_height"></span>
+                <input type="number" step="0.001" name="target2VehicleLength" max="20" min="0" value="5">
+              </div>
+            </li>
+            <li class="fixclear">
+              <div class="left">
+                <span language="dxoffset"></span><input type="text" value="0" name="target2DxOffset">
+              </div>
+              <div class="right">
+                <span language="dyoffset"></span><input type="text" value="0" name="target2DyOffset">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="target">
+          <p><span language="target"></span>5 <span language="config"></span></p>
+          <ul>
+            <li class="fixclear">
+              <span language="target"></span>5 <span language="CNSS_IMUOutputChannel"></span>
+              <select name="target4GNSS_IMUChannel" class="right">
+                <option value="0">(Disabled)</option>
+                <option value="1">Channel A</option>
+                <option value="2">Channel B</option>
+                <option value="3">Channel C</option>
+                <option value="4">Channel D</option>
+                <option value="5">Channel E</option>
+                <option value="6">Channel F</option>
+              </select>
+            </li>
+            <li class="fixclear">
+              <span language="target"></span>5 <span language="object_type"></span>
+              <select name="target4Type" class="right">
+                <option value="0">Car</option>
+                <option value="1">Pedestrian</option>
+              </select>
+            </li>
+            <li class="fixclear">
+              <div class="left">
+                <span language="vehicle_width"></span>
+                <input type="number" step="0.001" name="target4VehicleWidth" max="10" min="0" value="2">
+              </div>
+              <div class="right">
+                <span language="vehicle_height"></span>
+                <input type="number" step="0.001" name="target4VehicleLength" max="20" min="0" value="5">
+              </div>
+            </li>
+            <li class="fixclear">
+              <div class="left">
+                <span language="dxoffset"></span><input type="text" value="0" name="target4DxOffset">
+              </div>
+              <div class="right">
+                <span language="dyoffset"></span><input type="text" value="0" name="target4DyOffset">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+        <span language="OutputObjectsChannel"></span>
+        <select name="OutputObjectsChannel">
+          <option value="0">(Disabled)</option>
+          <option value="1">Channel A</option>
+          <option value="2">Channel B</option>
+          <option value="3">Channel C</option>
+          <option value="4">Channel D</option>
+          <option value="5">Channel E</option>
+          <option value="6">Channel F</option>
+        </select>
+        <div class="target">
+          <p><span language="target"></span>2 <span language="config"></span></p>
+          <ul>
+            <li class="fixclear">
+              <span language="target"></span>2 <span language="CNSS_IMUOutputChannel"></span>
+              <select name="target1GNSS_IMUChannel" class="right">
+                <option value="0">(Disabled)</option>
+                <option value="1">Channel A</option>
+                <option value="2">Channel B</option>
+                <option value="3">Channel C</option>
+                <option value="4">Channel D</option>
+                <option value="5">Channel E</option>
+                <option value="6">Channel F</option>
+              </select>
+            </li>
+            <li class="fixclear">
+              <span language="target"></span>2 <span language="object_type"></span>
+              <select name="target1Type" class="right">
+                <option value="0">Car</option>
+                <option value="1">Pedestrian</option>
+              </select>
+            </li>
+            <li class="fixclear">
+              <div class="left">
+                <span language="vehicle_width"></span>
+                <input type="number" step="0.001" name="target1VehicleWidth" max="10" min="0" value="2">
+              </div>
+              <div class="right">
+                <span language="vehicle_height"></span>
+                <input type="number" step="0.001" name="target1VehicleLength" max="20" min="0" value="5">
+              </div>
+            </li>
+            <li class="fixclear">
+              <div class="left">
+                <span language="dxoffset"></span><input type="text" value="0" name="target1DxOffset">
+              </div>
+              <div class="right">
+                <span language="dyoffset"></span><input type="text" value="0" name="target1DyOffset">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="target">
+          <p><span language="target"></span>4 <span language="config"></span></p>
+          <ul>
+            <li class="fixclear">
+              <span language="target"></span>4 <span language="CNSS_IMUOutputChannel"></span>
+              <select name="target3GNSS_IMUChannel" class="right">
+                <option value="0">(Disabled)</option>
+                <option value="1">Channel A</option>
+                <option value="2">Channel B</option>
+                <option value="3">Channel C</option>
+                <option value="4">Channel D</option>
+                <option value="5">Channel E</option>
+                <option value="6">Channel F</option>
+              </select>
+            </li>
+            <li class="fixclear">
+              <span language="target"></span>4 <span language="object_type"></span>
+              <select name="target3Type" class="right">
+                <option value="0">Car</option>
+                <option value="1">Pedestrian</option>
+              </select>
+            </li>
+            <li class="fixclear">
+              <div class="left">
+                <span language="vehicle_width"></span>
+                <input type="number" step="0.001" name="target3VehicleWidth" max="10" min="0" value="2">
+              </div>
+              <div class="right">
+                <span language="vehicle_height"></span>
+                <input type="number" step="0.001" name="target3VehicleLength" max="20" min="0" value="5">
+              </div>
+            </li>
+            <li class="fixclear">
+              <div class="left">
+                <span language="dxoffset"></span><input type="text" value="0" name="target3DxOffset">
+              </div>
+              <div class="right">
+                <span language="dyoffset"></span><input type="text" value="0" name="target3DyOffset">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p><span language="cal_heading_offset"></span></p>
+          <ul>
+            <li class="fixclear">
+              <div class="left">
+                <span>Dx:</span>
+                <input type="text" value="0" name="cal_dx">
+              </div>
+              <div class="right">
+                <span>Dy:</span>
+                <input type="text" value="0" name="cal_dy">
+              </div>
+            </li>
+            <li class="fixclear">
+              <div class="left">
+               <button>Angle</button>
+              </div>
+              <div class="right">
+                <input type="text" value="0" class="angle">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="v2v-object-converter/js/jquery-2.14.js"></script>
+  <script src="v2v-object-converter/js/bi-common.js"></script>
+  <script src="v2v-object-converter/js/text.js"></script>
+  <script src="v2v-object-converter/js/index.js"></script>
+</body>
+
+</html>

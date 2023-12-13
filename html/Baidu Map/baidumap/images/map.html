@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"΢���ź�";}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=D4bed86ae2c6d4f208d675b68a24bf62"></script>
+    <title>ASEva Global Map</title>
+  </head>
+  <body>
+    <div id="allmap"></div>
+  </body>
+</html>
+<script type="text/javascript">
+
+    var map;
+    var marker;
+    var routine;
+    function load_map() {
+        if (typeof (BMap) == 'undefined') return false;
+        map = new BMap.Map("allmap", { enableMapClick: false });
+        map.enableDragging();
+        map.enableScrollWheelZoom();
+        map.enableDoubleClickZoom();
+        map.enableKeyboard();
+        return true;
+    }
+
+    function satellite_map(showingSatellite) {
+        if (map == null) return;
+        map.setMapType(BMAP_SATELLITE_MAP);
+    }
+
+    function normal_map() {
+        if (map == null) return;
+        map.setMapType(BMAP_NORMAL_MAP);
+    }
+
+    function enable_operations() {
+        if (map == null) return;
+        map.enableDragging();
+        map.enableScrollWheelZoom();
+        map.enableDoubleClickZoom();
+        map.enableKeyboard();
+    }
+
+    function disable_operations() {
+        if (map == null) return;
+        map.disableDragging();
+        map.disableScrollWheelZoom();
+        map.disableDoubleClickZoom();
+        map.disableKeyboard();
+    }
+
+    function zoom_in() {
+        if (map == null) return;
+        map.zoomIn();
+    }
+
+    function zoom_out() {
+        if (map == null) return;
+        map.zoomOut();
+    }
+
+    function get_zoom() {
+        if (map == null) return 12;
+        return map.getZoom();
+    }
+
+    function get_center_lng() {
+        if (map == null) return 116.404;
+        return map.getCenter().lng;
+    }
+
+    function get_center_lat() {
+        if (map == null) return 39.915;
+        return map.getCenter().lat;
+    }
+
+    function set_center(center_lng, center_lat) {
+        if (map == null) return;
+        map.setCenter(new BMap.Point(center_lng, center_lat));
+    }
+
+    function set_center_and_zoom(center_lng, center_lat, zoom) {
+        if (map == null) return;
+        map.centerAndZoom(new BMap.Point(center_lng, center_lat), zoom);
+    }
+
+    function set_location_marker(longitude, latitude) {
+        if (map == null) return;
+        var loc = new BMap.Point(longitude, latitude);
+        if (marker == null) {
+            marker = new BMap.Marker(loc, { enableMassClear: false });
+            map.addOverlay(marker);
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+        }
+        else marker.setPosition(loc);
+    }
+
+    function remove_location_marker() {
+        if (map == null) return;
+        if (marker != null) {
+            map.removeOverlay(marker);
+            marker = null;
+        }
+    }
+
+    function reset_location_marker_animation() {
+        if (map == null) return;
+        if (marker != null) {
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+        }
+    }
+
+    function set_routine(newPointsScript) {
+        if (map == null) return;
+        var pts = eval(newPointsScript);
+        if (routine == null) {
+            routine = new BMap.Polyline(pts, { enableMassClear: false });
+            map.addOverlay(routine);
+        }
+        else routine.setPath(pts);
+    }
+
+    function remove_routine() {
+        if (map == null) return;
+        if (routine != null) {
+            map.removeOverlay(routine);
+            routine = null;
+        }
+    }
+
+</script>

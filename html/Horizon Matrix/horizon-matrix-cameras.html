@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizon Matrix</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="horizon-matrix-cameras/css/common.css">
+  <link rel="stylesheet" href="horizon-matrix-cameras/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="top fixclear">
+      <div class="left fixclear">
+        <button name="rad" id="r1" class="white">1</button>
+        <button name="rad" id="r2">2</button>
+        <button name="rad" id="r3">3</button>
+        <button name="rad" id="r4">4</button>
+      </div>
+    </div>
+    <div class="center">
+      <div class="c0">
+        <div>
+          <p language="connect"></p>
+          <div class="fixclear">
+            <div class="fixclear">
+              <div class="left">
+                <span language="ip"></span>
+                <input type="text" name="ip">
+              </div>
+              <div class="right">
+                <span language="port"></span>
+                <input type="number" name="port" min="0" max="65535" value="5560" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="image_scaling"></p>
+              <form action="">
+                <div class="fixclear cc">
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="1" id="ratio11" checked>
+                    <label for="ratio11" language="orign_size"></label>
+                  </div>
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="0.5" id="ratio12">
+                    <label for="ratio12" language="size1"></label>
+                  </div>
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="0.25" id="ratio13">
+                    <label for="ratio13" language="size2"></label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="process"></p>
+          <div>
+            <ul>
+              <li class="fixclear">
+                <div class="left">
+                  <input type="checkbox" name="enabled" id="enabled1">
+                  <label language="enabled" for="enabled1"></label>
+                </div>
+                <div class="right">
+                  <a href="javascript:;" onclick="onForword(this)" language="config_lane_line_bounds"></a>
+                </div>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="time_sync_mode"></span>
+                <select class="right" name="time_sync_mode">
+                  <option value="0" selected language="arrive_time"></option>
+                  <option value="1" language="local_time"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="obj_out_channel"></span>
+                <select class="right" name="channel_object">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                  <option value="4" language="chan_e"></option>
+                  <option value="5" language="chan_f"></option>
+                  <option value="6" language="chan_g"></option>
+                  <option value="7" language="chan_h"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="lane_out_channel"></span>
+                <select class="right" name="channel_lane">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="traffic_out_channel"></span>
+                <select class="right" name="channel_traffic">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="freespace_out_channel"></span>
+                <select class="right" name="channel_freespace">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" selected language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="fixclear">
+            <div class="left m65">
+              <div class="left fixclear w140">
+               <input type="checkbox" name="IsUseCalHeading" id="IsUseCalHeading1">
+                <label language="IsUseCalHeading" for="IsUseCalHeading1"></label>
+              </div>
+              <div class="fixclear w140 m65">
+                <div class="left" language="orign"></div>
+                <div class="right">
+                  <div class="fixclear">
+                    <span class="left">X</span>
+                    <input class="right" type="number" name="pos_x" value="0.00" min="-6" max="1" step="0.01" id="x">
+                  </div>
+                  <div class="fixclear">
+                    <span class="left">Y</span>
+                    <input class="right" type="number" name="pos_y" value="0.00" min="-3" max="3" step="0.01" id="y">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right" id="right">
+              <canvas class="myCanvas" width="143" height="180"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c0">
+        <div>
+          <p language="connect"></p>
+          <div class="fixclear">
+            <div class="fixclear">
+              <div class="left">
+                <span language="ip"></span>
+                <input type="text" name="ip">
+              </div>
+              <div class="right">
+                <span language="port"></span>
+                <input type="number" name="port" min="0" max="65535" value="5561" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="image_scaling"></p>
+              <form action="">
+                <div class="fixclear cc">
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="1" id="ratio21" checked>
+                    <label for="ratio21" language="orign_size"></label>
+                  </div>
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="0.5" id="ratio22">
+                    <label for="ratio22" language="size1"></label>
+                  </div>
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="0.25" id="ratio23">
+                    <label for="ratio23" language="size2"></label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="process"></p>
+          <div>
+            <ul>
+              <li class="fixclear">
+                <div class="left">
+                  <input type="checkbox" name="enabled" id="enabled2">
+                  <label language="enabled" for="enabled2"></label>
+                </div>
+                <div class="right">
+                  <a href="javascript:;" onclick="onForword(this)" language="config_lane_line_bounds"></a>
+                </div>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="time_sync_mode"></span>
+                <select class="right" name="time_sync_mode1">
+                  <option value="0" selected language="arrive_time"></option>
+                  <option value="1" language="local_time"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="obj_out_channel"></span>
+                <select class="right" name="channel_object">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                  <option value="4" language="chan_e"></option>
+                  <option value="5" language="chan_f"></option>
+                  <option value="6" language="chan_g"></option>
+                  <option value="7" language="chan_h"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="lane_out_channel"></span>
+                <select class="right" name="channel_lane">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="traffic_out_channel"></span>
+                <select class="right" name="channel_traffic">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="freespace_out_channel"></span>
+                <select class="right" name="channel_freespace">
+                  <option value="-1" language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="fixclear">
+            <div class="left m65">
+              <div class="left fixclear w140">
+               <input type="checkbox" name="IsUseCalHeading" id="IsUseCalHeading2">
+                <label language="IsUseCalHeading" for="IsUseCalHeading2"></label>
+              </div>
+              <div class="fixclear w140 m65">
+                <div class="left" language="orign"></div>
+                <div class="right">
+                  <div class="fixclear">
+                    <span class="left">X</span>
+                    <input class="right" type="number" name="pos_x" value="0.00" min="-6" max="1" step="0.01" id="x">
+                  </div>
+                  <div class="fixclear">
+                    <span class="left">Y</span>
+                    <input class="right" type="number" name="pos_y" value="0.00" min="-3" max="3" step="0.01" id="y">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right" id="right">
+              <canvas class="myCanvas" width="143" height="180"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c0">
+        <div>
+          <p language="connect"></p>
+          <div class="fixclear">
+            <div class="fixclear">
+              <div class="left">
+                <span language="ip"></span>
+                <input type="text" name="ip">
+              </div>
+              <div class="right">
+                <span language="port"></span>
+                <input type="number" name="port" min="0" max="65535" value="5562" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="image_scaling"></p>
+              <form action="">
+                <div class="fixclear cc">
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="1" id="ratio31" checked>
+                    <label for="ratio31" language="orign_size"></label>
+                  </div>
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="0.5" id="ratio32">
+                    <label for="ratio32" language="size1"></label>
+                  </div>
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="0.25" id="ratio33">
+                    <label for="ratio33" language="size2"></label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="process"></p>
+          <div>
+            <ul>
+              <li class="fixclear">
+                <div class="left">
+                  <input type="checkbox" name="enabled" id="enabled3">
+                  <label language="enabled" for="enabled3"></label>
+                </div>
+                <div class="right">
+                  <a href="javascript:;" onclick="onForword(this)" language="config_lane_line_bounds"></a>
+                </div>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="time_sync_mode"></span>
+                <select class="right" name="time_sync_mode2">
+                  <option value="0" selected language="arrive_time"></option>
+                  <option value="1" language="local_time"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="obj_out_channel"></span>
+                <select class="right" name="channel_object">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                  <option value="4" language="chan_e"></option>
+                  <option value="5" language="chan_f"></option>
+                  <option value="6" language="chan_g"></option>
+                  <option value="7" language="chan_h"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="lane_out_channel"></span>
+                <select class="right" name="channel_lane">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="traffic_out_channel"></span>
+                <select class="right" name="channel_traffic">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="freespace_out_channel"></span>
+                <select class="right" name="channel_freespace">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="fixclear">
+            <div class="left m65">
+              <div class="left fixclear w140">
+               <input type="checkbox" name="IsUseCalHeading" id="IsUseCalHeading3">
+                <label language="IsUseCalHeading" for="IsUseCalHeading3"></label>
+              </div>
+              <div class="fixclear w140 m65">
+                <div class="left" language="orign"></div>
+                <div class="right">
+                  <div class="fixclear">
+                    <span class="left">X</span>
+                    <input class="right" type="number" name="pos_x" value="0.00" min="-6" max="1" step="0.01" id="x">
+                  </div>
+                  <div class="fixclear">
+                    <span class="left">Y</span>
+                    <input class="right" type="number" name="pos_y" value="0.00" min="-3" max="3" step="0.01" id="y">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right" id="right">
+              <canvas class="myCanvas" width="143" height="180"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c0">
+        <div>
+          <p language="connect"></p>
+          <div class="fixclear">
+            <div class="fixclear">
+              <div class="left">
+                <span language="ip"></span>
+                <input type="text" name="ip">
+              </div>
+              <div class="right">
+                <span language="port"></span>
+                <input type="number" name="port" min="0" max="65535" value="5563" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="image_scaling"></p>
+              <form action="">
+                <div class="fixclear cc">
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="1" id="ratio41" checked>
+                    <label for="ratio41" language="orign_size"></label>
+                  </div>
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="0.5" id="ratio42">
+                    <label for="ratio42" language="size1"></label>
+                  </div>
+                  <div>
+                    <input type="radio" name="image_scale_ratio" value="0.25" id="ratio43">
+                    <label for="ratio43" language="size2"></label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="process"></p>
+          <div>
+            <ul>
+              <li class="fixclear">
+                <div class="left">
+                  <input type="checkbox" name="enabled" id="enabled4">
+                  <label language="enabled" for="enabled4"></label>
+                </div>
+                <div class="right">
+                  <a href="javascript:;" onclick="onForword(this)" language="config_lane_line_bounds"></a>
+                </div>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="time_sync_mode"></span>
+                <select class="right" name="time_sync_mode3">
+                  <option value="0" selected language="arrive_time"></option>
+                  <option value="1" language="local_time"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="obj_out_channel"></span>
+                <select class="right" name="channel_object">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                  <option value="4" language="chan_e"></option>
+                  <option value="5" language="chan_f"></option>
+                  <option value="6" language="chan_g"></option>
+                  <option value="7" language="chan_h"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="lane_out_channel"></span>
+                <select class="right" name="channel_lane">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="traffic_out_channel"></span>
+                <select class="right" name="channel_traffic">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <span class="left" language="freespace_out_channel"></span>
+                <select class="right" name="channel_freespace">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="chan_a"></option>
+                  <option value="1" language="chan_b"></option>
+                  <option value="2" language="chan_c"></option>
+                  <option value="3" language="chan_d"></option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <div class="fixclear">
+            <div class="left m65">
+              <div class="left fixclear w140">
+                <input type="checkbox" name="IsUseCalHeading" id="IsUseCalHeading4">
+                <label language="IsUseCalHeading" for="IsUseCalHeading4"></label>
+              </div>
+              <div class="fixclear w140 m65">
+                <div class="left" language="orign"></div>
+                <div class="right">
+                  <div class="fixclear">
+                    <span class="left">X</span>
+                    <input class="right" type="number" name="pos_x" value="0.00" min="-6" max="1" step="0.01" id="x">
+                  </div>
+                  <div class="fixclear">
+                    <span class="left">Y</span>
+                    <input class="right" type="number" name="pos_y" value="0.00" min="-3" max="3" step="0.01" id="y">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right" id="right">
+              <canvas class="myCanvas" width="143" height="180"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="horizon-matrix-cameras/js/jquery-2.14.js"></script>
+  <script src="horizon-matrix-cameras/js/bi-common.js"></script>
+  <script src="horizon-matrix-cameras/js/text.js"></script>
+  <script src="horizon-matrix-cameras/js/index.js"></script>
+</body>
+
+</html>

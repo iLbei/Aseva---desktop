@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Script</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="python-scripts/css/common.css">
+  <link rel="stylesheet" href="python-scripts/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="b_left">
+      <div class="top">
+        <a href="javascript:;" language="add_module"></a>
+        <a href="javascript:;" language="import_module"></a>
+      </div>
+      <div class="module_content"></div>
+    </div>
+    <div class="b_center fixclear">
+      <div class="top right">
+        <a href="javascript:;" language="export_module"></a>
+        <a href="javascript:;" language="remove_module"></a>
+      </div>
+      <div class="content">
+        <div class="basic">
+          <p language="basic"></p>
+          <div>
+            <div class="fixclear">
+              <input type="checkbox" name="enabled" id="enabled">
+              <label for="enabled" language="enabled"></label>
+            </div>
+            <div class="fixclear">
+              <span language="name"></span>
+              <input type="text" name="name" class="right">
+            </div>
+          </div>
+        </div>
+        <div class="normalmode">
+          <p language="normalmode"></p>
+          <ul>
+            <li class="fixclear">
+              <span language="id" class="left"></span>
+              <input type="text" name="id" class="right">
+            </li>
+            <li>
+              <input type="checkbox" name="type_auto_conversion" id="type_auto">
+              <label for="type_auto" language="type_auto"></label>
+            </li>
+            <li>
+              <input type="checkbox" name="id_legacy_mode" id="id_legacy_mode">
+              <label for="id_legacy_mode" language="id_legacy_mode"></label>
+            </li>
+          </ul>
+        </div>
+        <div class="templatemode">
+          <p language="templatemode"></p>
+          <ul>
+            <li>
+              <span language="template"></span>
+              <span class="templateval"></span>
+            </li>
+            <li class="fixclear">
+              <span language="template_postfix"></span>
+              <input type="text" name="template_postfix" class="right">
+            </li>
+            <li>
+              <span language="overwritefreq"></span>
+              <a href="javascript:;" class="overwritedef" language="templateDefault"></a>
+            </li>
+            <li>
+              <span language="overwriteparam"></span>
+              <a href="javascript:;" class="overwriteparam" language="none"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="io">
+          <p>I/O</p>
+          <div>
+            <div>
+              <span language="freq"></span>
+              <input type="number" name="freq" min="5" max="100" value="20" step="1">
+              <span language="hz"></span>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="in"></span>
+              <a href="javascript:;" class="in" language="none"></a>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="sample_in"></span>
+              <a href="javascript:;" class="sample_in" language="none"></a>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="output_signal"></span>
+              <a href="javascript:;" class="out" language="none"></a>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="output_sample"></span>
+              <a href="javascript:;" class="sample_out" language="none"></a>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="output_scene"></span>
+              <a href="javascript:;" class="scene_out" language="none"></a>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="output_report"></span>
+              <a href="javascript:;" class="report_out" language="none"></a>
+            </div>
+          </div>
+        </div>
+        <div class="parameters">
+          <p language="parameters"></p>
+          <div>
+            <div class="table">
+              <div class="title fixclear">
+                <div class="left fixclear">
+                  <span class="left" language="param_name"></span>
+                  <span class="right"></span>
+                </div>
+                <div class="right">
+                  <span language="param_val"></span>
+                  <span class="right"></span>
+                </div>
+              </div>
+              <div class="table_content">
+                <ul class="fixclear">
+                  <li><span></span><input type="text"></li>
+                  <li><span></span><input type="text"></li>
+                </ul>
+              </div>
+            </div>
+            <div class="text">
+              <textarea class="param_val" id="" cols="30" rows="10" disabled></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c_right">
+      <div class="top fixclear">
+        <ul class="left loop_list">
+          <li language="cmd" class="checked"></li>
+          <li language="cmd_start" class="loop_list_other"></li>
+          <li language="cmd_end" class="loop_list_other"></li>
+        </ul>
+        <div class="right">
+          <a href="javascript:;" language="save"></a>
+          <a href="javascript:;" language="abort"></a>
+        </div>
+      </div>
+      <div class="loop_list_content content">
+        <div class="item"><textarea rows="80" name="cmd" spellcheck="false"></textarea></div>
+        <div class="item"><textarea rows="80" name="cmd_start" spellcheck="false"></textarea></div>
+        <div class="item"><textarea rows="80" name="cmd_end" spellcheck="false"></textarea></div>
+      </div>
+      <div class="bottom fixclear">
+        <div class="left">
+          <a href="javascript:;" language="import_path" class="import_path"></a>
+          <span class="red" language="cant_find"></span>
+        </div>
+        <div class="right">
+          <a href="javascript:;" language="import_code"></a>
+          <a href="javascript:;" language="export_code"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="python-scripts/js/jquery-2.14.min.js"></script>
+  <script src="python-scripts/js/jquery.base64.js"></script>
+  <script src="python-scripts/js/bi-common.js"></script>
+  <script src="python-scripts/js/text.js"></script>
+  <script src="python-scripts/js/index.js"></script>
+  <script src="python-scripts/js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>APA Scene</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="apa-scene/css/common.css">
+  <link rel="stylesheet" href="apa-scene/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li><span language="ScanDirection"></span>
+        <br>
+        <select name="scanDirection">
+          <option value="0">-</option>
+          <option value="1" language="left"></option>
+          <option value="2" language="right"></option>
+        </select>
+      </li>
+      <li><span language="ParkingOutDirection"></span>
+        <br>
+        <select name="parkingOutDirection">
+          <option value="0">-</option>
+        </select>
+      </li>
+      <li><span language="MarkingExist"></span><br>
+        <select name="markingExist">
+          <option value="0">-</option>
+          <option value="1" language="you"></option>
+          <option value="2" language="wu"></option>
+        </select>
+      </li>
+      <li><span language="BorderVehicleExist"></span><br>
+        <select name="borderVehicleExist">
+          <option value="0">-</option>
+          <option value="1" language="you"></option>
+          <option value="2" language="wu"></option>
+        </select>
+      </li>
+      <li><span language="EdgeZeroState"></span><br>
+        <select name="edgeZeroState">
+          <option value="0">-</option>
+          <option value="1" language="empty"></option>
+          <option value="2" language="biaozhun"></option>
+          <option value="3" language="yaxian"></option>
+          <option value="4" language="pingpian30"></option>
+          <option value="5" language="qiang"></option>
+          <option value="6" language="qingxie5"></option>
+          <option value="7" language="zhu" ></option>
+        </select>
+      </li>
+      <li><span language="EdgeOneState"></span>
+        <br><select name="edgeOneState">
+          <option value="0">-</option>
+          <option value="1" language="empty"></option>
+          <option value="2" language="biaozhun"></option>
+          <option value="3" language="yaxian"></option>
+          <option value="4" language="pingpian30"></option>
+          <option value="5" language="qiang"></option>
+          <option value="6" language="qingxie5"></option>
+          <option value="7" language="zhu" ></option>
+        </select>
+      </li>
+      <li><span language="ParkingSpaceSize"></span>
+        <br>
+        <select name="parkingSpaceSize">
+          <option value="0">-</option>
+          <option value="1" language="da"></option>
+          <option value="2" language="zhong"></option>
+          <option value="3" language="xiao"></option>
+          <option value="4" language="er"></option>
+        </select>
+      </li>
+      <li><span language="EdgeParkingSpaceExist"></span>
+        <br>
+        <select name="edgeParkingSpaceExist">
+          <option value="0">-</option>
+          <option value="1" language="you"></option>
+          <option value="2" language="wu"></option>
+        </select>
+      </li>
+      <li><span language="CurbStoneExist">路沿石</span><br>
+        <select name="curbStoneExist">
+          <option value="0">-</option>
+          <option value="1" language="you"></option>
+          <option value="2" language="wu"></option>
+        </select>
+      </li>
+      <li><span language="ParkingSpaceType"></span><br>
+        <select name="parkingSpaceType">
+          <option value="0">-</option>
+          <option value="1" language="pingxing"></option>
+          <option value="2" language="shuzhi"></option>
+          <option value="3" language="xiexiang"></option>
+        </select>
+      </li>
+    </ul>
+    <button language="load"></button>
+    <button language="save"></button>
+  </div>
+  <script src="apa-scene/js/bi-common.js"></script>
+  <script src="apa-scene/js/jquery-2.14.min.js"></script>
+  <script src="apa-scene/js/text.js"></script>
+  <script src="apa-scene/js/index.js"></script>
+</body>
+
+</html>

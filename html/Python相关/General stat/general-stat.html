@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Statistics</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="general-stat/css/common.css">
+  <style>
+    .container {
+      height: 90px;
+      width: 202px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -45px 0 0 -101px;
+    }
+
+    ul {
+      height: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    ul>li>span {
+      padding-top: 3px;
+    }
+
+    input.right {
+      width: 86px;
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li>
+        <input type="checkbox" name="enabled" id="enabled">
+        <label for="enabled" language="enabled"></label>
+      </li>
+      <li class="fixclear">
+        <span language="turn_curvature" class="left"></span>
+        <input type="number" name="turn_curvature" step="0.001" min="0.02" max="0.2" value="0.05" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="straight_curvature" class="left"></span>
+        <input type="number" name="straight_curvature" step="0.001" min="0.001" max="0.05" value="0.01" class="right">
+      </li>
+    </ul>
+  </div>
+  <script src="general-stat/js/jquery-2.14.js"></script>
+  <script src="general-stat/js/bi-common.js"></script>
+  <script src="general-stat/js/text.js"></script>
+  <script src="general-stat/js/index.js"></script>
+</body>
+
+</html>

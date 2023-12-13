@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <session>
+    <etc_path>F:\ExperimentData\VirtualTestData_20200828\20200114-15-14-37\input\etc\</etc_path>
+    <raw_path>F:\ExperimentData\VirtualTestData_20200828\20200114-15-14-37\input\raw\</raw_path>
+    <session_path>F:\ExperimentData\VirtualTestData_20200828\20200114-15-14-37\</session_path>
+    <mark_name>parsed_primary.txt</mark_name>
+    <processed_file>processed.idc</processed_file>
+    <raw_csv_file>raw.csv</raw_csv_file>
+    <ref_csv_protocol>ibeo-ref-at-v1</ref_csv_protocol>
+    <classfication_config>
+      <config parsed_idc_name="parsed_objects.idc" index_file_name="index_objects.txt" data_type_id_list="36865,9732,10248,8833" />
+      <config parsed_idc_name="parsed_groundpts.idc" index_file_name="index_groundpts.txt" data_type_id_list="36865,9732,8713" />
+    </classfication_config>
+  </session>
+</root>

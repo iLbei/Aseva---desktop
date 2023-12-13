@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obstacle Evaluation</title>
+  <link rel="stylesheet" href="obstacle-evaluation/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="obstacle-evaluation/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="top">
+      <input type="checkbox" name="oeEnable" id="oeEnable">
+      <label for="oeEnable" language="oeEnable"></label>
+    </div>
+    <ul>
+      <li class="fixclear">
+        <span language="gtObjectsChannel" class="left"></span>
+        <select class="right" name="gtObjectsChannel">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Object sensor A</option>
+          <option value="1">Object sensor B</option>
+          <option value="2">Object sensor C</option>
+          <option value="3">Object sensor D</option>
+          <option value="4">Object sensor E</option>
+          <option value="5">Object sensor F</option>
+          <option value="6">Object sensor G</option>
+          <option value="7">Object sensor H</option>
+          <option value="8">Object sensor I</option>
+          <option value="9">Object sensor J</option>
+          <option value="10">Object sensor K</option>
+          <option value="11">Object sensor L</option>
+        </select>
+      </li>
+      <li class="fixclear"><span language="evaObjectsChannel" class="left"></span>
+        <select class="right" name="evaObjectsChannel">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Object sensor A</option>
+          <option value="1">Object sensor B</option>
+          <option value="2">Object sensor C</option>
+          <option value="3">Object sensor D</option>
+          <option value="4">Object sensor E</option>
+          <option value="5">Object sensor F</option>
+          <option value="6">Object sensor G</option>
+          <option value="7">Object sensor H</option>
+          <option value="8">Object sensor I</option>
+          <option value="9">Object sensor J</option>
+          <option value="10">Object sensor K</option>
+          <option value="11">Object sensor L</option>
+        </select>
+      </li>
+      <li class="fixclear"><span language="matchedObjectsChannel" class="left"></span>
+        <select class="right" name="matchedObjectsChannel">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Object sensor A</option>
+          <option value="1">Object sensor B</option>
+          <option value="2">Object sensor C</option>
+          <option value="3">Object sensor D</option>
+          <option value="4">Object sensor E</option>
+          <option value="5">Object sensor F</option>
+          <option value="6">Object sensor G</option>
+          <option value="7">Object sensor H</option>
+          <option value="8">Object sensor I</option>
+          <option value="9">Object sensor J</option>
+          <option value="10">Object sensor K</option>
+          <option value="11">Object sensor L</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <label language="enableEvaObjectsRawID" class="left" for="enableEvaObjectsRawID"></label>
+        <input type="checkbox" class="right" name="enableEvaObjectsRawID" id="enableEvaObjectsRawID">
+      </li>
+      <li class="fixclear">
+        <label language="recalculateObjectHeaing" class="left" for="recalculateObjectHeaing"></label>
+        <input type="checkbox" class="right" name="recalculateObjectHeaing" id="recalculateObjectHeaing">
+      </li>
+      <li class="fixclear">
+        <label language="evaObjectsBoxExtension" class="left" for="evaObjectsBoxExtension"></label>
+        <input type="checkbox" class="right" name="evaObjectsBoxExtension" id="evaObjectsBoxExtension">
+      </li>
+      <li class="fixclear">
+        <label language="includingGTVehicle" class="left" for="includingGTVehicle"></label>
+        <input type="checkbox" class="right" name="includingGTVehicle" id="includingGTVehicle">
+      </li>
+      <li class="fixclear">
+        <label language="useCenter" class="left" for="useCenter"></label>
+        <input type="checkbox" class="right" name="useCenter" id="useCenter">
+      </li>
+      <li class="fixclear">
+        <label language="useVelocity" class="left" for="useVelocity"></label>
+        <input type="checkbox" class="right" name="useVelocity" id="useVelocity"> 
+      </li>
+      <li class="fixclear">
+        <span language="trackingDeltaRange" class="left"></span>
+        <input type="number" class="right" name="trackingDeltaRange" value="15" max="10000" min="0" step="0.001">
+      </li>
+      <li class="fixclear">
+        <span language="mergeDistance" class="left"></span>
+        <input type="number" class="right" name="mergeDistance" value="2" max="10000" min="0" step="0.001">
+      </li>
+      <li class="fixclear">
+        <span language="matchingAngleLimit" class="left"></span>
+        <input type="number" class="right" name="matchingAngleLimit" value="10" max="10000" min="0" step="0.001">
+      </li>
+      <li class="fixclear">
+        <span language="matchingRangeLimit" class="left"></span>
+        <input type="number" class="right" name="matchingRangeLimit" value="30" max="10000" min="0" step="0.001">
+      </li>
+      <li class="fixclear">
+        <span language="matchingHeadingLimit" class="left"></span>
+        <input type="number" class="right" name="matchingHeadingLimit" value="15" max="10000" min="0" step="0.001">
+      </li>
+      <li class="fixclear">
+        <span language="deltaVelocityLimit" class="left"></span>
+        <input type="number" class="right" name="matchingVelocityLimit" value="5" max="10000" min="0" step="0.001">
+      </li>
+      <li class="fixclear">
+        <span language="minFrames" class="left"></span>
+        <input type="number" class="right" name="minFrames" value="5" max="1000" min="0" step="1">
+      </li>
+      <li class="fixclear">
+        <span language="minTimeLength" class="left"></span>
+        <input type="number" class="right" name="minTimeLength" value="1" max="1000" min="0" step="0.001">
+      </li>
+      <li class="fixclear">
+        <span language="posXCoeff" class="left"></span>
+        <input type="number" name="posXCoeff" value="1" max="2" min="0.5" step="0.1" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="posYCoeff" class="left"></span>
+        <input type="number" name="posYCoeff" value="1" max="2" min="0.5" step="0.1" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="minAbsGTPosX" class="left"></span>
+        <input type="number" name="minAbsGTPosX" value="30" max="1000" min="0" step="0.001" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="minAbsGTPosY" class="left"></span>
+        <input type="number" name="minAbsGTPosY" value="10" max="1000" min="0" step="0.001" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="costNormThresh" class="left"></span>
+        <input type="number" name="costNormThresh" value="5.2" max="1000" min="0" step="0.001" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="maxDeltaXPercent" class="left"></span>
+        <input type="number" name="maxDeltaXPercent" value="20" max="100" min="0" step="1" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="maxDeltaYPercent" class="left"></span>
+        <input type="number" name="maxDeltaYPercent" value="30" max="100" min="0" step="1" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="evaObjectID" class="left"></span>
+        <input type="number" name="evaObjectID" value="-1" max="1000000" min="-1" step="1" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="gtObjectID" class="left"></span>
+        <input type="number" name="gtObjectID" value="-1" max="1000000" min="-1" step="1" class="right">
+      </li>
+    </ul>
+  </div>
+  <script src="obstacle-evaluation/js/jquery-2.14.js"></script>
+  <script src="obstacle-evaluation/js/bi-common.js"></script>
+  <script src="obstacle-evaluation/js/text.js"></script>
+  <script src="obstacle-evaluation/js/index.js"></script>
+</body>
+
+</html>

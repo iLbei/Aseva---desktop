@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ASEva Global Map</title>
+  <link rel="stylesheet" type="text/css" href="baidumap/css/map.css" />
+  <script type="text/javascript" src="baidumap/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=fNcvANoBhG0qNSzCS3NdiCRz"></script>
+  <script type="text/javascript"
+    src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+  <script type="text/javascript" src="baidumap/js/EventWrapper.js"></script>
+  <script type="text/javascript" src="baidumap/js/bi-common.js"></script>
+  <script type="text/javascript" src="baidumap/js/map.js"></script>
+  <script type="text/javascript" src="baidumap/js/gnssimu-sample.js"></script>
+  <script type="text/javascript" src="baidumap/js/env-sample.js"></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="clearfix" id="map">
+    <div class="top-operation">
+      <ul class="left clearfix">
+        <li>
+          <div class="map-channel" title="Gnss-imu sensor A">A</div>
+        </li>
+        <li>
+          <div class="map-channel" title="Gnss-imu sensor B">B</div>
+        </li>
+        <li>
+          <div class="map-channel" title="Gnss-imu sensor C">C</div>
+        </li>
+        <li>
+          <div class="map-channel" title="Gnss-imu sensor D">D</div>
+        </li>
+        <li>
+          <div class="map-channel" title="Gnss-imu sensor E">E</div>
+        </li>
+        <li>
+          <div class="map-channel" title="Gnss-imu sensor F">F</div>
+        </li>
+      </ul>
+      <ul class="left clearfix">
+        <li>|</li>
+        <li>
+          <div id="picture1" onclick="toolStripOnlineMap(this)">
+            <div></div>
+          </div>
+        </li>
+        <li>
+          <div id="picture2" onclick="toolStripSatelliteMap(this)">
+            <div></div>
+          </div>
+        </li>
+        <li>|</li>
+        <li>
+          <div id="picture4" onclick="toolStripLockToCenter(this)">
+            <div></div>
+          </div>
+        </li>
+        <li>
+          <div id="picture5" onclick="toolStripShowingGPSData(this)">
+            <div></div>
+          </div>
+        </li>
+        <li>|</li>
+        <li>
+          <div id="picture6" onclick="toolStripZoomIn(this)">
+            <div></div>
+          </div>
+        </li>
+        <li>
+          <div id="picture7" onclick="toolStripZoomOut(this)">
+            <div></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="allmap0" class="allmap"></div>
+    <div class="location-road-info">
+      <div class="location clearfix">
+        <!--经纬度-->
+        <div class="left" id="location">(Unknown location)</div>
+        <!--gps时间-->
+        <div class="right" id="gnssTime">(Unknown time)</div>
+      </div>
+      <div class="road clearfix">
+        <!--道路名称-->
+        <div class="left" id="road-name">(Unknown road)</div>
+        <!--道路类型-->
+        <div class="right" id="road-type">(Unknown type)</div>
+      </div>
+    </div>
+    <div class="altitude">
+      <div></div>
+      <div>
+        <p id="antennaAltitude">---</p>
+        <p id="altitude">---</p>
+        <p>Altitude</p>
+      </div>
+    </div>
+    <div class="weather">
+      <div>
+        <img id="weather" src="baidumap/images/weather_unknown.png" width="47" height="27" alt="">
+      </div>
+      <div>
+        <img id="traffic" src="baidumap/images/traffic unknown.png" width="47" height="27" alt="">
+      </div>
+    </div>
+    <div class="vehicle-info clearfix">
+      <div class="vehicle-left-info clearfix">
+        <div style="overflow: hidden;">
+          <img src="baidumap/images/speed.png" width="30" height="25" alt="">
+          <p id="speed">---</p>
+        </div>
+        <div>
+          <p>
+            <span>AX:</span>
+            <span id="ax">---</span>
+          </p>
+          <p>
+            <span>AY:</span>
+            <span id="ay">---</span>
+          </p>
+        </div>
+        <div>
+          <img id="head-img" src="baidumap/images/heading.png" width="26" height="26" alt="">
+          <p id="heading">---</p>
+        </div>
+        <div>
+          <img id="pitch-img" src="baidumap/images/pitch.png" width="26" height="26" alt="">
+          <p id="pitch">---</p>
+        </div>
+        <div>
+          <img id="roll-img" src="baidumap/images/roll.png" width="26" height="26" alt="">
+          <p id="roll">---</p>
+        </div>
+        <div>
+          <div>
+            <span class="left-triangle">▼</span>
+            <span class="right-triangle">▼</span>
+          </div>
+          <p id="rate">---</p>
+          <p>Yaw Rate</p>
+        </div>
+      </div>
+      <div class="vehicle-right-info clearfix">
+        <div>
+          <div></div>
+          <span id="speedLimit">N.A</span>
+        </div>
+        <div>
+          <p>PM 2.5</p>
+          <p id="pm25">---</p>
+          <p>μg/m³</p>
+        </div>
+        <div>
+          <img src="baidumap/images/timg.png" width="26" height="26" alt="">
+          <p id="timg">---</p>
+        </div>
+        <div>
+          <img src="baidumap/images/wind.png" width="26" height="26" alt="">
+          <p id="wind">---</p>
+        </div>
+        <div>
+          <img src="baidumap/images/light.png" width="26" height="26" alt="">
+          <p id="light">---</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

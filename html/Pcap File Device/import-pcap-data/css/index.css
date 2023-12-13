@@ -1,0 +1,89 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 595px;
+  height: 494px;
+  margin: -247px 0 0 -297.5px;
+}
+
+.container>div {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 12px 10px;
+}
+
+.container>div:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+img {
+  width: 19px;
+}
+
+.content {
+  background-color: #cfcfcf;
+  padding: 2px;
+  height: 230px;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.content>.box {
+  padding: 3px 5px;
+  margin-bottom: 2px;
+  background-color: #dae0f5;
+}
+
+.container>div>p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+}
+
+a {
+  max-width: 472px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+select {
+  width: 120px;
+  margin-left: 15px;
+}
+
+button {
+  width: 100px;
+  height: 27px;
+  margin-right: 20px;
+}
+
+.output span {
+  vertical-align: 3px;
+}
+
+.box>ul>li:last-child {
+  margin-top: 3px;
+}
+
+.pcap_path>ul>li {
+  margin-top: 10px;
+  height: 26px;
+  line-height: 26px;
+}
+
+[language="pcap_files_path"] {
+  vertical-align: 8px;
+}
+
+[name="pcap_interval"] {
+  width: 122px;
+}
+.container>div>ul>li:not(:first-child) span {
+  width: 88px;
+}
+
+.container>div>ul  input {
+  width: 128px;
+}

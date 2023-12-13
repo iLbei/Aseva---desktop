@@ -1,0 +1,16 @@
+input[name=ip] {
+  width: 140px;
+  margin-right: 35px;
+}
+
+input[name=port] {
+  width: 60px;
+}
+
+span {
+  margin-right: 5px;
+}
+
+.container>div {
+  margin-top: 10px;
+}

@@ -1,0 +1,130 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1104px;
+  height: 606px;
+  transform: translate(-50%, -50%);
+}
+
+.container>.content>.left {
+  width: 601px;
+  height: 590px;
+  overflow: auto;
+}
+
+.container>.content>.left>div {
+  position: relative;
+  border: 1px solid rgb(220, 220, 220);
+  margin-top: 15px;
+  margin-right: 3px;
+}
+
+.container>.content>.left>div>p,
+.container>.content>.left>div:nth-of-type(2) .bottom>div>p,
+.container>.content>.left>div:nth-of-type(3) .bottom>div>p {
+  position: absolute;
+  left: 14px;
+  background-color: #fff;
+  padding: 0 2px;
+  background-color: #f0f0f0;
+  top: -10px;
+}
+
+.container>.content>.left>div>div {
+  padding: 10px;
+  ;
+}
+
+.container>.content .bsd {
+  width: 263px;
+  margin-left: 7px;
+  margin-top: 10px;
+}
+
+.container>.content .bsd>div>.left,
+.bsd>span {
+  width: 142px;
+  text-align: right;
+}
+
+.bsd input[type=number] {
+  margin-left: 1px;
+  width: 116px;
+}
+
+.container>.content .bsd>div>.right {
+  width: 116px;
+  margin-left: 5px;
+}
+
+.container>.content>.left>div:nth-of-type(2) .bottom>div,
+.container>.content>.left>div:nth-of-type(3) .bottom>div {
+  position: relative;
+  margin-top: 10px;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 10px;
+}
+
+.container>.content>.left>div:nth-of-type(2) .bottom>div>div>div,
+.container>.content>.left>div>div>div,
+.container>.content>.left>div:nth-of-type(3) .bottom>div>div>div {
+  margin-top: 6px;
+}
+
+.container>.content>.left>div:nth-of-type(3) .bottom2 {
+  margin-top: 10px;
+}
+
+.container>.content>.left>div:nth-of-type(3) .bottom2>div {
+  margin-top: 5px;
+}
+
+.container>.content>.left>div:nth-of-type(3) .bottom2>div span {
+  padding-top: 3.1px;
+  width: 176px;
+}
+
+select {
+  width: 150px;
+}
+
+[type=text] {
+  width: 116px;
+}
+
+[type=number] {
+  width: 64px;
+}
+
+.not_config {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.bsd>div:nth-child(2) {
+  height: 26px;
+  line-height: 30px;
+}
+
+.not_config>a {
+  max-width: 117px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.container>.content>.left>div:nth-of-type(2) .bottom>div>div>div:nth-child(3) span:last-child {
+  padding-top: 3px;
+  margin-right: 5px;
+}
+
+.top>div:nth-child(1) .firstBsd {
+  margin-top: 22px;
+  margin-bottom: 25px;
+}
+
+[language="lcda_min_ego_speed"] {
+  padding-top: 3px;
+  margin-right: 5px;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robosense Reference</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="robosense-reference/css/common.css">
+  <link rel="stylesheet" href="robosense-reference/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="Enabled" id="Enabled">
+      <label for="Enabled" language="enabled"></label>
+    </div>
+    <div class="input fixclear">
+      <p language="input"></p>
+      <ul>
+        <li>
+          <span language="result_path"></span>
+          <a href="javascript:;" language="not_config" name="gt_data_path"></a>
+        </li>
+        <li>
+          <span language="time_type"></span>
+          <select name="time_type">
+            <option value="0">UTC</option>
+            <option value="1">GPS</option>
+          </select>
+        </li>
+        <li>
+          <button language="import_data"></button>
+        </li>
+      </ul>
+    </div>
+    <div class="processing fixclear">
+      <p language="processing"></p>
+      <ul>
+        <li class="fixclear">
+          <span language="out_channel" class="left"></span>
+          <select name="out_channel" class="right">
+            <option value="-1" language="disabled"></option>
+            <option value="0">Object sensor A</option>
+            <option value="1">Object sensor B</option>
+            <option value="2">Object sensor C</option>
+            <option value="3">Object sensor D</option>
+            <option value="4">Object sensor E</option>
+            <option value="5">Object sensor F</option>
+            <option value="6">Object sensor G</option>
+            <option value="7">Object sensor H</option>
+            <option value="8">Object sensor I</option>
+            <option value="9">Object sensor J</option>
+            <option value="10">Object sensor K</option>
+            <option value="11">Object sensor L</option>
+          </select>
+        </li>
+        <li class="fixclear">
+          <span language="lane_channel" class="left"></span>
+          <select name="lane_channel" class="right">
+            <option value="-1" language="disabled"></option>
+            <option value="0">Lane sensor A</option>
+            <option value="1">Lane sensor B</option>
+            <option value="2">Lane sensor C</option>
+            <option value="3">Lane sensor D</option>
+          </select>
+        </li>
+        <li>
+          <span language="road_edge_channel" class="left"></span>
+          <select name="road_edge_channel" class="right">
+            <option value="-1" language="disabled"></option>
+            <option value="0">Lane sensor A</option>
+            <option value="1">Lane sensor B</option>
+            <option value="2">Lane sensor C</option>
+            <option value="3">Lane sensor D</option>
+          </select>
+        </li>
+      </ul>
+      <div class="fixclear">
+        <div class="left fixclear">
+          <div class="left">
+            <p language="origin"></p>
+            <p language="pos_offset"></p>
+          </div>
+          <div class="right">
+            <div class="fixclear">
+              <span class="left">X</span>
+              <input class="right" type="number" name="offset_x" value="0.00" min="-20.00" max="1.00" step="0.01">
+            </div>
+            <div class="fixclear">
+              <span class="left">Y</span>
+              <input class="right" type="number" name="offset_y" value="0.00" min="-3.00" max="3.00" step="0.01">
+            </div>
+            <div class="fixclear">
+              <span class="left">Z</span>
+              <input class="right" type="number" name="offset_z" value="0.00" min="-3.00" max="3.00" step="0.01">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="yaw"></span>
+              <input class="right" type="number" name="yaw" value="0.0" min="-180.00" max="180.00" step="0.1">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="pitch"></span>
+              <input class="right" type="number" name="pitch" value="0.0" min="-180.0" max="180.0" step="0.1">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="roll"></span>
+              <input class="right" type="number" name="roll" value="0.0" min="-180.0" max="180.0" step="0.1">
+            </div>
+          </div>
+        </div>
+        <div class="right" id="canvas">
+          <canvas class="myCanvas" width="160" height="180"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="robosense-reference/js/jquery-2.14.js"></script>
+  <script src="robosense-reference/js/bi-common.js"></script>
+  <script src="robosense-reference/js/text.js"></script>
+  <script src="robosense-reference/js/index.js"></script>
+</body>
+
+</html>

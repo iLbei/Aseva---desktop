@@ -1,0 +1,60 @@
+.canBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 474px;
+  height: 205px;
+  margin: -102.5px 0 0 -237px;
+}
+
+.canBox>.content>div {
+  position: relative;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.canBox>.content>div>p {
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  text-align: center;
+}
+
+.canBox>.content>div {
+  padding: 10px;
+}
+
+.canBox>.content>div:nth-of-type(1) {
+  margin-bottom: 10px;
+}
+
+.canBox>.content>div>div>div:nth-of-type(1),
+.canBox>.content>div:nth-of-type(2)>div>div:nth-of-type(1)>div:nth-of-type(1) {
+  padding-top: 3px;
+}
+
+.canBox>.content>div>div>div:nth-of-type(2),
+.canBox>.content>div:nth-of-type(2)>div>div:nth-of-type(1)>div:nth-of-type(2) {
+  margin-left: 55px;
+}
+
+.canBox>.content>div:nth-of-type(2)>div>div:nth-of-type(2) {
+  margin-top: 5px;
+  margin-left: 0;
+}
+
+.canBox>.content>div:nth-of-type(2)>div>div:nth-of-type(2)>div:last-of-type {
+  margin-top: 5px;
+}
+
+.canBox select {
+  width: 63px;
+  height: 25px;
+}
+
+.w200 {
+  width: 210px;
+}
+
+.w200>div>span {
+  margin-right: 4px;
+}

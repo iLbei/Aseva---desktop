@@ -1,0 +1,36 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1190px;
+  height: 750px;
+  margin: -375px 0 0 -595px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container>div:not(:first-child) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.container>div:not(:nth-child(1)) {
+  padding: 7px 10px;
+  background-color: #dedede;
+}
+
+.container input[type='number'] {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.container>div>span:nth-child(1) {
+  width: 85px;
+}
+
+.container>div:not(:first-child)>span {
+  padding-top: 3px;
+}

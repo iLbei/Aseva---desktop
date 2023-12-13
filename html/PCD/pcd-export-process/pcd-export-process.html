@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>PCD Export Process</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="pcd-export-process/css/common.css">
+  <link rel="stylesheet" href="pcd-export-process/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="top">
+      <div class="topleft">
+        <input type="checkbox" name="enable" id="enable">
+        <label for="enable" language='enable'></label>
+      </div>
+      <div class="topright">
+        <input type="checkbox" name="only_xyzi" id="only_xyzi">
+        <label for="only_xyzi" language='only_xyzi'></label>
+      </div>
+      <div>
+        <input type="checkbox" name="local_path" id="local_path">
+        <label for="local_path" language='local_path'></label>
+        <input type="checkbox" name="absolute_time_file" id="absolute_time_file">
+        <label for="absolute_time_file" language='absolute_time_file'></label>
+        <input type="checkbox" name="absolute_time_points" id="absolute_time_points" checked>
+        <label for="absolute_time_points" language='absolute_time_points'></label>
+      </div>
+    </div>
+    <a href="javascript:;" name='savepath' language='empty'></a>
+    <div class="bottom">
+      <div class="topleft">
+        <input type="radio" name="format" value="1" id="1_1" checked>
+        <label for="1_1" language='binary'></label>
+      </div>
+      <div class="topright">
+        <input type="radio" name="format" value="2" id="1_2">
+        <label for="1_2" language='ascii'></label>
+      </div>
+      <div class="topleft">
+        <input type="radio" name="format" value="3" id="1_3">
+        <label language='binary_compressed' for="1_3"></label>
+      </div>
+    </div>
+    <div>
+      <ul>
+        <li class="left">
+          <span language="timeOffset"></span>
+          <input type="number" name="time_offset" value="0" max="100000000" min="-100000000" step="0.1" id="">
+        </li>
+        <li class="right">
+          <ul class="fixclear">
+            <li><span language="time_sync_type"></span></li>
+            <li><input type="radio" name="time_sync_type" value="0" id="UTC" checked><label for="UTC">UTC</label></li>
+            <li><input type="radio" name="time_sync_type" value="1" id="Local"><label for="Local">Local</label></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <p language="channelFiltering"></p>
+    <div class="channelFiltering">
+      <input type="checkbox" name="channelFiltering" id="0"><label for="0">A</label>
+      <input type="checkbox" name="channelFiltering" id="1"><label for="1">B</label>
+      <input type="checkbox" name="channelFiltering" id="2"><label for="2">C</label>
+      <input type="checkbox" name="channelFiltering" id="3"><label for="3">D</label>
+      <input type="checkbox" name="channelFiltering" id="4"><label for="4">E</label>
+      <input type="checkbox" name="channelFiltering" id="5"><label for="5">F</label>
+      <input type="checkbox" name="channelFiltering" id="6"><label for="6">G</label>
+      <input type="checkbox" name="channelFiltering" id="7"><label for="7">H</label>
+      <input type="checkbox" name="channelFiltering" id="8"><label for="8">I</label>
+      <input type="checkbox" name="channelFiltering" id="9"><label for="9">J</label>
+      <input type="checkbox" name="channelFiltering" id="10"><label for="10">K</label>
+      <input type="checkbox" name="channelFiltering" id="11"><label for="11">L</label>
+    </div>
+  </div>
+  </div>
+  <script src="pcd-export-process/js/jquery-2.14.js"></script>
+  <script src="pcd-export-process/js/bi-common.js"></script>
+  <script src="pcd-export-process/js/text.js"></script>
+  <script src="pcd-export-process/js/index.js"></script>
+</body>
+
+</html>

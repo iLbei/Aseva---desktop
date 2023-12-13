@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html language="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="video/css/common.css" />
+    <link rel="stylesheet" href="video/css/index.css" />
+  </head>
+
+  <body
+    oncontextmenu="return false"
+    ondragstart="return false"
+    onselectstart="return false"
+    onbeforecopy="return false"
+  >
+    <div class="line">
+      <div class="fixclear">
+        <span language="position"></span>
+        <input
+          type="radio"
+          name="special_hint1"
+          value="0"
+          id="line_left"
+          checked
+        />
+        <label for="line_left" language="line_left"></label>
+        <input type="radio" name="special_hint1" value="1" id="line_right" />
+        <label for="line_right" language="line_right"></label>
+        <div class="left">
+          <span language="zero_u"></span>
+          <input type="text" name="zero_u" value="0.25" step="0.000001" />
+          <span language="meter_u"></span>
+          <input type="text" name="meter_u" value="-0.25" step="0.000001" />
+          <span language="fifty"></span>
+          <input type="text" name="fifty" value="0.5" step="0.000001" />
+        </div>
+        <div class="right">
+          <span language="zero_v"></span>
+          <input type="text" name="zero_v" value="0" step="0.000001" />
+          <span language="meter_v"></span>
+          <input type="text" name="meter_v" value="0" step="0.000001" />
+          <span language="meter_scale"></span>
+          <input type="text" name="meter_scale" value="1" step="0.000001" />
+        </div>
+      </div>
+      <button language="import" class="line_import"></button>
+    </div>
+    <script src="video/js/jquery-2.14.js"></script>
+    <script src="video/js/bi-common.js"></script>
+    <script src="video/js/text.js"></script>
+    <script src="video/js/line.js"></script>
+  </body>
+</html>

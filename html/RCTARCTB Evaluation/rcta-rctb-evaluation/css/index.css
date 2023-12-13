@@ -1,0 +1,132 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1097px;
+  height: 586px;
+  transform: translate(-50%, -50%);
+}
+
+fieldset {
+  border-color: #eee;
+}
+
+fieldset>ul,
+.bottom>ul,
+.top>ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.common {
+  height: 145px;
+}
+
+.common select,
+.common input[type=number] {
+  width: 130px;
+}
+
+.common>li>span:nth-child(1) {
+  width: 111px;
+}
+
+.common>li:nth-child(2)>span:nth-child(3) {
+  text-align: right;
+}
+
+.common>li>span:nth-child(3) {
+  width: 71px;
+}
+
+.container>.content>.left {
+  width: 601px;
+  height: 568px;
+  overflow: auto;
+}
+
+.container>.content>.right {
+  width: 496px;
+}
+
+.rctb_signals,
+.rcta_signals {
+  height: 160px;
+}
+
+.rctb_signals span,
+.rcta_signals span {
+  width: 117px;
+}
+
+.rctb_signals>li:not(:nth-child(1)) input[name],
+.rcta_signals>li:not(:nth-child(1)) input[name] {
+  width: 150px;
+}
+
+.rctb_signals a,
+.rcta_signals a,
+.top a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.rctb_signals a,
+.rcta_signals a {
+  max-width: 150px;
+}
+
+.content>div>div:nth-child(3)>div {
+  margin-top: 10px;
+  width: 49%;
+}
+
+.content>div>div:nth-child(3) input[type=text],
+.content>div>div:nth-child(3) input[type=number] {
+  width: 93px;
+}
+
+.top label,
+.top span {
+  width: 135px;
+}
+
+.top>ul {
+  height: 107px;
+}
+
+.top a {
+  max-width: 128px;
+  vertical-align: -2px;
+}
+
+.bottom>ul {
+  margin: 10px;
+  height: 120px;
+}
+
+.bottom>ul>li {
+  height: 26px;
+  line-height: 24px;
+}
+
+.container>.content>div.right img {
+  margin-left: 18px;
+  width: 95%;
+}
+
+[name="RCTBGTSignalChecked"],
+[name="RCTAGTSignalChecked"] {
+  margin-top: 4px;
+}
+
+/* IP验证，不再需要js，通过css结合pattern就能验证 */
+[type="text"]:valid {
+  color: green;
+}
+
+[type="text"]:invalid {
+  color: red;
+}

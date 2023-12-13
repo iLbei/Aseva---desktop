@@ -1,0 +1,409 @@
+.container {
+  width: 947px;
+  height: 553px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container>[type=radio] {
+  display: none;
+}
+
+#l1:checked~.label>.l1,
+#l2:checked~.label>.l2,
+#l3:checked~.label>.l3,
+#l4:checked~.label>.l4,
+#l5:checked~.label>.l5,
+#l6:checked~.label>.l6 {
+  background-color: #fff;
+  border-bottom: none;
+}
+
+.lidar {
+  display: none;
+  /* overflow: hidden; */
+  padding: 6px 15px 13px;
+  border: 1px solid #ccc;
+  margin-top: -1px;
+  background: #fff;
+}
+
+#l1:checked~.lidar1,
+#l2:checked~.lidar2,
+#l3:checked~.lidar3,
+#l4:checked~.lidar4,
+#l5:checked~.lidar5,
+#l6:checked~.lidar6 {
+  display: block;
+}
+
+.label>label {
+  float: left;
+  display: block;
+  width: 80px;
+  height: 21px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.lidar>div:first-child>div.right,
+.lidar>div:last-child,
+.lidar>div:first-child>div:first-child>div {
+  position: relative;
+  border: 1px solid rgb(220, 220, 220);
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.process>div>div:nth-child(3)>div:nth-child(2)>span {
+  display: inline-block;
+  width: 145px;
+}
+
+
+.lidar>div.process>div>div:nth-of-type(2)>div.left>input {
+  margin: 6px 0px 8px;
+}
+
+.lidar>div.process>div>div:nth-of-type(2)>.right>input {
+  width: 93px;
+  margin-bottom: 2px;
+}
+
+.lidar>div:first-child>div.right>div>p,
+.lidar>div:last-child>p,
+.lidar>div:first-child>div:first-child>div>p {
+  position: absolute;
+  left: 5px;
+  padding: 0 2px;
+  top: -10px;
+  background: #fff;
+}
+
+.input span {
+  width: 87px;
+}
+
+.input [name=bus_channel] {
+  width: 92px;
+}
+
+.input [name=bus_msgid] {
+  width: 28%;
+}
+
+.input>div>div:first-of-type,
+.output>div>div:first-of-type {
+  margin-bottom: 7.5px;
+}
+
+.process>div>div:first-of-type>form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.process>div>div:first-of-type>form>div>div {
+  height: 19px;
+}
+
+.process>div>.bottom>.right {
+  position: relative;
+  width: 190px;
+  height: 258px;
+  margin-top: 16px;
+}
+
+.process>div>.bottom>.right>a {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+.lidar>.calib_hide,
+.lidar>.rsLidar32Le_hide {
+  display: none;
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  display: none;
+}
+
+.calib .table,
+.rshelios32 .table,
+.rsLidar32La .table,
+.rsLidar32Le .table {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 357px;
+  height: 319px;
+  border: 1px solid rgb(54, 54, 54);
+  overflow: auto;
+}
+
+.calib .table {
+  width: 357px;
+  padding: 5px;
+}
+
+.rshelios32 .table,
+.rsLidar32La .table {
+  width: 280px;
+  padding: 5px;
+}
+
+.calib .table>table,
+.calib .table>div,
+.rshelios32 .table>table,
+.rshelios32 .table>div,
+.rsLidar32La .table>table,
+.rsLidar32La .table>div {
+  width: 100%;
+}
+
+.calib .table>div>div,
+.calib .table>table td {
+  width: 25%;
+}
+
+.rshelios32 .table>div>div,
+.rshelios32 .table>table td,
+.rsLidar32La .table>div>div,
+.rsLidar32La .table>table td {
+  width: 33%;
+}
+
+.calib .bottom>button,
+.rshelios32 .bottom>button,
+.rsLidar32La .bottom>button {
+  margin-left: 37%;
+  margin-top: 5px;
+}
+
+
+.rsLidar32Le>.left {
+  width: 255px;
+}
+
+.rsLidar32Le>.left>div {
+  background-color: #fff;
+  width: 255px;
+  height: 319px;
+  padding: 5px;
+  border: 1px solid rgb(90, 90, 89);
+  overflow: auto;
+}
+
+.rsLidar32Le>.left>div>table {
+  width: 100%;
+}
+
+.rsLidar32Le>.left>div>div>div:first-of-type,
+.rsLidar32Le>.left>div>table tr>td:first-of-type {
+  width: 20%;
+}
+
+.rsLidar32Le>.left>div>div>div:not(:first-of-type),
+.rsLidar32Le>.left>div>table tr>td:not(:first-of-type) {
+  width: 40%;
+}
+
+.rsLidar32Le>.left>button {
+  margin-top: 5px;
+  margin-left: 52px;
+}
+
+.rsLidar32Le>.right {
+  width: 797px;
+}
+
+.rsLidar32Le>.right>div {
+  background-color: #fff;
+  width: 797px;
+  height: 319px;
+  padding: 5px 0px;
+  border: 1px solid rgb(90, 90, 89);
+  overflow: auto;
+  white-space: nowrap
+}
+
+.rsLidar32Le>.right>button {
+  margin-top: 5px;
+  margin-left: 298px;
+}
+
+.rsLidar32Le>.right>div>div>span {
+  display: inline-block;
+  text-align: center;
+  width: 60px;
+  height: 20px;
+}
+
+.rsLidar32Le>.right>div>table {
+  border-spacing: 0px !important;
+}
+
+.rsLidar32Le>.right>div>table tr td {
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  text-align: center;
+}
+
+.lidar>div:nth-child(1) select {
+  width: 214px;
+}
+
+.lidar>div:nth-child(2) [name=split] {
+  width: 190px;
+  margin-left: 10px;
+}
+
+select {
+  margin-left: 5px;
+}
+
+[type=text] {
+  width: 100px;
+}
+
+.w180 {
+  width: 193px;
+}
+
+.w200 {
+  width: 260px;
+  margin: auto;
+  margin-right: 5px;
+}
+
+
+.monitor input[type=number] {
+  width: 23%;
+  margin-top: 3px;
+}
+
+.monitor input[type=checkbox] {
+  margin: 8px 3px 0px 0px;
+}
+
+.monitor span,
+.monitor label {
+  margin: 6px 2px 0px 0px;
+}
+
+.myCanvas {
+  border: 1px solid rgb(220, 220, 220);
+  background-color: #fff;
+}
+
+.bottom>.w200>ul.right {
+  width: 154px;
+}
+
+.bottom>.w200>ul {
+  text-align: right;
+}
+
+.bottom>.w200>ul {
+  display: flex;
+  flex-direction: column;
+  height: 291px;
+  justify-content: space-around;
+}
+
+.bottom>.w200>ul>li>input[type=text] {
+  width: 100%;
+}
+
+.monitor>div>ul {
+  display: flex;
+  height: 117px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.lidar>div:first-child>div.left {
+  width: 436px;
+}
+
+.lidar>div:first-child>div.right {
+  width: 470px;
+}
+
+.lidar>div:first-child>div:first-child>div.input>div,
+.output>div>div,
+.process>div.right>div:nth-child(1),
+.process>div.left>div:nth-child(2)>div.right>ul>li {
+  height: 26px;
+  line-height: 23px;
+}
+
+.process>div.left {
+  width: 435px;
+}
+
+.process>div.left>div:nth-child(2)>div.right>ul>li input,
+.process>div.left>div:nth-child(2)>div.right>ul>li select {
+  width: 101px;
+  margin-left: 5px;
+}
+
+.process>div.right>div:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+.rsLidar32Le {
+  padding: 15px 11px 0px;
+}
+
+div.rsLidar32La,
+div.rshelios32,
+div.calib {
+  padding-top: 15px;
+}
+
+[name="time_sync_type"] {
+  width: 58px;
+}
+
+.process>div:nth-child(2)>div:nth-child(2) ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.process>div:nth-child(2)>div:nth-child(2)>ul {
+  height: 79px;
+}
+
+.process>div:nth-child(2)>div:nth-child(2) div.right ul {
+  height: 117px;
+  /* margin-top: 28px; */
+}
+
+
+.container>.label>label {
+  float: left;
+  padding: 0px 5px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #F0F0F0;
+}
+
+.container>.label>label:last-child {
+  border-right: 1px solid #ccc;
+}

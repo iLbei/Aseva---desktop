@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>RCTA/RCTB Evaluation</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="rcta-rctb-evaluation/css/common.css">
+  <link rel="stylesheet" href="rcta-rctb-evaluation/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="enabled">
+      <input type="checkbox" name="enabled" id="enabled">
+      <label for="enabled" language="enabled"></label>
+    </div>
+    <div class="content fixclear">
+      <div class="left">
+        <fieldset>
+          <legend language="common"></legend>
+          <ul class="common">
+            <li>
+              <span language="final_msg"></span>
+              <a href="javascript:;" name="final_msg" language="not_config"></a>
+            </li>
+            <li>
+              <span language="object_sensor"></span>
+              <select name="left_sensor_source">
+                <option value="Object sensor A" selected language="obj_sen_a">Object sensor A</option>
+                <option value="Object sensor B" language="obj_sen_b">Object sensor B</option>
+                <option value="Object sensor C" language="obj_sen_c">Object sensor C</option>
+                <option value="Object sensor D" language="obj_sen_d">Object sensor D</option>
+                <option value="Object sensor E" language="obj_sen_e">Object sensor E</option>
+                <option value="Object sensor F" language="obj_sen_f">Object sensor F</option>
+                <option value="Object sensor G" language="obj_sen_g">Object sensor G</option>
+                <option value="Object sensor H" language="obj_sen_h">Object sensor H</option>
+                <option value="Object sensor I" language="obj_sen_i">Object sensor I</option>
+                <option value="Object sensor J" language="obj_sen_j">Object sensor J</option>
+                <option value="Object sensor K" language="obj_sen_k">Object sensor K</option>
+                <option value="Object sensor L" language="obj_sen_l">Object sensor L</option>
+              </select>
+              <span language="r"> R </span>
+              <select name="right_sensor_source">
+                <option value="Object sensor A" selected language="obj_sen_a">Object sensor A</option>
+                <option value="Object sensor B" language="obj_sen_b">Object sensor B</option>
+                <option value="Object sensor C" language="obj_sen_c">Object sensor C</option>
+                <option value="Object sensor D" language="obj_sen_d">Object sensor D</option>
+                <option value="Object sensor E" language="obj_sen_e">Object sensor E</option>
+                <option value="Object sensor F" language="obj_sen_f">Object sensor F</option>
+                <option value="Object sensor G" language="obj_sen_g">Object sensor G</option>
+                <option value="Object sensor H" language="obj_sen_h">Object sensor H</option>
+                <option value="Object sensor I" language="obj_sen_i">Object sensor I</option>
+                <option value="Object sensor J" language="obj_sen_j">Object sensor J</option>
+                <option value="Object sensor K" language="obj_sen_k">Object sensor K</option>
+                <option value="Object sensor L" language="obj_sen_l">Object sensor L</option>
+              </select>
+            </li>
+            <li>
+              <span language="vehicle_width"></span>
+              <input type="number" name="vehicle_width" value="1" min="0" max="5" step="0.01">
+              <span language="length"></span>
+              <input type="number" name="vehicle_length" value="3" min="0" max="20" step="0.01">
+            </li>
+            <li>
+              <span>B to C [m]:</span>
+              <input type="number" name="RCTAlertBreakAreaBtoC" value="0.30" min="0" max="100" step="0.01">
+              <span>,A to B [m]:</span>
+              <input type="number" name="RCTAlertBreakAreaAtoB" value="3.00" min="0" max="100" step="0.01">
+            </li>
+            <li>
+              <span>E to F [m]:</span>
+              <input type="number" name="RCTAlertBreakAreaEtoF" value="0.30" min="0" max="1" step="0.01">
+              <span> ,F to G [m]:</span>
+              <input type="number" name="RCTAlertBreakAreaFtoG" value="3.00" min="0" max="50" step="0.01">
+            </li>
+          </ul>
+        </fieldset>
+        <div class="fixclear">
+          <fieldset class="left">
+            <legend>RCTB <span language="signal"></span></legend>
+            <ul class="rctb_signals">
+              <li>
+                <input type="checkbox" name="RCTBAlwaysEnable" id="RCTBAlwaysEnable">
+                <label for="RCTBAlwaysEnable" language="alwaysEnable"></label>
+              </li>
+              <li>
+                <span language="enableSignal"></span>
+                <a href="javascript:;" name="RCTBEnableSignal" language="not_config"></a>
+              </li>
+              <li>
+                <span language="enableValue"></span>
+                <input type="text" pattern="[,0-9]+$" name="RCTBEnableValue">
+              </li>
+              <li>
+                <span language="RCTBLeftActiveSignal"></span>
+                <a href="javascript:;" name="RCTBLeftActiveSignal" language="not_config"></a>
+              </li>
+              <li>
+                <span language="RCTBLeftActiveValue"></span>
+                <input type="text" pattern="[,0-9]+$" name="RCTBLeftActiveValue">
+              </li>
+              <li>
+                <span language="RCTBRightActiveSignal"></span>
+                <a href="javascript:;" name="RCTBRightActiveSignal" language="not_config"></a>
+              </li>
+              <li>
+                <span language="RCTBRightActiveValue"></span>
+                <input type="text" pattern="[,0-9]+$" name="RCTBRightActiveValue">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="right">
+            <legend>RCTA <span language="signal"></span></legend>
+            <ul class="rcta_signals">
+              <li>
+                <input type="checkbox" name="RCTAAlwaysEnable" id="RCTAAlwaysEnable">
+                <label for="RCTAAlwaysEnable" language="alwaysEnable"></label>
+              </li>
+              <li>
+                <span language="enableSignal"></span>
+                <a href="javascript:;" name="RCTAEnableSignal" language="not_config"></a>
+              </li>
+              <li>
+                <span language="enableValue"></span>
+                <input type="text" pattern="[,0-9]+$" name="RCTAEnableValue">
+              </li>
+              <li>
+                <span language="RCTALeftActiveSignal"></span>
+                <a href="javascript:;" name="RCTALeftActiveSignal" language="not_config"></a>
+              </li>
+              <li>
+                <span language="RCTALeftActiveValue"></span>
+                <input type="text" pattern="[,0-9]+$" name="RCTALeftActiveValue">
+              </li>
+              <li>
+                <span language="RCTARightActiveSignal"></span>
+                <a href="javascript:;" name="RCTARightActiveSignal" language="not_config"></a>
+              </li>
+              <li>
+                <span language="RCTARightActiveValue"></span>
+                <input type="text" pattern="[,0-9]+$" name="RCTARightActiveValue">
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="fixclear">
+          <div class="left">
+            <div class="top">
+              <input type="checkbox" name="RCTBGTSignalChecked" class="left" id="RCTBLeftGTSignal">
+              <ul class="left">
+                <li>
+                  <label language="RCTBLeftGTSignal" for="RCTBLeftGTSignal"></label>
+                  <a href="javascript:;" language="not_config" name="RCTBLeftGTSignal"></a>
+                </li>
+                <li>
+                  <span language="value"></span>
+                  <input type="text" pattern="[,0-9]+$" name="RCTBLeftGTValue" >
+                </li>
+                <li>
+                  <span language="RCTBRightGTSignal"></span>
+                  <a href="javascript:;" language="not_config" name="RCTBRightGTSignal"></a>
+                </li>
+                <li><span language="value"></span><input type="text" pattern="[,0-9]+$" name="RCTBRightGTValue" ></li>
+              </ul>
+            </div>
+            <div class="bottom">
+              <fieldset>
+                <legend>RCTB <span language="algorithm"></span></legend>
+                <span>TTC1≤</span>
+                <input type="number" name="RCTBTTC1Level1"  min="0" max="10" step="0.01">
+                <span language="sec">sec</span>
+              </fieldset>
+              <ul>
+                <li class="fixclear">
+                  <span language="RCTBRangeFd"></span><input type="number" name="RCTBRangeFd" min="0" max="1" step="0.01" class="right" value="">
+                </li>
+                <li class="fixclear">
+                  <span language="RCTBRangeMd"></span><input type="number" name="RCTBRangeMd" min="-1" max="0" step="0.01"
+                    class="right" value="">
+                </li>
+                <li class="fixclear">
+                  <span language="RCTBTTCFd"></span><input type="number" name="RCTBTTCFd" min="0" max="1" step="0.01"
+                    class="right" value="">
+                </li>
+                <li class="fixclear">
+                  <span language="RCTBTTCMd"></span><input type="number" name="RCTBTTCMd" min="-1" max="0" step="0.01"
+                    class="right" value="">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="right">
+            <div class="top">
+              <input type="checkbox" class="left" name="RCTAGTSignalChecked" id="RCTAGTSignalChecked">
+              <ul class="left">
+                <li>
+                  <label language="RCTAGTSignalChecked" for="RCTAGTSignalChecked"></label><a href="javascript:;"
+                    language="not_config" name="RCTALeftGTSignal"></a>
+                </li>
+                <li><span language="value"></span><input type="text" pattern="[,0-9]+$" name="RCTALeftGTValue" ></li>
+                <li><span language="RCTARightGTSignal"></span><a href="javascript:;" language="not_config"
+                    name="RCTARightGTSignal"></a></li>
+                <li><span language="value"></span><input type="text" pattern="[,0-9]+$" name="RCTARightGTValue" ></li>
+              </ul>
+            </div>
+            <div class="bottom">
+              <fieldset>
+                <legend>RCTA <span language="algorithm"></span></legend>
+                <span>TTC1≤</span>
+                <input type="number" min="0" max="10" step="0.01" name="RCTATTC1Level1">
+                <span  language="sec">sec</span>
+              </fieldset>
+              <ul>
+                <li class="fixclear">
+                  <span language="RCTBRangeFd"></span>
+                  <input type="number" name="RCTARangeFd" min="0" max="1" step="0.01" value="" class="right">
+                </li>
+                <li class="fixclear">
+                  <span language="RCTBRangeMd"></span>
+                  <input type="number" name="RCTARangeMd" min="-1" max="0" step="0.01" value="" class="right">
+                </li>
+                <li class="fixclear">
+                  <span language="RCTBTTCFd"></span>
+                  <input type="number" name="RCTATTCFd" min="0" max="1" step="0.01" value="" class="right">
+                </li>
+                <li class="fixclear">
+                  <span language="RCTBTTCMd"></span>
+                  <input type="number" name="RCTATTCMd" min="-1" max="0" step="0.01" value="" class="right">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="rcta-rctb-evaluation//images/rcta_area.png" alt="">
+      </div>
+    </div>
+  </div>
+  <script src="rcta-rctb-evaluation/js/jquery-2.14.min.js"></script>
+  <script src="rcta-rctb-evaluation/js/text.js"></script>
+  <script src="rcta-rctb-evaluation/js/bi-common.js"></script>
+  <script src="rcta-rctb-evaluation/js/index.js"></script>
+</body>
+
+</html>

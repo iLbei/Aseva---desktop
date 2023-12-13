@@ -1,0 +1,22 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 242px;
+  height: 172px;
+  margin: -86px 0 0 -121px;
+}
+
+select,
+input[type=number] {
+  width: 142px;
+}
+
+.container>ul>li {
+  height: 26px;
+  line-height: 26px;
+}
+
+.container>ul>li:not(:first-child) {
+  margin-top: 10px;
+}

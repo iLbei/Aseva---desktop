@@ -1,0 +1,24 @@
+.container {
+  width: 270px;
+  height: 418px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -209px 0 0 -135px;
+}
+
+.container>div>div:not(:first-child) {
+  margin-top: 20px;
+}
+
+.container>div>div ul li {
+  margin: 10px 0px;
+}
+.container>div>div ul li span{
+  vertical-align: middle;
+}
+input[type=text],
+[type=number] {
+  width: 140px;
+  float: right;
+}

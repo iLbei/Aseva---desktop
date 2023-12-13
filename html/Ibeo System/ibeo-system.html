@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IBEO system</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="ibeo-system/css/common.css">
+  <link rel="stylesheet" href="ibeo-system/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <button id="primary" language="primary" class="active left"></button>
+    <button id="secondary" language="secondary" class="left"></button>
+    <div>
+      <div>
+        <p language="device_part"></p>
+        <ul>
+          <li class="fixclear">
+            <div class="left primary">
+              <input type="checkbox" name="connect_0" id="connect0">
+              <label for="connect0" language="connect"></label>
+            </div>
+            <div class="left secondary">
+              <input type="checkbox" name="connect_1" id="connect1">
+              <label for="connect1" language="connect"></label>
+            </div>
+            <div class="right">
+              <a id="how_to_lux" href="javascript:;" onclick="openChildDialog()"  language="how_to_lux"></a>
+            </div>
+          </li>
+          <li class="fixclear">
+            <span class="left" language="device">Device:</span>
+            <div class="right primary fixclear">
+              <div class="left">
+                <div>
+                  <input type="radio" name="mode_0" id="p-device1" value="1" />
+                  <label for="p-device1">Lux 4L</label>
+                </div>
+                <div>
+                  <input type="radio" name="mode_0" id="p-device3" value="3" />
+                  <label for="p-device3">Fusion ECU</label>
+                </div>
+              </div>
+              <div class="left">
+                <div>
+                  <input type="radio" name="mode_0" id="p-device2" value="2" />
+                  <label for="p-device2">Lux 8L</label>
+                </div>
+                <div>
+                  <input type="radio" name="mode_0" id="p-device4" value="4" />
+                  <label for="p-device4">Scala</label>
+                </div>
+              </div>
+            </div>
+            <div class="right secondary">
+              <div class="left">
+                <div>
+                  <input type="radio" name="mode_1" id="s-device1" value="1" />
+                  <label for="s-device1">Lux 4L</label>
+                </div>
+                <div>
+                  <input type="radio" name="mode_1" id="s-device3" value="3" />
+                  <label for="s-device3">Fusion ECU</label>
+                </div>
+              </div>
+              <div class="left">
+                <div>
+                  <input type="radio" name="mode_1" id="s-device2" value="2" />
+                  <label for="s-device2">Lux 8L</label>
+                </div>
+                <div>
+                  <input type="radio" name="mode_1" id="p-device4" value="4" />
+                  <label for="s-device4">Scala</label>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="fixclear">
+            <span class="left" language="address"></span>
+            <div class="left primary ip">
+              <input type="text" class="green" name="ip_0" />
+            </div>
+            <div class="left secondary ip">
+              <input type="text" class="green" name="ip_1" />
+            </div>
+            <div class="right primary port">
+              <input type="number" name="port_0" value="0" min="0" max="65535" step="1" />
+            </div>
+            <div class="right secondary port">
+              <input type="number" name="port_1" value="0" min="0" max="65535" step="1" />
+            </div>
+            <span class="right" language="port"></span>
+          </li>
+          <li class="fixclear primary">
+            <input type="checkbox" name="input_pc_0" id="input_pc_0">
+            <label for="input_pc_0" language="import"></label> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="record_data_0" id="record_data_0">
+            <label for="record_data_0" language="record"></label>
+          </li>
+          <li class="fixclear secondary">
+            <input type="checkbox" name="input_pc_1" id="input_pc_1">
+            <label for="input_pc_1" language="import"></label> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="record_data_1" id="record_data_1">
+            <label for="record_data_1" language="record"></label>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p language="processing_part"></p>
+        <div>
+          <ul>
+            <li class="fixclear">
+              <div class="primary fixclear">
+                <span class="left" language="time_sync">Time sync:</span>
+                <select class="right" name="time_sync_mode_0" id="">
+                  <option value="0" selected language="arrival_time">Arrival time</option>
+                  <option value="1" language="ntp_local_time">NTP local time</option>
+                </select>
+              </div>
+              <div class="secondary fixclear">
+                <span class="left" language="time_sync">Time sync:</span>
+                <select class="right" name="time_sync_mode_1" id="">
+                  <option value="0" selected language="arrival_time">Arrival time</option>
+                  <option value="1" language="ntp_local_time">NTP local time</option>
+                </select>
+              </div>
+              <div class="primary">
+                <input type="checkbox" name="output_vehicle_0" id="output_vehicle_0">
+                <label for="output_vehicle_0" language="vehicle_sample"></label>
+              </div>
+              <div class="secondary">
+                <input type="checkbox" name="output_vehicle_1" id="output_vehicle_1">
+                <label for="output_vehicle_1" language="vehicle_sample"></label>
+              </div>
+              <div class="fixclear">
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 10px;" language="only_support"></span>
+              </div>
+            </li>
+            <li class="fixclear">
+              <div class="fixclear">
+                <span class="left" language="without_object"></span>
+              </div>
+              <div class="fixclear primary">
+                <select class="right" name="out_channel_0" id="p-without">
+                  <option value="-1" selected language="disabled">(Disabled)</option>
+                  <option value="0" language="obj_sensor_a">Object Sensor A</option>
+                  <option value="1" language="obj_sensor_b">Object Sensor B</option>
+                  <option value="2" language="obj_sensor_c">Object Sensor C</option>
+                  <option value="3" language="obj_sensor_d">Object Sensor D</option>
+                  <option value="4" language="obj_sensor_e">Object Sensor E</option>
+                  <option value="5" language="obj_sensor_f">Object Sensor F</option>
+                  <option value="6" language="obj_sensor_g">Object Sensor G</option>
+                  <option value="7" language="obj_sensor_h">Object Sensor H</option>
+                  <option value="8" language="obj_sensor_i">Object Sensor I</option>
+                  <option value="9" language="obj_sensor_j">Object Sensor J</option>
+                  <option value="10" language="obj_sensor_k">Object Sensor K</option>
+                  <option value="11" language="obj_sensor_l">Object Sensor L</option>
+                </select>
+              </div>
+              <div class="fixclear secondary">
+                <select class="right" name="out_channel_1" id="s-without">
+                  <option value="-1" selected language="disabled">(Disabled)</option>
+                  <option value="0" language="obj_sensor_a">Object Sensor A</option>
+                  <option value="1" language="obj_sensor_b">Object Sensor B</option>
+                  <option value="2" language="obj_sensor_c">Object Sensor C</option>
+                  <option value="3" language="obj_sensor_d">Object Sensor D</option>
+                  <option value="4" language="obj_sensor_e">Object Sensor E</option>
+                  <option value="5" language="obj_sensor_f">Object Sensor F</option>
+                  <option value="6" language="obj_sensor_g">Object Sensor G</option>
+                  <option value="7" language="obj_sensor_h">Object Sensor H</option>
+                  <option value="8" language="obj_sensor_i">Object Sensor I</option>
+                  <option value="9" language="obj_sensor_j">Object Sensor J</option>
+                  <option value="10" language="obj_sensor_k">Object Sensor K</option>
+                  <option value="11" language="obj_sensor_l">Object Sensor L</option>
+                </select>
+              </div>
+            </li>
+            <li class="fixclear">
+              <div class="fixclear">
+                <span class="left" language="with_object"></span>
+              </div>
+              <div class="fixclear primary">
+                <select class="right" name="objects_output_channel_with_post_process_0" id="p-with">
+                  <option value="-1" selected language="disabled">(Disabled)</option>
+                  <option value="0" language="obj_sensor_a">Object Sensor A</option>
+                  <option value="1" language="obj_sensor_b">Object Sensor B</option>
+                  <option value="2" language="obj_sensor_c">Object Sensor C</option>
+                  <option value="3" language="obj_sensor_d">Object Sensor D</option>
+                  <option value="4" language="obj_sensor_e">Object Sensor E</option>
+                  <option value="5" language="obj_sensor_f">Object Sensor F</option>
+                  <option value="6" language="obj_sensor_g">Object Sensor G</option>
+                  <option value="7" language="obj_sensor_h">Object Sensor H</option>
+                  <option value="8" language="obj_sensor_i">Object Sensor I</option>
+                  <option value="9" language="obj_sensor_j">Object Sensor J</option>
+                  <option value="10" language="obj_sensor_k">Object Sensor K</option>
+                  <option value="11" language="obj_sensor_l">Object Sensor L</option>
+                </select>
+              </div>
+              <div class="fixclear secondary">
+                <select class="right" name="objects_output_channel_with_post_process_1" id="s-with">
+                  <option value="-1" selected language="disabled">(Disabled)</option>
+                  <option value="0" language="obj_sensor_a">Object Sensor A</option>
+                  <option value="1" language="obj_sensor_b">Object Sensor B</option>
+                  <option value="2" language="obj_sensor_c">Object Sensor C</option>
+                  <option value="3" language="obj_sensor_d">Object Sensor D</option>
+                  <option value="4" language="obj_sensor_e">Object Sensor E</option>
+                  <option value="5" language="obj_sensor_f">Object Sensor F</option>
+                  <option value="6" language="obj_sensor_g">Object Sensor G</option>
+                  <option value="7" language="obj_sensor_h">Object Sensor H</option>
+                  <option value="8" language="obj_sensor_i">Object Sensor I</option>
+                  <option value="9" language="obj_sensor_j">Object Sensor J</option>
+                  <option value="10" language="obj_sensor_k">Object Sensor K</option>
+                  <option value="11" language="obj_sensor_l">Object Sensor L</option>
+                </select>
+              </div>
+            </li>
+            <li class="fixclear primary">
+              <p language="signal_output"></p>
+              <input type="radio" name="signal_output_with_post_process_0" id="p-signal1" value="no" checked />
+              <label for="p-signal1" language="without"></label> &nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="signal_output_with_post_process_0" id="p-signal2" value="yes" checked />
+              <label for="p-signal2" language="with"></label>
+            </li>
+            <li class="fixclear secondary">
+              <p language="signal_output"></p>
+              <input type="radio" name="signal_output_with_post_process_1" id="s-signal1" value="no" checked />
+              <label for="s-signal1" language="without"></label> &nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" name="signal_output_with_post_process_1" id="s-signal2" value="yes" checked />
+              <label for="s-signal2" language="with"></label>
+            </li>
+          </ul>
+        </div>
+        <div class="fixclear">
+          <div class="left primary">
+            <div class="fixclear">
+              <div class="left" language="origin">Origin [m]:</div>
+              <div class="right">
+                <div class="fixclear">
+                  <span class="left">X</span>
+                  <input class="right xy" type="number" value="0.00" name="offset_x_0" min="-6" max="1" step="0.01"
+                    id="p-x">
+                </div>
+                <div class="fixclear">
+                  <span class="left">Y</span>
+                  <input class="right xy" type="number" value="0.00" name="offset_y_0" min="-3" max="3" step="0.01"
+                    id="p-y">
+                </div>
+                <div class="fixclear">
+                  <span class="left">H</span>
+                  <input class="right" type="number" value="0.00" name="height_0" min="0.00" max="3.00" step="0.01"
+                    id="p-h">
+                </div>
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="yam_offset">Yaw offset [°]</span>
+              <input class="right xy" type="number" name="yaw_0" value="0.0" min="-180.00" max="180.00" step="0.1"
+                id="p-offset">
+            </div>
+          </div>
+          <div class="left secondary">
+            <div class="fixclear">
+              <div class="left" language="origin">Origin [m]:</div>
+              <div class="right">
+                <div class="fixclear">
+                  <span class="left">X</span>
+                  <input class="right xy" type="number" value="0.00" name="offset_x_1" min="-6" max="1" step="0.01"
+                    id="s-x">
+                </div>
+                <div class="fixclear">
+                  <span class="left">Y</span>
+                  <input class="right xy" type="number" value="0.00" name="offset_y_1" min="-3" max="3" step="0.01"
+                    id="s-y">
+                </div>
+                <div class="fixclear">
+                  <span class="left">H</span>
+                  <input class="right" type="number" value="0.00" name="height_1" min="0.00" max="3.00" step="0.01"
+                    id="s-h">
+                </div>
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="yam_offset">Yaw offset [°]</span>
+              <input class="right xy" type="number" name="yaw_1" value="0.0" min="-180.00" max="180.00" step="0.1"
+                id="s-offset">
+            </div>
+          </div>
+          <div class="right" id="p-right">
+            <canvas id="myCanvas" width="105" height="113"></canvas>
+          </div>
+        </div>
+        <div class="fixclear">
+          <ul>
+            <li class="fixclear">
+              <span class="left" language="point_output"></span>
+              <select class="right primary" name="out_channel_pts_0" id="">
+                <option value="-1" selected language="disabled">(Disabled)</option>
+                <option value="0" language="chan_a">Channel A</option>
+                <option value="1" language="chan_b">Channel B</option>
+                <option value="2" language="chan_c">Channel C</option>
+                <option value="3" language="chan_d">Channel D</option>
+                <option value="4" language="chan_e">Channel E</option>
+                <option value="5" language="chan_f">Channel F</option>
+              </select>
+              <select class="right secondary" name="out_channel_pts_1" id="">
+                <option value="-1" selected language="disabled">(Disabled)</option>
+                <option value="0" language="chan_a">Channel A</option>
+                <option value="1" language="chan_b">Channel B</option>
+                <option value="2" language="chan_c">Channel C</option>
+                <option value="3" language="chan_d">Channel D</option>
+                <option value="4" language="chan_e">Channel E</option>
+                <option value="5" language="chan_f">Channel F</option>
+              </select>
+            </li>
+            <li class="fixclear primary">
+              <input class="left" type="checkbox" name="two_frame_merge_0" id="p-merge2">
+              <label for="p-merge2" language="merge2"></label>
+            </li>
+            <li class="fixclear secondary">
+              <input class="left" type="checkbox" name="two_frame_merge_1" id="s-merge2">
+              <label for="s-merge2" language="merge2"></label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id='image'>
+    <img src="ibeo-system/image/guide(1_5).jpg" alt="">
+  </div>
+  <script src="ibeo-system/js/jquery-2.14.min.js"></script>
+  <script src="ibeo-system/js/bi-common.js"></script>
+  <script src="ibeo-system/js/text.js"></script>
+  <script src="ibeo-system/js/index.js"></script>
+</body>
+
+</html>

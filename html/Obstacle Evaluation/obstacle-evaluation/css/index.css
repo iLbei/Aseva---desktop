@@ -1,0 +1,64 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 332px;
+  height:487px;
+  transform: translate(-50%,-50%);
+}
+
+.container>.top {
+  height: 26px;
+}
+
+.container>ul {
+ max-height: 460px;
+ overflow: auto;
+}
+
+.container li {
+  height: 26px;
+}
+.container>ul>li:not(:first-child){
+  margin-top: 7px;
+}
+.container li>span {
+  padding-top: 2px;
+  display: inline-block;
+}
+
+.container li>select {
+  margin-left: -4px;
+}
+
+.container li>input[type=number],
+.container li>select {
+  width: 126px;
+}
+
+ul>li:nth-child(4),
+ul>li:nth-child(5),
+ul>li:nth-child(6),
+ul>li:nth-child(7),
+ul>li:nth-child(8),
+ul>li:nth-child(9) {
+  width: 222px;
+}
+
+ul>li:nth-child(4) input[type=checkbox],
+ul>li:nth-child(5) input[type=checkbox],
+ul>li:nth-child(6) input[type=checkbox],
+ul>li:nth-child(7) input[type=checkbox],
+ul>li:nth-child(8) input[type=checkbox],
+ul>li:nth-child(9) input[type=checkbox] {
+  margin-top: 4px;
+}
+
+ul>li:nth-child(4)>span,
+ul>li:nth-child(5)>span,
+ul>li:nth-child(6)>span,
+ul>li:nth-child(7)>span,
+ul>li:nth-child(8)>span,
+ul>li:nth-child(9)>span {
+  margin-top: -7px;
+}

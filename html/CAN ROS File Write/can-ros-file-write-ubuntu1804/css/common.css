@@ -1,0 +1,104 @@
+body,
+div,
+p,
+input,
+li,
+ul,
+button,
+tr,
+td {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span,
+a,
+i,
+b,
+div {
+  background: transparent;
+}
+
+li {
+  list-style: none;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  vertical-align: -2px;
+  margin-right: 3px;
+}
+
+input[type=text],
+input[type=number] {
+  height: 26px;
+}
+
+span {
+  display: inline-block;
+}
+
+input,
+select {
+  outline: none;
+  background-color: white;
+  border: 1px solid #868686;
+}
+
+select {
+  height: 26px;
+  font-size: 10px;
+}
+
+button {
+  padding: 2px 20px;
+  border: 1px solid #868686;
+  border-radius: 2px;
+}
+
+a {
+  color: blue;
+}
+
+.container {
+  padding: 10px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.fixclear::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: rgb(50, 205, 50);
+}
+
+.orange {
+  color: rgb(255, 140, 0);
+}
+
+.blue {
+  color: rgb(30, 144, 255);
+}
+
+.disabled {
+  color: gray;
+}
+
+.disabled_background {
+  background-color: #ededed;
+}

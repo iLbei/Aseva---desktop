@@ -1,0 +1,30 @@
+var cn = {
+  Enabled: "Enabled",
+  not_config:"<Not Configured>",
+  SubjectGNSS_IMUChannel:"Subject GNSS-IMU Channel:",
+  target:"Target",
+  config:"Config",
+  CNSS_IMUOutputChannel:"CNSS-IMU Channel:",
+  object_type:"Object Type:",
+  vehicle_width:"Vehicle Width[m]:",
+  vehicle_height:"Vehicle height[m]:",
+  dxoffset:"DxOffset:",
+  dyoffset:"DyOffset:",
+  cal_heading_offset:"Cal Heading Offset",
+  OutputObjectsChannel:"Output Object Channel:"
+},
+  en = {
+    Enabled: "Enabled",
+    not_config:"<Not Configured>",
+    SubjectGNSS_IMUChannel:"Subject GNSS-IMU Channel:",
+    config:"Config",
+    target:"Target",
+    CNSS_IMUOutputChannel:"CNSS-IMU Channel:",
+    object_type:"Object Type:",
+    vehicle_width:"Vehicle Width[m]:",
+    vehicle_height:"Vehicle height[m]:",
+    dxoffset:"DxOffset:",
+    dyoffset:"DyOffset:",
+    cal_heading_offset:"Cal Heading Offset",
+    OutputObjectsChannel:"Output Object Channel:"
+  };

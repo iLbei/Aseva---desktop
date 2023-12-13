@@ -1,0 +1,146 @@
+body,
+div,
+p,
+input,
+li,
+ul,
+button,
+tr,
+td {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span,
+a,
+i,
+b,
+div,
+tr,
+td,
+tbody,
+table,
+ul,
+li,
+label,
+img {
+  background: transparent;
+}
+
+li {
+  list-style: none;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  vertical-align: -2px;
+  margin-right: 3px;
+}
+
+input[type=text],
+input[type=number],
+input[type=password] {
+  height: 26px;
+  padding: 0px 4px;
+}
+
+li,
+span,
+p,
+div {
+  cursor: default;
+}
+
+span,
+label {
+  display: inline-block;
+}
+
+canvas {
+  background-color: #fff;
+}
+
+input,
+select {
+  outline: none;
+  background-color: white;
+  border: 1px solid #868686;
+}
+
+select {
+  height: 26px;
+  font-size: 10px;
+}
+
+button {
+  padding: 2px 20px;
+  border: 1px solid #868686;
+  border-radius: 2px;
+}
+
+a {
+  display: inline-block;
+  color: blue;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.fixclear::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: rgb(50, 205, 50);
+}
+
+.orange {
+  color: rgb(255, 140, 0);
+}
+
+.blue {
+  color: rgb(30, 144, 255);
+}
+
+/* a标签禁用 */
+.disabled_a {
+  cursor: default;
+  color: gray;
+  /* pointer-events: none; linux不支持 */
+  text-decoration: none;
+}
+
+/* 禁用时input,select,button的背景颜色 */
+.disabled_background {
+  background-color: #ededed;
+  border: 1px solid #b0b0b0;
+  color: #b0b0b0;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #858585;
+  box-shadow: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

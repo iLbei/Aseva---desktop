@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Lane Sensor By CAN</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="lane-sensor-by-can/css/common.css">
+  <link rel="stylesheet" href="lane-sensor-by-can/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul class="item top fixclear">
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+    <div class="content fixclear">
+      <div class="left">
+        <div class="title">
+          <a href="javascript:;" class="alias" language="lane_sensor"></a>
+          <input type="text" name="alias" value="Lane Sensor" id="">
+        </div>
+        <div class="fixclear">
+          <div class="left">
+            <input type="checkbox" name="enabled" id="enabled0">
+            <label for="enabled0" language="enabled"></label>
+          </div>
+          <div class="right">
+            <button class="import" onclick="importFile(this)" language="import"></button>
+            <button type="button" class="export" onclick="exportFile(this)" language="export"></button>
+          </div>
+        </div>
+        <div class="fixclear">
+          <div class="left">
+            <span language="final_msg"></span>
+            <a href="javascript:;" class="red sampling_msg_id" name="sampling_msg_id" onclick="selectBus(this)"
+              language="not_cfg"></a>
+          </div>
+          <div class="right">
+            <span language="out_channel"></span>
+            <select name="out_channel" id="">
+              <option value="0" selected language="lane_sen_a"></option>
+              <option value="1" language="lane_sen_b"></option>
+              <option value="2" language="lane_sen_c"></option>
+              <option value="3" language="lane_sen_d"></option>
+              <option value="4" language="lane_sen_e"></option>
+              <option value="5" language="lane_sen_f"></option>
+              <option value="6" language="lane_sen_g"></option>
+              <option value="7" language="lane_sen_h"></option>
+            </select>
+          </div>
+        </div>
+        <div class="fixclear">
+          <div class="left ">
+            <div class="coor">
+              <p language="coor_offset"></p>
+              <div>
+                <div class="fixclear">
+                  <div language="origin"></div>
+                  <div>
+                    <span>X</span>
+                    <input type="number" name="camera_offset_x" onchange="change(this)" oninput="changeInput(this)"
+                      onblur="change(this)" value="0.00" min="-20" max="1" step="0.01" id="">
+                  </div>
+                  <div>
+                    <span>Y</span>
+                    <input type="number" name="camera_offset_y" onchange="change(this)" oninput="changeInput(this)"
+                      onblur="change(this)" value="0.00" min="-3" max="3" step="0.01" id="">
+                  </div>
+                </div>
+                <div>
+                  <span language="yaw_offset"></span>
+                  <input type="number" name="camera_offset_yaw" onchange="changeYaw(this)"
+                    oninput="changeYawInput(this)" onblur="changeYaw(this)" value="0.00" min="-3" max="3" step="0.01"
+                    id="">
+                </div>
+              </div>
+            </div>
+            <div class="line">
+              <p language="line_type_v"></p>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="other_type"></a>
+              <div class="fixclear class_sv">
+                <div class="left">
+                  <span language="solid"></span>
+                  <input type="text"  pattern="[,0-9.]+$" class="bar" name="solid" num="2">
+                </div>
+                <div class="right">
+                  <span language="dashed"></span>
+                  <input type="text"  pattern="[,0-9.]+$" class="bar" name="dash" num="3">
+                </div>
+              </div>
+            </div>
+            <div class="line">
+              <p language="line_color_v"></p>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="other_type"></a>
+              <div class="fixclear color_sv">
+                <div class="left">
+                  <span language="white"></span>
+                  <input type="text" pattern="[,0-9.]+$" class="bar" name="white" num="2">
+                </div>
+                <div class="right">
+                  <span language="yellow"></span>
+                  <input type="text" pattern="[,0-9.]+$" class="bar" name="yellow" num="3">
+                </div>
+              </div>
+            </div>
+            <div class="model">
+              <p language="model_type"></p>
+              <div class="fixclear">
+                <div>
+                  <p language="heading"></p>
+                  <select name="heading_mode" onchange="headMode(this)" id="">
+                    <option value="Clothoid" selected language="clothoid"></option>
+                    <option value="Mathematic" language="mathematic"></option>
+                  </select>
+                </div>
+                <div>
+                  <p language="curvature"></p>
+                  <select name="curvature_mode" onchange="curvMode(this)" id="">
+                    <option value="Clothoid" selected language="clothoid"></option>
+                    <option value="Mathematic" language="mathematic"></option>
+                  </select>
+                </div>
+                <div>
+                  <p language="curvature_diff"></p>
+                  <select name="curvature_diff_mode" onchange="diffMode(this)" id="">
+                    <option value="Clothoid" selected language="clothoid"></option>
+                    <option value="Mathematic" language="mathematic"></option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div>
+              <canvas class="canvas" width="146" height="186"></canvas>
+              <a href="javascript:;" onclick="scaleCanvas(this)" class="scale_change" scale="large"
+                language="scale_small"></a>
+            </div>
+            <div class="detect">
+              <p language="detect_range"></p>
+              <div>
+                <div class="fixclear">
+                  <span class="left red" language="rear"></span>
+                  <input class="right" type="number" onchange="checkRear(this)" onchange="checkRear(this)"
+                    name="rear_bound" value="0.00" min="-100" max="20" step="0.01" id="">
+                </div>
+                <div class="fixclear">
+                  <span class="left red" language="front"></span>
+                  <input class="right" type="number" onchange="checkFront(this)" onchange="checkFront(this)"
+                    name="front_bound" value="0.00" min="-20" max="100" step="0.01" id="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <p language="lane_line"></p>
+        <div>
+          <a href="javascript:;" onclick="addBox(this)" language="add_lane_line"></a>
+        </div>
+        <div class="lines">
+          <div class="box fixclear">
+            <div class="left">
+              <div class="fixclear">
+                <div class="left w70">
+                  <span class="right" language="valid_signal"></span>
+                </div>
+                <div class="right space_a">
+                  <a class="red detected_signal" name="detected_signal" onclick="selectSignal(this,false)"
+                    href="javascript:;" language="not_cfg"></a>
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left w70">
+                  <span class="right" language="id_signal"></span>
+                </div>
+                <div class="right space_a">
+                  <a class="id_signal" name="id_signal" href="javascript:;" onclick="selectSignal(this,false)"
+                    language="not_cfg"></a>
+
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left w70">
+                  <span class="right" language="line_type"></span>
+                </div>
+                <div class="right space_a">
+                  <a class="class_signal" name="class_signal" href="javascript:;"
+                    onclick="selectSignal(this,false)" language="not_cfg"></a>
+
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left w70">
+                  <span class="right" language="line_color"></span>
+                </div>
+                <div class="right space_a">
+                  <a class="color_signal" name="color_signal" href="javascript:;"
+                    onclick="selectSignal(this,false)" language="not_cfg"></a>
+
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left w70">
+                  <span class="right" language="confidence"></span>
+                </div>
+                <div class="right space_a">
+                  <a class="confidence_signal" name="confidence_signal" type="confidence_scale" unit="%"
+                    onclick="selectSignal(this,true)" confidence_scale="1" href="javascript:;" language="not_cfg">
+                  </a>
+
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left w70">
+                  <span class="right" language="line_width"></span>
+                </div>
+                <div class="right space_a">
+                  <a class="width_signal" name="width_signal" unit="m" width_scale="1" type="width_scale"
+                    onclick="selectSignal(this,true)" href="javascript:;" language="not_cfg"></a>
+
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left w70">
+                  <span class="right" language="rear_end"></span>
+                </div>
+                <div class="right space_a">
+                  <a class="rear_end_signal" name="rear_end_signal" unit="m" rear_end_scale="1"
+                    onclick="selectSignal(this,true)" type="rear_end_scale" href="javascript:;" language="not_cfg"></a>
+
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left w70">
+                  <span class="right" language="front_end"></span>
+                </div>
+                <div class="right space_a">
+                  <a class="front_end_signal" name="front_end_signal" unit="m" front_end_scale="1"
+                    onclick="selectSignal(this,true)" type="front_end_scale" href="javascript:;" language="not_cfg"></a>
+
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="fixclear">
+                <div class="left">
+                  <span language="valid_v"></span>
+                  <input type="text" pattern="[,0-9.]+$" class="green" onchange="textChange(this)" name="detected_values" val="0" value="0"
+                    id="">
+                </div>
+                <a class="right" href="javascript:;" onclick="remove(this)" language="remove"></a>
+              </div>
+              <p language="distance_to_line"></p>
+              <div>
+                <div class="space_a">
+                  <a href="javascript:;" onclick="selectSignal(this,true)" class="red coef_1st_signal" unit="m"
+                    name="coef_1st_signal" coef_1st_scale="1" type="coef_1st_scale" language="not_cfg">
+                  </a>
+                </div>
+              </div>
+              <p class="first">Heading Angle [rad]:</p>
+              <div class="h20">
+                <div class="space_a">
+                  <a href="javascript:;" onclick="selectSignal(this,true)" class="red coef_2nd_signal"
+                    name="coef_2nd_signal" unit="rad" coef_2nd_scale="1" type="coef_2nd_scale" language="not_cfg">
+                  </a>
+                </div>
+              </div>
+              <p class="second">Curvature [1/m]:</p>
+              <div>
+                <div class="space_a">
+                  <a href="javascript:;" onclick="selectSignal(this,true)" class="coef_3rd_signal"
+                    name="coef_3rd_signal" coef_3rd_scale="1" type="coef_3rd_scale" unit="1/m" language="not_cfg">
+                  </a>
+                </div>
+              </div>
+              <p class="third">Differential of Curvature [1/m2]:</p>
+              <div>
+                <div class="space_a">
+                  <a href="javascript:;" onclick="selectSignal(this,true)" class="coef_4th_signal" unit="1/m2"
+                    name="coef_4th_signal" coef_4th_scale="1" type="coef_4th_scale" language="not_cfg">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <p class="type"></p>
+        <p class="color"></p>
+      </div>
+    </div>
+  </div>
+  <script src="lane-sensor-by-can/js/bi-common.js"></script>
+  <script src="lane-sensor-by-can/js/text.js"></script>
+  <script src="lane-sensor-by-can/js/jquery-2.14.min.js"></script>
+  <script src="lane-sensor-by-can/js/index.js"></script>
+  <script src="lane-sensor-by-can/js/jquery.base64.js"></script>
+</body>
+
+</html>

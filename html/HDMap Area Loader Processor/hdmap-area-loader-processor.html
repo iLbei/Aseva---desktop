@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="hdmap-area-loader-processor/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="hdmap-area-loader-processor/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="data_sourse">
+      <p language='data_sourse'></p>
+      <input type="radio" name='areaDataSource' value="1" id="kb_data"><label for="kb_data" language='kb_data'></label>
+      <input type="radio" name='areaDataSource' value="0" id="hdmap_files" checked><label for="hdmap_files" language='hdmap_files'></label>
+    </div>
+    <div class="map_sourse">
+      <p language='map_sourse'></p>
+      <ul>
+        <li>
+          <input type="radio" name='areaMapSource' value="0" id="areaMapSource_0" checked>
+          <label for="areaMapSource_0" language='external_hdMap'></label>
+          <a href="javascript:;" name='areaMapPath' id="external_hdMap" language='not_config'></a>
+        </li>
+        <li>
+          <input type="radio" name='areaMapSource' value="1" id="ibeo_evs">
+          <label for="ibeo_evs" language='ibeo_evs'></label>
+        </li>
+        <li>
+          <input type="radio" name='areaMapSource' value="2" id="lane_sensor_sample">
+          <label for="lane_sensor_sample" language='lane_sensor_sample'></label>
+        </li>
+        <li>
+          <input type="radio" name='areaMapSource' value="3" id="gnss_imu_sample">
+          <label for="gnss_imu_sample" language='gnss_imu_sample'></label>
+        </li>
+        <li>
+          <input type="radio" name='areaMapSource' value="4" id="areaMapSource_4">
+          <label for="areaMapSource_4" language='external_geo_json'></label>
+          <a href="javascript:;" name='areaMapPath' id="external_geo_json" language='not_config'></a>
+        </li>
+        <li>
+          <input type="radio" name='areaMapSource' value="5" id="areaMapSource_5">
+          <label for="areaMapSource_5" language='external_shape_file'></label>
+          <a href="javascript:;" name='areaMapPath' id="external_shape_file" language='not_config'></a>
+        </li>
+      </ul>
+    </div>
+    <div class="Processing">
+      <p language='processing'></p>
+      <ul>
+        <li><span language='gnss_imu_input'></span>
+          <select name="areaGnssChannel" id="">
+            <option value="-1" language='disabled'></option>
+            <option value="0">GNSS IMU A</option>
+            <option value="1">GNSS IMU B</option>
+            <option value="2">GNSS IMU C</option>
+            <option value="3">GNSS IMU D</option>
+            <option value="4">GNSS IMU E</option>
+            <option value="5">GNSS IMU F</option>
+          </select>
+        </li>
+        <li><span language='visible_area_region'></span><input type="number" name="areaVisibleAreaRegion" id=""
+            value="500.00" min="0.00" max="1000000.00" step="0.01"></li>
+        <li><span language='fine_interval'></span><input type="number" min="0.00" max="200.00" name="areaFineInterval"
+            id="" value='0.50' step="0.01"></li>
+      </ul>
+    </div>
+  </div>
+  <script src="hdmap-area-loader-processor/js/jquery-2.14.js"></script>
+  <script src="hdmap-area-loader-processor/js/bi-common.js"></script>
+  <script src="hdmap-area-loader-processor/js/text.js"></script>
+  <script src="hdmap-area-loader-processor/js/index.js"></script>
+</body>
+
+</html>

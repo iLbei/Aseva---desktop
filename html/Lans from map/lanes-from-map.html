@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="lanes-from-map/css/common.css">
+  <link rel="stylesheet" href="lanes-from-map/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container fixclear">
+    <div class="left">
+      <div class="top">
+        <p language="hdmap_source"></p>
+        <div>
+          <input type="radio" name="HDMapSource" value="1" id="h1">
+          <label for="h1" language="external_shp"></label>
+          <a href="javascript:;" id="ExternalShpFilesPath" language="empty"></a>
+        </div>
+        <div>
+          <input type="radio" name="HDMapSource" value="2" id="h2">
+          <label for="h2" language="external_xoder"></label>
+          <a href="javascript:;" id="ExternalXodrMapPath" language="empty"></a>
+        </div>
+        <div>
+          <input type="radio" name="HDMapSource" value="5" id="h5">
+          <label for="h5" language="ppbgis"></label>
+        </div>
+        <div>
+          <input type="radio" name="HDMapSource" value="4" id="h4">
+          <label for="h4" language="ppblss"></label>
+        </div>
+        <div>
+          <input type="radio" name="HDMapSource" value="0" checked id="h0">
+          <label for="h0" language="none"></label>
+        </div>
+      </div>
+      <div class="bottom" id="bottom">
+        <p language="process"></p>
+        <div class="fixclear">
+          <span class="left" language="gnss_imu_input_channel"></span>
+          <select class="right" name="GnssImuInputChannel" id="">
+            <option value="-1" selected language="disabled">(Disabled)</option>
+            <option value="0">GNSS IMU A</option>
+            <option value="1">GNSS IMU B</option>
+            <option value="2">GNSS IMU C</option>
+            <option value="3">GNSS IMU D</option>
+            <option value="4">GNSS IMU E</option>
+            <option value="5">GNSS IMU F</option>
+          </select>
+        </div>
+        <div class="fixclear">
+          <span class="left" language="lane_out_channel"></span>
+          <select class="right" name="LssOutputChannel" id="">
+            <option value="-1" selected language="disabled">(Disabled)</option>
+            <option value="0" language="lane_sensor_a">Lane sensor A</option>
+            <option value="1" language="lane_sensor_b">Lane sensor B</option>
+            <option value="2" language="lane_sensor_c">Lane sensor C</option>
+            <option value="3" language="lane_sensor_d">Lane sensor D</option>
+            <option value="4" language="lane_sensor_e">Lane sensor E</option>
+            <option value="5" language="lane_sensor_f">Lane sensor F</option>
+            <option value="6" language="lane_sensor_g">Lane sensor G</option>
+            <option value="7" language="lane_sensor_h">Lane sensor H</option>
+          </select>
+        </div>
+        <div class="fixclear">
+          <span class="left" language="for_exten"></span>
+          <input class="right" type="number" name="ForwardExtension" value="0.00" min="0" max="100" step="0.01" id="">
+        </div>
+        <div class="fixclear">
+          <span class="left" language="baskr_exten"></span>
+          <input class="right" type="number" name="BackwardExtension" value="0.00" min="0" max="100" step="0.01" id="">
+        </div>
+        <div class="fixclear">
+          <span class="left" language="coatse_inter"></span>
+          <input class="right" type="number" name="CoarseInterval" value="0.00" min="0" max="200" step="0.01" id="">
+        </div>
+        <div class="fixclear">
+          <span class="left" language="fine_inter"></span>
+          <input class="right" type="number" name="FineInterval" value="0.00" min="0" max="200" step="0.01" id="">
+        </div>
+        <div class="fixclear">
+          <div class="left">
+            <canvas id="canvas1" width="107" height="143"></canvas>
+          </div>
+          <div class="right">
+            <div>
+              <span>X:</span>
+              <input class="right" onchange="changeX(this)" oninput="changeInputX(this)" onblur="changeX(this)"
+                type="number" name="PositionX" value="0" min="-10" max="10" step="0.01" id="">
+            </div>
+            <div>
+              <span>Y:</span>
+              <input class="right" onchange="changeY(this)" oninput="changeInputY(this)" onblur="changeY(this)"
+                type="number" name="PositionY" value="0" min="-10" max="10" step="0.01" id="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <p language="signal_out"></p>
+      <div class="content" id="content">
+        <div class="box fixclear">
+          <div class="left">
+            <div class="fixclear">
+              <span class="left" language="lane_id"></span>
+              <input class="right" type="number" onchange="changeLane()" onblur="laneBlur(this)" name="lane" value="0"
+                min="-10" max="10" step="1" id="">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="signal"></span>
+              <div class="right text">
+                <a href="javascript:;" onclick="selectSignal(this)" scale="1" language="not_config"></a>
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="description"></span>
+              <input class="right disabled_background" type="text" name="description" disabled id="">
+            </div>
+          </div>
+          <div class="btn right" onclick="onClick(this)">
+            <img src="lanes-from-map/images/delete item.png" width="16" height="16" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <button language="add"></button>
+        <button language="clear"></button>
+      </div>
+    </div>
+  </div>
+  <script src="lanes-from-map/js/jquery-2.14.min.js"></script>
+  <script src="lanes-from-map/js/text.js"></script>
+  <script src="lanes-from-map/js/bi-common.js"></script>
+  <script src="lanes-from-map/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.content{
+  height: 735px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content>div {
+  padding: 7px 10px;
+  background-color: #FBD7B6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container input[type='number'] {
+  width: 50px;
+  margin-right:10px;
+}
+.content>div>span:nth-child(1) {
+  width: 80px;
+}

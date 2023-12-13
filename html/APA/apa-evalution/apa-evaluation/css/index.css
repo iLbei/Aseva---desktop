@@ -1,0 +1,94 @@
+.container {
+  width: 1016px;
+  height: 596px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -298px 0 0 -508px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content>div:nth-child(1) {
+  width: 370px;
+}
+
+.content>div:nth-child(2) {
+  width: 320px;
+}
+
+.content>div:nth-child(3) {
+  width: 301px;
+}
+
+.container>div>div>div {
+  padding: 10px 10px 5px;
+  position: relative;
+  border: 1px solid #ccc;
+  margin: 10px 0px;
+}
+
+.container>div>div>div>p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+}
+
+.indicators {
+  height: 167px;
+}
+
+.indicators>ul>li {
+  margin: 20px 0px !important;
+}
+
+[language='empty'] {
+  width: 299px;
+}
+
+.container>div>div>ul>li>a {
+  max-width: 112px;
+}
+
+.container>div>div:nth-child(4)>div:nth-child(2) {
+  height: 461px;
+}
+
+.content>div>div>ul>li {
+  height: 22.65px;
+}
+
+[language="empty"] {
+  max-width: 240px !important;
+}
+
+.content>div>div>ul>li>a {
+  max-width: 120px;
+}
+
+.content>div>div a {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content>div>div>ul:nth-child(2) {
+  margin-right: 7px;
+}
+
+.content>div:nth-child(1) ul li {
+  height: 23.6px;
+}
+
+.content>div:nth-child(3)>div:nth-child(2) {
+  height: 394px;
+}
+
+.indicators input {
+  width: 80px;
+}

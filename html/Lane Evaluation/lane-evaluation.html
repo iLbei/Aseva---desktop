@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="lane-evaluation/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="lane-evaluation/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="leEnable" id="leEnable">
+      <label for="leEnable" language="leEnable"></label>
+    </div>
+    <ul>
+      <li class="fixclear">
+        <span language="gtLanesChannel"></span>
+        <select name="gtLanesChannel" class="right">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+          <option value="6">Channel G</option>
+          <option value="7">Channel H</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="evaluationLanesChannel"></span>
+        <select name="evaluationLanesChannel" class="right">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+          <option value="6">Channel G</option>
+          <option value="7">Channel H</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="laneIndex"></span>
+        <select name="laneIndex" class="right">
+          <option value="0">Invalid</option>
+          <option value="1">Third Left Lane</option>
+          <option value="2">Second Left Lane</option>
+          <option value="3">First Left Lane</option>
+          <option value="4">Current Lane</option>
+          <option value="5">First Right Lane</option>
+          <option value="6">Second Right Lane</option>
+          <option value="7">Third Right Lane</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="roadSource"></span>
+        <select name="roadSource" class="right">
+          <option value="0">EnvSample</option>
+          <option value="1">Highway</option>
+          <option value="2">CityExpress</option>
+          <option value="3">CityMain</option>
+          <option value="4">GeneralRoad</option>
+          <option value="5">CountryRoad</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="lineType"></span>
+        <select name="lineType" class="right">
+          <option value="0">Straight</option>
+          <option value="1">Bend</option>
+          <option value="2">All</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="dayTime"></span>
+        <span language="start"></span>
+        <input type="number" name="dayTimeStart" value="0" max="24" min="0" step="1">
+        <input type="number" name="dayTimeEnd" value="18" max="24" min="0" step="1" class="right">
+        <span language="end" class="right"></span>
+      </li>
+      <li class="fixclear">
+        <span language="nightTime"></span>
+        <span language="start"></span>
+        <input type="number" name="nightTimeStart" value="19" max="24" min="0" step="1">
+        <input type="number" name="nightTimeEnd" value="24" max="24" min="0" step="1" class="right">
+        <span language="end" class="right"></span>
+      </li>
+      <li class="fixclear">
+        <span language="absZeroPowerLimit"></span>
+        <input type="number" value="20" step="0.000001" name="absZeroPowerLimit" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="absFirstPowerLimit"></span>
+        <input type="number" value="1" step="0.000001" name="absFirstPowerLimit" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="absSecondPowerLimit"></span>
+        <input type="number" value="0.1" step="0.000001" name="absSecondPowerLimit" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="absThirdPowerLimit"></span>
+        <input type="number" value="0.00005" step="0.000001" name="absThirdPowerLimit" class="right">
+      </li>
+    </ul>
+  </div>
+  <script src="lane-evaluation/js/jquery-2.14.js"></script>
+  <script src="lane-evaluation/js/bi-common.js"></script>
+  <script src="lane-evaluation/js/text.js"></script>
+  <script src="lane-evaluation/js/index.js"></script>
+</body>
+
+</html>

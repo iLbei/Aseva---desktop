@@ -1,0 +1,32 @@
+.container {
+  width: 336px;
+}
+
+.top>ul>li>span {
+  display: inline-block;
+  width: 150px;
+  margin-bottom: 25px;
+}
+
+a {
+  max-width: 151px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 4px;
+  vertical-align: -4px;
+}
+
+.border {
+  padding: 2px;
+  width: 140px;
+}
+
+select {
+  width: 148px;
+}
+
+.container>div:nth-child(2) {
+  text-align: center;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lidar Points Filter</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="lidar-points-filter/css/common.css">
+  <link rel="stylesheet" href="lidar-points-filter/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container fixclear">
+    <ul class="fixclear">
+      <li class="white" id="lidar1"><span language="lidar">Lidar</span>1</li>
+      <li id="lidar2"><span language="lidar">Lidar</span>2</li>
+      <li id="lidar3"><span language="lidar">Lidar</span>3</li>
+      <li id="lidar4"><span language="lidar">Lidar</span>4</li>
+      <li id="lidar5"><span language="lidar">Lidar</span>5</li>
+      <li id="lidar6"><span language="lidar">Lidar</span>6</li>
+    </ul>
+    <div class="content">
+      <ul>
+        <li>
+          <span language="inputChannelCloud"></span>
+          <select name="inputChannelCloud" id="">
+            <option value="-1">(Disabled)</option>
+            <option value="0">Channel A</option>
+            <option value="1">Channel B</option>
+            <option value="2">Channel C</option>
+            <option value="3">Channel D</option>
+            <option value="4">Channel E</option>
+            <option value="5">Channel F</option>
+            <option value="6">Channel G</option>
+            <option value="7">Channel H</option>
+            <option value="8">Channel I</option>
+            <option value="9">Channel J</option>
+            <option value="10">Channel K</option>
+            <option value="11">Channel L</option>
+          </select>
+        </li>
+        <li>
+          <span language="outputChannelCloud"></span>
+          <select name="outputChannelCloud" id="">
+            <option value="-1">(Disabled)</option>
+            <option value="0">Channel A</option>
+            <option value="1">Channel B</option>
+            <option value="2">Channel C</option>
+            <option value="3">Channel D</option>
+            <option value="4">Channel E</option>
+            <option value="5">Channel F</option>
+            <option value="6">Channel G</option>
+            <option value="7">Channel H</option>
+            <option value="8">Channel I</option>
+            <option value="9">Channel J</option>
+            <option value="10">Channel K</option>
+            <option value="11">Channel L</option>
+          </select>
+        </li>
+      </ul>
+      <div class="filter">
+        <div class="range">
+          <p language="range"></p>
+          <ul>
+            <li><input type="checkbox" name="enableRange" id="range_enable">
+              <label for="range_enable" language="enable"></label></li>
+            <li>
+              <span language="min"></span>
+              <input type="number" name="minRange" step="0.01" id="">
+            </li>
+            <li>
+              <span language="max"></span>
+              <input type="number" name="maxRange" step="0.01" id="">
+            </li>
+          </ul>
+        </div>
+        <div class="angle">
+          <p language="angle"></p>
+          <ul>
+            <li><input type="checkbox" name="enableAngle" id="enableAngle">
+              <label for="enableAngle" language="enable"></label></li>
+            <li>
+              <span language="min"></span>
+              <input type="number" name="minAngle" step="0.01" id="">
+            </li>
+            <li>
+              <span language="max"></span>
+              <input type="number" name="maxAngle" step="0.01" id="">
+            </li>
+          </ul>
+        </div>
+        <div class="pitch">
+          <p language="pitch"></p>
+          <ul>
+            <li><input type="checkbox" name="enablePitchAngle" id="enablePitchAngle">
+              <label for="enablePitchAngle" language="enable"></label></li>
+            <li>
+              <span language="min"></span>
+              <input type="number" name="minPitchAngle" step="0.01" id="">
+            </li>
+            <li>
+              <span language="max"></span>
+              <input type="number" name="maxPitchAngle" step="0.01" id="">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="laser">
+        <p language="laserIDList"></p>
+        <div class="ids"></div>
+      </div>
+    </div>
+  </div>
+  <script src="lidar-points-filter/js/jquery-2.14.js"></script>
+  <script src="lidar-points-filter/js/bi-common.js"></script>
+  <script src="lidar-points-filter/js/text.js"></script>
+  <script src="lidar-points-filter/js/index.js"></script>
+</body>
+
+</html>

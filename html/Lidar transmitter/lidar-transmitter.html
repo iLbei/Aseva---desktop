@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lidar Transmitter</title>
+  <link rel="stylesheet" href="lidar-transmitter/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="lidar-transmitter/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul class="item fixclear">
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+    <div class="content">
+      <p language="ethernet"></p>
+      <div class="ethernet">
+        <ul>
+          <li>
+            <input type="checkbox" name="enable" id="enabled">
+            <label for="enabled" language="enable"></label>
+            <input type="number" value="42" name="data_offset" step="1" max="1400" min="0" class="right">
+            <span language="data_offset" class="right"></span>
+          </li>
+          <li>
+            <span language="local_ip"></span>
+            <input type="text" name="local_ip" value="192.168.0.201">
+            <input type="number" name="local_port_num" class="right" value="5002" max="65535" min="0" step="1">
+            <span language="local_port_num" class="right"></span>
+          </li>
+          <li>
+            <span language="server_ip"></span>
+            <input type="text" name="server_ip" value="192.168.1.100">
+            <input type="number" name="server_port_num" class="right" value="5001" max="65535" min="0" step="1">
+            <span language="server_port_num" class="right"></span>
+          </li>
+          <li>
+            <span class="left" language="transmit_mode"></span>
+            <select class="right" name="transmit_mode">
+              <option value="0" language="Instantaneous">Instantaneous</option>
+              <option value="1" language="Scheduled">Scheduled</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <script src="lidar-transmitter/js/jquery-2.14.js"></script>
+  <script src="lidar-transmitter/js/bi-common.js"></script>
+  <script src="lidar-transmitter/js/text.js"></script>
+  <script src="lidar-transmitter/js/index.js"></script>
+</body>
+
+</html>

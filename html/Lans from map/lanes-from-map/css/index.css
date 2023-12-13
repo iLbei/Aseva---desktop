@@ -1,0 +1,162 @@
+.container>.left>div,
+.container>.right {
+  border: 1px solid rgb(220, 220, 220);
+  position: relative;
+}
+.container>.left{
+  width: 361px;
+}
+.container>.left>.top {
+  height: 164px;
+  margin-bottom: 10px;
+}
+.container>.left>.top a{
+  vertical-align: -3px;
+}
+.container>.left>.bottom {
+  height: 391px;
+  padding: 10px;
+}
+
+.container>.left>.bottom>div:last-of-type>div:first-of-type {
+  position: relative;
+  width: 107px;
+  height: 143px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#canvas2 {
+  position: absolute;
+  left: 39px;
+  top: 12px;
+}
+
+.container>.right {
+  width: 272px;
+  height: 565px;
+}
+
+.container>.left>div>p,
+.container>.right>p {
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  background-color: #f0f0f0;
+  padding: 0 2px;
+}
+
+.container>.left>.top>div {
+  margin: 12px 0 12px 5px;
+}
+
+.container>.right>.content {
+  width: 262px;
+  height: 517px;
+  margin: 10px 5px 0;
+  background-color: #e3e3e3;
+  overflow: auto;
+  padding: 3px;
+}
+
+.container>.right>.content>div:first-of-type {
+  display: none;
+}
+
+.container>.right>.bottom {
+  width: 262px;
+  height: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+
+.container>.left>.bottom select,
+.container>.left>.bottom input  {
+  width: 175px;
+}
+
+.container>.left>.bottom input:hover {
+  cursor: default;
+}
+
+.container>.left>.bottom>div {
+  margin-top: 10px;
+}
+
+.container>.left>.bottom>div:last-of-type>.right>div {
+  height: 25px;
+  margin-top: 30px;
+}
+
+.container>.left>.bottom>div:last-of-type>.right>div>input {
+  margin-left: 10px;
+}
+
+button {
+  width: 97px;
+  height: 30px;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  background-color: rgb(24, 80, 235);
+  border: 0;
+}
+
+.box {
+  background-color: #d7e4f2;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.btn {
+  width: 25px;
+  height: 75px;
+  background-color: #99b4d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn>div {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 2px solid black;
+  color: black;
+  text-align: center;
+  line-height: 14px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.box input {
+  width: 120px;
+}
+
+.box>.left {
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box>.left>div {
+  width: 205px;
+  height: 26px;
+}
+
+.box>.left>div>.text {
+  width: 120px;
+}
+
+a {
+  overflow: hidden;
+  max-width: 119px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+span{
+  padding-top: 3px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="tianjin-university-weather/css/common.css">
+  <link rel="stylesheet" href="tianjin-university-weather/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="connect" id="connect">
+      <label for="connect" language="connect"></label>
+    </div>
+    <ul class="item fixclear">
+      <li>
+        <span language="baud_rate"></span>
+        <select name="baud_rate">
+          <option value="0">4800</option>
+          <option value="1">9600</option>
+          <option value="2">19200</option>
+        </select>
+      </li>
+      <li>
+        <span language="com_port"></span>
+        <input type="number" min="0" max="500" step="1" name="com_port">
+      </li>
+      <li>
+        <span language="address"></span>
+        <input type="text" name="address" pattern="[0-9]{1}|[a-f]{1}|[0-9A-Fa-f]{2}" value="00">
+      </li>
+    </ul>
+  </div>
+  <script src="tianjin-university-weather/js/jquery-2.14.js"></script>
+  <script src="tianjin-university-weather/js/bi-common.js"></script>
+  <script src="tianjin-university-weather/js/text.js"></script>
+  <script src="tianjin-university-weather/js/index.js"></script>
+</body>
+
+</html>

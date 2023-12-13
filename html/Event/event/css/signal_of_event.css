@@ -1,0 +1,68 @@
+.signal_of_event {
+  width: 642px;
+  height: 437px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -218.5px 0 0 -321px;
+}
+
+.signal_of_event>.content>.top>a:nth-child(2) {
+  margin: 0px 30px;
+}
+
+.signal_of_event>.content>.bottom {
+  background-color: #fffef0;
+  height: 384px;
+  margin-top: 5px;
+  padding: 3px;
+  overflow: auto;
+}
+
+.signal_of_event>.content>.bottom>.box {
+  background-color: #e6e6fa;
+  padding: 3px;
+  margin-bottom: 3px;
+}
+
+.signal_of_event>.content>.bottom>div:nth-of-type(1) {
+  display: none;
+}
+
+.signal_of_event>.content>.bottom>.box input {
+  width: 167px;
+  margin: 0 7px;
+}
+
+.signal_of_event>.content>.bottom>.box>.right {
+  width: 23px;
+  height: 25px;
+}
+
+.signal_of_event>.content>.bottom>.box>.right>div {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.signal_of_event>.content>.bottom>.box>.right:hover {
+  background-color: #b0c4de;
+  cursor: default
+}
+
+.signal_of_event [type=button] {
+  width: 108px;
+}
+
+.signal_of_event .bottom2 {
+  text-align: right;
+  margin-top: 10px;
+}
+
+a {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: -4px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>IBEO Reference</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="ibeo-reference/css/common.css">
+  <link rel="stylesheet" href="ibeo-reference/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="session">
+    <div class="content">
+      <div class="top fixclear">
+        <div class="left" onclick="loadBox()" language="load"></div>
+        <div class="left" onclick="clearBox(this)" language="clear"></div>
+        <div class="right" onclick="defaultLoad()" language="default"></div>
+      </div>
+      <div class="center">
+        <div class="box fixclear">
+          <a href="javascript:;" onclick="openFile(this)" class="left"></a>
+          <div class="right" onclick="removeBox(this)">
+            <img src="ibeo-reference/images/2.png">
+          </div>
+        </div>
+      </div>
+      <div class="bottom fixclear">
+        <div class="left" onclick="ok()" language="ok">OK</div>
+        <div class="right" onclick="biCloseChildDialog();" language="cancel"></div>
+      </div>
+    </div>
+  </div>
+  <div class="shadow"></div>
+  <script src="ibeo-reference/js/jquery-2.14.min.js"></script>
+  <script src="ibeo-reference/js/bi-common.js"></script>
+  <script src="ibeo-reference/js/text.js"></script>
+  <script src="ibeo-reference/js/session.js"></script>
+</body>
+
+</html>

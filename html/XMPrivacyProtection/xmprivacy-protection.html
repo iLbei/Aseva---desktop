@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>XM privacy protection</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="xmprivacy-protection/css/common.css">
+  <style>
+    .container {
+      width: 137px;
+      height: 70px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -34px 0 0 -68.5px;
+    }
+
+    .container>ul {
+      height: 59px;
+      flex-direction: column;
+      justify-content: space-between;
+      display: flex;
+    }
+    button{
+      width: 137px;
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li>
+        <input type="checkbox" name="enabled" id="enabled">
+        <label for="enabled" language="enabled"></label>
+      </li>
+      <li>
+        <button language="processing"></button>
+      </li>
+    </ul>
+  </div>
+  <script src="xmprivacy-protection/js/jquery-2.14.js"></script>
+  <script src="xmprivacy-protection/js/bi-common.js"></script>
+  <script src="xmprivacy-protection/js/text.js"></script>
+  <script src="xmprivacy-protection/js/index.js"></script>
+</body>
+
+</html>

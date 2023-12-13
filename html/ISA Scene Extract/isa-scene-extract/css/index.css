@@ -1,0 +1,27 @@
+.container {
+  width: 253px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container>div:nth-child(1) {
+  margin-bottom: 15px;
+}
+
+ul {
+  height: 68px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul>li>span {
+  width: 115px;
+}
+
+ul>li>input {
+  width: 134px;
+}

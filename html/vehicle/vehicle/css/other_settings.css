@@ -1,0 +1,333 @@
+.other_settings {
+  padding: 10px;
+}
+
+.other_settings>div>div.left {
+  width: 357px;
+}
+
+.other_settings [name=output_sample_version] {
+  width: 52px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+.other_settings .close {
+  height: 13px;
+}
+
+.other_settings .close:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.other_settings>div:nth-of-type(1)>.left>div {
+  padding:13px 10px;
+}
+
+.other_settings>div:nth-of-type(1)>.left>div:nth-child(1) {
+  height: 50px;
+}
+
+.other_settings>div:nth-of-type(1)>.left>div:nth-child(2) {
+  height: 63px;
+}
+
+.other_settings>div:nth-of-type(1)>.left>div:nth-child(3) {
+  height: 52px;
+}
+
+.other_settings>div:nth-of-type(1)>.left>div:nth-child(4) {
+  height: 82px;
+}
+
+.other_settings>div:nth-of-type(1)>.left>div:nth-child(5) {
+  height: 195px;
+}
+
+.other_settings>div:nth-of-type(1)>.left>div:nth-child(6) {
+  height:65px;
+}
+
+.other_settings>div:nth-of-type(1)>.left>div:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.other_settings>div:nth-of-type(1)>.left [type=text] {
+  width: 73px;
+}
+
+.other_settings>div:nth-of-type(1)>.left>.steer>div>div:first-of-type {
+  margin-bottom: 5px;
+}
+
+.other_settings>div:nth-of-type(1)>.right>p,
+.other_settings>div:nth-of-type(1)>.left>div>p {
+  position: absolute;
+  background-color: #f0f0f0;
+  left: 10px;
+  top: -10px;
+  text-align: center;
+}
+
+.other_settings>div:nth-of-type(1)>.right,
+.other_settings>div:nth-of-type(1)>.left>div {
+  position: relative;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.head_light>div>div:nth-of-type(2)>div:nth-of-type(1) {
+  margin-bottom: 5px;
+}
+
+.wiper>div>div:nth-of-type(1) {
+  margin-bottom: 3px;
+}
+
+.wiper>div>div:nth-of-type(2)>.left>ul>li,
+.wiper>div>div:nth-of-type(2)>.right>ul>li {
+  margin-bottom: 5px;
+}
+
+.low_fre>div>div:nth-of-type(1) {
+  margin-bottom: 5px;
+}
+
+.other_settings>div:nth-of-type(1)>.right {
+  width: 317px;
+  height: 588px;
+  padding: 8px;
+}
+
+.other_settings>div:nth-of-type(1)>.right>div>div:nth-of-type(1) {
+  position: absolute;
+  top: 7px;
+  left: 12px;
+}
+
+.other_settings>div:nth-of-type(1)>.right>div>div:nth-of-type(1)>a:nth-of-type(1) {
+  margin-right: 27px;
+}
+
+.other_settings>div:nth-of-type(1)>.right>div>div:nth-of-type(1)>a:nth-of-type(2) {
+  margin-right: 30px;
+}
+
+.other_settings>div:nth-of-type(1)>.right>div>div:nth-of-type(1)>a:nth-of-type(3) {
+  margin-right: 15px;
+}
+
+.other_settings>div:nth-of-type(1)>.right>div>div:nth-of-type(2) {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  width: 300px;
+}
+
+.other_settings>div:nth-of-type(1)>.right>div>div:nth-of-type(2)>div {
+  width: 50%;
+}
+
+.other_settings>div:nth-of-type(1)>.right>div>div:nth-of-type(2) input {
+  width: 55px;
+}
+
+.other_settings>div:nth-of-type(1)>.right>div>div:nth-of-type(2) [type=button] {
+  width: 20px;
+}
+
+#wiper_signal {
+  max-width: 115px;
+}
+
+#wiper_slow_level_signal {
+  max-width: 116px;
+}
+
+#horn_signal,
+#head_light_signal {
+  max-width: 130px;
+}
+
+#steer_rate_value,
+#steer_rate_value {
+  max-width: 140px;
+}
+
+#scale_change {
+  position: absolute;
+  bottom: 45px;
+  left: 15px;
+}
+
+#myCanvas {
+  background-color: #fff;
+}
+
+.w60 {
+  width: 60px;
+}
+
+.w90 {
+  width: 86px;
+}
+
+.w100 {
+  width: 100px;
+}
+
+.w45 {
+  width: 45px;
+}
+
+[name=vehicle_height] {
+  width: 64px;
+  height: 23px;
+}
+
+[name=frequency] {
+  width: 48px;
+  height: 25px;
+}
+
+[type=number],
+[type=_number] {
+  width: 52px;
+  height: 23px;
+}
+
+[name=output_can_msgid],
+[name=output_can_msgid2] {
+  width: 57px;
+  height: 23px;
+}
+
+[name=output_can_turn_left],
+[name=output_can_turn_right],
+[name=output_can_brake] {
+  width: 60px;
+  height: 23px;
+}
+
+.configBtn {
+  width: 187px;
+  height: 25px;
+}
+
+.w65 {
+  width: 65px;
+  margin-right: 5px;
+}
+
+.w170 {
+  width: 180px;
+}
+
+.w150 {
+  width: 150px;
+}
+
+[name=turn_left_values],
+[name=turn_right_values] {
+  width: 72px;
+  height: 23px;
+}
+
+[name=imu_channel] {
+  width: 170px;
+  height: 25px;
+}
+
+.gear_d_values,
+.gear_n_values,
+.gear_r_values,
+.gear_p_values {
+  width: 50px;
+  height: 23px;
+}
+
+.space_a {
+  position: relative;
+  width: 105px;
+}
+
+.space_a>a {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  word-break: keep-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.space_a>p {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+  border: 1px solid rgb(66, 65, 65);
+  background-color: #fff;
+  z-index: 1;
+  padding: 0 3px;
+  color: rgb(59, 59, 59);
+  white-space: nowrap;
+}
+
+.otherBtn {
+  width: 162px;
+  height: 25px;
+}
+
+.green {
+  color: rgb(63, 189, 100);
+}
+
+#enabled {
+  vertical-align: middle;
+}
+
+
+.borderRed {
+  border-color: red !important;
+}
+
+.circle>div:hover {
+  border-color: rgb(188, 214, 223);
+}
+
+.not_a {
+  text-decoration: none;
+  color: #a2a0a0;
+}
+
+.other_settings>.bottom {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.other_settings>.bottom>input {
+  width: 75px;
+  height: 25px;
+}
+
+.container>div>div.left {
+  width: 355px;
+}
+
+.container>div>div.left>div:nth-child(1),
+.container>div>div.left>div:nth-child(3) {
+  height: 48px;
+}
+
+.container>div>div.left>div:nth-child(2),
+.container>div>div.left>div:nth-child(6) {
+  height: 66px;
+}
+
+.container>div>div.left>div:nth-child(4) {
+  height: 79px;
+}
+
+.container>div>div.left>div:nth-child(5) {
+  height: 200px;
+}

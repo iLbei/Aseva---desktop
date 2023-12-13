@@ -1,0 +1,185 @@
+.container {
+  width: 590px;
+  height: 486px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container>div:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+.container>div:nth-child(2)>span,
+.container>div:nth-child(2)>a {
+  padding-top: 3px;
+  margin-right: 5px;
+}
+
+.container>div:nth-of-type(3)>div {
+  position: relative;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 5px 15px 10px;
+}
+
+.container>div:nth-of-type(3)>div [type=text] {
+  width: 126px;
+}
+
+.container>div:nth-of-type(3)>div>p,
+.container>div:nth-of-type(4)>div:nth-of-type(1)>p {
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+.container>div:nth-of-type(3)>div>div>div {
+  width: 256px;
+  margin-top: 10px;
+}
+
+.container>div:nth-of-type(3)>div>div>div>div:nth-child(2),
+.container>.ldw_algorithm>div>div>div:nth-of-type(2)>div>div:nth-of-type(1) {
+  height: 26px;
+  line-height: 26px;
+}
+
+.container>div:nth-of-type(3)>div>div>div>div>a {
+  margin-right: 30px;
+}
+
+.container>div:nth-of-type(4)>div {
+  width: 100%;
+}
+
+.container>div:nth-of-type(4)>.right {
+  padding-right: 20px;
+}
+
+.container>div:nth-of-type(4)>.right [type=checkbox] {
+  margin-right: 3px;
+}
+
+.container>div:nth-of-type(4)>div:nth-of-type(1) {
+  position: relative;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 15px;
+}
+
+.container>div:nth-of-type(4)>.left [type=text] {
+  width: 35px;
+}
+
+.container>div:nth-of-type(4)>.left [type=number] {
+  width: 120px;
+}
+
+.container>div:nth-of-type(4)>.left>div>div,
+.container>div:nth-of-type(4)>.right>div {
+  margin: 5px 0;
+}
+
+.container>div:nth-of-type(4)>.right>div>div:nth-of-type(1)>a {
+  margin-left: 15px;
+}
+
+.container>div:nth-of-type(4)>.right>div>div:nth-of-type(2)>input {
+  margin-left: 18px;
+}
+
+.container>div:nth-of-type(4)>.right>div>div:nth-of-type(2),
+.container>div:nth-of-type(4)>.right>div:nth-of-type(2)>div:nth-of-type(1) {
+  margin-left: 17px;
+}
+
+.container>div:nth-of-type(4)>.right [type=text] {
+  width: 125px;
+}
+
+.container>.ldw_algorithm>div>div>div:nth-of-type(2) {
+  margin-top: 3px;
+}
+
+.container>.ldw_algorithm>div>div>div:nth-of-type(2)>div>div:nth-of-type(1) {
+  margin: 5px 0;
+}
+
+.container>.ldw_algorithm [type=number] {
+  width: 82px;
+  margin-left: 4px;
+}
+
+.container>div:last-of-type [type=text] {
+  width: 100px;
+}
+
+.container>div:last-of-type>.left>div:nth-of-type(2) {
+  padding-left: 18px;
+}
+
+.container>div:last-of-type>div>div:nth-of-type(1) {
+  margin-bottom: 4px;
+}
+
+[name=vehicle_speed] {
+  width: 61px !important;
+}
+
+select {
+  width: 159px;
+}
+
+.a {
+  color: darkgrey !important;
+  text-decoration: none !important;
+}
+
+[name=ldw_dtlc_level1],
+[name=ldw_ttlc_level1] {
+  width: 35px;
+}
+
+.space_a {
+  position: relative;
+  width: 125px;
+}
+
+.space_a>a {
+  max-width: 125px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.space_a>p {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  border: 1px solid black;
+  background-color: #fff;
+  text-align: center;
+  display: none;
+  padding: 1px 3px;
+  z-index: 999;
+}
+
+.container>div:last-child>div>div:last-child>span {
+  padding-top: 3px;
+}
+
+[name=message_id] {
+  max-width: 219px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* IP验证，不再需要js，通过css结合pattern就能验证 */
+[type="text"]:valid {
+  color: green;
+}
+
+[type="text"]:invalid {
+  color: red;
+}

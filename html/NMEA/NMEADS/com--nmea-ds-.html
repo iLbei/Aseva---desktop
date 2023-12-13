@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COM (NMEADS)</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="com--nmea-ds-/css/common.css">
+  <link rel="stylesheet" href="com--nmea-ds-/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <a href="javascript:void(0);" id="displayLabel" onclick="displayInput()">NMEA-DS Device</a>
+    <input name="alias" type="text" hidden="hidden" value="NMEA-DS Device" />
+    <div>
+      <p language="device_part"></p>
+      <ul>
+        <li class="fixclear">
+          <div class="left">
+            <input type="checkbox" name="connect" id="connect">
+            <label for="connect" language="connect"></label>
+          </div>
+          <div class="right margin_r1 offset">
+            <span language="com_port" class="left"></span>
+            <input type="number" name="com_port" value="0" step="1" min="0" max="99" class="right" />
+          </div>
+        </li>
+        <li class="fixclear">
+          <span class="left" language="com_baud_rate"></span>
+          <div class="right">
+            <select class="right" name="com_br" id="com_br">
+              <option value="0" selected language="b48"></option>
+              <option value="1" language="b96"></option>
+              <option value="2" language="b192"></option>
+              <option value="3" language="b384"></option>
+              <option value="4" language="b576"></option>
+              <option value="5" language="b1152"></option>
+              <option value="6" language="b2304"></option>
+              <option value="7" language="b4608"></option>
+            </select>
+          </div>
+        </li>
+        <li class="fixclear">
+          <span class="left" language="device_type"></span>
+          <div class="right">
+            <select class="right" name="device_type" id="device_type">
+              <option value="0">General:GPGGA/GNGGA</option>
+              <option value="1">General:GPRMC/GNRMC</option>
+              <option value="2">Lianshi:PPNAV</option>
+              <option value="3">Chcnav:GPCHC</option>
+              <option value="4">Starneto:GPFPD</option>
+              <option value="5">Novatel:INSPVAA,INSPVAXA</option>
+              <option value="6">Starneto:GPFPD+GTIMU</option>
+              <option value="7">Npos220:INSPVAXA+CORRIMUDATA</option>
+            </select>
+          </div>
+        </li>
+        <li class="fixclear">
+          <span class="left" language="novatel_imu_type"></span>
+          <div class="right">
+            <select class="right" name="novatel_imu_type" id="novatel_imu_type">
+              <option value="0" selected>HG1700-AG58</option>
+              <option value="1">HG1900-CA29/CA50</option>
+              <option value="2">HG1930-AA99/CA50</option>
+              <option value="3">HG1700-AG62</option>
+              <option value="4">HG4930-AN01</option>
+              <option value="5">IMU-CPT</option>
+              <option value="6">IMU-KVH1750</option>
+              <option value="7">IMU-FSAS</option>
+              <option value="8">LN-200</option>
+              <option value="9">ISA-100C</option>
+              <option value="10">μIMU</option>
+              <option value="11">ADIS16488</option>
+              <option value="12">IMU-IGM-A1</option>
+              <option value="13">STIM300</option>
+              <option value="14">IMU-IGM-S1</option>
+              <option value="15">G320N</option>
+            </select>
+          </div>
+        </li>
+        <li class="fixclear">
+          <span class="left" language="time_type"></span>
+          <div class="right">
+            <select class="right" name="time_type" id="time_type">
+              <option value="0">UTC</option>
+              <option value="1">GPS</option>
+            </select>
+          </div>
+        </li>
+        <li class="fixclear">
+          <span class="left" language="sampling_frequency"></span>
+          <div class="right">
+            <select class="right" name="sampling_frequency" id="sampling_frequency">
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p language="processing_part"></p>
+      <div class="fixclear">
+        <span class="left" language="output_channel"></span>
+        <select class="right" name="out_channel" id="out_channel">
+          <option value="-1" selected language="disabled"></option>
+          <option value="0" language="gnss_imu_a"></option>
+          <option value="1" language="gnss_imu_b"></option>
+          <option value="2" language="gnss_imu_c"></option>
+          <option value="3" language="gnss_imu_d"></option>
+          <option value="4" language="gnss_imu_e"></option>
+          <option value="5" language="gnss_imu_f"></option>
+        </select>
+      </div>
+      <div class="fixclear margin_t2">
+        <div class="left fixclear">
+          <ul class="fixclear">
+            <li class="fixclear w200">
+              <span class="left" language="pitch_angle_offset"></span>
+              <input type="number" name="pitch_offset" class="right" value="0.00" step="0.01" max="10" min="-10" />
+            </li>
+            <li class="fixclear margin_t1 w200">
+              <span class="left" language="roll_angle_offset"></span>
+              <input type="number" name="roll_offset" class="right" value="0.00" step="0.01" max="10" min="-10" />
+            </li>
+            <li class="fixclear margin_t1 w200">
+              <span class="left" language="orientation_offset"></span>
+              <input type="number" name="orientation_offset" class="right" value="0.00" step="0.01" max="10"
+                min="-10" />
+            </li>
+            <li class="pos">
+              <div class="left">
+                <span language="pos"></span>
+                <div class="fixclear margin_l2">
+                  <div class="fixclear margin_t1">
+                    <span class="left">X</span>
+                    <div class=" _antenna">
+                      <input type="number" name="antenna_x" value="0.000" min="-5" max="0" step="0.001" id="antenna_x">
+                    </div>
+                  </div>
+                  <div class="fixclear margin_t1">
+                    <span class="left">Y</span>
+                    <div class=" _antenna">
+                      <input type="number" name="antenna_y" value="0.000" min="-1" max="1" step="0.001" id="antenna_y">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right" id="canvas">
+                <canvas id="myCanvas" width="139" height="140"></canvas>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <p language="connect_gps_comm"></p>
+      <div>
+        <div class="fixclear">
+          <div class="left">
+            <input type="checkbox" name="send_command" id="send_command">
+            <label for="send_command" language="send_command"></label>
+          </div>
+          <div class="right offset">
+            <span language="com2_port" class="left"></span>
+            <input type="number" name="com2_port" class="right" value="0" min="0" max="99" step="1">
+          </div>
+        </div>
+        <div class="fixclear">
+          <span class="left" language="connect_comm"></span>
+          <input class="right" type="text" name="connect_command" value="AT+QGPS=1" >
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="com--nmea-ds-/js/jquery-2.14.js"></script>
+  <script src="com--nmea-ds-/js/bi-common.js"></script>
+  <script src="com--nmea-ds-/js/text.js"></script>
+  <script src="com--nmea-ds-/js/index.js"></script>
+</body>
+
+</html>

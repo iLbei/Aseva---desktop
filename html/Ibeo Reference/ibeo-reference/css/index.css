@@ -1,0 +1,367 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 274px;
+  height: 362px;
+  transform: translate(-50%, -50%);
+}
+
+#process {
+  height: 27px;
+  background-color: rgb(0, 102, 204);
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+  line-height: 27px;
+  text-align: center;
+  display: block;
+}
+
+#process:hover {
+  cursor: pointer;
+}
+
+#canvasContain {
+  padding: 6px;
+  margin: 0 auto;
+  background-color: rgb(227, 227, 227);
+}
+
+
+#myCanvas {
+  background-color: #fff;
+}
+
+#right {
+  position: relative;
+}
+
+#myCanvas2 {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+}
+
+.margin_l1 {
+  margin-left: 10px;
+}
+
+.margin_l3 {
+  margin-left: 10px;
+}
+
+.margin_t1 {
+  margin-top: 5px;
+}
+
+.margin_t2 {
+  margin-top: 10px;
+}
+
+.margin_t3 {
+  margin-top: 15px;
+}
+
+.h_line1 {
+  line-height: 40px;
+}
+
+select {
+  width: 185px;
+}
+
+[type=checkbox] {
+  margin-top: 3px;
+  margin-right: 5px;
+}
+
+[name=offset_x],
+[name=offset_y],
+[name=yaw_angle] {
+  margin-left: 3px;
+  width: 56px !important;
+}
+
+input {
+  padding-left: 3px;
+}
+
+.origin {
+  margin-left: 2px;
+  width: 144px;
+}
+
+.container span.left {
+  padding-top: 3px;
+}
+
+.axis {
+  margin-bottom: 17px;
+}
+
+.container>div>div>ul>li:nth-of-type(2)>div:nth-of-type(1) {
+  margin-top: 5px;
+}
+
+[language="origin"] {
+  padding-top: 2px;
+}
+
+/*****************************/
+
+.container2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 722px;
+  height: 618px;
+  margin: -309px 0 0 -361px;
+}
+
+.container2 p {
+  background: transparent;
+}
+
+
+.container2>.content>.top>.right {
+  position: relative;
+  width: 567px;
+  height: 170px;
+  background: url(../images/1.png) no-repeat;
+}
+
+.container2>.content>.top>.right>div {
+  width: 88px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  background-color: rgb(0, 102, 204);
+  cursor: default;
+}
+
+.container2>.content>.top>.right>div:nth-of-type(1) {
+  position: absolute;
+  left: 46px;
+  top: 2px;
+}
+
+.container2>.content>.top>.right>div:nth-of-type(2) {
+  position: absolute;
+  left: 46px;
+  top: 74px;
+}
+
+.container2>.content>.top>.right>div:nth-of-type(3) {
+  position: absolute;
+  right: 1px;
+  top: 2px;
+}
+
+.container2>.content>.top>.right>div:nth-of-type(4) {
+  position: absolute;
+  right: 88px;
+  top: 38px;
+}
+
+.container2>.content>.top>.right>div:nth-of-type(5) {
+  position: absolute;
+  right: 175px;
+  top: 74px;
+}
+
+.container2>.content>.top>.right>div:nth-of-type(6) {
+  position: absolute;
+  right: 262px;
+  top: 111px;
+}
+
+.container2>.content>.top>.left {
+  width: 150px;
+  height: 170px;
+}
+
+.container2>.content>.top>.left>div>a {
+  max-width: 110px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: auto;
+}
+
+.container2>.content>.top>.left {
+  margin-top: 14px;
+  height: 149px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container2>.content>.top>.left>div {
+  text-align: center;
+}
+
+.container2>.content>.headline>div,
+.container2>.content>.bottom>div {
+  float: left;
+  width: 88px;
+  height: 44px;
+  text-align: center;
+  color: white;
+  background-color: rgb(0, 102, 204);
+  cursor: default;
+}
+
+.container2>.content>.headline>div>p:first-of-type {
+  margin-top: 3px;
+}
+
+.container2>.content>.headline>div:first-of-type,
+.container2>.content>.headline>div:nth-of-type(4),
+.container2>.content>.headline>div:last-of-type {
+  line-height: 44px;
+}
+
+.container2>.content>.bottom>div {
+  line-height: 44px;
+}
+
+.container2>.content>.center {
+  height: 359px;
+  overflow: auto;
+  background: #e7e7e7;
+}
+
+.container2>.content>.center>.box>div:first-of-type>div {
+  float: left;
+  width: 88px;
+  height: 44px;
+  text-align: center;
+}
+
+.container2>.content>.center>.box>div:first-child,
+.container2>.content>.headline,
+.container2>.content>.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container2>.content>.center>.box>div:last-of-type {
+  height: 20px;
+  line-height: 20px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.container2>.content>.center>.box>div:last-of-type:hover {
+  font-weight: bold;
+  cursor: default;
+}
+
+.container2>.content>.center>.box:nth-child(odd)>div:first-of-type>div,
+.container2>.content>.center>.box:nth-child(odd)>div:last-of-type {
+  background-color: #e9ebf5;
+}
+
+.container2>.content>.center>.box>.path {
+  text-align: left;
+}
+
+.container2>.content>.center>.box:nth-child(even)>div:first-of-type>div,
+.container2>.content>.center>.box:nth-child(even)>div:last-of-type {
+  background-color: #cfd5ea;
+}
+
+.container2>.content>.center>.box>div:first-of-type>div:not(:first-of-type) {
+  line-height: 44px;
+}
+
+.container2>.content>.center>.box>div:first-of-type>div:first-of-type {
+  padding: 3px;
+}
+
+.session {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 450px;
+  height: 470px;
+  margin: -235px 0 0 -225px;
+}
+
+.session>.title>span {
+  margin-left: 10px;
+}
+
+.session>.content>.top>div,
+.session>.content>.bottom>div {
+  width: 88px;
+  height: 29px;
+  background-color: rgb(0, 102, 204);
+  text-align: center;
+  line-height: 29px;
+  color: white;
+  cursor: default;
+}
+
+.session>.content>.top>div:nth-of-type(2) {
+  margin-left: 94px;
+}
+
+.session>.content>.center {
+  height: 397px;
+  overflow: auto;
+  background: #e7e7e7;
+  padding: 5px;
+  margin: 5px 0px;
+}
+
+.session>.content>.center>.box {
+  height: 29px;
+  background-color: #cfd5ea;
+  line-height: 29px;
+  text-indent: 10px;
+  margin-bottom: 2px;
+}
+
+.session>.content>.center>.box>a {
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.session>.content>.bottom {
+  margin-top: 3px;
+}
+
+.container2>.content>.center>div:first-of-type,
+.session>.content>.center>div:first-of-type {
+  display: none;
+}
+
+.session>.content>.center>.box>.right {
+  width: 29px;
+  height: 27px;
+}
+
+.session>.content>.center>.box>.right>img {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.shadow {
+  position: absolute;
+  top: 11px;
+  left: 13px;
+  background: transparent;
+  width: 452px;
+  height: 470px;
+  display: none;
+}
+
+.container2>.content>.headline>div>p {
+  color: white;
+}

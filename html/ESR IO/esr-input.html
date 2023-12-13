@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>ESR I/O</title>
+  <link rel="stylesheet" href="esr-input/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="esr-input/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="tabs fixclear">
+      <ul>
+        <li class="isActive" id="front" language="front"></li>
+        <li id="rear" language="rear"></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="top fixclear">
+        <div class="out_channel left">
+          <span language="out_channel"></span>
+          <select name="out_channel">
+            <option value="-1" language="disabled"></option>
+            <option value="0" language="object_sensor_a"></option>
+            <option value="1" language="object_sensor_b"></option>
+            <option value="2" language="object_sensor_c"></option>
+            <option value="3" language="object_sensor_d"></option>
+            <option value="4" language="object_sensor_e"></option>
+            <option value="5" language="object_sensor_f"></option>
+            <option value="6" language="object_sensor_g"></option>
+            <option value="7" language="object_sensor_h"></option>
+            <option value="8" language="object_sensor_i"></option>
+            <option value="9" language="object_sensor_j"></option>
+            <option value="10" language="object_sensor_k"></option>
+            <option value="11" language="object_sensor_l"></option>
+          </select>
+        </div>
+        <div class="can_channel right">
+          <span language="can_channel"></span>
+          <input type="number" name="can_channel" value="1" min="1" max="16" step="1">
+        </div>
+      </div>
+      <div class="main fixclear">
+        <div class="left">
+          <div class="fixclear origin">
+            <span class="left" language="origin"></span>
+            <div class="right">
+              <div>
+                <span>X</span>
+                <input type="number" name="offset_x" value="0.00" min="-6.00" max="1.00" step="0.01">
+              </div>
+              <div>
+                <span>Y</span>
+                <input type="number" name="offset_y" value="0.00" min="-3.00" max="3.00" step="0.01">
+              </div>
+
+            </div>
+          </div>
+          <div class="yaw_offset fixclear">
+            <span language="yaw_offset" class="left"></span>
+            <input type="number" class="right" name="yaw_offset" value="0.00" min="-10.00" max="10.00" step="0.01">
+
+          </div>
+          <div class="object_merging fixclear">
+            <input type="checkbox" name="post_process" id="post_process">
+            <label for="post_process" language="post_process"></label>
+          </div>
+          <div class="invert fixclear">
+            <input type="checkbox" name="invert" id="invert">
+            <label for="invert" language="invert"></label>
+          </div>
+        </div>
+        <div class="right">
+          <canvas class="canvas" width="217" height="244"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="esr-input/js/jquery-2.14.js"></script>
+  <script src="esr-input/js/bi-common.js"></script>
+  <script src="esr-input/js/text.js"></script>
+  <script src="esr-input/js/index.js"></script>
+</body>
+
+</html>

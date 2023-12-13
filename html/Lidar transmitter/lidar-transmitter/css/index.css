@@ -1,0 +1,93 @@
+.container {
+  position: absolute;
+  width: 403px;
+  height: 226px;
+  top: 50%;
+  left: 50%;
+  margin: -113px 0 0 -201.5px;
+}
+
+.content p {
+  position: absolute;
+  top: 32px;
+  left: 20px;
+  padding: 0px 2px;
+  background: #fff;
+}
+
+.content .ethernet>ul {
+  padding: 3px 5px 0px;
+  width: 349px;
+  height: 147px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.content .ethernet>ul>li {
+  height: 26px;
+}
+
+[language="data_offset"],
+[language="local_port_num"],
+[language="server_port_num"] {
+  width: 81px;
+}
+
+[language="data_offset"],
+[language="local_port_num"],
+[language="server_port_num"],
+[language="transmit_mode"] {
+  padding-top: 3px;
+
+}
+
+.content input[type=number] {
+  width: 60px;
+}
+
+[name="server_ip"],
+[name="local_ip"] {
+  width: 107px;
+}
+
+[name="transmit_mode"] {
+  width: 231px;
+}
+
+[language="local_ip"],
+[language="server_ip"] {
+  width: 57px;
+}
+
+.ethernet {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.content {
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin-top: -1px;
+  background: #fff;
+}
+
+.item>li {
+  float: left;
+  width: 36px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.item>li:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.active {
+  border-bottom: 1px solid #fff !important;
+  background-color: #fff !important;
+}

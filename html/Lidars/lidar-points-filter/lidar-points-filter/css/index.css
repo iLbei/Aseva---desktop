@@ -1,0 +1,83 @@
+.container {
+  padding: 2px;
+}
+
+input[type=checkbox] {
+  margin-right: 1px;
+}
+
+.container>ul>li {
+  float: left;
+  width: 70px;
+  cursor: default;
+  text-align: center;
+  padding: 3px 0px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 417px;
+  border: 2px solid #fff;
+  padding: 0px 5px;
+}
+
+.content>ul>li>span {
+  width: 145px;
+  margin-bottom: 17px;
+}
+
+.content>ul>li>select {
+  width: 160px;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.filter>div,
+.laser {
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+.laser {
+  padding: 15px 0px 10px 10px;
+}
+
+.filter>div {
+  width: 32%;
+  padding: 10px 15px 15px;
+}
+
+.filter>div>p,
+.laser>p {
+  position: absolute;
+  top: -10px;
+  left: 4px;
+  padding: 0px 2px;
+}
+
+.filter>div>ul>li {
+  margin-top: 10px;
+}
+
+.filter>div>ul>li>span {
+  width: 43px;
+}
+
+.filter>div>ul>li>input[type=number] {
+  width: 135px;
+}
+
+.ids>label {
+  width: 30.26px;
+  display: inline-block;
+}

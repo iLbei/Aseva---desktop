@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Environment</title>
+  <link rel="stylesheet" href="environment/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="environment/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="top">
+      <input type="checkbox" name="enabled" id="Enabled">
+      <label for="Enabled" language="Enabled"></label>
+    </div>
+    <div class="sourceSelection fixclear">
+      <p language="source_Selection"></p>
+      <div class="left">
+        <ul>
+          <li>
+            <span language="weather_type"></span>
+            <select name="weather_source" class="checked">
+              <option value="Manual" language="manual"></option>
+              <option value="Baidu" language="baidu"></option>
+              <option value="Seniverse" language="seniverse"></option>
+            </select>
+          </li>
+          <li>
+            <span language="temperature"></span>
+            <select name="temperature_source">
+              <option value="Signal" language="signal"></option>
+              <option value="RS485" language="rs485"></option>
+              <option value="Baidu" language="baidu"></option>
+              <option value="Seniverse" language="seniverse"></option>
+            </select>
+          </li>
+          <li>
+            <span language="humidity"></span>
+            <select class="humidity">
+              <option value="Seniverse" language="seniverse"></option>
+            </select>
+          </li>
+          <li>
+            <span language="pressure"></span>
+            <select class="pressure">
+              <option value="Seniverse" language="seniverse"></option>
+            </select>
+          </li>
+          <li>
+            <span language="pm25"></span>
+            <select name="pm25_source">
+              <option value="Seniverse" language="seniverse"></option>
+              <option value="Baidu" language="baidu"></option>
+            </select>
+          </li>
+          <li>
+            <span language="pm10"></span>
+            <select class="pm10">
+              <option value="Seniverse" language="seniverse"></option>
+            </select>
+          </li>
+          <li>
+            <span language="visibility"></span>
+            <select class="visibility">
+              <option value="Seniverse" language="seniverse"></option>
+            </select>
+          </li>
+          <li>
+            <span language="illumination"></span>
+            <select name="illumination_source">
+              <option value="Signal" language="signal"></option>
+              <option value="RS485" language="rs485"></option>
+            </select>
+          </li>
+          <li>
+            <span language="wind_speed"></span>
+            <select name="windspeed_source">
+              <option value="Signal" language="signal"></option>
+              <option value="Seniverse" language="seniverse"></option>
+            </select>
+          </li>
+          <li>
+            <span language="wind_direction"></span>
+            <select class="windDirection">
+              <option value="Seniverse" language="seniverse"></option>
+            </select>
+          </li>
+          <li>
+            <span language="disaster"></span>
+            <select class="disaster">
+              <option value="Seniverse" language="seniverse"></option>
+            </select>
+          </li>
+        </ul>
+        <p language="typhoon"></p>
+      </div>
+      <div class="right">
+        <ul>
+          <li>
+            <span language="road_name"></span>
+            <select name="roadname_source">
+              <option value="Baidu" language="baidu"></option>
+              <option value="Gaode" language="gaode"></option>
+            </select>
+          </li>
+          <li>
+            <span language="speed_limit"></span>
+            <select name="splimit_source">
+              <option value="Manual" language="manual"></option>
+              <option value="Baidu" language="baidu"></option>
+              <option value="Gaode" language="gaode"></option>
+            </select>
+          </li>
+          <li>
+            <span language="road_type"></span>
+            <select name="roadtype_source">
+              <option value="Manual" language="manual"></option>
+              <option value="Baidu" language="baidu"></option>
+              <option value="Gaode" language="gaode"></option>
+            </select>
+          </li>
+          <li>
+            <span language="road_surface"></span>
+            <select class="roadSurface">
+              <option value="Seniverse" language="seniverse"></option>
+            </select>
+          </li>
+          <li>
+            <span language="road_traffic"></span>
+            <select name="traffic_source">
+              <option value="Manual" language="manual"></option>
+              <option value="Baidu" language="baidu"></option>
+              <option value="Gaode" language="gaode"></option>
+              <option value="Seniverse" language="seniverse"></option>
+            </select>
+          </li>
+          <li>
+            <span language="lane_traffic"></span>
+            <select class="laneTraffic">
+              <option value="signal" language="signal"></option>
+            </select>
+          </li>
+          <li>
+            <span language="rainfall_source"></span>
+            <select name="rainfall_source">
+              <option value="Seniverse" language="seniverse"></option>
+              <option value="RS485" language="rs485"></option>
+            </select>
+          </li>
+          <li>
+            <span language="spots"></span>
+            <select name="spots_source">
+              <option value="Baidu" language="baidu"></option>
+              <option value="Gaode" language="gaode"></option>
+            </select>
+          </li>
+        </ul>
+        <p language="tunnel"></p>
+        <div class="right web">
+          <p language="web"></p>
+          <span language="data_holder"></span>
+          <input type="number" min="0" max="600" step="1" value="30" name='webquery_data_holder'>
+          <span language="sec" class="sec"></span>
+        </div>
+      </div>
+    </div>
+    <div class="signals fixclear">
+      <p language="signals"></p>
+      <ul>
+        <li>
+          <span language="temperature"></span>
+          <select name="temperature_type">
+            <option value="c">℃</option>
+            <option value="f">℉</option>
+          </select>
+          <a href="javascript:;" language="not_config" name="temperature" scale="1"></a>
+          <p class="tips"></p>
+        </li>
+        <li>
+          <span language="illumination"></span>
+          <a href="javascript:;" name="illumination" language="not_config" scale="1"></a>
+          <p class="tips"></p>
+          <div class="right">
+            <span language="wind_speed"></span>
+            <a href="javascript:;" name="windspeed" language="not_config" scale="1"></a>
+            <p class="tips"></p>
+          </div>
+        </li>
+        <li>
+          <span language="lane_traffic"></span>
+          <ul class="left">
+            <li>
+              <span language="left">Left:</span>
+              <a href="javascript:;" language="not_config" name="leftlane_traffic_signal"></a>
+              <p class="tips"></p>
+            </li>
+            <li><span language="current"></span><a href="javascript:;" language="not_config"
+                name="curlane_traffic_signal"></a>
+              <p class="tips"></p>
+            </li>
+            <li><span language="right"></span><a href="javascript:;" language="not_config"
+                name="rightlane_traffic_signal"></a>
+              <p class="tips"></p>
+            </li>
+          </ul>
+          <div class="right">
+            <ul>
+              <li><span language="open"></span><input type="text" name="open_traffic_value" value=""></li>
+              <li><span language="slow"></span><input type="text" name="slow_traffic_value" value=""></li>
+              <li><span language="crowded"></span><input type="text" name="crowded_traffic_value" value=""></li>
+              <li><span language="reverse"></span><input type="text" name="reverse_traffic_value" value=""></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="environment/js/jquery-2.14.min.js"></script>
+  <script src="environment/js/bi-common.js"></script>
+  <script src="environment/js/text.js"></script>
+  <script src="environment/js/index.js"></script>
+</body>
+
+</html>

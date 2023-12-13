@@ -1,0 +1,188 @@
+.container {
+  width: 590px;
+  height: 838px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -419px 0 0 -295px;
+}
+
+.container>.top button {
+  float: left;
+  border: 1px solid #cfcccc;
+  padding: 4px 20px;
+  border-right: none;
+  border-radius: 0px;
+}
+
+.container>.top button:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.content {
+  border: 1px solid #ccc;
+  margin-top: -1px;
+  padding: 7px;
+  background-color: #fff;
+}
+
+.container>.content>div {
+  display: none;
+}
+
+.container>.content>div:nth-of-type(1) {
+  display: block;
+}
+
+.container>.content>div>.top>.title {
+  text-align: center;
+  margin: 5px 0px 10px;
+}
+
+.container>.content>div>.top>.title>a {
+  /* display: block; */
+  height: 22px;
+  padding-top: 4px;
+}
+
+[signalName=sampling_msg] {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 126px;
+  padding-top: 2px;
+  white-space: nowrap;
+  vertical-align: -4px;
+  text-overflow: ellipsis;
+}
+
+.container>.content>div>.top>.opt>div:nth-of-type(1) {
+  width: 165px;
+}
+
+.container>.content>div>.fixclear a {
+  display: inline-block;
+  max-width: 133px;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: -4px;
+  text-overflow: ellipsis;
+}
+
+.container>.content>div>.fixclear>.left>div,
+.container>.content>div>.fixclear>.right>div:not(:last-child) {
+  width: 280px;
+  position: relative;
+  border: 1px solid #cfcccc;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.container>.content>div>.fixclear>.left>div:last-child {
+  padding: 20px 20px 20px 10px;
+}
+
+.container>.content>div>.fixclear>.left>div>p,
+.container>.content>div>.fixclear>.right>div>p {
+  position: absolute;
+  left: 10px;
+  top: -9px;
+  padding: 0 2px;
+  background-color: #fff;
+}
+
+.container>.content>div>.fixclear>.left>div>div>div>span,
+.container>.content>div>.fixclear>.right>div>div>div>span {
+  width: 120px;
+}
+
+.white {
+  background-color: #fff !important;
+  border-bottom: 1px solid #fff !important;
+}
+
+[name=alias] {
+  text-align: center;
+  width: 100%;
+  height: 23px;
+  display: none;
+}
+
+[name=channel] {
+  width: 149;
+}
+
+.mode [type=text] {
+  width: 100px;
+}
+
+.antenna [type=number] {
+  width:70px;
+}
+
+.antenna>div>.left {
+  margin-top: 35px !important;
+}
+
+.antenna>div>.left>div {
+  margin-bottom: 31px;
+}
+
+.antenna>div>.right {
+  position: relative;
+  width: 142px;
+  height: 200px;
+}
+
+.antenna>div>.right>a {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+.time select {
+  width: 120px;
+}
+
+canvas {
+  border: 1px solid #ccc;
+}
+
+.bottom {
+  margin-top: 7px;
+}
+
+.not_a {
+  text-decoration: none;
+  color: #555657;
+  pointer-events: none;
+}
+
+.gnss>div {
+  height: 189px;
+}
+
+.mode>div {
+  height: 209px;
+}
+
+.antenna {
+  height: 244px;
+}
+
+.imu>div {
+  height: 364px;
+}
+
+.imu>div,
+.time>div,
+.mode>div,
+.gnss>div {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.time>div {
+  height: 263px;
+}

@@ -1,0 +1,43 @@
+.fov>.content {
+  padding: 10px 10px 0 10px;
+}
+
+.fov>.content>.right {
+  width: 150px;
+  height: 179px;
+  margin-top: 7px;
+}
+
+
+.w180 {
+  width: 172px;
+}
+
+.fov [name=x],
+.fov [name=y],
+.fov [name=orient],
+.fov [name=dist_range],
+.fov [name=angle_range] {
+  width: 66px;
+}
+
+.fov>.content>.left>div:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.fov>.content>.left>div:last-of-type {
+  margin-top: 12px;
+}
+
+.fov>.content>.left>div:first-of-type>.left {
+  margin-top: 16px;
+}
+
+.fov>.content>.left>div:first-of-type>.right>div:first-of-type {
+  margin-bottom: 3px;
+}
+
+.fov>.content>.left>div:first-of-type>.right span {
+  margin-right: 5px;
+  padding-top: 3px;
+}

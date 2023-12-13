@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html language="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="video/css/common.css" />
+    <link rel="stylesheet" href="video/css/index.css" />
+  </head>
+
+  <body
+    oncontextmenu="return false"
+    ondragstart="return false"
+    onselectstart="return false"
+    onbeforecopy="return false"
+  >
+    <div class="bs">
+      <div>
+        <div>
+          <span language="position"></span>
+          <input type="radio" name="special_hint2" value="0" id="left_side" checked />
+          <label for="left_side"  language="left_side"></label>
+          <input type="radio" name="special_hint2" value="1" id="right_side"/>
+          <label for="right_side" language="right_side"></label>
+        </div>
+        <div class="left">
+          <span language="p00_u"></span>
+          <input type="text" name="p00_u" value="-0.25" />
+          <span language="p04_u"></span>
+          <input type="text" name="p04_u" value="-0.25" />
+          <span language="p30_u"></span>
+          <input type="text" name="p30_u" value="0.25" />
+          <span language="p34_u"></span>
+          <input type="text" name="p34_u" value="0.25" />
+          <span language="p0h_ratio"></span>
+          <input type="text" name="p0h" value="0.5" />
+          <span language="ph0_ratio"></span>
+          <input type="text" name="ph0" value="0.5" />
+        </div>
+        <div class="right">
+          <span language="p00_v"></span>
+          <input type="text" name="p00_v" value="0.25" />
+          <span language="p04_v"></span>
+          <input type="text" name="p04_v" value="-0.25" />
+          <span language="p30_v"></span>
+          <input type="text" name="p30_v" value="0.25" />
+          <span language="p34_v"></span>
+          <input type="text" name="p34_v" value="-0.25" />
+          <span language="p3h_ratio"></span>
+          <input type="text" name="p3h" value="0.5" />
+          <span language="ph4_ratio"></span>
+          <input type="text" name="ph4" value="0.5" />
+        </div>
+      </div>
+      <button language="import" class="blind_import"></button>
+    </div>
+    <script src="video/js/jquery-2.14.js"></script>
+    <script src="video/js/bi-common.js"></script>
+    <script src="video/js/text.js"></script>
+    <script src="video/js/line.js"></script>
+  </body>
+</html>

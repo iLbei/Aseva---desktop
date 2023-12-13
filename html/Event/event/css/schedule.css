@@ -1,0 +1,40 @@
+.schedule {
+  width: 238px;
+  height: 115px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -57.5px 0 0 -119px;
+}
+
+.schedule>.content>div:nth-of-type(2) {
+  display: flex;
+  width: 238px;
+  justify-content: space-between;
+}
+.schedule>.content>div:not(:last-child){
+  height: 26px;
+  line-height: 26px;
+}
+.schedule>.content>div:last-of-type {
+  text-align: center;
+}
+
+.schedule select {
+  width: 68px;
+}
+
+.schedule [type=text] {
+  width: 168px;
+}
+
+.schedule button {
+  width: 108px;
+  height: 24px;
+}
+.schedule>.content{
+  height: 115px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}

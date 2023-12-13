@@ -1,0 +1,32 @@
+.trigger{
+  width: 268px;
+  height: 106px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -53px 0 0 -138px;
+}
+.trigger>.content {
+  height: 106px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.trigger>.content>div:last-of-type {
+    text-align: center;
+}
+
+.trigger button {
+    width: 108px;
+    height: 24px;
+}
+
+.trigger [type=text],
+.trigger select {
+    width: 209px;
+}
+
+.trigger>.content>div:not(:last-child) span {
+   padding-top: 3px;
+}

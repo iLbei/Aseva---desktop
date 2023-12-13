@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capture Image From Ladybug6</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="ladybug-capture-image/css/common.css">
+  <link rel="stylesheet" href="ladybug-capture-image/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="Enabled" id="Enabled">
+      <label for="Enabled" language="Enabled"></label>
+    </div>
+    <ul>
+      <li>
+        <div class="left">
+          <span language="exposure"></span>
+          <select name="exposure_auto">
+            <option value="0" language="auto"></option>
+            <option value="1" language="manual"></option>
+          </select>
+          <input type="number" name="exposure" max="10" min="0" step="0.001">
+        </div>
+        <div class="right">
+          <span language="shutter_time"></span>
+          <select name="shutter_time_auto">
+            <option value="0" language="auto"></option>
+            <option value="1" language="manual"></option>
+          </select>
+          <input type="number" name="shutter_time" max="10" min="0" step="0.1">
+        </div>
+      </li>
+      <li>
+        <div class="left">
+          <span language="framerate"></span>
+          <select name="framerate_auto">
+            <option value="0" language="auto"></option>
+            <option value="1" language="manual"></option>
+          </select>
+          <input type="number" name="framerate" max="50" min="1" step="1">
+        </div>
+        <div class="right">
+          <span language="gain_count"></span>
+          <select name="gain_count_auto">
+            <option value="0" language="auto"></option>
+            <option value="1" language="manual"></option>
+          </select>
+          <input type="number" name="gain_count" max="50" min="0" step="1">
+        </div>
+      </li>
+      <li>
+        <div class="left">
+          <span language="white_balance_low"></span>
+          <input type="number" name="white_balance_low" max="1024" min="0" step="1">
+        </div>
+        <div class="right">
+          <span language="white_balance_high"></span>
+          <input type="number" name="white_balance_high" max="1024" min="0" step="1">
+        </div>
+      </li>
+      <li>
+        <span language="jpeg_quality"></span>
+        <input type="number" name="jpeg_quality" max="100" min="1" step="1">
+      </li>
+      <li>
+        <span language="image_type"></span>
+        <select name="image_type">
+          <option value="0"> LADYBUG_DATAFORMAT_RAW8 </option>
+          <option value="1"> LADYBUG_DATAFORMAT_JPEG8</option>
+          <option value="2"> LADYBUG_DATAFORMAT_COLOR_SEP_RAW8</option>
+          <option value="3"> LADYBUG_DATAFORMAT_COLOR_SEP_JPEG8</option>
+          <option value="4"> LADYBUG_DATAFORMAT_HALF_HEIGHT_RAW8</option>
+          <option value="5"> LADYBUG_DATAFORMAT_COLOR_SEP_HALF_HEIGHT_JPEG8</option>
+          <option value="6"> LADYBUG_DATAFORMAT_RAW16</option>
+          <option value="7"> LADYBUG_DATAFORMAT_COLOR_SEP_JPEG12</option>
+          <option value="8"> LADYBUG_DATAFORMAT_HALF_HEIGHT_RAW16</option>
+          <option value="9"> LADYBUG_DATAFORMAT_COLOR_SEP_HALF_HEIGHT_JPEG12</option>
+          <option value="10">LADYBUG_DATAFORMAT_RAW12</option>
+          <option value="11">LADYBUG_DATAFORMAT_HALF_HEIGHT_RAW12</option>
+          <option value="12">LADYBUG_DATAFORMAT_COLOR_SEP_JPEG12_PROCESSED</option>
+          <option value="13">LADYBUG_DATAFORMAT_COLOR_SEP_HALF_HEIGHT_JPEG12_PROCESSED</option>
+          <option value="14">LADYBUG_NUM_DATAFORMATS</option>
+          <option value="15">LADYBUG_DATAFORMAT_ANY</option>
+        </select>
+      </li>
+    </ul>
+  </div>
+  <script src="ladybug-capture-image/js/jquery-2.14.js"></script>
+  <script src="ladybug-capture-image/js/bi-common.js"></script>
+  <script src="ladybug-capture-image/js/text.js"></script>
+  <script src="ladybug-capture-image/js/index.js"></script>
+</body>
+
+</html>

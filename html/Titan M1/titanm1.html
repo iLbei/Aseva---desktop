@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Titan M1</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="titanm1/css/common.css">
+  <link rel="stylesheet" href="titanm1/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul class="item fixclear">
+      <li class="active"><span language="lidar"></span>1</li>
+      <li><span language="lidar"></span>2</li>
+      <li><span language="lidar"></span>3</li>
+      <li><span language="lidar"></span>4</li>
+    </ul>
+    <div class="content">
+      <div class="device">
+        <p language="device">
+        </p>
+        <ul>
+          <li>
+            <input type="checkbox" name="connect" id="connect">
+            <label for="connect" language="connect"></label>
+          </li>
+          <li class="fixclear">
+            <span language="ip" class="left"></span>
+            <input type="text" name="ip" value="127.0.0.1" class="left green">
+            <input type="number" name="port" value="10000" step="1" max="65535" min="0" class="right">
+            <span language="port" class="right"></span>
+          </li>
+          <li class="fixclear">
+            <span language="local_ip" class="left"></span>
+            <input type="text" name="local_ip" value="127.0.0.1" class="left green">
+            <input type="number" name="local_port" value="10000" step="1" max="65535" min="0" class="right">
+            <span language="local_port" class="right"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="output">
+        <ul>
+          <li class="fixclear"><span language="tcp_output_objects_channel" class="left"></span>
+            <select name="tcp_output_objects_channel" class="right" id="">
+              <option value="-1">(Disabled)</option>
+              <option value="0">Object sensor A</option>
+              <option value="1">Object sensor B</option>
+              <option value="2">Object sensor C</option>
+              <option value="3">Object sensor D</option>
+              <option value="4">Object sensor E</option>
+              <option value="5">Object sensor F</option>
+              <option value="6">Object sensor G</option>
+              <option value="7">Object sensor H</option>
+              <option value="8">Object sensor I</option>
+              <option value="9">Object sensor J</option>
+              <option value="10">Object sensor K</option>
+              <option value="11">Object sensor L</option>
+            </select>
+          </li>
+          <li class="fixclear"><span language="tcp_output_point_cloud_channel" class="left"></span>
+            <select name="tcp_output_point_cloud_channel" class="right" id="">
+              <option value="-1">(Disabled)</option>
+              <option value="0">Channel A</option>
+              <option value="1">Channel B</option>
+              <option value="2">Channel C</option>
+              <option value="3">Channel D</option>
+              <option value="4">Channel E</option>
+              <option value="5">Channel F</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <div class="angle">
+        <ul>
+          <li class="fixclear">
+            <span>X:</span>
+            <input type="number" class="right" name="origin_x" max="1" min="-6" step="0.01">
+          </li>
+          <li class="fixclear">
+            <span language="origin_y"></span>
+            <input type="number" name="origin_y" class="right" max="3" min="-3" step="0.01"></li>
+          <li class="fixclear">
+            <span>H:</span>
+            <input type="number" name="origin_h" class="right" max="3" min="-3" step="0.01"></li>
+          <li class="fixclear">
+            <span language="yaw_angle"></span>
+            <input type="number" name="yaw_angle" class="right" max="180" min="-180" step="0.1"></li>
+          <li class="fixclear">
+            <span language="pitch_angle"></span>
+            <input type="number" name="pitch_angle" class="right" max="30" min="-30" step="0.1">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="titanm1/js/jquery-2.14.js"></script>
+  <script src="titanm1/js/bi-common.js"></script>
+  <script src="titanm1/js/text.js"></script>
+  <script src="titanm1/js/index.js"></script>
+</body>
+
+</html>

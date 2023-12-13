@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluetooth Bracelet</title>
+  <link rel="stylesheet" href="bluetooth-bracelet/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    input[name=ip] {
+      width: 140px;
+      margin-right: 35px;
+    }
+
+    input[name=port] {
+      width: 60px;
+    }
+
+    span {
+      margin-right: 5px;
+    }
+
+    .container>div {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="connect" id="connect">
+      <label for="connect" language="connect"></label>
+    </div>
+    <div>
+      <span language="ip"></span>
+      <input type="text" name="ip">
+      <span language="port"></span>
+      <input type="number" name="port" value="60000" step="1" max="65535" min="0">
+    </div>
+  </div>
+  <script src="bluetooth-bracelet/js/jquery-2.14.js"></script>
+  <script src="bluetooth-bracelet/js/bi-common.js"></script>
+  <script src="bluetooth-bracelet/js/text.js"></script>
+  <script src="bluetooth-bracelet/js/index.js"></script>
+</body>
+
+</html>

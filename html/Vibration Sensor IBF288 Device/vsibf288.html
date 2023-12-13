@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibration Sensor IBF288 Device</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="vsibf288/css/common.css">
+  <link rel="stylesheet" href="vsibf288/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="VSIBF288">
+    <ul>
+      <li>
+        <input type="checkbox" name="enable" id="enable">
+        <label for="enable" language="enable"></label>
+      </li>
+      <li class="fixclear">
+        <span class="feft">IP:</span>
+        <span class="right"></span>
+        <input type="text" name="ip"
+          pattern="^(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|[0-9])\.((1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)\.){2}(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)$"
+          class="green right">
+      </li>
+      <li>
+        <input type="checkbox" name="busenable" id="busenable">
+        <label for="busenable" language="busenable"></label>
+      </li>
+      <li>
+        <span language="busChannel" class="left"></span>
+        <span class="right"> </span>
+        <select name="channel" class="right">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+        </select>
+      </li>
+      <li>
+        <span language="id" class="left"></span>
+        <span class="id right">0x00</span>
+        <input type="text" name="id" pattern="[0-9]{0,10}" class="right">
+      </li>
+      <li>
+        <span language="channel"></span> 0 <span language="value"></span><span class="right"> (±)V</span><input
+          type="number" max="10" min="0" step="0.00000001" class="triggerVal right">
+      </li>
+      <li><span language="channel"></span> 1 <span language="value"></span><span class="right"> (±)V</span><input
+          type="number" max="10" min="0" step="0.00000001" class="triggerVal right"></li>
+      <li><span language="channel"></span> 2 <span language="value"></span><span class="right"> (±)V</span><input
+          type="number" max="10" min="0" step="0.00000001" class="triggerVal right"></li>
+      <li><span language="channel"></span> 3 <span language="value"></span><span class="right"> (±)V</span><input
+          type="number" max="10" min="0" step="0.00000001" class="triggerVal right"></li>
+      <li><span language="channel"></span> 4 <span language="value"></span><span class="right"> (±)V</span><input
+          type="number" max="10" min="0" step="0.00000001" class="triggerVal right"></li>
+      <li><span language="channel"></span> 5 <span language="value"></span><span class="right"> (±)V</span><input
+          type="number" max="10" min="0" step="0.00000001" class="triggerVal right"></li>
+      <li><span language="channel"></span> 6 <span language="value"></span><span class="right"> (±)V</span><input
+          type="number" max="10" min="0" step="0.00000001" class="triggerVal right"></li>
+      <li><span language="channel"></span> 7 <span language="value"></span><span class="right"> (±)V</span><input
+          type="number" max="10" min="0" step="0.00000001" class="triggerVal right"></li>
+    </ul>
+  </div>
+  <script src="vsibf288/js/jquery-2.14.js"></script>
+  <script src="vsibf288/js/bi-common.js"></script>
+  <script src="vsibf288/js/text.js"></script>
+  <script src="vsibf288/js/index.js"></script>
+</body>
+
+</html>

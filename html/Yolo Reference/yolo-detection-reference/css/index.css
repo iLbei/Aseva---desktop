@@ -1,0 +1,46 @@
+.container {
+  width: 306px;
+  height:482px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container>ul {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container>ul>li>span,
+.container>ul>li>label {
+  width: 138px;
+}
+
+.container>ul>li>input[type=number],
+.container>ul>li>select {
+  width: 164px;
+}
+
+.container>ul>li:nth-child(13)>span,
+.container>ul>li:nth-child(14)>span,
+.container>ul>li>a {
+  vertical-align: middle;
+}
+
+.container>ul>li>a {
+  max-width: 163px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.container>div:nth-child(1) {
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+}

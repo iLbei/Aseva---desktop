@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="pcd-merge/css/common.css">
+  <link rel="stylesheet" href="pcd-merge/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="top">
+      <ul>
+        <li><span language="input_data_path"></span><a href="javascript:;" name="input_data_path"></a></li>
+        <li><span language="output_data_path"></span><a href="javascript:;" name="output_data_path"></a></li>
+        <li>
+          <input type="checkbox" name="local_path">
+          <span language="local_path"></span>
+        </li>
+        <li><span language="main_lidar_channel"></span>
+          <select name="main_lidar_channel">
+            <option value="-1">(Disabled)</option>
+            <option value="0">Channel A</option>
+            <option value="1">Channel B</option>
+            <option value="2">Channel C</option>
+            <option value="3">Channel D</option>
+            <option value="4">Channel E</option>
+            <option value="5">Channel F</option>
+          </select>
+        </li>
+        <li><span language="format"></span>
+          <select name="format">
+            <option value="0">Invalid</option>
+            <option value="1">Binary</option>
+            <option value="2">ASCII</option>
+            <option value="3">BinaryCompressed</option>
+          </select>
+        </li>
+        <li><span language="pcd_merged_channel"></span>
+          <select name="pcd_merged_channel">
+            <option value="-1">(Disabled)</option>
+            <option value="0">Channel A</option>
+            <option value="1">Channel B</option>
+            <option value="2">Channel C</option>
+            <option value="3">Channel D</option>
+            <option value="4">Channel E</option>
+            <option value="5">Channel F</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <button language="merge"></button>
+    </div>
+  </div>
+  <script src="pcd-merge/js/jquery-2.14.js"></script>
+  <script src="pcd-merge/js/bi-common.js"></script>
+  <script src="pcd-merge/js/text.js"></script>
+  <script src="pcd-merge/js/index.js"></script>
+</body>
+
+</html>

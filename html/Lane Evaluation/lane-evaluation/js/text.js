@@ -1,0 +1,32 @@
+var cn = {
+  leEnable: "启动",
+  gtLanesChannel: "真值车道线输入通道:",
+  evaluationLanesChannel: "待评测车道线输入通道:",
+  roadSource: "道路类型:",
+  lineType: "车道线类型:",
+  dayTime: "白天时间段:",
+  start: "起始",
+  end: "结束",
+  nightTime: "傍晚时间段:",
+  absZeroPowerLimit: "零次项系数绝对值阈值:",
+  absFirstPowerLimit: "一次项系数绝对值阈值:",
+  absSecondPowerLimit: "二次项系数绝对值阈值:",
+  absThirdPowerLimit: "三次项系数绝对值阈值:",
+  laneIndex: "车道索引:"
+},
+  en = {
+    leEnable: "Enable",
+    gtLanesChannel: "GT lanes channel:",
+    evaluationLanesChannel: "Evaluating lanes channel:",
+    roadSource: "Road type:",
+    lineType: "Line type:",
+    dayTime: "Day time:",
+    start: "Start",
+    end: "End",
+    nightTime: "Night time:",
+    absZeroPowerLimit: "Zero power absolute max:",
+    absFirstPowerLimit: "First power absolute max:",
+    absSecondPowerLimit: "Second power absolute max:",
+    absThirdPowerLimit: "Third power absolute max:",
+    laneIndex: "Lane index:"
+  };

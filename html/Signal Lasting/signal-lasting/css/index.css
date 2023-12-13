@@ -1,0 +1,122 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 830px;
+  height: 580px;
+  margin: -290px 0px 0px -415px;
+}
+
+.container>div:first-of-type>a:last-of-type {
+  margin-left: 15px;
+}
+
+.content {
+  height: 554px;
+  overflow: auto;
+}
+
+.content>.box {
+  margin-top: 5px;
+  background-color: #ffffe1;
+  padding: 2px 5px;
+}
+
+.content>div:first-of-type {
+  display: none;
+}
+
+.content>.box>div {
+  line-height: 32px;
+}
+
+[name=lasting] {
+  width: 70px;
+}
+
+[type=range] {
+  width: 55px;
+}
+
+.number_btn {
+  top: 6px !important;
+}
+
+.hz {
+  display: inline-block;
+  width: 20px;
+}
+
+[name=output] {
+  width: 41px;
+}
+
+.signals {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.box select {
+  width: 60px;
+}
+
+.box>.right>.left>span {
+  margin: 0 8px;
+}
+
+.x {
+  width: 28px;
+  height: 28px;
+  background-color: #e6e6fa;
+  margin: 0 auto;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+.x:hover {
+  cursor: default;
+  background-color: #b0c4de;
+}
+
+.x>div {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2px;
+}
+
+[type=checkbox] {
+  vertical-align: middle;
+}
+
+.a {
+  text-decoration: none;
+  color: darkgrey;
+}
+
+.space_a {
+  position: relative;
+  width: 130px;
+}
+
+.space_a>a {
+  display: block;
+  width: 150px;
+  overflow: hidden;
+  word-break: keep-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.space_a>p {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+  border: 1px solid rgb(66, 65, 65);
+  background-color: #fff;
+  z-index: 1;
+  padding: 1px 3px;
+  color: rgb(59, 59, 59);
+  white-space: nowrap;
+  line-height: 1;
+}

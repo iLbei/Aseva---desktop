@@ -1,0 +1,129 @@
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+.container>.content {
+  position: relative;
+  width: 456px;
+  height: 327px;
+  border: 2px solid #fff;
+}
+
+.container>.content>div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px 10px 10px 20px;
+  display: none;
+  width: 100%;
+}
+
+.container>input {
+  display: none;
+}
+
+.container>.top>label {
+  display: block;
+  float: left;
+<<<<<<< HEAD
+  width: 78px;
+=======
+  width: 68px;
+>>>>>>> e65a7ab3088a04feade3fca15e18bc4ac4736ebc
+  text-align: center;
+  line-height: 25px;
+}
+
+#r1:checked~.top>.label1 {
+  background-color: #fff;
+}
+
+#r2:checked~.top>.label2 {
+  background-color: #fff;
+}
+
+#r3:checked~.top>.label3 {
+  background-color: #fff;
+}
+
+#r4:checked~.top>.label4 {
+  background-color: #fff;
+}
+
+#r1:checked~.content>.rear_left {
+  display: block;
+}
+
+#r2:checked~.content>.rear_right {
+  display: block;
+}
+
+#r3:checked~.content>.front_left {
+  display: block;
+}
+
+#r4:checked~.content>.front_right {
+  display: block;
+}
+
+[name=out_channel] {
+  width: 309px;
+}
+
+.center>.left>div:not(:last-child) {
+  height: 59px;
+  width: 180px;
+  margin-bottom: 20px;
+}
+.center>.left>div:last-child{
+  width: 180px;
+}
+.can input {
+  width: 42px;
+}
+
+.orie input {
+  width: 59px;
+}
+
+.origin input,
+.position input {
+  width: 68px;
+}
+
+.can>.left,
+.origin>.left,
+.position>.left {
+  line-height: 51px;
+}
+
+.can>.right>div:first-of-type,
+.origin>.right>div:first-of-type,
+.position>.right>div:first-of-type {
+  margin-bottom: 5px;
+}
+
+.center>.right {
+  position: relative;
+  width: 235px;
+  height: 264px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.container>.content>div>div:nth-of-type(1) {
+  margin-bottom: 8px;
+}
+
+.container>div:last-of-type {
+  padding-left: 10px;
+  margin-top: 8px;
+}
+
+.canvas {
+  background-color: #fff;
+  position: absolute;
+  left: -150px;
+  top: -50px;
+}

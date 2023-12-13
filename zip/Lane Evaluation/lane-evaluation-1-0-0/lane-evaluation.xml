@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root name="Lane Evaluation" name_ch="车道线评估" type="Dialog" version="1.0.0" depend_api="4.0" deprecated_api="" signature="jSnX0j5weItuQZa6676YLMFxRELgF1YIbXt+/BxIktc=" default_width="313" default_height="338" min_width="200" min_height="100">
+  <rm optional="no">lane-evaluation.aspluginlaneevaluation</rm>
+</root>

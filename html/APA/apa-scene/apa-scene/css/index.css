@@ -1,0 +1,78 @@
+.container {
+  width: 1110px;
+  height: 132px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul>li span {
+  display: table-cell;
+  padding: 0px 11px;
+  background-color: rgb(175, 175, 175);
+  vertical-align: middle;
+  height: 60px;
+  text-align: center;
+}
+
+ul>li span:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+select {
+  width: 100%;
+}
+
+button {
+  width: 148px;
+  margin-top: 7px;
+  padding: 2px 0px;
+}
+
+button:first-of-type {
+  margin-left: 402px;
+}
+
+li:nth-child(1) span {
+  width: 48px;
+}
+
+li:nth-child(2) span {
+  width: 51px;
+}
+
+li:nth-child(3) span {
+  width: 48px;
+}
+
+li:nth-child(4) span {
+  width: 72px;
+}
+
+li:nth-child(5) span,
+li:nth-child(6) span {
+  width: 102px;
+}
+
+li:nth-child(7) span {
+  width: 150px;
+}
+
+li:nth-child(8) span {
+  width: 137px;
+}
+
+li:nth-child(9) span {
+  width: 60px;
+}
+
+li:nth-child(10) span {
+  width: 63px;
+}

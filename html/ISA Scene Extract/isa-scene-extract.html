@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISA Scene Extract</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="isa-scene-extract/css/common.css">
+  <link rel="stylesheet" href="isa-scene-extract/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="enableISASceneExtract" id="enableISASceneExtract">
+      <label for="enableISASceneExtract" language="enableISASceneExtract"></label>
+    </div>
+    <ul>
+      <li>
+        <span language="sceneOffset"></span>
+        <input type="number" name="sceneOffset" value="-2" step="1">
+      </li>
+      <li>
+        <span language="sceneLength"></span>
+        <input type="number" name="sceneLength" value="4" step="1">
+      </li>
+    </ul>
+  </div>
+  <script src="isa-scene-extract/js/jquery-2.14.js"></script>
+  <script src="isa-scene-extract/js/bi-common.js"></script>
+  <script src="isa-scene-extract/js/text.js"></script>
+  <script src="isa-scene-extract/js/index.js"></script>
+</body>
+
+</html>

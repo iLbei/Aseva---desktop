@@ -1,0 +1,64 @@
+.container {
+  width: 814px;
+  height: 603px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -301.5px 0 0 -407px;
+}
+
+a {
+  max-width: 171px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+fieldset {
+  width: 379px;
+  border: 1px solid #ccc;
+}
+
+fieldset>ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+fieldset span {
+  width: 202px;
+}
+
+.noa,
+.road {
+  height: 320px;
+}
+
+.noa>ul,
+.road>ul {
+  height: 300px;
+}
+
+.traffic {
+  height: 236px;
+}
+
+.traffic>ul {
+  height: 216px;
+}
+
+.vehicle {
+  height: 160px;
+}
+
+.vehicle>ul {
+  height: 140px;
+}
+
+.env {
+  height: 61.5px;
+}
+
+.env>ul {
+  height: 41.5px;
+}

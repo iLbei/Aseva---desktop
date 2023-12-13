@@ -1,0 +1,37 @@
+.container {
+  height: 780px;
+  overflow: auto;
+}
+
+.container>ul {
+  padding: 7px 0px;
+  background-color: #fffbe0;
+}
+
+.container input[type='number'] {
+  width: 50px;
+}
+
+.container span {
+  margin-right: 3px;
+}
+
+.container ul>li:nth-child(1) span:nth-child(1) {
+  width: 74px;
+  padding-top: 3px;
+}
+
+.container>div:nth-child(1) input:nth-child(3) {
+  margin-left: 40px;
+}
+
+.container ul>li {
+  float: left;
+}
+
+.container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 5px;
+}

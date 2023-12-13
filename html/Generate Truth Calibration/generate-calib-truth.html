@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Calib Truth</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="generate-calib-truth/css/common.css">
+  <link rel="stylesheet" href="generate-calib-truth/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li class="fixclear">
+        <span language="calib_channel" class="left"></span>
+        <select name="calib_channel" id="" class="right">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <button class="left" language="add"></button>
+        <button language="remove" class="right"></button>
+      </li>
+      <li>
+        <ul class="content">
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <script src="generate-calib-truth/js/jquery-2.14.js"></script>
+  <script src="generate-calib-truth/js/bi-common.js"></script>
+  <script src="generate-calib-truth/js/text.js"></script>
+  <script src="generate-calib-truth/js/index.js"></script>
+</body>
+
+</html>

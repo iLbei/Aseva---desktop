@@ -1,0 +1,35 @@
+.container {
+  padding: 10px 10px 0px;
+}
+
+.container>div {
+  position: relative;
+  border: 1px solid #ccc;
+  height: 84px;
+  padding: 15px 10px;
+}
+.container>div:first-child{
+  margin-bottom: 10px;
+}
+.container span {
+  margin-top: 3px;
+}
+
+.container>div p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 3px;
+}
+
+ul>li {
+  margin-bottom: 5px;
+}
+
+select {
+  width: 240px;
+}
+
+h3 {
+  font-weight: normal;
+  text-align: center;
+}

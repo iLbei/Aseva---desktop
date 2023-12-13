@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" />
+  <title>Event</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="event/css/common.css" />
+  <link rel="stylesheet" href="event/css/index.css" />
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="top fixclear">
+      <div class="left">
+        <a href="javascript:;" onclick="openDialog('add_schedule')" language="add_schedule">Add schedule event</a>
+        <a href="javascript:;" onclick="openDialog('add_signal')" language="add_signal_event">Add signal event</a>
+        <a href="javascript:;" onclick="openDialog('add_manual')" language="add_manual">Add manual trigger event</a>
+      </div>
+      <div class="right">
+        <a href="javascript:;" onclick="importAsc()" language="importAsc">Import config</a>
+        <a href="javascript:;" onclick="exportAsc()" language="exportAsc">Export config</a>
+        <a href="javascript:;" onclick="openDialog('mail_set')" language="mail_set">Mail settings</a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="box">
+        <p class="name">1</p>
+        <div>
+          <div class="fixclear">
+            <div class="left first">
+              <input type="checkbox" onclick="isDisabled(this)" name="enabled" />
+              <span language="enabled">Enabled</span>
+            </div>
+            <div class="left fixclear second">
+              <span class="right" language="trigger_cond">Trigger condition:</span>
+            </div>
+            <div class="left second schedule_time">
+              <a href="javascript:;" class="cond green" type="" onclick="trigger_cond(this)">Schedule at 00:00</a>
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <p class="title" language="snap">Snapshot</p>
+              <div class="fixclear">
+                <div class="left fixclear first">
+                  <span class="right" language="data_table">Data table:&nbsp;&nbsp;</span>
+                </div>
+                <div class="left second">
+                  <a href="javascript:;" onclick="openDialog('no_data',this)" language="no_data">No data</a>
+                </div>
+                <div class="left second">
+                  <input type="checkbox" name="send_mail" onclick="sendMail(this)" id="" />
+                  <span language="send_mail" class="a">Send mail</span>
+                </div>
+              </div>
+              <div class="fixclear center">
+                <div class="left first fixclear">
+                  <span class="right" language="video_view">Video view:</span>
+                </div>
+                <select name="binding_video" id="">
+                  <option value="" selected language="disabled">
+                    (Disabled)
+                  </option>
+                  <option value="0" language="chan_a">Channel A</option>
+                  <option value="1" language="chan_b">Channel B</option>
+                  <option value="2" language="chan_c">Channel C</option>
+                  <option value="3" language="chan_d">Channel D</option>
+                  <option value="4" language="chan_e">Channel E</option>
+                  <option value="5" language="chan_f">Channel F</option>
+                  <option value="6" language="chan_g">Channel G</option>
+                  <option value="7" language="chan_h">Channel H</option>
+                  <option value="8" language="chan_i">Channel I</option>
+                  <option value="9" language="chan_j">Channel J</option>
+                  <option value="10" language="chan_k">Channel K</option>
+                  <option value="11" language="chan_l">Channel L</option>
+                  <option value="12" language="chan_m">Channel M</option>
+                  <option value="13" language="chan_n">Channel N</option>
+                  <option value="14" language="chan_o">Channel O</option>
+                  <option value="15" language="chan_p">Channel P</option>
+                  <option value="16" language="chan_q">Channel Q</option>
+                  <option value="17" language="chan_r">Channel R</option>
+                  <option value="18" language="chan_s">Channel S</option>
+                  <option value="19" language="chan_t">Channel T</option>
+                  <option value="20" language="chan_u">Channel U</option>
+                  <option value="21" language="chan_v">Channel V</option>
+                  <option value="22" language="chan_w">Channel W</option>
+                  <option value="23" language="chan_x">Channel X</option>
+                </select>
+              </div>
+              <div class="fixclear">
+                <div class="first fixclear left">
+                  <span class="right" language="bird_view">Bird view:</span>
+                </div>
+                <select name="binding_obj_sensor" id="">
+                  <option value="" selected language="disabled">
+                    (Disabled)
+                  </option>
+                  <option value="0" language="obj_chan_a">
+                    Object Channel A
+                  </option>
+                  <option value="1" language="obj_chan_b">
+                    Object Channel B
+                  </option>
+                  <option value="2" language="obj_chan_c">
+                    Object Channel C
+                  </option>
+                  <option value="3" language="obj_chan_d">
+                    Object Channel D
+                  </option>
+                  <option value="4" language="obj_chan_e">
+                    Object Channel E
+                  </option>
+                  <option value="5" language="obj_chan_f">
+                    Object Channel F
+                  </option>
+                  <option value="6" language="obj_chan_g">
+                    Object Channel G
+                  </option>
+                  <option value="7" language="obj_chan_h">
+                    Object Channel H
+                  </option>
+                  <option value="8" language="obj_chan_i">
+                    Object Channel I
+                  </option>
+                  <option value="9" language="obj_chan_j">
+                    Object Channel J
+                  </option>
+                  <option value="10" language="obj_chan_k">
+                    Object Channel K
+                  </option>
+                  <option value="11" language="obj_chan_l">
+                    Object Channel L
+                  </option>
+                </select>
+                <select name="binding_lane_sensor" id="">
+                  <option value="" selected language="disabled">
+                    (Disabled)
+                  </option>
+                  <option value="0" language="lane_chan_a">
+                    Lane Channel A
+                  </option>
+                  <option value="1" language="lane_chan_b">
+                    Lane Channel B
+                  </option>
+                  <option value="2" language="lane_chan_c">
+                    Lane Channel C
+                  </option>
+                  <option value="3" language="lane_chan_d">
+                    Lane Channel D
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="left">
+              <div class="top">
+                <div class="fixclear">
+                  <span class="left title" language="session_record">Session Recording</span>
+                  <div class="right">
+                    <input type="checkbox" onclick="recBusEnabled(this)" name="rec_bus_enabled" />
+                    <span language="enabled" class="a">Enabled</span>
+                  </div>
+                </div>
+                <div>
+                  <span language="range">Range[s]: - </span>
+                  <input type="number" name="rec_bus_negative" value="0" min="0" max="60" step="1" id="" />
+                  <span>∽</span>
+                  <input type="number" name="rec_bus_positive" value="0" min="0" max="60" step="1" id="" />
+                </div>
+              </div>
+              <div class="bottom">
+                <p class="title" language="meg_tran">Message transmit</p>
+                <a href="javascript:;" onclick="openDialog('transmit',this)" language="not_tran">Not transmit</a>
+              </div>
+            </div>
+            <div class="close" onclick="remove(this)">
+              <div><img src="./event/image/delete item.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <span language="location_source">Location source:</span>
+      <select name="location_source" id="">
+        <option value="-1" selected language="any_chan">Any channels</option>
+        <option value="0" language="gnss_imu_chan_a">
+          GNSS-IMU channel A
+        </option>
+        <option value="1" language="gnss_imu_chan_b">
+          GNSS-IMU channel B
+        </option>
+        <option value="2" language="gnss_imu_chan_c">
+          GNSS-IMU channel C
+        </option>
+        <option value="3" language="gnss_imu_chan_d">
+          GNSS-IMU channel D
+        </option>
+        <option value="4" language="gnss_imu_chan_e">
+          GNSS-IMU channel E
+        </option>
+        <option value="5" language="gnss_imu_chan_f">
+          GNSS-IMU channel F
+        </option>
+      </select>
+    </div>
+  </div>
+  <script src="event/js/jquery-2.14.min.js"></script>
+  <script src="event/js/text.js"></script>
+  <script src="event/js/bi-common.js"></script>
+  <script src="event/js/base64.js"></script>
+  <script src="event/js/index.js"></script>
+</body>
+
+</html>

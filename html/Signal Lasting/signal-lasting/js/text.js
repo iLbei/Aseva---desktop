@@ -1,0 +1,20 @@
+let cn = {
+    enabled: "启动",
+    not_config: "<未配置>",
+    add_signal: "添加信号",
+    add_signals: "批量添加报文的信号",
+    signal: "信号:",
+    lasting: "持续时间[s]:",
+    freq: "输出频率:",
+    out_channel: "输出信号通道:",
+  },
+  en = {
+    add_signal: "Add signal",
+    add_signals: "Add message's signals",
+    enabled: "Enabled",
+    not_config: "<Not Configured>",
+    signal: "Signal:",
+    lasting: "Lasting [s]:",
+    freq: "Frequency:",
+    out_channel: "Output channel:",
+  };

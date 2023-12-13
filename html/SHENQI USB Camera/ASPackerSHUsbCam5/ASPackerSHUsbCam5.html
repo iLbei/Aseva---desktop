@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHENQI USB Camera 5</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="ASPackerSHUsbCam5/css/common.css">
+  <link rel="stylesheet" href="ASPackerSHUsbCam5/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="top fixclear">
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+    </div>
+    <div class="content fixclear">
+      <div class="left">
+        <ul>
+          <li>
+			<input type="checkbox" name="enable" id="enable">
+            <label for="enable" language="enable"></label>
+            <span language="serial_number"></span>
+            <input type="text" name="serial_num" id="">
+          </li>
+          <li>
+            <input type="checkbox" name="record" id="record">
+            <label for="record" language="record"></label>
+            <input type="checkbox" name="show_img" id="show_image">
+            <label for="show_image" language="show_image"></label>
+            <input type="checkbox" name="show_cam" id="show_camera">
+            <label for="show_camera" language="show_camera"></label>
+            <input type="checkbox" name="show_log" id="show_log">
+            <label for="show_log" language="show_log"></label>
+          </li>
+        </ul>
+        <div>
+          <p language="accumulation_time_ang_fps"></p>
+          <ul>
+            <li class="fixclear">
+              <span language="fram_rate" class="left"></span>
+              <input type="number" name="fps" max="120" min="0" step="0.01" value="0" class="left">
+              <input type="number" name="acc" max="1000" min="0" step="1" value="20" class="right">
+              <span language="accumulation_time" class="right"></span>
+            </li>
+            <li>
+              <span language="palette"></span>
+              <select name="palette" id="">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="gray">Gray</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <div class="fixclear">
+          <p language="event_rate_controller"></p>
+          <input type="checkbox" name="erc_module" id="enable_erc" class="left">
+          <label for="enable_erc" language="enable_erc" class="left"></label>
+          <span language="million" class="right"></span>
+          <input type="number" name="events_per_sec" step="1" value="0" class="right">
+          <span language="event_per_second" class="right"></span>
+        </div>
+        <div>
+          <p language="noise_filter"></p>
+          <ul>
+            <li>
+              <input type="checkbox" name="noise_filter_module" id="enable_noise_filter">
+              <label for="enable_noise_filter" language="enable_noise_filter"></label>
+            </li>
+            <li>
+              <span language="mode"></span>
+              <select name="noise_filter_mode" id="">
+                <option value="stc">STC</option>
+                <option value="trail">Trail</option>
+              </select>
+              <input type="number" name="noise_thr" max="100,000" min="0" step="1" value="20000" class="right">
+              <span language="noise_thresh" class="right"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="fixclear">
+          <p language="activity_noise_filter"></p>
+          <input type="checkbox" name="do_activity" id="enabled_activity_noise_filter" class="left">
+          <label for="enabled_activity_noise_filter" language="enabled_activity_noise_filter" class="left"></label>
+          <input type="number" name="act_filter_th" max="100,000" min="0" step="1" value="10000"  class="right">
+          <span language="activity_thresh" class="right"></span>
+        </div>
+        <div>
+          <p language="anti_flicker_filter"></p>
+          <ul>
+            <li>
+              <input type="checkbox" name="antiflicker" id="enable_anti_flicker_filter">
+              <label for="enable_anti_flicker_filter" language="enable_anti_flicker_filter"></label>
+              <label for="output_all_burst_events" language="output_all_burst_events" class="right"></label>
+              <input type="checkbox" name="output_all_burst_events" id="output_all_burst_events" class="right">
+            </li>
+            <li>
+              <span language="difference_thresh"></span>
+              <input type="number" name="diff_thresh_us" max="4294967295" min="0" step="1" value="" id="">
+            </li>
+            <li>
+              <span language="anti_flicker_length"></span>
+              <input type="number" name="anti_fil_length" max="100" min="0" step="1" value="7" id="">
+            </li>
+            <li>
+              <span language="output_frequency_range"></span>
+              <input type="number" name="anti_min_freq" max="1000" min="0" step="1" value="95" id="">
+              <span>~</span>
+              <input type="number" name="anti_max_freq" max="1000" min="0" step="1" value="125" id="">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+        <ul>
+          <li><span language="file_path"></span><a href="javascript:;" name="file_path" language="not_select"></a></li>
+          <li><span language="save_path"></span><a href="javascript:;" name="save_path" language="not_select"></a></li>
+        </ul>
+        <div>
+          <p language="anti_flicker"></p>
+          <ul>
+            <li>
+              <input type="checkbox" name="do_af" id="enable_antiflicker">
+              <label for="enable_antiflicker" language="enable_antiflicker"></label>
+              <label for="band_stop" language="band_stop" class="right"></label>
+              <input type="checkbox" name="afk_band_stop" id="band_stop" class="right">
+            </li>
+            <li>
+              <span language="band_frequency_range"></span>
+              <input type="number" name="afk_min_freq" max="1000" min="0" step="1" value="50" id="">
+              <span>~</span>
+              <input type="number" name="afk_max_freq" max="1000" min="0" step="1" value="500" id="">
+            </li>
+          </ul>
+        </div>
+        <div class="fixclear">
+          <p language="polarity_filter_algorithm"></p>
+          <input type="checkbox" name="do_pol" id="enable_polarity_filter" class="left">
+          <label for="enable_polarity_filter" language="enable_polarity_filter" class="left"></label>
+          <input type="number" name="polarity" max="100,000" min="0" step="1" value="0" class="right">
+           <span language="polarity" class="right"></span>
+        </div>
+        <div>
+          <p language="spatio_temporal_contrast_filter"></p>
+          <ul>
+            <li>
+              <input type="checkbox" name="do_stc" id="enable_stc">
+              <label for="enable_stc" language="enable_stc"></label>
+            </li>
+            <li>
+              <span language="stc_thresh"></span>
+              <input type="number" name="stc_filter_th" max="1,000,000" min="0" step="1" value="100000" id="">
+              <label for="cut_trail" language="cut_trail"  class="right"></label>
+              <input type="checkbox" name="cut_trail" id="cut_trail" class="right">
+            </li>
+          </ul>
+        </div>
+        <div class="fixclear">
+          <p language="trail_filter"></p>
+          <input type="checkbox" name="do_trail" id="enable_trail_filter" class="left">
+          <label for="enable_trail_filter" language="enable_trail_filter" class="left"></label>
+          <input type="number" name="trail_th" max="100,000" min="0" step="1" value="10000"  class="right">
+          <span language="trail_thresh" class="right"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="ASPackerSHUsbCam5/js/jquery-2.14.js"></script>
+  <script src="ASPackerSHUsbCam5/js/bi-common.js"></script>
+  <script src="ASPackerSHUsbCam5/js/text.js"></script>
+  <script src="ASPackerSHUsbCam5/js/index.js"></script>
+</body>
+
+</html>

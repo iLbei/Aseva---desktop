@@ -1,0 +1,55 @@
+ul li {
+  height: 26px;
+  margin-bottom: 5px;
+}
+
+ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.data_sourse input[type='radio']:nth-child(3) {
+  margin-left: 103px;
+}
+
+.data_sourse,
+.map_sourse,
+.Processing {
+  border: 1px solid #DCDCDC;
+  padding: 15px 10px;
+  position: relative;
+}
+
+.data_sourse,
+.map_sourse {
+  margin-bottom: 10px;
+}
+
+.data_sourse p,
+.map_sourse p,
+.Processing p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+}
+
+input[type='number'],
+select {
+  width: 150px;
+  float: right;
+}
+
+.map_sourse li:nth-child(1) span,
+.map_sourse li:nth-child(5) span,
+.map_sourse li:nth-child(6) span {
+  display: inline-block;
+  width: 145px;
+}
+
+a {
+  display: inline-block;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: -4px;
+}

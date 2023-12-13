@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Scenario Pre Extraction</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="scenario-pre-extraction/css/common.css">
+  <link rel="stylesheet" href="scenario-pre-extraction/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="process_enable" id="process_enable">
+      <label for="process_enable" language="enable"></label>
+    </div>
+    <div id="box1">
+      <p language="select_scene"></p>
+      <div>
+        <ul class="fixclear">
+          <li>
+            <div>
+              <input type="checkbox" id="cut_in_enable" name="cut_in_enable">
+              <label for="cut_in_enable" language="cut_in"></label>
+            </div>
+            <div>
+              <input type="checkbox" id="cut_out_enable" name="cut_out_enable">
+              <label for="cut_out_enable" language="cut_out"></label>
+            </div>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" id="lane_change_enable" name="lane_change_enable">
+              <label for="lane_change_enable" language="lane_change"></label>
+            </div>
+            <div>
+              <input type="checkbox" id="car_following_enable" name="car_following_enable">
+              <label for="car_following_enable" language="car_following"></label>
+            </div>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" id="turn_left_enable" name="turn_left_enable">
+              <label for="turn_left_enable" language="turn_left_enable"></label>
+            </div>
+            <div>
+              <input type="checkbox" id="uTurn_enable" name="uTurn_enable">
+              <label for="uTurn_enable" language="u_turn"></label>
+            </div>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" id="turn_right_enable" name="turn_right_enable">
+              <label for="turn_right_enable" language="turn_right_enable"></label>
+            </div>
+            <div>
+              <input type="checkbox" id="lane_keep_enable" name="lane_keep_enable">
+              <label for="lane_keep_enable" language="lane_keep"></label>
+            </div>
+          </li>
+          <li>
+            <div>
+              <input type="checkbox" id="overtake_enable" name="overtake_enable">
+              <label for="overtake_enable" language="overtake"></label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="box2">
+      <p language="com_par"></p>
+      <div>
+        <div class="fixclear">
+          <div class="left">
+            <span language="lane_source"> </span>
+            <select name="lane_source" id="lane">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="sen_a"></option>
+              <option value="1" language="sen_b"></option>
+              <option value="2" language="sen_c"></option>
+              <option value="3" language="sen_d"></option>
+            </select>
+          </div>
+          <div class="right">
+            <span language="object_source"></span>
+            <select name="object_source" id="object">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="sen_a"></option>
+              <option value="1" language="sen_b"></option>
+              <option value="2" language="sen_c"></option>
+              <option value="3" language="sen_d"></option>
+              <option value="4" language="sen_e"></option>
+              <option value="5" language="sen_f"></option>
+              <option value="6" language="sen_g"></option>
+              <option value="7" language="sen_h"></option>
+              <option value="8" language="sen_i"></option>
+              <option value="9" language="sen_j"></option>
+              <option value="10" language="sen_k"></option>
+              <option value="11" language="sen_l"></option>
+            </select>
+          </div>
+        </div>
+        <div class="fixclear">
+          <div class="left">
+            <span language="tube_width"></span>
+            <input type="number" value="0" min="0" max="10" step="0.1" name="tube_width">
+          </div>
+          <div class="right">
+            <spam language="gnssimu_source"></spam>
+            <select name="gnssimu_source" id="">
+              <option value="-1" language="disabled"></option>
+              <option value="0" language="sen_a"></option>
+              <option value="1" language="sen_b"></option>
+              <option value="2" language="sen_c"></option>
+              <option value="3" language="sen_d"></option>
+              <option value="4" language="sen_e"></option>
+              <option value="5" language="sen_f"></option>
+            </select>
+          </div>
+        </div>
+        <div class="fixclear bottom">
+          <div class="left">
+            <span language="max_curv"></span>
+            <input type="number" value="0" min="0" max="1" step="0.0001" name="max_curvature">
+          </div>
+          <div class="right">
+            <span language="rang_dis"></span>
+            <input type="number" value="0" step="1" name="range_distance">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="box3">
+      <p language="car_foll_par"></p>
+      <div>
+        <div class="fixclear">
+          <div class="left">
+            <span language="en_thw"></span>
+            <input type="number" value="1" min="1" max="3.6" step="0.1" name="car_following_thw">
+          </div>
+          <div class="right">
+            <span language="en_vx_rel"> </span>
+            <input type="number" value="0" min="0" max="15" step="0.1" name="car_following_vx_rel">
+          </div>
+        </div>
+        <div class="fixclear bottom">
+          <div class="left">
+            <span language="le_thw"> </span>
+            <input type="number" value="0" min="0" max="10" step="0.1" name="car_following_leave_thw">
+          </div>
+          <div class="right">
+            <span language="le_vx_rel"></span>
+            <input type="number" value="0" min="0" max="10" step="0.1" name="car_following_leave_vx_rel">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="box4">
+      <p language="cut_in_out"></p>
+      <div class="fixclear">
+        <div class="left">
+          <span language="cut_in_over"></span>
+          <input type="number" name="cut_in_overlap" value="20" min="20" max="80" step="1">
+        </div>
+        <div class="right">
+          <span language="cut_out_over"></span>
+          <input type="number" name="cut_out_overlap" value="-20" min="-30" max="0" step="1">
+        </div>
+      </div>
+    </div>
+    <div id="box5">
+      <p language="turn_left"></p>
+      <div class="fixclear">
+          <span>PPMCC:</span>
+          <input type="number" name="ppmcc" value="0.95" min="0" max="50" step="0.01">
+      </div>
+    </div>
+  </div>
+  <script src="scenario-pre-extraction/js/jquery-2.14.min.js"></script>
+  <script src="scenario-pre-extraction/js/text.js"></script>
+  <script src="scenario-pre-extraction/js/bi-common.js"></script>
+  <script src="scenario-pre-extraction/js/index.js"></script>
+</body>
+
+</html>

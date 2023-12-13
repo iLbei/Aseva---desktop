@@ -1,0 +1,44 @@
+.container {
+  width: 426px;
+  height: 222px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -111px 0 0 -213px;
+}
+
+.container>ul>li:not(:nth-child(5)) {
+  margin-bottom: 15px;
+}
+
+.container>ul>li>span {
+  width: 82px;
+}
+
+.container>ul>li:nth-child(1)>a {
+  vertical-align: -4px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  max-width: 334px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.container>ul>li select {
+  width: 130px;
+}
+
+.container>ul>li:nth-child(4)>ul {
+  width: 430px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.container>ul>li:nth-child(4) label {
+  width: 15px;
+}
+
+input[type=radio] {
+  margin-left: 100px;
+}

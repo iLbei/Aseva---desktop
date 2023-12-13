@@ -1,0 +1,9 @@
+.container>ul{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+select{
+  width: 115px;
+}

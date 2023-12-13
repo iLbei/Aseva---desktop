@@ -1,0 +1,34 @@
+.container{
+  width: 337px;
+  height: 196px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -98px 0 0 -168.5px;
+}
+ul>li {
+  margin-bottom: 20px;
+}
+
+.container>div {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 15px 0px 9px 15px;
+}
+
+.container>div>p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+}
+
+.container>div>label {
+  display: inline-block;
+  width: 135px;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 165px;
+  margin-left: 10px;
+}

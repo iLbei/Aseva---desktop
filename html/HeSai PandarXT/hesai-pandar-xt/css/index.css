@@ -1,0 +1,118 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 456px;
+  height: 379px;
+  margin: -189.5px 0 0 -228px;
+}
+
+.container>div>div {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.container>div>div:last-child {
+  margin-top: 12px;
+}
+
+.container>div>div>p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+  background: #fff;
+}
+
+.container>div>div:nth-child(1) input[type=text] {
+  width: 130px;
+  margin-left: 5px;
+}
+
+[language="point_cloud_channel"] {
+  padding-top: 2px;
+}
+
+.container>div>div:nth-child(1) input[type=number] {
+  width: 57px;
+  margin-left: 5px;
+}
+
+.container>div>div select {
+  width: 200px;
+}
+
+.processing>div {
+  margin-top: 35px;
+}
+
+.processing>div p {
+  margin-right: 10px;
+  background: transparent;
+}
+
+.processing>div p:nth-child(1) {
+  margin-top: 30px;
+}
+
+.processing>div p:nth-child(2) {
+  margin-top: 100px;
+}
+
+.processing>div input {
+  margin-bottom: 6px;
+  width: 61px;
+  margin-left: 7px;
+}
+
+.processing>div>div>div.right>div:nth-child(3) {
+  margin-bottom: 20px;
+}
+
+.myCanvas {
+  background-color: #fff;
+  width: 160px;
+  height: 206px;
+  border: 2px solid #e9e9e9;
+}
+
+input[type=radio][value="1"] {
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+.content {
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin-top: -1px;
+  background: #fff;
+}
+
+/*tab分页*/
+.container>div {
+  padding: 15px 10px 10px;
+  border: 1px solid #ccc;
+  margin-top: -1px;
+  background: #fff;
+}
+
+.item>li {
+  float: left;
+  width: 60px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  background-color: #F0F0F0;
+}
+
+.item>li:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.active {
+  border-bottom: 1px solid #fff !important;
+  background-color: #fff !important;
+}

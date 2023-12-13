@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="vehicle/css/common.css">
+  <link rel="stylesheet" href="vehicle/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="fixclear">
+      <div class="left">
+        <input type="checkbox" name="enabled" id="enabled">
+        <label for="enabled" language="enabled"></label>
+      </div>
+      <div class="right">
+        <span language="frequency"></span>
+        <select name="frequency" id="">
+          <option value="50" selected>50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+    </div>
+    <div class="fixclear">
+      <div class="left">
+        <span language="front_overhang"></span>
+        <input type="number" name="front_overhang" min="0.001" value="0.001" max="3.000" step="0.001" id="">
+      </div>
+      <div class="left">
+        <div>
+          <span language="engine_speed"></span>
+          <a href="javascript:;" id="engine_speed_value" scaleName="engine_speed_scale" scale="1" unit="rpm"
+            language="not_configured" onclick="selectSignal(this,true)"></a>
+        </div>
+        <div>
+          <span language="engine_torque"></span>
+          <a href="javascript:;" id="engine_torque_value" scaleName="engine_torque_scale" scale="1" unit="Nm"
+            language="not_configured" onclick="selectSignal(this,true)"></a>
+        </div>
+      </div>
+      <div class="right">
+        <button class="otherBtn" onclick="openChildDialog(this)" language="other_settings"></button>
+      </div>
+    </div>
+    <div class="fixclear">
+      <div class="left">
+        <p language="speed_fl"></p>
+        <div class="space_a">
+          <a href="javascript:;" id="speed_fl_value" unit="KPH" scaleName="speed_fl_scale" sign="speed_fl_sign"
+            scale="1" language="not_configured" onclick="selectSignal(this,true)"></a>
+        </div>
+      </div>
+      <div class="left">
+        <div>
+          <span language="steer_angle_ratio"></span>
+          <input type="number" name="steer_angle_ratio" value="0.001" min="0.001" max="99.999" step="0.001" id="">
+        </div>
+        <div>
+          <span language="steer_angle"></span>
+          <a href="javascript:;" id="steer_value" scaleName="steer_scale" sign="steer_sign" scale="1" unit="deg"
+            language="not_configured" onclick="selectSignal(this,true)"></a>
+        </div>
+      </div>
+      <div class="left">
+        <p language="speed_fr"></p>
+        <div class="space_a">
+          <a href="javascript:;" id="speed_fr_value" unit="KPH" scaleName="speed_fr_scale" sign="speed_fr_sign"
+            scale="1" language="not_configured" onclick="selectSignal(this,true)"></a>
+        </div>
+      </div>
+    </div>
+    <div class="fixclear">
+      <div class="left">
+        <p language="turn_left_signal"></p>
+        <span language="signal"></span>
+        <a href="javascript:;" id="turn_left_signal" scale="1" language="not_configured"
+          onclick="selectSignal(this,false)"></a>
+        <div>
+          <span language="value"></span>
+          <input type="text" class="green" name="turn_left_values" value="0" id="">
+        </div>
+      </div>
+      <div class="left">
+        <div class="fixclear">
+          <span language="brake"></span>
+          <a href="javascript:;" id="brake_value" scaleName="brake_scale" unit="%" scale="1" language="not_configured"
+            onclick="selectSignal(this,true)"></a>
+        </div>
+        <div class="fixclear">
+          <span language="throttle"></span>
+          <a href="javascript:;" id="throttle_value" scaleName="throttle_scale" scale="1" unit="%" language="not_configured"
+            onclick="selectSignal(this,true)"></a>
+        </div>
+      </div>
+      <div class="left">
+        <p language="turn_right_signal"></p>
+        <div class="fixclear">
+          <span language="signal" class="left"></span>
+          <div class="right space_a">
+            <a href="javascript:;" id="turn_right_signal" scale="1" language="not_configured"
+              onclick="selectSignal(this,false)"></a>
+
+          </div>
+        </div>
+        <div>
+          <span language="value"></span>
+          <input type="text" class="green" name="turn_right_values" value="0" id="">
+        </div>
+      </div>
+    </div>
+    <div class="fixclear">
+      <div class="left">
+        <span language="speed"></span>
+        <a href="javascript:;" id="speed_value" class="red" onclick="selectSignal(this,true)" scaleName="speed_scale"
+          scale="1" sign="speed_sign" unit="KPH" language="not_configured"></a>
+      </div>
+      <div class="left">
+        <p language="gear_signal"></p>
+        <div class="fixclear">
+          <span language="signal" class="left"></span>
+          <div class="left space_a">
+            <a href="javascript:;" id="gear_signal" scale="1" onclick="selectSignal(this,false)"
+              language="not_configured"></a>
+          </div>
+        </div>
+        <div>
+          <div class="fixclear">
+            <div class="fixclear left w65">
+              <span class="left">P:</span>
+              <input type="text" value="0" class="right green gear_p_values" name="gear_p_values" id="">
+            </div>
+            <div class="fixclear left w65">
+              <span class="left">N:</span>
+              <input type="text" value="0" class="right green gear_n_values" name="gear_n_values" id="">
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="fixclear left w65">
+              <span class="left">R:</span>
+              <input type="text" value="0" class="right green gear_r_values" name="gear_r_values" id="">
+            </div>
+            <div class="fixclear left w65">
+              <span class="left">D:</span>
+              <input type="text" value="0" class="right green gear_d_values" name="gear_d_values" id="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fixclear">
+      <div class="left w150">
+        <span language="wheel_base"></span>
+        <input type="number" name="wheel_base" value="0.001" min="0.001" max="9.999" step="0.001" id="">
+      </div>
+      <div class="left">
+        <div class="fixclear">
+          <span language="imu_channel"></span>
+        </div>
+        <div>
+          <select name="imu_channel" onchange="checkImuChannel()" id="">
+            <option value="-1" selected language="disabled"></option>
+            <option value="0">A:(Not availabled)</option>
+            <option value="1">B:(Not availabled)</option>
+            <option value="2">C:(Not availabled)</option>
+            <option value="3">D:(Not availabled)</option>
+            <option value="4">E:(Not availabled)</option>
+            <option value="5">F:(Not availabled)</option>
+          </select>
+        </div>
+        <div>
+          <span language="rear_tread"></span>
+          <input type="number" name="rear_tread" value="0.001" min="0.001" max="9.999" step="0.001" id="">
+        </div>
+      </div>
+      <div class="left">
+        <span language="vehicle_length"></span>
+        <input type="number" name="vehicle_length" value="0.001" min="0.001" max="19.999" step="0.001" id="">
+      </div>
+    </div>
+    <div class="fixclear">
+      <div class="left">
+        <p language="speed_rl"></p>
+        <div class="space_a">
+          <a href="javascript:;" onclick="selectSignal(this,true)" id="speed_rl_value" unit="KPH" scale="1"
+            sign="speed_rl_sign" scaleName="speed_rl_scale" language="not_configured"></a>
+
+        </div>
+      </div>
+      <div class="right">
+        <p language="speed_rr"></p>
+        <div class="space_a">
+          <a href="javascript:;" onclick="selectSignal(this,true)" id="speed_rr_value" unit="KPH" scale="1"
+            sign="speed_rr_sign" scaleName="speed_rr_scale" language="not_configured"></a>
+
+        </div>
+      </div>
+    </div>
+    <div class="fixclear">
+      <div class="left">
+        <button language="import" onclick="importAsmc()"></button>
+        <button language="export" onclick="exportAsmc()"></button>
+      </div>
+      <div class="left">
+        <span language="vehicle_width"></span>
+        <input type="number" name="vehicle_width" value="0.001" min="0.001" max="9.999" step="0.001" id="">
+      </div>
+      <div class="right">
+        <button class="configBtn" language="configure_can_output" onclick="openChildDialog(this)"></button>
+      </div>
+    </div>
+  </div>
+  <script src="vehicle/js/jquery-2.14.min.js"></script>
+  <script src="vehicle/js/bi-common.js"></script>
+  <script src="vehicle/js/text.js"></script>
+  <script src="vehicle/js/index.js"></script>
+</body>
+
+</html>

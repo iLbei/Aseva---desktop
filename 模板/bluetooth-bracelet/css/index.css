@@ -1,0 +1,37 @@
+/* tab栏分页 */
+.content {
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin-top: -1px;
+  background: #fff;
+}
+
+.item>li {
+  float: left;
+  width: 60px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  background-color: #F0F0F0;
+}
+
+.item>li:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.active {
+  border-bottom: 1px solid #fff !important;
+  background-color: #fff !important;
+}
+
+/* IP验证，不再需要js，通过css结合pattern就能验证 */
+[type=text]:valid {
+  color: green;
+}
+
+[type=text]:invalid {
+ color: red;
+}

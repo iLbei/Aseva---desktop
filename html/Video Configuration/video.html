@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html language="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="video/css/common.css" />
+    <link rel="stylesheet" href="video/css/index.css" />
+  </head>
+
+  <body
+    oncontextmenu="return false"
+    ondragstart="return false"
+    onselectstart="return false"
+    onbeforecopy="return false"
+  >
+    <div class="container fixclear">
+      <div class="left">
+        <div class="video">
+          <p language="videodevices"></p>
+          <ul class="video_list"></ul>
+          <h5 language="not_config"></h5>
+        </div>
+        <div class="general_settings">
+          <p language="generalsettings"></p>
+          <span language="size"></span>
+          <input
+            type="number"
+            name="hires_buffer_max_size"
+            min="100"
+            max="2000"
+            value="500"
+            step="1"
+          />
+          <span language="thread"></span>
+          <input
+            type="number"
+            name="max_process_thread_count"
+            min="1"
+            max="8"
+            value="3"
+            step="1"
+          />
+        </div>
+      </div>
+      <div class="right">
+        <div class="video_channel">
+          <p language="channeloptions"></p>
+          <ul class="video_channel_list left"></ul>
+        </div>
+      </div>
+      <div class="bottom left">
+        <a href="javascript:;" language="video_information"></a>
+      </div>
+    </div>
+    <script src="video/js/jquery-2.14.js"></script>
+    <script src="video/js/bi-common.js"></script>
+    <script src="video/js/text.js"></script>
+    <script src="video/js/index.js"></script>
+  </body>
+</html>

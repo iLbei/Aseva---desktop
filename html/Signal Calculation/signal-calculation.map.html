@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Signal Calculation</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="signal-calculation/css/common.css">
+  <link rel="stylesheet" href="signal-calculation/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="map tent">
+    <div>
+      <span language="default"></span>
+      <input type="radio" name="map" value="passthrough" id="map1">
+      <label for="map1" language="passthrough"></label>
+      <input type="radio" name="map" value="constant" id="map2" checked>
+      <label for="map2" language="constant_"></label>
+      <input type="text" name="mapValue" value="0" id="">
+    </div>
+    <div class="table">
+      <div class="top fixclear">
+        <div class="left" onclick="selectAll()"></div>
+        <div language="input" class="left"></div>
+        <div language="output" class="left"></div>
+      </div>
+      <div class="body">
+        <div class="fixclear tableBox">
+          <div class="left" onclick="selectOneRow(this)" style="background:white"></div>
+          <div class="left">
+            <input type="text" onkeypress="keyPress(this)" onclick="wipeBlue(this)" name="input" id="">
+          </div>
+          <div class="left">
+            <input type="text" onkeypress="keyPress(this)" onclick="wipeBlue(this)" name="output" id="">
+          </div>
+        </div>
+        <div class="fixclear tableBox">
+          <div class="left" onclick="selectOneRow(this)" style="background:white"></div>
+          <div class="left">
+            <input type="text" onkeypress="keyPress(this)" onclick="wipeBlue(this)" name="input" id="">
+          </div>
+          <div class="left">
+            <input type="text" onkeypress="keyPress(this)" onclick="wipeBlue(this)" name="output" id="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="signal-calculation/js/jquery-2.14.min.js"></script>
+  <script src="signal-calculation/js/bi-common.js"></script>
+  <script src="signal-calculation/js/text.js"></script>
+  <script src="signal-calculation/js/map.js"></script>
+</body>
+
+</html>

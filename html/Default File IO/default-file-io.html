@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Default File I/O</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="default-file-io/css/common.css">
+  <link rel="stylesheet" href="default-file-io/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="top fixclear">
+      <div class="left">
+        <p language="write_option"></p>
+        <div class="left">
+          <ul>
+            <li language="binary_data"></li>
+            <li><a href="javascript:;" language="bus"></a></li>
+            <li><a href="javascript:;" language="video"></a></li>
+            <li><a href="javascript:;" language="audio"></a></li>
+            <li language="signal_data"></li>
+            <li language="bus_data"></li>
+            <li language="sample_data"></li>
+            <li language="matrix_data"></li>
+          </ul>
+        </div>
+        <div class="left">
+          <ul>
+            <li language="online_mode"></li>
+            <li><input type="checkbox" id="enabled_0" class="default" name="online_write_raw_binary"><label for="enabled_0" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_1" class="default" name="online_write_bus"><label for="enabled_1" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_2" class="default" name="online_write_video"><label for="enabled_2" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_3" class="default" name="online_write_audio"><label for="enabled_3" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_4" class="default" name="online_write_signal"><label for="enabled_4" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" id="enabled_5" disabled><label for="enabled_5" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_6" class="default" name="online_write_sample"><label for="enabled_6" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" id="enabled_7" name="online_write_matrix"><label for="enabled_7" language="enabled"></label></li>
+          </ul>
+        </div>
+        <div class="left">
+          <ul>
+            <li language="offline_mode"></li>
+            <li><input type="checkbox" disabled><span language="not_available" class="disabled"></span></li>
+            <li><input type="checkbox" disabled><span language="not_available" class="disabled"></span></li>
+            <li><input type="checkbox" disabled><span language="not_available" class="disabled"></span></li>
+            <li><input type="checkbox" disabled><span language="not_available" class="disabled"></span></li>
+            <li><input type="checkbox" id="enabled_8" class="default" name="offline_write_signal"><label for="enabled_8" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" id="enabled_9" disabled><label for="enabled_9" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_10" class="default" name="offline_write_sample"><label for="enabled_10" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" id="enabled_11" name="offline_write_matrix"><label for="enabled_11" language="enabled"></label></li>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+        <p language="read_option"></p>
+        <div class="left">
+          <ul>
+            <li language="binary_data"></li>
+            <li language="bus"></li>
+            <li language="video"></li>
+            <li language="audio"></li>
+            <li language="signal_data"></li>
+            <li language="bus_data"></li>
+            <li language="sample_data"></li>
+            <li language="matrix_data"></li>
+          </ul>
+        </div>
+        <div class="left">
+          <ul>
+            <li language="from_raw_data"></li>
+            <li><input type="checkbox" id="enabled_12" class="default" name="from_raw_read_raw_binary"><label for="enabled_12" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_13" class="default" name="from_raw_read_bus"><label for="enabled_13" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_14" class="default" name="from_raw_read_video"><label for="enabled_14" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" id="enabled_15" class="default" name="from_raw_read_audio"><label for="enabled_15" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" disabled><span language="not_available" class="disabled"></span></li>
+            <li><input type="checkbox" disabled><span language="not_available" class="disabled"></span></li>
+            <li><input type="checkbox" disabled><span language="not_available" class="disabled"></span></li>
+            <li><input type="checkbox" disabled><span language="not_available" class="disabled"></span></li>
+          </ul>
+        </div>
+        <div class="left">
+          <ul>
+            <li><span language="from_generation"></span><br>(<span language="offline_mode"></span>)</li>
+            <li><input type="checkbox" id="enabled_16" name="offline_from_gen_read_raw_binary"><label for="enabled_16" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_17" name="offline_from_gen_read_bus"><label for="enabled_17" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_18" class="default" name="offline_from_gen_read_video"><label for="enabled_18" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" id="enabled_19" name="offline_from_gen_read_audio"><label for="enabled_19" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_20" name="offline_from_gen_read_signal"><label for="enabled_20" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_21" disabled><label for="enabled_21" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_22" class="default" name="offline_from_gen_read_sample"><label for="enabled_22" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" id="enabled_23" name="offline_from_gen_read_matrix"><label for="enabled_23" language="enabled"></label></li>
+          </ul>
+        </div>
+        <div class="left">
+          <ul>
+            <li><span language="from_generation"></span><br>(<span language="replay_mode"></span>)</li>
+            <li><input type="checkbox" id="enabled_24" name="replay_from_gen_read_raw_binary"><label for="enabled_24" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_25" class="default" name="replay_from_gen_read_bus"><label for="enabled_25" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_26" class="default" name="replay_from_gen_read_video"><label for="enabled_26" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" id="enabled_27" class="default" name="replay_from_gen_read_audio"><label for="enabled_27" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" id="enabled_28" class="default" name="replay_from_gen_read_signal"><label for="enabled_28" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" id="enabled_29" class="default" disabled><label for="enabled_29" language="enabled"></label></li>
+            <li><input type="checkbox" id="enabled_30" class="default" name="replay_from_gen_read_sample"><label for="enabled_30" language="enabled"></label>
+            </li>
+            <li><input type="checkbox" id="enabled_31" class="default" name="replay_from_gen_read_matrix"><label for="enabled_31" language="enabled"></label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <input type="checkbox" name="record_legacy_style" id="record_legacy_style" class="left">
+      <label for="record_legacy_style" language="record_legacy_style" class="left"></label>
+      <a href="javascript:;" language="data_password" class="left"></a>
+      <button class="restore right" language="reset_to_default"></button>
+      <button class="disable right" language="disabled_all"></button>
+    </div>
+  </div>
+  <script src="default-file-io/js/jquery-2.14.js"></script>
+  <script src="default-file-io/js/bi-common.js"></script>
+  <script src="default-file-io/js/text.js"></script>
+  <script src="default-file-io/js/index.js"></script>
+</body>
+
+</html>

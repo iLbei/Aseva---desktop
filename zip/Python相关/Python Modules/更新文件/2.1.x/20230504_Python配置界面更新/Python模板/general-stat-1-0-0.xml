@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<python_template name="General Stat" name_ch="一般性统计" version="1.0.0" depend_api="3.0" deprecated_api="" signature="bKgvsdCRnLNZcjR/Fu0L/zoXYBsgvJs+" can_overwrite_freq="yes" freq="50">
+  <use_api>bi.session</use_api>
+  <use_api>bi.time</use_api>
+  <use_api>bi.Util.set_to_value_report</use_api>
+  <use_api>bi.Util.add_to_numeric_histline_report</use_api>
+  <use_api>bi.interval</use_api>
+  <use_api>bi.Util.add_to_label_histline_report</use_api>
+  <use_api>bi.Util.add_to_value_report</use_api>
+  <sample_in>vehicle-sample-v4</sample_in>
+  <sample_in>env-sample-v3</sample_in>
+  <report_out id="total-hr-age" type="SingleValue" title="Total Hour Age" configs="" column_titles="Value" />
+  <report_out id="total-km-age" type="SingleValue" title="Total Kilometer Age" configs="" column_titles="Value" />
+  <report_out id="time-hr-age" type="HistAndLine" title="Time Hour Age" configs="Sum,Time,0,0,XValues,0,1,24" column_titles="Hour Age,Aux" />
+  <report_out id="time-km-age" type="HistAndLine" title="Time Kilometer Age" configs="Sum,Time,0,0,XValues,0,1,24" column_titles="Kilometer Age,Aux" />
+  <report_out id="speed-hr-age" type="HistAndLine" title="Speed Hour Age" configs="Sum,Speed [KPH],0,0,XValues,0,10,15" column_titles="Hour Age,Aux" />
+  <report_out id="speed-km-age" type="HistAndLine" title="Speed Kilometer Age" configs="Sum,Speed [KPH],0,0,XValues,0,10,15" column_titles="Kilometer Age,Aux" />
+  <report_out id="weather-hr-age" type="HistAndLine" title="Weather Hour Age" configs="Sum,Weather,0,0,XLabels,Unknown,Sunny,Cloudy,Rainy,Snowy,Foggy,Sand" column_titles="Hour Age,Aux" />
+  <report_out id="weather-km-age" type="HistAndLine" title="Weather Kilometer Age" configs="Sum,Weather,0,0,XLabels,Unknown,Sunny,Cloudy,Rainy,Snowy,Foggy,Sand" column_titles="Kilometer Age,Aux" />
+  <report_out id="road-hr-age" type="HistAndLine" title="Road Hour Age" configs="Sum,Road Type,0,0,XLabels,Unknown,Highway,City express,City main,General road,Country road" column_titles="Hour Age,Aux" />
+  <report_out id="road-km-age" type="HistAndLine" title="Road Kilometer Age" configs="Sum,Road Type,0,0,XLabels,Unknown,Highway,City express,City main,General road,Country road" column_titles="Kilometer Age,Aux" />
+  <report_out id="turn-left" type="SingleValue" title="Turn Left Times" configs="" column_titles="Value" />
+  <report_out id="turn-right" type="SingleValue" title="Turn Right Times" configs="" column_titles="Value" />
+  <report_out id="over-speed" type="SingleValue" title="Over Speed Times" configs="" column_titles="Value" />
+  <param name="turn_curvature" value="0.05">The curvature threshold to determine a turning. [1/m]</param>
+  <param name="straight_curvature" value="0.01">The curvature threshold to determine the end of a turning. [1/m] </param>
+  <param name="speed_down_gap" value="5.0">The gap threshold to determine the end of overspeed. [KPH]</param>
+  <cmd>aW1wb3J0IHZlaGljbGVfc2FtcGxlIGFzIHZz</cmd>
+  <cmd>aW1wb3J0IGVudl9zYW1wbGUgYXMgZXM=</cmd>
+  <cmd>aW1wb3J0IF9kYXRldGltZSBhcyBkdA==</cmd>
+  <cmd>dl9zYW1wbGUgPSB2cy5nZXRfdmVoaWNsZV9zYW1wbGUoKQ==</cmd>
+  <cmd>ZV9zYW1wbGUgPSBlcy5nZXRfZW52X3NhbXBsZSgp</cmd>
+  <cmd>ZGF0ZV90aW1lID0gYmkuc2Vzc2lvbiArIGR0LnRpbWVkZWx0YShzZWNvbmRzPWJpLnRpbWUp</cmd>
+  <cmd>YmkuVXRpbC5zZXRfdG9fdmFsdWVfcmVwb3J0KCd0b3RhbC1oci1hZ2UnLCBiaS50aW1lIC8gMzYwMCk=</cmd>
+  <cmd>aWYgdl9zYW1wbGUgaXMgbm90IE5vbmU6CiAgICBiaS5VdGlsLnNldF90b192YWx1ZV9yZXBvcnQoJ3RvdGFsLWttLWFnZScsIHZfc2FtcGxlLmtpbG9tZXRlcl9hZ2Up</cmd>
+  <cmd>YmkuVXRpbC5hZGRfdG9fbnVtZXJpY19oaXN0bGluZV9yZXBvcnQoJ3RpbWUtaHItYWdlJywgZGF0ZV90aW1lLmhvdXIsIGJpLmludGVydmFsIC8gMzYwMCk=</cmd>
+  <cmd>aWYgdl9zYW1wbGUgaXMgbm90IE5vbmU6CiAgICBiaS5VdGlsLmFkZF90b19udW1lcmljX2hpc3RsaW5lX3JlcG9ydCgndGltZS1rbS1hZ2UnLCBkYXRlX3RpbWUuaG91ciwgdl9zYW1wbGUuc3BlZWQgLyAzLjYgKiBiaS5pbnRlcnZhbCAqIDAuMDAxKQ==</cmd>
+  <cmd>aWYgdl9zYW1wbGUgaXMgbm90IE5vbmU6CiAgICBiaS5VdGlsLmFkZF90b19udW1lcmljX2hpc3RsaW5lX3JlcG9ydCgnc3BlZWQtaHItYWdlJywgdl9zYW1wbGUuc3BlZWQsIGJpLmludGVydmFsIC8gMzYwMCk=</cmd>
+  <cmd>aWYgdl9zYW1wbGUgaXMgbm90IE5vbmU6CiAgICBiaS5VdGlsLmFkZF90b19udW1lcmljX2hpc3RsaW5lX3JlcG9ydCgnc3BlZWQta20tYWdlJywgdl9zYW1wbGUuc3BlZWQsIHZfc2FtcGxlLnNwZWVkIC8gMy42ICogYmkuaW50ZXJ2YWwgKiAwLjAwMSk=</cmd>
+  <cmd>aWYgdl9zYW1wbGUgaXMgbm90IE5vbmUgYW5kIGVfc2FtcGxlIGlzIG5vdCBOb25lOgogICAgYmkuVXRpbC5hZGRfdG9fbGFiZWxfaGlzdGxpbmVfcmVwb3J0KCd3ZWF0aGVyLWhyLWFnZScsIGVfc2FtcGxlLndlYXRoZXJfdHlwZSwgYmkuaW50ZXJ2YWwgLyAzNjAwKQ==</cmd>
+  <cmd>aWYgdl9zYW1wbGUgaXMgbm90IE5vbmUgYW5kIGVfc2FtcGxlIGlzIG5vdCBOb25lOgogICAgYmkuVXRpbC5hZGRfdG9fbGFiZWxfaGlzdGxpbmVfcmVwb3J0KCd3ZWF0aGVyLWttLWFnZScsIGVfc2FtcGxlLndlYXRoZXJfdHlwZSwgdl9zYW1wbGUuc3BlZWQgLyAzLjYgKiBiaS5pbnRlcnZhbCAqIDAuMDAxKQ==</cmd>
+  <cmd>aWYgdl9zYW1wbGUgaXMgbm90IE5vbmUgYW5kIGVfc2FtcGxlIGlzIG5vdCBOb25lOgogICAgYmkuVXRpbC5hZGRfdG9fbGFiZWxfaGlzdGxpbmVfcmVwb3J0KCdyb2FkLWhyLWFnZScsIGVfc2FtcGxlLnJvYWRfdHlwZSwgYmkuaW50ZXJ2YWwgLyAzNjAwKQ==</cmd>
+  <cmd>aWYgdl9zYW1wbGUgaXMgbm90IE5vbmUgYW5kIGVfc2FtcGxlIGlzIG5vdCBOb25lOgogICAgYmkuVXRpbC5hZGRfdG9fbGFiZWxfaGlzdGxpbmVfcmVwb3J0KCdyb2FkLWttLWFnZScsIGVfc2FtcGxlLnJvYWRfdHlwZSwgdl9zYW1wbGUuc3BlZWQgLyAzLjYgKiBiaS5pbnRlcnZhbCAqIDAuMDAxKQ==</cmd>
+  <cmd>aWYgdl9zYW1wbGUgaXMgbm90IE5vbmUgYW5kIHZfc2FtcGxlLmN1cnZhdHVyZV92YWxpZCBhbmQgdHVybl9sZWZ0X2RldGVjdG9yLnVwZGF0ZSh2X3NhbXBsZS5jdXJ2YXR1cmUpOgogICAgYmkuVXRpbC5hZGRfdG9fdmFsdWVfcmVwb3J0KCd0dXJuLWxlZnQnLCAxKQ==</cmd>
+  <cmd>aWYgdl9zYW1wbGUgaXMgbm90IE5vbmUgYW5kIHZfc2FtcGxlLmN1cnZhdHVyZV92YWxpZCBhbmQgdHVybl9yaWdodF9kZXRlY3Rvci51cGRhdGUodl9zYW1wbGUuY3VydmF0dXJlKToKICAgIGJpLlV0aWwuYWRkX3RvX3ZhbHVlX3JlcG9ydCgndHVybi1yaWdodCcsIDEp</cmd>
+  <cmd>aWYgdl9zYW1wbGUgaXMgbm90IE5vbmUgYW5kIGVfc2FtcGxlIGlzIG5vdCBOb25lIGFuZCBlX3NhbXBsZS5zcGVlZF9saW1pdF92YWxpZDoKICAgIG92ZXJfc3BlZWRfZGV0ZWN0b3IucmlzZV90aHJlc2ggPSBlX3NhbXBsZS5zcGVlZF9saW1pdAogICAgb3Zlcl9zcGVlZF9kZXRlY3Rvci5mYWxsX3RocmVzaCA9IGVfc2FtcGxlLnNwZWVkX2xpbWl0IC0gc3BlZWRfZG93bl9nYXAKICAgIGlmIG92ZXJfc3BlZWRfZGV0ZWN0b3IudXBkYXRlKHZfc2FtcGxlLnNwZWVkKToKICAgICAgICBiaS5VdGlsLmFkZF90b192YWx1ZV9yZXBvcnQoJ292ZXItc3BlZWQnLCAxKQ==</cmd>
+  <cmd_start>Y2xhc3MgUmlzaW5nRGV0ZWN0b3I6CiAgICBkZWYgX19pbml0X18oc2VsZiwgcmlzZV90aHJlc2gsIGZhbGxfdGhyZXNoLCBncmVhdGVyX3J1bGUpOgogICAgICAgIHNlbGYuc3RhdGUgPSBGYWxzZQogICAgICAgIHNlbGYucmlzZV90aHJlc2ggPSByaXNlX3RocmVzaAogICAgICAgIHNlbGYuZmFsbF90aHJlc2ggPSBmYWxsX3RocmVzaAogICAgICAgIHNlbGYuZ3JlYXRlcl9ydWxlID0gZ3JlYXRlcl9ydWxlCgogICAgZGVmIHVwZGF0ZShzZWxmLCB2YWx1ZSk6CiAgICAgICAgaWYgc2VsZi5zdGF0ZToKICAgICAgICAgICAgaWYgc2VsZi5ncmVhdGVyX3J1bGU6CiAgICAgICAgICAgICAgICBuZXdfc3RhdGUgPSB2YWx1ZSA+PSBzZWxmLmZhbGxfdGhyZXNoCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBuZXdfc3RhdGUgPSB2YWx1ZSA8PSBzZWxmLmZhbGxfdGhyZXNoCiAgICAgICAgZWxzZToKICAgICAgICAgICAgaWYgc2VsZi5ncmVhdGVyX3J1bGU6CiAgICAgICAgICAgICAgICBuZXdfc3RhdGUgPSB2YWx1ZSA+PSBzZWxmLnJpc2VfdGhyZXNoCiAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICBuZXdfc3RhdGUgPSB2YWx1ZSA8PSBzZWxmLnJpc2VfdGhyZXNoCiAgICAgICAgcmlzaW5nID0gc2VsZi5zdGF0ZSBpcyBGYWxzZSBhbmQgbmV3X3N0YXRlIGlzIFRydWUKICAgICAgICBzZWxmLnN0YXRlID0gbmV3X3N0YXRlCiAgICAgICAgcmV0dXJuIHJpc2luZwoKCnR1cm5fbGVmdF9kZXRlY3RvciA9IFJpc2luZ0RldGVjdG9yKHR1cm5fY3VydmF0dXJlLCBzdHJhaWdodF9jdXJ2YXR1cmUsIFRydWUpCnR1cm5fcmlnaHRfZGV0ZWN0b3IgPSBSaXNpbmdEZXRlY3RvcigtdHVybl9jdXJ2YXR1cmUsIC1zdHJhaWdodF9jdXJ2YXR1cmUsIEZhbHNlKQpvdmVyX3NwZWVkX2RldGVjdG9yID0gUmlzaW5nRGV0ZWN0b3IoMTAwMC4wLCAxMDAwLjAsIFRydWUpCgoKCgo=</cmd_start>
+</python_template>

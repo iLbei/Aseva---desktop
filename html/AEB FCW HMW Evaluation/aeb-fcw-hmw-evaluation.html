@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>AEB FCW HMW Evaluation</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="aeb-fcw-hmw-evaluation/css/common.css">
+  <link rel="stylesheet" href="aeb-fcw-hmw-evaluation/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="enabled">
+      <input type="checkbox" name="enabled" onclick="onClickEnabled(this)" id="enabled">
+      <label language="enabled" for="enabled"></label>
+    </div>
+    <div class="fixclear">
+      <div>
+        <span language="final_msg" class="left"></span>
+        <a href="javascript:;" language="not_config" class="message_id" id="message_id"></a>
+      </div>
+      <div>
+        <span language="sensor_source" class="left"></span>
+        <select name="sensor_source" class="left">
+          <option value="Object sensor A" selected language="obj_sen_a"></option>
+          <option value="Object sensor B" language="obj_sen_b"></option>
+          <option value="Object sensor C" language="obj_sen_c"></option>
+          <option value="Object sensor D" language="obj_sen_d"></option>
+          <option value="Object sensor E" language="obj_sen_e"></option>
+          <option value="Object sensor F" language="obj_sen_f"></option>
+          <option value="Object sensor G" language="obj_sen_g"></option>
+          <option value="Object sensor H" language="obj_sen_h"></option>
+          <option value="Object sensor I" language="obj_sen_i"></option>
+          <option value="Object sensor J" language="obj_sen_j"></option>
+          <option value="Object sensor K" language="obj_sen_k"></option>
+          <option value="Object sensor L" language="obj_sen_l"></option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <ul class="fixclear">
+        <li>
+          <p language="AEB_signals"></p>
+          <ul>
+            <li>
+              <input type="checkbox" name="aeb_always_enable" id="aeb_always_enable">
+              <label for="aeb_always_enable" language="always_enable"></label>
+            </li>
+            <li class="fixclear w195">
+              <span language="enable_signal"> </span>
+              <a href="javascript:;" onclick="onClick(this,false)" scaleVal="1" id="aeb_enable_id"
+                language="not_config"></a>
+            </li>
+            <li class="fixclear w195">
+              <span language="enable_value"></span>
+              <input type="text" class="green" name="aeb_enable_values" value="0">
+            </li>
+            <li class="fixclear w195">
+              <span language="active_signal"></span>
+              <a href="javascript:;" onclick="onClick(this,false)" scaleVal="1" id="aeb_active_id"
+                language="not_config"></a>
+            </li>
+            <li class="fixclear w195">
+              <span language="active_value"> </span>
+              <input type="text" class="green" name="aeb_active_values" value="0">
+            </li>
+            <li class="fixclear">
+              <span language="aeb_target_ax" class="left"></span>
+              <a href="javascript:;" onclick="onClick(this,true)" scaleVal="1" id="aeb_target_ax_id"
+                language="not_config" class></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p language="fcw_signals"></p>
+          <ul>
+            <li>
+              <input type="checkbox" name="fcw_always_enable" id="always_enable">
+              <label for="always_enable" language="always_enable"></label>
+            </li>
+            <li>
+              <span language="enable_signal"></span>
+              <a href="javascript:;" onclick="onClick(this,false)" scaleVal="1" id="fcw_enable_id"
+                language="not_config"></a>
+            </li>
+            <li class="fixclear w195">
+              <span language="enable_value"></span>
+              <input type="text" class="green" name="fcw_enable_values" value="0">
+            </li>
+            <li>
+              <span language="warn_signal"> </span>
+              <a href="javascript:;" onclick="onClick(this,false)" scaleVal="1" language="not_config"
+                id="fcw_active_id"></a>
+            </li>
+            <li class="fixclear w195">
+              <span language="warn_value"> </span>
+              <input type="text" class="green" name="fcw_active_values" value="0">
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p language="hmw_signal"></p>
+          <ul>
+            <li>
+              <input type="checkbox" name="hmw_always_enable" id="hmw_always_enable">
+              <label for="hmw_always_enable" language="always_enable"></label>
+            </li>
+            <li>
+              <span language="enable_signal"></span>
+              <a href="javascript:;" onclick="onClick(this,false)" scaleVal="1" language="not_config"
+                id="hmw_enable_id"></a>
+            </li>
+            <li class="fixclear w195">
+              <span language="enable_value"></span>
+              <input type="text" class="green" name="hmw_enable_values" value="0">
+            </li>
+            <li>
+              <span language="warn_signal"></span>
+              <a href="javascript:;" onclick="onClick(this,false)" scaleVal="1" language="not_config"
+                id="hmw_active_id"></a>
+            </li>
+            <li class="fixclear w195">
+              <span language="warn_value"></span>
+              <input type="text" class="green" name="hmw_active_values" value="0">
+            </li>
+            <li>
+              <span language="hmw_left_dtlc_signal"></span>
+              <a href="javascript:;" onclick="onClick(this,false)" scaleVal="1" language="not_config"
+                id="hmw_left_dtlc_signal"></a>
+            </li>
+            <li class="fixclear w195">
+              <span language="hmw_right_dtlc_signal"></span>
+              <a href="javascript:;" onclick="onClick(this,false)" scaleVal="1" language="not_config"
+                id="hmw_right_dtlc_signal"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul class="fixclear">
+        <li>
+          <div class="fixclear">
+            <input class="left" type="checkbox" name="aeb_gt_signal_checked" onclick="checkClick(this)"
+              id="aeb_gt_signal_checked">
+            <label for="aeb_gt_signal_checked" class="left" language="aeb_gt_signal"></label>
+            <div class="space_a">
+              <a href="javascript:;" class="a" language="not_config" scaleVal="1" onclick="onClick(this,false)"
+                id="aeb_gt_signal"></a>
+              <p></p>
+            </div>
+          </div>
+          <div>
+            <span language="aeb_gt_value"></span>
+            <input type="text" class="green" name="aeb_gt_values" value="0">
+          </div>
+        </li>
+        <li>
+          <div class="fixclear">
+            <input class="left" type="checkbox" name="fcw_gt_signal_checked" onclick="checkClick(this)"
+              id="fcw_gt_signal_checked">
+            <label for="fcw_gt_signal_checked" class="left" language="fcw_gt_signal"></label>
+            <div class="space_a">
+              <a href="javascript:;" class="a" language="not_config" scaleVal="1" onclick="onClick(this,false)"
+                id="fcw_gt_signal"></a>
+              <p></p>
+            </div>
+          </div>
+          <div>
+            <span language="fcw_gt_value"></span>
+            <input type="text" class="green" class="green" class="green" name="fcw_gt_values" value="0">
+          </div>
+        </li>
+        <li>
+          <div class="fixclear">
+            <input class="left" type="checkbox" name="hmw_gt_signal_checked" onclick="checkClick(this)"
+              id="hmw_gt_signal_checked">
+            <label for="hmw_gt_signal_checked" class="left" language="hmw_gt_signal"></label>
+            <div class="space_a">
+              <a href="javascript:;" class="a" onclick="onClick(this,false)" language="not_config"
+                id="hmw_gt_signal"></a>
+              <p></p>
+            </div>
+          </div>
+          <div>
+            <span language="hmw_gt_value"></span>
+            <input type="text" class="green" name="hmw_gt_values" value="0">
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul class="fixclear">
+        <li>
+          <p language="aeb_algorithm"></p>
+          <div>
+            <form action="">
+              <span language="vx"></span>
+              <input type="radio" name="aeb_vx_rel" value="yes" id="aeb_vx_rel1" class="" checked>
+              <label for="aeb_vx_rel1" language="relative"></label>
+              <input type="radio" name="aeb_vx_rel" value="no" id="aeb_vx_rel2" class="">
+              <label for="aeb_vx_rel2" language="absolute"></label>
+            </form>
+          </div>
+          <div class="span fixclear">
+            <span></span>
+            <span>[KPH]</span>
+            <span>[s]</span>
+            <span>[s]</span>
+            <span>[m/s²]</span>
+          </div>
+          <div class="table" id="aeb_algorithm_config">
+            <table class="table1">
+              <tr>
+                <td onclick="onSelectClick(this)" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)"
+                  class="all"></td>
+                <td>VX ≥</td>
+                <td>TTC1 ≤</td>
+                <td>TTC2 ≤</td>
+                <td>ODCA ≥</td>
+              </tr>
+            </table>
+            <div id="div1">
+              <div class="fixclear">
+                <div class="left select" onclick="onSelectClick(this)" onmouseover="onMouseOver(this)"
+                  onmouseout="onMouseOut(this)"></div>
+                <div class="left">
+                  <input type="text" class="text" onclick="checkClick2(this)" onblur="checkBlur(this)"
+                    onkeypress="keyPress(this)">
+                </div>
+                <div class="left">
+                  <input type="text" class="text" onclick="checkClick2(this)" onblur="checkBlur(this)"
+                    onkeypress="keyPress(this)">
+                </div>
+                <div class="left">
+                  <input type="text" class="text" onclick="checkClick2(this)" onblur="checkBlur(this)"
+                    onkeypress="keyPress(this)">
+                </div>
+                <div class="left">
+                  <input type="text" class="text" onclick="checkClick2(this)" onblur="checkBlur(this)"
+                    onkeypress="keyPress(this)">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <div class="fixclear">
+                  <span class="left" language="ttc1_offset_false_detected"></span>
+                  <input class="right" type="number" name="aeb_ttc1_fd" value="0" min="0" max="1" step="0.01">
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="ttc1_offset_miss_detected"></span>
+                  <input class="right" type="number" name="aeb_ttc1_md" value="0" min="-1" max="0" step="0.01">
+                </div>
+              </li>
+              <li>
+                <div class="fixclear">
+                  <span class="left" language="ttc2_offset_false_detected"></span>
+                  <input class="right" type="number" name="aeb_ttc2_fd" value="0" min="0" max="1" step="0.01">
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="ttc2_offset_false_detected"></span>
+                  <input class="right" type="number" name="aeb_ttc2_md" value="0" min="-1" max="0" step="0.01">
+                </div>
+              </li>
+              <li>
+                <div class="fixclear">
+                  <span class="left" language="odca_offset_false_detected"></span>
+                  <input class="right" type="number" name="aeb_odca_fd" value="0" min="0" max="1" step="0.01">
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="odca_offset_miss_detected"></span>
+                  <input class="right" type="number" name="aeb_odca_md" value="0" min="-1" max="0" step="0.01">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p language="fcw_algorithm"></p>
+          <div>
+            <form action="">
+              <span language="vx"></span>
+              <input type="radio" name="fcw_vx_rel" value="yes" id="fcw_vx_rel1" class="" checked>
+              <label for="fcw_vx_rel1" language="relative"></label>
+              <input type="radio" name="fcw_vx_rel" value="no" id="fcw_vx_rel2" class="">
+              <label for="fcw_vx_rel2" language="absolute"></label>
+            </form>
+          </div>
+          <div class="span fixclear">
+            <span></span>
+            <span>[KPH]</span>
+            <span>[s]</span>
+            <span>[s]</span>
+            <span>[m/s²]</span>
+          </div>
+          <div class="table" id="fcw_algorithm_config">
+            <table class="table2">
+              <tr>
+                <td onclick="onSelectClick(this)" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)"
+                  class="all"></td>
+                <td>VX ≥</td>
+                <td>TTC1 ≤</td>
+                <td>TTC2 ≤</td>
+                <td>PDCA ≥</td>
+              </tr>
+            </table>
+            <div id=div2>
+              <div class="fixclear">
+                <div class="left select" onclick="onSelectClick(this)" onmouseover="onMouseOver(this)"
+                  onmouseout="onMouseOut(this)"></div>
+                <div class="left">
+                  <input type="text" class="text" onclick="checkClick2(this)" onblur="checkBlur(this)"
+                    onkeypress="keyPress(this)">
+                </div>
+                <div class="left">
+                  <input type="text" class="text" onclick="checkClick2(this)" onblur="checkBlur(this)"
+                    onkeypress="keyPress(this)">
+                </div>
+                <div class="left">
+                  <input type="text" class="text" onclick="checkClick2(this)" onblur="checkBlur(this)"
+                    onkeypress="keyPress(this)">
+                </div>
+                <div class="left">
+                  <input type="text" class="text" onclick="checkClick2(this)" onblur="checkBlur(this)"
+                    onkeypress="keyPress(this)">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <div class="fixclear">
+                  <span class="left" language="ttc1_offset_false_detected"></span>
+                  <input class="right" type="number" name="fcw_ttc1_fd" value="0" min="0" max="1" step="0.01">
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="ttc1_offset_miss_detected"></span>
+                  <input class="right" type="number" name="fcw_ttc1_md" value="0" min="-1" max="0" step="0.01">
+                </div>
+              </li>
+              <li>
+                <div class="fixclear">
+                  <span class="left" language="ttc2_offset_false_detected"></span>
+                  <input class="right" type="number" name="fcw_ttc2_fd" value="0" min="0" max="1" step="0.01">
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="ttc2_offset_miss_detected"></span>
+                  <input class="right" type="number" name="fcw_ttc2_md" value="0" min="-1" max="0" step="0.01">
+                </div>
+              </li>
+              <li>
+                <div class="fixclear">
+                  <span class="left" language="pdca_offset_false_detected"> </span>
+                  <input class="right" type="number" name="fcw_pdca_fd" value="0" min="0" max="1" step="0.01">
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="pdca_offset_miss_detected"> </span>
+                  <input class="right" type="number" name="fcw_pdca_md" value="0" min="-1" max="0" step="0.01">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <p language="hmw_algorithm"></p>
+          <div>
+            <form action="">
+              <span language="vx"></span>
+              <input type="radio" name="hmw_vx_rel" value="yes" id="hmw_vx_rel1" class="" checked>
+              <label for="hmw_vx_rel1" language="relative"></label>
+              <input type="radio" name="hmw_vx_rel" value="no" id="hmw_vx_rel2" class="">
+              <label for="hmw_vx_rel2" language="absolute"></label>
+            </form>
+          </div>
+          <div class="span2 fixclear">
+            <span></span>
+            <span>[KPH]</span>
+            <span>[s]</span>
+          </div>
+          <div class="table" id="hmw_algorithm_config">
+            <table class="table3">
+              <tr>
+                <td onclick="onSelectClick(this)" onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)"
+                  class="all"></td>
+                <td>VX ≥</td>
+                <td>THW ≤</td>
+              </tr>
+            </table>
+            <div id=div3>
+              <div class="fixclear">
+                <div class="left select" onclick="onSelectClick(this)" onmouseover="onMouseOver(this)"
+                  onmouseout="onMouseOut(this)"></div>
+                <div class="left">
+                  <input type="text" class="text" onclick="checkClick2(this)" onblur="checkBlur(this)"
+                    onkeypress="keyPress(this)">
+                </div>
+                <div class="left">
+                  <input type="text" class="text" onclick="checkClick2(this)" onblur="checkBlur(this)"
+                    onkeypress="keyPress(this)">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div language="thw_offset_fase_detected"></div>
+            <div>
+              <input type="number" name="hmw_thw_fd" value="0" min="0" max="1" step="0.01">
+            </div>
+            <div language="thw_offset_miss_detected"></div>
+            <div>
+              <input type="number" name="hmw_thw_md" value="-1" min="-1" max="0" step="0.01">
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="aeb-fcw-hmw-evaluation/js/jquery-2.14.min.js"></script>
+  <script src="aeb-fcw-hmw-evaluation/js/text.js"></script>
+  <script src="aeb-fcw-hmw-evaluation/js/bi-common.js"></script>
+  <script src="aeb-fcw-hmw-evaluation/js/index.js"></script>
+</body>
+
+</html>

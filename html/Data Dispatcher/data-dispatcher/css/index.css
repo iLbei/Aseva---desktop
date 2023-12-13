@@ -1,0 +1,218 @@
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 546px;
+  height: 730px;
+  margin: -365px 0 0 -273px;
+}
+
+fieldset {
+  border: 1px solid #C8C8C8;
+  background-color: #fff;
+}
+
+legend {
+  background-color: #fff;
+}
+
+/* .content>div>p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+  background-color: #fff;
+} */
+
+.container .ethernet>ul {
+  height: 206px;
+}
+
+.content>fieldset:not(:nth-child(3))>ul {
+  height: 110px;
+}
+
+.content>fieldset>ul {
+  /* background-color: #F0F0F0; */
+  padding: 3px 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+fieldset>ul>li {
+  height: 26px;
+  line-height: 24px;
+}
+
+.bus span[name="canBitrate"] {
+  margin-right: 14px;
+}
+/* 
+.bus>ul>li span.left {
+  width: 110px;
+} */
+
+.bus>ul>li span.right {
+  width: 124px;
+}
+
+.bus [name="canBitrate"] {
+  margin-right: 10px;
+}
+
+.video li>span.left, .bus>ul>li span.left, .ethernet ul>li:not(:nth-child(2)) span.left,.general span.left {
+  width: 125px;
+}
+
+.video li>span.right {
+  width: 136px;
+}
+
+[language="local_ip"],
+[language="server_ip"] {
+  width: 52px !important;
+}
+
+.video li>span[language=busDeviceType] {
+  width: 80px;
+}
+
+.video li>span[language="largeCodec"] {
+  width: 72px;
+  margin-left: 46px;
+}
+
+.video li>span[language=enable] {
+  width: 137px;
+}
+
+[language="rawFormat"] {
+  margin-left: 18px;
+}
+
+[name=VideoDeviceType] {
+  margin-left: 4px;
+}
+
+.video li>span[language=video_channel],
+input[name="video_channel"] {
+  margin-right: 17px;
+}
+
+.ethernet>ul>li>span:nth-child(3) {
+  margin-left: 4px;
+}
+
+.video>ul>li:nth-child(1) {
+  height: 26px;
+  line-height: 26px;
+}
+
+.video input[type=number] {
+  width: 99px;
+}
+
+/* 
+.container span {
+  background-color: #F0F0F0;
+} */
+
+.bus input[type=number] {
+  width: 99px;
+}
+
+input[type=text],
+select,
+input[type=number] {
+  width: 99px;
+}
+
+input[type=text],
+input[type=number] {
+  padding-left: 2px;
+
+}
+
+.container .ethernet input[name="bus_target_channel"],
+.ethernet [name="server_posix_offset"],
+.ethernet [name="cutoff_start_time"] {
+  width: 73px !important;
+  margin-left: 5px;
+}
+
+.ethernet [name="srcPort"] {
+  width: 73px;
+}
+
+.ethernet [name="srcIP"],
+.ethernet [name="srcPort"],
+.ethernet [name="bus_msgid"] {
+  margin-left: 5px;
+}
+
+.ethernet select.left,
+.ethernet input.left {
+  width: 100px;
+}
+
+.ethernet [name="cutoff_time_length"] {
+  width: 78.5px;
+}
+
+.ethernet ul>li:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .ethernet ul>li:not(:nth-child(2)) span.left {
+  width: 120px;
+} */
+
+/* .general span.left {
+  width: 122px;
+} */
+
+.content {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  height: 679px;
+  margin-top: -1px;
+  margin-bottom: 10px;
+}
+
+.item>li {
+  float: left;
+  width: 36px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  background-color: #F0F0F0;
+}
+
+.item>li:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.active {
+  border-bottom: 1px solid #fff !important;
+  background-color: #fff !important;
+}
+
+.content>fieldset:nth-child(4) [name="transmit_mode"] {
+  margin-left: 5px;
+}
+
+[name="srcIP"]:valid,
+[name="srcPort"]:valid {
+  color: green;
+}
+
+[name="srcIP"]:invalid,
+[name="srcPort"]:invalid {
+  color: red;
+}

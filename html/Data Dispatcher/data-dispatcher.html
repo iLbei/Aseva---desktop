@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Dispatcher</title>
+  <link rel="stylesheet" href="data-dispatcher/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="data-dispatcher/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul class="item fixclear">
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+    </ul>
+    <div class="content">
+      <fieldset class="bus">
+        <legend language="bus"></legend>
+        <ul class="fixclear">
+          <li>
+            <input type="checkbox" name="enable" id="enabled_bus">
+            <label for="enabled_bus" language="enable"></label>
+          </li>
+          <li>
+            <span class="left" language="bus_data_channel"></span>
+            <input class="left" type="number" name="bus_data_channel" value="1" step="1" max="24" min="1">
+            <input class="right" type="number" name="bus_target_channel" value="1" step="1" max="24" min="1">
+            <span class="right" language="bus_target_channel"></span>
+          </li>
+          <li>
+            <span class="left" language="transmit_mode"></span>
+            <select class="left" name="transmit_mode">
+              <option value="0">Instantaneous</option>
+              <option value="1">Scheduled</option>
+            </select>
+            <input class="right" type="number" name="server_posix_offset" max="100000" min="0" value="1000" step="0.1">
+            <span class="right" language="server_posix_offset"></span>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="video">
+        <legend language="video"></legend>
+        <ul class="fixclear">
+          <li>
+            <input type="checkbox" name="enable" id="enabled_video">
+            <label for="enabled_video" language="enable"></label></li>
+          <li>
+            <span class="left" language="video_data_channel"></span>
+            <select class="left" name="video_data_channel">
+              <option value="0">Channel A</option>
+              <option value="1">Channel B</option>
+              <option value="2">Channel C</option>
+              <option value="3">Channel D</option>
+              <option value="4">Channel E</option>
+              <option value="5">Channel F</option>
+              <option value="6">Channel G</option>
+              <option value="7">Channel H</option>
+              <option value="8">Channel I</option>
+              <option value="9">Channel J</option>
+              <option value="10">Channel K</option>
+              <option value="11">Channel L</option>
+              <option value="12">Channel M</option>
+              <option value="13">Channel N</option>
+              <option value="14">Channel O</option>
+              <option value="15">Channel P</option>
+              <option value="16">Channel Q</option>
+              <option value="17">Channel R</option>
+              <option value="18">Channel S</option>
+              <option value="19">Channel T</option>
+              <option value="20">Channel U</option>
+              <option value="21">Channel V</option>
+              <option value="22">Channel W</option>
+              <option value="23">Channel X</option>
+            </select>
+            <select class="right" name="video_target_channel">
+              <option value="0">Channel A</option>
+              <option value="1">Channel B</option>
+              <option value="2">Channel C</option>
+              <option value="3">Channel D</option>
+              <option value="4">Channel E</option>
+              <option value="5">Channel F</option>
+              <option value="6">Channel G</option>
+              <option value="7">Channel H</option>
+              <option value="8">Channel I</option>
+              <option value="9">Channel J</option>
+              <option value="10">Channel K</option>
+              <option value="11">Channel L</option>
+              <option value="12">Channel M</option>
+              <option value="13">Channel N</option>
+              <option value="14">Channel O</option>
+              <option value="15">Channel P</option>
+              <option value="16">Channel Q</option>
+              <option value="17">Channel R</option>
+              <option value="18">Channel S</option>
+              <option value="19">Channel T</option>
+              <option value="20">Channel U</option>
+              <option value="21">Channel V</option>
+              <option value="22">Channel W</option>
+              <option value="23">Channel X</option>
+            </select>
+            <span class="right" language="video_target_channel"></span>
+          </li>
+          <li>
+            <span class="left" language="transmit_mode"></span>
+            <select class="left" name="transmit_mode">
+              <option value="0">Instantaneous</option>
+              <option value="1">Scheduled</option>
+            </select>
+            <input class="right" type="number" name="server_posix_offset" max="100000" min="0" value="1000" step="0.1">
+            <span class="right" language="server_posix_offset"></span>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="ethernet">
+        <legend language="ethernet"></legend>
+        <ul class="fixclear">
+          <li>
+            <input type="checkbox" name="enable" id="enabled_ethernet">
+            <label for="enabled_ethernet" language="enable"></label></li>
+          <li>
+            <div>
+              <span class="left" language="bus_msgid"></span>
+              <input class="left" type="text" name="bus_msgid">
+            </div>
+            <div>
+              <span class="left">Src IP:</span>
+              <input type="text" name="srcIP" pattern="^(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|[0-9])\.((1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)\.){2}(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)$"  value="192.168.0.201" class="left">
+            </div>
+            <div>
+              <input type="text" name="srcPort" pattern="^([0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$" class="right"><span class="right" language="port"></span>
+            </div>
+          </li>
+          <li class="fixclear">
+            <span class="left" language="bus_data_channel"></span>
+            <input class="left" type="number" name="bus_data_channel" value="1" step="1" max="24" min="1">
+            <input class="right" type="number" name="bus_target_channel" value="1" step="1" max="24" min="1">
+            <span class="right" language="bus_target_channel"></span>
+          </li>
+          <li>
+            <span class="left" language="transmit_mode"></span>
+            <select class="left" name="transmit_mode">
+              <option value="0">Instantaneous</option>
+              <option value="1">Scheduled</option>
+            </select>
+            <input class="right" type="number" name="server_posix_offset" max="100000" min="0" value="1000" step="0.1">
+            <span class="right" language="server_posix_offset"></span>
+          </li>
+          <li>
+            <span language="packet_loss_rate" class="left"></span>
+            <input type="number" name="packet_loss_rate" max="99.99" min="0" step="0.01" class="left">
+          </li>
+          <li>
+            <span language="cutoff_time_length" class="left"></span>
+            <input type="number" name="cutoff_time_length" min="0" step="0.1" class="left">
+            <input type="number" name="cutoff_start_time" min="0" class="right" step="0.1">
+            <span language="cutoff_start_time" class="right"></span>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="general">
+        <legend language="general"></legend>
+        <ul class="fixclear">
+          <li>
+            <input type="checkbox" name="enable" id="enabled_general">
+            <label for="enabled_general" language="enable"></label>
+          </li>
+          <li>
+            <span class="left" language="protocolName"></span>
+            <input class="left" type="text" name="protocolName">
+            <select class="right" name="transmit_mode">
+              <option value="0">Instantaneous</option>
+              <option value="1">Scheduled</option>
+            </select>
+            <span class="right" language="transmit_mode"></span>
+          </li>
+          <li>
+            <span language="server_posix_offset" class="left"></span>
+            <input type="number" name="server_posix_offset" max="100000" min="0" value="1000" step="0.1" class="left">
+          </li>
+        </ul>
+      </fieldset>
+    </div>
+    <input type="checkbox" name="realTimeThread" id="realTimeThread">
+    <label for="realTimeThread" language="realTimeThread"></label>
+  </div>
+  <script src="data-dispatcher/js/jquery-2.14.js"></script>
+  <script src="data-dispatcher/js/bi-common.js"></script>
+  <script src="data-dispatcher/js/text.js"></script>
+  <script src="data-dispatcher/js/index.js"></script>
+</body>
+
+</html>

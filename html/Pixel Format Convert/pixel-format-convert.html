@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pixel-format-convert</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="pixel-format-convert/css/common.css">
+  <link rel="stylesheet" href="pixel-format-convert/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li>
+        <span language="inputPath"></span>
+        <a href="javascript:;" name="inputPath" language="not_config"></a>
+      </li>
+      <li>
+        <span language="pixelFormat"></span>
+        <select name="pixelFormat">
+          <option value="0">Invalid</option>
+          <option value="1">YUV420</option>
+          <option value="2">YUV422</option>
+          <option value="3">H264</option>
+        </select>
+        <input type="radio" name="radio1" class="utc" id="utc">
+        <label for="utc">UTC</label>
+      </li>
+      <li>
+        <span language="resizeScale"></span>
+        <select name="resizeScale">
+          <option value="0">Raw</option>
+          <option value="1">1/4</option>
+          <option value="2">1/2</option>
+          <option value="3">X2</option>
+          <option value="4">X4</option>
+        </select>
+        <input type="radio" name="radio1" class="local" id="local">
+        <label for="local" language="local">UTC</label>
+      </li>
+      <li>
+        <p language="videoChannels"></p>
+        <ul>
+          <li><input type="checkbox" value="0" id="0"><label for="0">A</label></li>
+          <li><input type="checkbox" value="1" id="1"><label for="1">B</label></li>
+          <li><input type="checkbox" value="2" id="2"><label for="2">C</label></li>
+          <li><input type="checkbox" value="3" id="3"><label for="3">D</label></li>
+          <li><input type="checkbox" value="4" id="4"><label for="4">E</label></li>
+          <li><input type="checkbox" value="5" id="5"><label for="5">F</label></li>
+          <li><input type="checkbox" value="6" id="6"><label for="6">G</label></li>
+          <li><input type="checkbox" value="7" id="7"><label for="7">H</label></li>
+          <li><input type="checkbox" value="8" id="8"><label for="8">I</label></li>
+          <li><input type="checkbox" value="9" id="9"><label for="9">J</label></li>
+          <li><input type="checkbox" value="10" id="10"><label for="10">K</label></li>
+          <li><input type="checkbox" value="11" id="11"><label for="11">L</label></li>
+        </ul>
+        <ul>
+          <li><input type="checkbox" value="12" id="12"><label for="12">M</label></li>
+          <li><input type="checkbox" value="13" id="13"><label for="13">N</label></li>
+          <li><input type="checkbox" value="14" id="14"><label for="14">O</label></li>
+          <li><input type="checkbox" value="15" id="15"><label for="15">P</label></li>
+          <li><input type="checkbox" value="16" id="16"><label for="16">Q</label></li>
+          <li><input type="checkbox" value="17" id="17"><label for="17">R</label></li>
+          <li><input type="checkbox" value="18" id="18"><label for="18">S</label></li>
+          <li><input type="checkbox" value="19" id="19"><label for="19">T</label></li>
+          <li><input type="checkbox" value="20" id="20"><label for="20">U</label></li>
+          <li><input type="checkbox" value="21" id="21"><label for="21">V</label></li>
+          <li><input type="checkbox" value="22" id="22"><label for="22">W</label></li>
+          <li><input type="checkbox" value="23" id="23"><label for="23">X</label></li>
+        </ul>
+      </li>
+      <li>
+        <button language="pixel_Format"></button>
+      </li>
+    </ul>
+  </div>
+  <script src="pixel-format-convert/js/jquery-2.14.js"></script>
+  <script src="pixel-format-convert/js/bi-common.js"></script>
+  <script src="pixel-format-convert/js/text.js"></script>
+  <script src="pixel-format-convert/js/index.js"></script>
+</body>
+
+</html>

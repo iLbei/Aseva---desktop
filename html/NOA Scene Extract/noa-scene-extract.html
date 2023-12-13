@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOA Scene Extract</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="noa-scene-extract/css/common.css">
+  <link rel="stylesheet" href="noa-scene-extract/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="enableNOASceneExtract" id="enableNOASceneExtract">
+      <label for="enableNOASceneExtract" language="enableNOASceneExtract"></label>
+    </div>
+    <ul class="item">
+      <li>
+        <span language="sceneOffset"></span>
+        <input type="number" step="1" value="-2" name="sceneOffset"/>
+      </li>
+      <li>
+        <span language="sceneLength"></span>
+        <input type="number" step="1" value="4" name="sceneLength"/>
+      </li>
+    </ul>
+  </div>
+  <script src="noa-scene-extract/js/jquery-2.14.js"></script>
+  <script src="noa-scene-extract/js/bi-common.js"></script>
+  <script src="noa-scene-extract/js/text.js"></script>
+  <script src="noa-scene-extract/js/index.js"></script>
+</body>
+
+</html>

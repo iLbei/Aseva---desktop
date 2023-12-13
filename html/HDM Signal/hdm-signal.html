@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HDM Signal</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="hdm-signal/css/common.css">
+  <style>
+    .container {
+      width: 292px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 58px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -31px 0 0 -146px;
+    }
+
+    .container>div:nth-child(2) {
+      height: 26px;
+      line-height: 26px;
+    }
+
+    .container>div:nth-child(2) select {
+      width: 160px;
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="active">
+      <input type="checkbox" name="hdm_enable" id="hdm_enable">
+      <label for="hdm_enable" language="hdm_enable"></label>
+    </div>
+    <div>
+      <span language="gnssIMUChannel" class="left"></span>
+      <select name="gnssIMUChannel" class="right">
+        <option value="-1" language="disabled">(Disabled)</option>
+        <option value="0">GNSS IMU A</option>
+        <option value="1">GNSS IMU B</option>
+        <option value="2">GNSS IMU C</option>
+        <option value="3">GNSS IMU D</option>
+        <option value="4">GNSS IMU E</option>
+        <option value="5">GNSS IMU F</option>
+      </select>
+    </div>
+  </div>
+  <script src="hdm-signal/js/jquery-2.14.js"></script>
+  <script src="hdm-signal/js/bi-common.js"></script>
+  <script src="hdm-signal/js/text.js"></script>
+  <script src="hdm-signal/js/index.js"></script>
+</body>
+
+</html>

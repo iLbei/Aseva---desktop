@@ -1,0 +1,476 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 10px;
+}
+
+#map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.allmap {
+  position: absolute;
+  left: 43px;
+  top: 50px;
+  width: calc(100% - 86px);
+  height: calc(100% - 111px);
+}
+
+#map li {
+  position: relative;
+  list-style: none;
+  float: left;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#map>div>ul:nth-of-type(2)>li:nth-of-type(5) {
+  width: 23px !important;
+}
+
+#map>.top_operation>ul:nth-of-type(1)>li {
+  background-color: #808080;
+  border: 1px solid #808080;
+}
+
+#map>.top_operation>ul:nth-of-type(1)>li>div:nth-of-type(1) {
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  border: 1px solid #808080;
+}
+
+#map>.top_operation>ul:nth-of-type(1)>li>div:nth-of-type(2) {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background-color: #fff;
+  border: 1px solid #b0b0b0;
+  font-size: 10px;
+  z-index: 2;
+}
+
+#map>.top_operation {
+  width: 398px;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+#map>.top_operation>ul:nth-of-type(1) {
+  margin-left: 10px;
+  width: 144px;
+  height: 30px;
+  padding: 3px;
+}
+
+#map>.top_operation>ul:nth-of-type(2) {
+  width: 244px;
+  height: 30px;
+  padding: 3px;
+}
+
+#map>.top_operation>ul>li>.gnss {
+  display: none;
+  width: 120px;
+  line-height: 20px;
+}
+
+#map>.top_operation>ul>li:hover>.gnss {
+  display: block;
+}
+
+#map>.top_operation>ul>li:hover>.map_channel {
+  border-color: #657fff;
+  background-color: #838ec5;
+}
+
+#map>.top_operation>ul>li>.map_channel {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.location-road-info {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  min-width: 666px;
+  height: 24px;
+  z-index: 100 !important;
+  line-height: 21px;
+}
+
+.location>div,
+.road>div {
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.location>.left,
+.road>.left {
+  padding-left: 10px;
+}
+
+.location>.right,
+.road>.right {
+  padding-right: 10px;
+  text-align: right;
+}
+
+.location-road-info>div {
+  float: left;
+  width: 50%;
+  height: 25px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.location-road-info>div>span {
+  font-size: 10px;
+}
+
+.location-road-info>div>span:nth-of-type(1) {
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.location-road-info>div>span:nth-of-type(2) {
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.altitude {
+  position: absolute;
+  left: 0;
+  top: 54px;
+  bottom: 60px;
+  width: 49px;
+  height: calc(100% - 110px);
+  border: 1px solid black;
+  background-color: #fff;
+  display: block;
+  z-index: 100 !important;
+}
+
+.altitude>div:nth-of-type(1) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7px;
+  bottom: 50px;
+  width: 10px;
+  background-color: rgb(153, 180, 209);
+  margin: auto;
+}
+.altitude>div:nth-child(2){
+  display: none;
+  position: relative;
+  height: 100%;
+}
+.altitude>div:nth-child(2)>div {
+  position: absolute;
+  bottom: 50px;
+  left: 11px;
+  width: 24px;
+  height: 6px;
+  background-color: #fff;
+  border: 1px solid gray;
+  opacity: 0.6;
+}
+
+.altitude>div:nth-of-type(3) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  margin: auto;
+}
+
+.altitude>div>p {
+  text-align: center;
+  font-size: 10px;
+}
+
+.weather {
+  position: absolute;
+  right: 0;
+  top: 54px;
+  bottom: 60px;
+  width: 49px;
+  height: calc(100% - 110px);
+  border: 1px solid black;
+  background-color: #fff;
+  display: block;
+  z-index: 100 !important;
+}
+
+.weather>div {
+  height: 28px;
+}
+
+.weather>div:nth-of-type(1) {
+  border-bottom: 1px solid black;
+}
+
+.vehicle-info {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 61px;
+  background-color: #fff;
+  z-index: 100 !important;
+  min-width: 666px;
+}
+
+.vehicle-info>div {
+  float: left;
+  width: 50%;
+  height: 60px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.vehicle-info img {
+  display: block;
+  margin: 0 auto;
+}
+
+.vehicle-info>.vehicle-left-info>div,
+.vehicle-info>.vehicle-right-info>div {
+  width: 50px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.vehicle-info>.vehicle-left-info>div:nth-of-type(2)>p:nth-child(1) {
+  margin: 6px 0;
+}
+
+.vehicle-info>.vehicle-left-info>div:nth-of-type(6) {
+  margin-top: 7.5px;
+}
+
+.vehicle-info>.vehicle-left-info>div:nth-of-type(6)>p {
+  line-height: 1.5;
+  font-size: 10px;
+}
+
+.vehicle-info>.vehicle-right-info>div:nth-of-type(4)>p:nth-of-type(1) {
+  font-size: 10px;
+}
+
+.vehicle-info>.vehicle-right-info>div:nth-of-type(5) {
+  width: 44px;
+  height: 44px;
+  text-align: center;
+}
+
+.vehicle-info>.vehicle-right-info>div:nth-of-type(5)>div {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 6px solid rgb(255, 0, 0);
+}
+
+.vehicle-info>.vehicle-right-info>div:nth-of-type(5)>span {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 39px;
+  position: relative;
+  top: -42px;
+}
+
+.vehicle-left-info>div:nth-child(2) p>span {
+  display: inline-block;
+  width: 17px;
+}
+
+.vehicle-left-info>div:nth-child(2) p>span:nth-child(2) {
+  text-align: left;
+}
+
+#map-time {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+#map>.top_operation>ul:nth-of-type(2)>li {
+  margin: 0px 0.4px;
+}
+
+#map>.top_operation>ul:nth-of-type(2)>li:nth-of-type(1),
+#map>.top_operation>ul:nth-of-type(2)>li:nth-of-type(5),
+#map>.top_operation>ul:nth-of-type(2)>li:nth-of-type(8) {
+  margin: 0px;
+}
+
+#picture1 {
+  position: relative;
+  background-image: url("../images/picture1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 23px;
+  height: 24px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+#picture2 {
+  position: relative;
+  background-image: url("../images/picture2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+#picture3 {
+  position: relative;
+  background-image: url("../images/picture3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+#picture4 {
+  position: relative;
+  background-image: url("../images/picture4.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+#picture5 {
+  position: relative;
+  background-image: url("../images/picture5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+#picture6 {
+  position: relative;
+  background-image: url("../images/picture6.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+#picture7 {
+  position: relative;
+  background-image: url("../images/picture7.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.pic-wrap:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: #838ec5;
+  opacity: 0.2;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.green {
+  background-color: rgb(61, 236, 8) !important;
+}
+
+.allmap {
+  position: absolute !important;
+  left: 0px !important;
+  top: 29px !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.left-triangle {
+  font-size: 12px;
+  line-height: .7;
+  color: rgb(196, 196, 196);
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+.right-triangle {
+  font-size: 12px;
+  line-height: .7;
+  color: rgb(196, 196, 196);
+  transform: rotate(-90deg);
+  display: inline-block;
+}
+
+body .temporary {
+  height: 36px !important;
+  margin-bottom: 5px;
+}
+
+body .temporary>* {
+  display: block;
+  text-align: center;
+}
+
+body .temporary span {
+  font-size: 12px;
+}
+
+#light {
+  display: inline-block;
+}
+
+/* 谷歌地图除地图外其他自带元素隐藏 */
+/* .gmnoprint,
+#allmap0 button {
+  display: none;
+} */

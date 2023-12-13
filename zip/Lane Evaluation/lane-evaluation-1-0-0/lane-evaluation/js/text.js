@@ -1,0 +1,30 @@
+let cn = {
+  leEnable: "Enable",
+  gtLanesChannel: "GT lanes channel:",
+  evaluationLanesChannel: "Evaluating lanes channel:",
+  roadSource: "Road type:",
+  lineType: "Line type:",
+  dayTime: "Day time:",
+  start: "Start",
+  end: "End",
+  nightTime: "Night time:",
+  absZeroPowerLimit: "Zero power absolute max:",
+  absFirstPowerLimit: "First power absolute max:",
+  absSecondPowerLimit: "Second power absolute max:",
+  absThirdPowerLimit: "Third power absolute max:"
+},
+  en = {
+    leEnable: "Enable",
+  gtLanesChannel: "GT lanes channel:",
+  evaluationLanesChannel: "Evaluating lanes channel:",
+  roadSource: "Road type:",
+  lineType: "Line type:",
+  dayTime: "Day time:",
+  start: "Start",
+  end: "End",
+  nightTime: "Night time:",
+  absZeroPowerLimit: "Zero power absolute max:",
+  absFirstPowerLimit: "First power absolute max:",
+  absSecondPowerLimit: "Second power absolute max:",
+  absThirdPowerLimit: "Third power absolute max:"
+  };

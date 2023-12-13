@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="bus/css/common.css">
+  <link rel="stylesheet" href="bus/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="add_binding">
+    <div class="fixclear">
+      <span language="message"></span>
+      <a href="javascript:;" language="not_config" class="message"></a>
+      <button class="right del_message" language="del_message" style="display: none;"></button>
+    </div>
+    <div class="message_binding_content">
+      <ul></ul>
+    </div>
+    <div class="add_binding_bottom">
+      <ul>
+        <li>
+          <span language="counter_signal"></span>
+          <select name="counter_signal">
+            <option value="0">(Disabled)</option>
+          </select>
+        </li>
+        <li>
+          <span language="validator_signal"></span>
+          <select name="validator_signal">
+            <option value="0">(Disabled)</option>
+          </select>
+          <span language="validator_type"></span>
+          <select name="validator_type">
+            <option value="xor">XOR</option>
+            <option value="crc8">CRC8</option>
+          </select>
+          <a href="javascript:;" language="validation_parameters" style="display: none;"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="bus/js/jquery-2.14.js"></script>
+  <script src="bus/js/bi-common.js"></script>
+  <script src="bus/js/text.js"></script>
+  <script src="bus/js/bus.addbinding.js"></script>
+</body>
+
+</html>

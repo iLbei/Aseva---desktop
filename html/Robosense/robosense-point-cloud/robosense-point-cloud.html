@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robosense Point Cloud</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="robosense-point-cloud/css/common.css">
+  <link rel="stylesheet" href="robosense-point-cloud/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container fixclear">
+    <ul class="fixclear">
+      <li class="white" id="lidar1"><span language="m1_lidar"></span>1</li>
+      <li id="lidar2"><span language="m1_lidar"></span>2</li>
+      <li id="lidar3"><span language="m1_lidar"></span>3</li>
+      <li id="lidar4"><span language="m1_lidar"></span>4</li>
+      <li id="lidar5"><span language="m1_lidar"></span>5</li>
+      <li id="lidar6"><span language="m1_lidar"></span>6</li>
+    </ul>
+    <div class="lidar1 fixclear">
+      <div class="input fixclear">
+        <p language="input"></p>
+        <div>
+          <span language="mode"></span>
+          <input type="radio" name="mode" id="m1" value="0">
+          <label for="m1">M1</label>
+          <input type="radio" name="mode" id="m2" value="1">
+          <label for="m2">M2</label>
+        </div>
+        <div class="left">
+          <span language="bus_channel"></span><input type="number" name="bus_channel" value="1" max="16" min="1"
+            step="1" id="">
+        </div>
+        <div class="right">
+          <span language="msgID"></span><input type="text" name="msgID" value="0" id="">
+        </div>
+      </div>
+      <div class="processing fixclear">
+        <p language="processing"></p>
+        <span language="point_cloud_channel" class="left"></span>
+        <select class="right" name="point_cloud_channel">
+          <option value="-1" language="disabled"></option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+        </select>
+        <div class="fixclear">
+          <div class="left fixclear">
+            <div class="left">
+              <p language="origin"></p>
+              <p language="pos_offset"></p>
+            </div>
+            <div class="right">
+              <div class="fixclear">
+                <span class="left">X</span>
+                <input class="right" type="number" name="offset_x" value="0.00" min="-20.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Y</span>
+                <input class="right" type="number" name="offset_y" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Z</span>
+                <input class="right" type="number" name="offset_z" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="yaw"></span>
+                <input class="right" type="number" name="yaw" value="0.0" min="-180.00" max="180.00" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="pitch"></span>
+                <input class="right" type="number" name="pitch" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="roll"></span>
+                <input class="right" type="number" name="roll" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+            </div>
+          </div>
+          <div class="right" id="canvas1">
+            <canvas class="myCanvas" width="160" height="206"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lidar2">
+      <div class="input fixclear">
+        <p language="input"></p>
+        <div>
+          <span language="mode"></span>
+          <input type="radio" name="mode1" id="m2_1" value="0">
+          <label for="m2_1">M1</label>
+          <input type="radio" name="mode1" id="m2_2" value="1">
+          <label for="m2_2">M2</label>
+        </div>
+        <div class="left">
+          <span language="bus_channel"></span><input type="number" name="bus_channel1" value="1" max="16" min="1"
+            step="1" id="">
+        </div>
+        <div class="right">
+          <span language="msgID"></span><input type="text" name="msgID1" value="0" id="">
+        </div>
+      </div>
+      <div class="processing fixclear">
+        <p language="processing"></p>
+        <span language="point_cloud_channel" class="left"></span>
+        <select class="right" name="point_cloud_channel1">
+          <option value="-1" language="disabled"></option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+        </select>
+        <div class="fixclear">
+          <div class="left fixclear">
+            <div class="left">
+              <p language="origin"></p>
+              <p language="pos_offset"></p>
+            </div>
+            <div class="right">
+              <div class="fixclear">
+                <span class="left">X</span>
+                <input class="right" type="number" name="offset_x1" value="0.00" min="-20.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Y</span>
+                <input class="right" type="number" name="offset_y1" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Z</span>
+                <input class="right" type="number" name="offset_z1" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="yaw"></span>
+                <input class="right" type="number" name="yaw1" value="0.0" min="-180.00" max="180.00" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="pitch"></span>
+                <input class="right" type="number" name="pitch1" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="roll"></span>
+                <input class="right" type="number" name="roll1" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+            </div>
+          </div>
+          <div class="right" id="canvas2">
+            <canvas class="myCanvas" width="160" height="206"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lidar3">
+      <div class="input fixclear">
+        <p language="input"></p>
+        <div>
+          <span language="mode"></span>
+          <input type="radio" name="mode2" id="m3_1" value="0">
+          <label for="m3_1">M1</label>
+          <input type="radio" name="mode2" id="m3_2" value="1">
+          <label for="m3_2">M2</label>
+        </div>
+        <div class="left">
+          <span language="bus_channel"></span><input type="number" name="bus_channel2" value="1" max="16" min="1"
+            step="1" id="">
+        </div>
+        <div class="right">
+          <span language="msgID"></span><input type="text" name="msgID2" value="0" id="">
+        </div>
+      </div>
+      <div class="processing fixclear">
+        <p language="processing"></p>
+        <span language="point_cloud_channel" class="left"></span>
+        <select class="right" name="point_cloud_channel2">
+          <option value="-1" language="disabled"></option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+        </select>
+        <div class="fixclear">
+          <div class="left fixclear">
+            <div class="left">
+              <p language="origin"></p>
+              <p language="pos_offset"></p>
+            </div>
+            <div class="right">
+              <div class="fixclear">
+                <span class="left">X</span>
+                <input class="right" type="number" name="offset_x2" value="0.00" min="-20.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Y</span>
+                <input class="right" type="number" name="offset_y2" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Z</span>
+                <input class="right" type="number" name="offset_z2" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="yaw"></span>
+                <input class="right" type="number" name="yaw2" value="0.0" min="-180.00" max="180.00" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="pitch"></span>
+                <input class="right" type="number" name="pitch2" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="roll"></span>
+                <input class="right" type="number" name="roll2" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+            </div>
+          </div>
+          <div class="right" id="canvas3">
+            <canvas class="myCanvas" width="160" height="206"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lidar4">
+      <div class="input fixclear">
+        <p language="input"></p>
+        <div>
+          <span language="mode"></span>
+          <input type="radio" name="mode3" id="m4_1" value="0">
+          <label for="m4_1">M1</label>
+          <input type="radio" name="mode3" id="m4_2" value="1">
+          <label for="m4_2">M2</label>
+        </div>
+        <div class="left">
+          <span language="bus_channel"></span><input type="number" name="bus_channel3" value="1" max="16" min="1"
+            step="1" id="">
+        </div>
+        <div class="right">
+          <span language="msgID"></span><input type="text" name="msgID3" value="0" id="">
+        </div>
+      </div>
+      <div class="processing fixclear">
+        <p language="processing"></p>
+        <span language="point_cloud_channel" class="left"></span>
+        <select class="right" name="point_cloud_channel3">
+          <option value="-1" language="disabled"></option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+        </select>
+        <div class="fixclear">
+          <div class="left fixclear">
+            <div class="left">
+              <p language="origin"></p>
+              <p language="pos_offset"></p>
+            </div>
+            <div class="right">
+              <div class="fixclear">
+                <span class="left">X</span>
+                <input class="right" type="number" name="offset_x3" value="0.00" min="-20.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Y</span>
+                <input class="right" type="number" name="offset_y3" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Z</span>
+                <input class="right" type="number" name="offset_z3" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="yaw"></span>
+                <input class="right" type="number" name="yaw3" value="0.0" min="-180.00" max="180.00" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="pitch"></span>
+                <input class="right" type="number" name="pitch3" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="roll"></span>
+                <input class="right" type="number" name="roll3" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+            </div>
+          </div>
+          <div class="right" id="canvas4">
+            <canvas class="myCanvas" width="160" height="206"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lidar5">
+      <div class="input fixclear">
+        <p language="input"></p>
+        <div>
+          <span language="mode"></span>
+          <input type="radio" name="mode4" id="m5_1" value="0">
+          <label for="m5_1">M1</label>
+          <input type="radio" name="mode4" id="m5_2" value="1">
+          <label for="m5_2">M2</label>
+        </div>
+        <div class="left">
+          <span language="bus_channel"></span><input type="number" name="bus_channel4" value="1" max="16" min="1"
+            step="1" id="">
+        </div>
+        <div class="right">
+          <span language="msgID"></span><input type="text" name="msgID4" value="0" id="">
+        </div>
+      </div>
+      <div class="processing fixclear">
+        <p language="processing"></p>
+        <span language="point_cloud_channel" class="left"></span>
+        <select class="right" name="point_cloud_channel4">
+          <option value="-1" language="disabled"></option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+        </select>
+        <div class="fixclear">
+          <div class="left fixclear">
+            <div class="left">
+              <p language="origin"></p>
+              <p language="pos_offset"></p>
+            </div>
+            <div class="right">
+              <div class="fixclear">
+                <span class="left">X</span>
+                <input class="right" type="number" name="offset_x4" value="0.00" min="-20.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Y</span>
+                <input class="right" type="number" name="offset_y4" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Z</span>
+                <input class="right" type="number" name="offset_z4" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="yaw"></span>
+                <input class="right" type="number" name="yaw4" value="0.0" min="-180.00" max="180.00" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="pitch"></span>
+                <input class="right" type="number" name="pitch4" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="roll"></span>
+                <input class="right" type="number" name="roll4" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+            </div>
+          </div>
+          <div class="right" id="canvas5">
+            <canvas class="myCanvas" width="160" height="206"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lidar6">
+      <div class="input fixclear">
+        <p language="input"></p>
+        <div>
+          <span language="mode"></span>
+          <input type="radio" name="mode5" id="m6_1" value="0">
+          <label for="m6_1">M1</label>
+          <input type="radio" name="mode5" id="m6_2" value="1">
+          <label for="m6_2">M2</label>
+        </div>
+        <div class="left">
+          <span language="bus_channel"></span><input type="number" name="bus_channel5" value="1" max="16" min="1"
+            step="1" id="">
+        </div>
+        <div class="right">
+          <span language="msgID"></span><input type="text" name="msgID5" value="0" id="">
+        </div>
+      </div>
+      <div class="processing fixclear">
+        <p language="processing"></p>
+        <span language="point_cloud_channel" class="left"></span>
+        <select class="right" name="point_cloud_channel5">
+          <option value="-1" language="disabled"></option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+        </select>
+        <div class="fixclear">
+          <div class="left fixclear">
+            <div class="left">
+              <p language="origin"></p>
+              <p language="pos_offset"></p>
+            </div>
+            <div class="right">
+              <div class="fixclear">
+                <span class="left">X</span>
+                <input class="right" type="number" name="offset_x5" value="0.00" min="-20.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Y</span>
+                <input class="right" type="number" name="offset_y5" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left">Z</span>
+                <input class="right" type="number" name="offset_z5" value="0.00" min="-10.00" max="10.00" step="0.01">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="yaw"></span>
+                <input class="right" type="number" name="yaw5" value="0.0" min="-180.00" max="180.00" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="pitch"></span>
+                <input class="right" type="number" name="pitch5" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+              <div class="fixclear">
+                <span class="left" language="roll"></span>
+                <input class="right" type="number" name="roll5" value="0.0" min="-180.0" max="180.0" step="0.1">
+              </div>
+            </div>
+          </div>
+          <div class="right" id="canvas6">
+            <canvas class="myCanvas" width="160" height="206"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="robosense-point-cloud/js/jquery-2.14.js"></script>
+  <script src="robosense-point-cloud/js/bi-common.js"></script>
+  <script src="robosense-point-cloud/js/text.js"></script>
+  <script src="robosense-point-cloud/js/index.js"></script>
+</body>
+
+</html>

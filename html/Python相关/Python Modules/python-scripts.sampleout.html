@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Script</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="python-scripts/css/common.css">
+  <link rel="stylesheet" href="python-scripts/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="sample_out">
+    <div class="table">
+      <ul class="fixclear">
+        <li class="all"></li>
+        <li><span>ID</span></li>
+        <li><span language="output_channel"></span></li>
+        <li><span language="output_title"></span></li>
+      </ul>
+      <div class="table_content"></div>
+    </div>
+    <div class="bottom">
+      <span language="protocal_name"></span>
+      <input type="text" name="output_protocal">
+      <span language="channel"></span>
+      <select name="output_protocal_channel">
+        <option value="-1" language="none"></option>
+        <option value="0">A</option>
+        <option value="1">B</option>
+        <option value="2">C</option>
+        <option value="3">D</option>
+        <option value="4">E</option>
+        <option value="5">F</option>
+        <option value="6">G</option>
+        <option value="7">H</option>
+        <option value="8">I</option>
+        <option value="9">J</option>
+        <option value="10">K</option>
+        <option value="11">L</option>
+      </select>
+      <button language="output_add_sample" class="right disabled_background" disabled></button>
+      <button language="output_reload_sample" class="right disabled_background" disabled></button>
+    </div>
+  </div>
+  <script src="python-scripts/js/jquery-2.14.min.js"></script>
+  <script src="python-scripts/js/bi-common.js"></script>
+  <script src="python-scripts/js/jquery.base64.js"></script>
+  <script src="python-scripts/js/text.js"></script>
+  <script src="python-scripts/js/common.js"></script>
+  <script src="python-scripts/js/python-scripts.sampleout.js"></script>
+</body>
+
+</html>

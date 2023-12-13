@@ -1,0 +1,35 @@
+.signal_values {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.signal_values input {
+  width: 67px;
+}
+
+.signal_values>.border {
+  position: relative;
+  border: 1px solid #b9b9b9;
+  padding: 10px;
+}
+
+.signal_values>div:not(:last-child) {
+  margin-bottom: 13.5px;
+}
+
+.signal_values input:not(:last-child){
+  margin-right: 20px;
+}
+
+.signal_values>.border>p {
+  position: absolute;
+  left: 4px;
+  background-color: #fff;
+  padding: 0 2px;
+  top: -10px;
+}
+
+.signal_values>.bottom>input {
+  width: 75px;
+  margin-right: 15px;
+}

@@ -1,0 +1,443 @@
+.container {
+  position: absolute;
+  width: 961px;
+  height: 594px;
+  top: 50%;
+  left: 50%;
+  margin: -297px 0 0 -480.5px;
+}
+
+.container>.left {
+  width: 589px;
+}
+
+.container>.right {
+  width: 362px;
+}
+
+.video,
+.video_channel,
+.general_settings {
+  position: relative;
+  padding: 10px 0px 5px 10px;
+  border: 1px solid #cfcfcf;
+  margin-bottom: 10px;
+}
+
+.video {
+  width: 589px;
+  height: 478px;
+}
+
+.video_channel {
+  padding-right: 10px;
+  width: 369px;
+  height: 566px;
+}
+
+.video_list {
+  height: 460px;
+  overflow-y: auto;
+}
+
+h5 {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.video h5 {
+  margin-top: 37%;
+}
+
+.video_list>li {
+  width: 560px;
+  border: 1px solid #868686;
+  padding: 3px;
+  margin-bottom: 7px;
+}
+
+.video>p,
+.video_channel>p,
+.general_settings>p {
+  position: absolute;
+  background-color: #f0f0f0;
+  top: -10px;
+  padding: 0px 2px;
+}
+
+.video_list span.name {
+  cursor: default;
+}
+
+.icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 10px;
+  margin-top: 3px;
+  color: white;
+}
+
+.video_list>li>ul>li>div.left {
+  height: 30px;
+}
+
+.video_list>li>ul>li>div.left>p {
+  height: 13px;
+}
+
+.video_list>li>ul>li>div.left>span {
+  font-size: 11px;
+  padding-top: 4px;
+  overflow: hidden;
+  max-width: 250px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.video_list>li>ul>li:nth-child(1) select {
+  width: 144px;
+  margin-left: 4px;
+}
+
+.video_list>li>ul>li:nth-child(2) select:nth-child(2) {
+  width: 150px;
+}
+
+.video_list>li>ul>li:nth-child(2) select:nth-child(4),
+.video_list>li>ul>li:nth-child(2) select:nth-child(6) {
+  width: 60px;
+}
+
+.video_list>li>ul>li:nth-child(2) span {
+  width: 90px;
+}
+
+.video_list>li>ul>li:nth-child(2) span:nth-child(3) {
+  width: 54px;
+  margin-left: 15px;
+}
+
+.video_list>li>ul>li:nth-child(2) input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+.video_channel_list {
+  height: 543px;
+  overflow: auto;
+}
+
+.video_channel_list>li {
+  width: 347px;
+  border: 1px solid #868686;
+  height: 67px;
+  padding: 5px;
+}
+
+.video_channel_list>li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.video_channel_list>li a:nth-child(2) {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.video_channel_list>li a {
+  display: inline-block;
+  margin-left: 10px;
+  height: 19px;
+}
+
+.video_channel_list>li span,
+.video_channel_list>li label {
+  display: inline-block;
+  width: 40px;
+}
+
+.video_channel_list>li>ul>li:nth-child(1)>span:nth-child(1) {
+  width: 10px;
+}
+
+.video_channel_list>li input {
+  margin-left: 15px;
+  outline: none;
+}
+
+.video_channel_list>li input[type="text"] {
+  height: 18px;
+}
+
+.removevideoDevice {
+  margin: -5px -2px -7px;
+  padding: 20px 8px;
+  transform: scale(0.8);
+  background-color: #eaebf8;
+}
+
+.red {
+  color: red;
+}
+
+.bcRed {
+  background-color: red;
+}
+
+.bcGray {
+  background-color: gray;
+}
+
+.bcGreen {
+  background-color: green;
+}
+
+.trans {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 990px;
+  height: 613px;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.video_information {
+  min-width: 163px;
+  min-height: 200px;
+  top: 152px;
+  left: 440px;
+  padding: 10px;
+}
+
+.videoInfo_button {
+  width: 100%;
+  height: 34px;
+  background-color: #f0f0f0;
+}
+
+.video_information>div:last-child {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+}
+
+.video_information>div>button.closeInfo {
+  position: absolute;
+  right: 10px;
+  margin-top: 5px;
+  padding: 4px 25px;
+}
+
+[language="add_channel_video_channel"] {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.button {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 7px;
+  height: 39px;
+  background-color: #eee;
+}
+
+.button>button {
+  width: 75px;
+  padding: 4px 10px;
+  margin-right: 11px;
+  border: 1px solid #b8b8b8;
+}
+
+[language="not_config"] {
+  display: none;
+}
+
+.channelInput {
+  display: none;
+  width: 166px;
+  height: 18px;
+}
+
+.general_settings {
+  padding: 25px 10px;
+}
+
+.general_settings input {
+  margin: 0px 30px 0px 10px;
+}
+
+.video_information_main {
+  padding: 27px 10px;
+  margin-bottom: 31px;
+}
+
+.video_information_main p {
+  margin-bottom: 5px;
+}
+
+.switch,
+.line,
+.bs,
+.normal,
+.intrinsics {
+  padding: 20px 10px 0px;
+}
+
+.normal {
+  width: 439px;
+  overflow: hidden;
+  position: relative;
+}
+
+.normal>div>ul>li {
+  margin-bottom: 14px;
+}
+
+.normal>div>ul>li li {
+  margin-bottom: 5px;
+}
+
+.normal>div>ul>li>span {
+  width: 72px;
+}
+.normal>div>ul>li:not(:first-child)>span {
+ padding-top: 3px;
+}
+
+.normal>div>ul>li>ul span {
+  width: 39px;
+}
+
+.normal>div>ul>li input[type="radio"] {
+  margin-right: 10px;
+}
+
+.normal>div>ul>li input[type="number"] {
+  width: 73px;
+}
+
+.canvas {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+}
+
+.canvas:nth-child(1) {
+  background-color: #fff;
+}
+
+.normal button {
+  width: 100%;
+}
+
+.switch label {
+  margin-right: 20px;
+}
+
+.line>div label,
+.bs>div label,
+.line>div span,
+.bs>div span {
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+.line>div label,
+.bs>div label {
+  margin-right: 25px;
+}
+
+.line input[type="text"],
+.bs input[type="text"] {
+  width: 82px;
+}
+
+.line>div>.left,
+.line>div>.right,
+.bs>div>.left,
+.bs>div>.right {
+  width: 156px;
+}
+
+.line button,
+.bs button {
+  width: 100%;
+  padding: 4px;
+  margin-top: 10px;
+}
+
+.intrinsics {
+  width:234px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.intrinsics>ul {
+  height: 458px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.intrinsics>ul input {
+  width: 113px;
+}
+
+.intrinsics>ul span {
+  width: 73px;
+  padding-top: 3px;
+}
+
+.intrinsics>ul>li:nth-child(1) span,
+.intrinsics>ul>li:nth-child(2) span,
+.intrinsics>ul>li:nth-child(3):not(.cu) span {
+  width: 100%;
+  margin-bottom: 3px;
+}
+
+.intrinsics>ul>li:nth-child(1) input,
+.intrinsics>ul>li:nth-child(2) input,
+.intrinsics>ul>li:nth-child(3):not(.cu) input {
+  width: 120px;
+  /* margin-left: 44px; */
+}
+
+.intrinsics button {
+  width: 45%;
+  padding: 2px 4px;
+}
+
+div.reset {
+  top: 165px;
+  left: 386px;
+  width: 216px;
+  background-color: #f0f0f0;
+}
+
+.reset>.content {
+  background-color: white;
+  line-height: 73px;
+  height: 73px;
+  padding-left: 15px;
+}
+
+.reset button {
+  width: 40%;
+  padding: 2px 3px;
+  margin: 8px 10px;
+}
+
+.reset>div:nth-child(1) {
+  color: grey;
+  background-color: #fff;
+}

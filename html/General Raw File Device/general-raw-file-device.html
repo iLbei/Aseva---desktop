@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Raw File Device</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="general-raw-file-device/css/common.css">
+  <style>
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 330px;
+      height: 90px;
+      margin: -45px 0 0 -165px;
+    }
+
+    a {
+      vertical-align: -3px;
+      max-width: 262px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 90px;
+    }
+
+    ul>li:nth-child(2) {
+      height: 26px;
+      line-height: 26px;
+    }
+
+    ul>li:nth-child(2)>span {
+      vertical-align: 3px;
+    }
+
+    input[type=number] {
+      width: 83px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li>
+        <input type="checkbox" name="enable" id="enable">
+        <label for="enable" language="enable"></label>
+      </li>
+      <li class="fixclear">
+        <span language="time_ratio" class="left"></span>
+        <input type="number" name="time_ratio" step="0.01" value="0.999978" class="left">
+        <input type="number" name="load_speed" step="0.01" value="1" class="right">
+        <span language="load_speed" class="right"></span>
+      </li>
+      <li>
+        <span language="data_path"></span>
+        <a href="javascript:;" name="data_path" language="not_config"></a>
+      </li>
+    </ul>
+  </div>
+  <script src="general-raw-file-device/js/jquery-2.14.js"></script>
+  <script src="general-raw-file-device/js/bi-common.js"></script>
+  <script src="general-raw-file-device/js/text.js"></script>
+  <script src="general-raw-file-device/js/index.js"></script>
+</body>
+
+</html>

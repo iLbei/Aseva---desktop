@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethernet UDP</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="ethernet-udp/css/common.css">
+  <link rel="stylesheet" href="ethernet-udp/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="Enabled" id="Enabled">
+      <label for="Enabled" language="Enabled"></label>
+    </div>
+    <div id="table">
+      <div class="fixclear">
+        <div onclick="onClick(this)" class="all"></div>
+        <div>src_ip</div>
+        <div>dest_ip</div>
+        <div>Port 1</div>
+        <div>Port 2</div>
+        <div>Port 3</div>
+        <div>Port 4</div>
+        <div>Port 5</div>
+        <div>Port 6</div>
+        <div>Port 7</div>
+        <div>Port 8</div>
+      </div>
+      <div class="table">
+        <div>
+          <div class="fixclear input">
+            <div onclick="onClick(this)" class="select"></div>
+            <div>
+              <input type="text" class="text" name="src_ip">
+            </div>
+            <div>
+              <input type="text" class="text" name="dest_ip">
+            </div>
+            <div>
+              <input type="text" class="text" name="port0">
+            </div>
+            <div>
+              <input type="text" class="text" name="port1">
+            </div>
+            <div>
+              <input type="text" class="text" name="port2">
+            </div>
+            <div>
+              <input type="text" class="text" name="port3">
+            </div>
+            <div>
+              <input type="text" class="text" name="port4">
+            </div>
+            <div>
+              <input type="text" class="text" name="port5">
+            </div>
+            <div>
+              <input type="text" class="text" name="port6">
+            </div>
+            <div>
+              <input type="text" class="text" name="port7">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="ethernet-udp/js/jquery-2.14.js"></script>
+  <script src="ethernet-udp/js/bi-common.js"></script>
+  <script src="ethernet-udp/js/text.js"></script>
+  <script src="ethernet-udp/js/index.js"></script>
+</body>
+
+</html>

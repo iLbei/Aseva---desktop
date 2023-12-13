@@ -1,0 +1,212 @@
+.container{
+  padding-top: 0;
+}
+.container>.top>.left>button {
+    display: block;
+    float: left;
+    width: 46px;
+    height: 23px;
+    background-color: #f0f0f0;
+    border: 1px solid #cfcccc;
+    outline: 0;
+}
+.container>.center>div>div:nth-child(1){
+  margin: 15px 0px;
+}
+.container>.center>div>div {
+    position: relative;
+    border: 1px solid rgb(220, 220, 220);
+    padding: 15px 10px 8px 10px;
+}
+
+.container>.center>div:not(:nth-of-type(1)) {
+    display: none;
+}
+
+.container>.center>div>div:nth-of-type(1)>div>div:nth-of-type(2) .cc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container>.center>div>div>p {
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    margin: 0 2px;
+    background-color: #f0f0f0;
+    padding: 2px;
+}
+
+.container>div:nth-of-type(2)>div:nth-of-type(2)>.left {
+    margin-top: 74px;
+}
+
+.container>div:nth-of-type(2)>div:nth-of-type(2)>.left>div>div {
+    height: 52px;
+}
+
+.container>div:nth-of-type(2)>div:nth-of-type(2)>.left>div>div:nth-of-type(1) {
+    line-height: 52px;
+    margin-right: 10px;
+}
+
+.container>div:nth-of-type(2)>div:nth-of-type(2)>.left>div>.right>div:first-of-type {
+    margin-bottom: 5px;
+}
+
+.container>div:nth-of-type(2)>div:nth-of-type(2)>.left>div>.right {
+    width: 80px;
+}
+
+.myCanvas {
+    background-color: #fff;
+}
+
+#right {
+    position: relative;
+}
+
+#myCanvas2 {
+    position: absolute;
+    background-color: transparent;
+    top: 22px;
+    left: 56px;
+}
+
+.container [type=text] {
+    width: 142px;
+    height: 23px;
+}
+
+.container [type=checkbox] {
+    width: 13px;
+    height: 13px;
+}
+
+select {
+    width: 127px;
+    height: 25px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+[name=port] {
+    width: 60px;
+    height: 23px;
+}
+
+[type=number] {
+    width: 70px;
+    height: 23px;
+}
+
+
+/* 第二个窗口 */
+
+.content {
+    width: 476px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.content>.btn>div {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.content>.table {
+    width: 452px;
+    height: 166px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #b5b5b5;
+}
+
+.content>.table>div:first-of-type>div {
+    text-align: center;
+    line-height: 24px;
+}
+
+.content>.table>div:first-of-type>div,
+.content>.table>.bottom>div>div {
+    border-bottom: 1px solid #a2a2a2;
+    border-right: 1px solid #a2a2a2;
+}
+
+.content>.table>div:first-of-type>div:not(:first-of-type),
+.content>.table>.bottom>div>div:not(:first-of-type) {
+    width: 136.6px;
+    height: 24px;
+}
+
+.bottom {
+    height: 140px;
+    overflow-y: overlay;
+}
+
+.c-1 {
+    width: 40px;
+    height: 24px;
+}
+
+.c-1:hover {
+    background-color: #c9ddec;
+}
+
+.content>.table input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 0;
+}
+
+.blue {
+    background-color: #BCD8ED;
+}
+
+.blue2 {
+    background-color: #0078D7;
+    color: white;
+}
+
+.white {
+    background-color: #fff !important;
+}
+
+input {
+    vertical-align: middle;
+}
+
+.m65 {
+    margin-top: 38px;
+}
+
+.w140 {
+    width: 156px;
+}
+
+.w140>div:first-of-type {
+    margin-top: 18px;
+}
+
+.w140>div:last-of-type>div {
+    margin-top: 5px;
+}
+
+.w140>div:last-of-type>div>span {
+    margin:2px 5px 0px 0px;
+}
+
+.bottom2>input {
+    width: 75px;
+    height: 25px;
+    float: right;
+    margin-top: 3px;
+}
+.content>.table>div:first-of-type>div:nth-child(4),
+.content>.table>.bottom>div>div:nth-child(4){
+border-right: none;
+}

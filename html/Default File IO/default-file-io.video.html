@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Default File I/O</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="default-file-io/css/common.css">
+  <link rel="stylesheet" href="default-file-io/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="video">
+    <div class="type fixclear">
+      <p language="file_type"></p>
+      <ul class="left fixclear">
+        <li>
+          <span class="left">MJPEG:</span>
+          <select name="mjpeg_rec_format" class="right">
+            <option value="1" language="avi_file"></option>
+            <option value="2" language="mp4_file"></option>
+            <option value="3" language="mkv_file"></option>
+            <option value="4" language="dat_file"></option>
+          </select>
+        </li>
+        <li>
+          <span class="left">YUV420:</span>
+          <select name="yuv420_rec_format" class="right">
+            <option value="1" language="avi_file"></option>
+            <option value="3" language="mkv_file"></option>
+            <option value="4" language="dat_file"></option>
+          </select>
+        </li>
+        <li>
+          <span class="left">RAW:</span>
+          <select name="raw_rec_format" class="right">
+            <option value="4" language="dat_file"></option>
+          </select>
+        </li>
+        <li>
+          <span class="left">RAW16:</span>
+          <select name="raw16_rec_format" class="right">
+            <option value="4" language="dat_file"></option>
+          </select>
+        </li>
+      </ul>
+      <ul class="left fixclear">
+        <li>
+          <span class="left">H264:</span>
+          <select name="h264_rec_format" class="right">
+            <option value="1" language="avi_file"></option>
+            <option value="2" language="mp4_file"></option>
+            <option value="3" language="mkv_file"></option>
+            <option value="4" language="dat_file"></option>
+          </select>
+        </li>
+        <li>
+          <span class="left">YUV411:</span>
+          <select name="yuv411_rec_format" class="right">
+            <option value="1" language="avi_file"></option>
+            <option value="3" language="mkv_file"></option>
+            <option value="4" language="dat_file"></option>
+          </select>
+        </li>
+        <li>
+          <span class="left">RAW12:</span>
+          <select name="raw12_rec_format" class="right">
+            <option value="4" language="dat_file"></option>
+          </select>
+        </li>
+        <li>
+          <span class="left">Y16:</span>
+          <select name="y16_rec_format" class="right">
+            <option value="4" language="dat_file"></option>
+          </select>
+        </li>
+      </ul>
+      <ul class="right fixclear">
+        <li>
+          <span class="left">H265:</span>
+          <select name="h265_rec_format" class="right">
+            <option value="1" language="avi_file"></option>
+            <option value="2" language="mp4_file"></option>
+            <option value="3" language="mkv_file"></option>
+            <option value="4" language="dat_file"></option>
+          </select>
+        </li>
+        <li>
+          <span class="left">YUV422:</span>
+          <select name="yuv422_rec_format" class="right">
+            <option value="4" language="dat_file"></option>
+          </select>
+        </li>
+        <li>
+          <span class="left">RAW14:</span>
+          <select name="raw14_rec_format" class="right">
+            <option value="4" language="dat_file"></option>
+          </select>
+        </li>
+      </ul>
+    </div>
+    <div class="pos fixclear">
+      <p language="file_pos"></p>
+      <ul class="left">
+        <li>
+          <span class="left">Channel A</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel B</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel C</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel D</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel E</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel F</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel G</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel H</span>
+          <select class="right">
+          </select>
+        </li>
+      </ul>
+      <ul class="left">
+        <li>
+          <span class="left">Channel I</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel J</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel K</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel L</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel M</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel N</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel O</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel P</span>
+          <select class="right">
+          </select>
+        </li>
+      </ul>
+      <ul class="right">
+        <li>
+          <span class="left">Channel Q</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel R</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel S</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel T</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel U</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel V</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel W</span>
+          <select class="right">
+          </select>
+        </li>
+        <li>
+          <span class="left">Channel X</span>
+          <select class="right">
+          </select>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="default-file-io/js/jquery-2.14.js"></script>
+  <script src="default-file-io/js/bi-common.js"></script>
+  <script src="default-file-io/js/text.js"></script>
+  <script src="default-file-io/js/default-file-io.video.js"></script>
+</body>
+
+</html>

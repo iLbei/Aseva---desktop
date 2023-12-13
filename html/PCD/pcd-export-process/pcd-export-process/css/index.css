@@ -1,0 +1,74 @@
+.container {
+  width: 427px;
+  height: 209px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -105.5px 0 0 -213.5px;
+}
+
+[language="enable"],
+[language="local_path"] {
+  display: inline-block;
+  width: 94px;
+}
+
+.topleft,
+.topright {
+  display: inline-block;
+}
+
+.bottom {
+  margin: 13px 0px;
+}
+
+.bottom label {
+  margin-right: 15px;
+}
+
+.top {
+  margin-bottom: 15px;
+}
+
+a {
+  display: inline-block;
+  max-width: 270px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.top>div:nth-child(3) {
+  margin-top: 15px;
+}
+
+div.top>div:nth-child(3)>span {
+  margin-right: 9px;
+}
+
+p[language="channelFiltering"] {
+  margin: 17px 0px 4px 0px;
+}
+
+.channelFiltering>input:not(:nth-child(1)) {
+  margin-left: 8px;
+}
+
+[language="absolute_time_file"] {
+  margin-right: 25px;
+}
+
+.container div:nth-child(4)>ul>li>ul {
+  display: flex;
+  justify-content: space-between;
+  width: 204px;
+}
+
+.container div:nth-child(4)>ul {
+  height: 26px;
+  line-height: 26px;
+}
+
+[name="time_offset"] {
+  width: 103px;
+}

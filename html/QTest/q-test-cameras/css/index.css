@@ -1,0 +1,193 @@
+.container {
+  width: 356px;
+  height: 468px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -234px 0 0 -178px;
+}
+
+.container>div:nth-child(1) {
+  margin-bottom: 15px;
+}
+
+.container>div {
+  position: relative;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 15px 10px 8px 10px;
+}
+
+.container:not(:nth-of-type(1)) {
+  display: none;
+}
+
+.container>div:nth-of-type(1)>div>div:nth-of-type(2) .cc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container>div>p {
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  margin: 0 2px;
+  background-color: #f0f0f0;
+  padding: 2px;
+}
+
+.container>div:nth-of-type(2)>div:nth-of-type(2)>.left>div>div {
+  height: 26px;
+  line-height: 26px;
+  margin-bottom: 5px;
+  width: 104px;
+  margin-left: 5px;
+}
+
+.container>div:nth-of-type(2)>div:nth-of-type(2)>.left>div>.right>div:first-of-type {
+  margin-bottom: 5px;
+}
+
+.container>div:nth-of-type(2)>div:nth-of-type(2)>.left>div>.right {
+  width: 80px;
+}
+
+.myCanvas {
+  margin-top: 11px;
+}
+
+#right {
+  position: relative;
+}
+
+#myCanvas2 {
+  position: absolute;
+  background-color: transparent;
+  top: 22px;
+  left: 56px;
+}
+
+.container [type=text] {
+  width: 142px;
+}
+
+.container [type=checkbox] {
+  width: 13px;
+  height: 13px;
+}
+
+select {
+  width: 127px;
+  height: 25px;
+}
+
+li {
+  margin: 5px 0;
+  height: 26px;
+  line-height: 26px;
+}
+
+[type=number] {
+  width: 62px;
+}
+
+
+/* 第二个窗口 */
+
+.content {
+  width: 476px;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.content>.btn>div {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.content>.table {
+  width: 452px;
+  height: 166px;
+  margin: auto;
+  background-color: #fff;
+  border: 1px solid #b5b5b5;
+}
+
+.content>.table>div:first-of-type>div {
+  text-align: center;
+  line-height: 24px;
+}
+
+.content>.table>div:first-of-type>div,
+.content>.table>.bottom>div>div {
+  border-bottom: 1px solid #a2a2a2;
+  border-right: 1px solid #a2a2a2;
+}
+
+.content>.table>div:first-of-type>div:not(:first-of-type),
+.content>.table>.bottom>div>div:not(:first-of-type) {
+  width: 136.6px;
+  height: 24px;
+}
+
+.bottom {
+  height: 140px;
+  width: 451px;
+  overflow-y: overlay;
+  overflow-x: hidden;
+}
+
+.bottom>div {
+  width: 451px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c-1 {
+  width: 40px;
+  height: 24px;
+}
+
+.c-1:hover {
+  background-color: #c9ddec;
+}
+
+.content>.table input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 0;
+}
+
+.blue {
+  background-color: #BCD8ED;
+}
+
+.blue2 {
+  background-color: #0078D7;
+  color: white;
+}
+
+.white {
+  background-color: #fff !important;
+}
+
+input {
+  vertical-align: middle;
+}
+
+.bottom2>input {
+  width: 75px;
+  height: 25px;
+  float: right;
+  margin-top: 3px;
+}
+
+.content>.table>div:first-of-type>div:nth-child(4),
+.content>.table>.bottom>div>div:nth-child(4) {
+  border-right: none;
+}
+
+[language="orign"] {
+  margin: 35px 6px 75px 0px;
+}

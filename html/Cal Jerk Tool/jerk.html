@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jerk</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="jerk/css/common.css">
+  <link rel="stylesheet" href="jerk/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li>
+        <input type="checkbox" name="Enabled" id="Enabled">
+        <label for="Enabled" language="Enabled"></label>
+      </li>
+      <li class="fixclear">
+        <span language="CalpointNum" class="left"></span>
+        <input type="number" name="CalpointNum" max="50" min="2" value="10" step="1" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="RelThresholdx" class="left"></span>
+        <input type="number" name="RelThresholdx" max="100" min="-100" value="10" step="0.01" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="RelThresholdy" class="left"></span>
+        <input type="number" name="RelThresholdy" max="100" min="-100" value="10" step="0.01" class="right">
+      </li>
+      <li class="fixclear"><span language="GNSS_IMUChannel" class="left"></span>
+        <select name="GNSS_IMUChannel" class="right">
+          <option value="-1" language="disabled">(Disabled)</option>
+          <option value="0">GNSS-IMU Sensor A</option>
+          <option value="1">GNSS-IMU Sensor B</option>
+          <option value="2">GNSS-IMU Sensor C</option>
+          <option value="3">GNSS-IMU Sensor D</option>
+          <option value="4">GNSS-IMU Sensor E</option>
+          <option value="5">GNSS-IMU Sensor F</option>
+        </select>
+      </li>
+    </ul>
+  </div>
+  <script src="jerk/js/jquery-2.14.js"></script>
+  <script src="jerk/js/bi-common.js"></script>
+  <script src="jerk/js/text.js"></script>
+  <script src="jerk/js/index.js"></script>
+</body>
+
+</html>

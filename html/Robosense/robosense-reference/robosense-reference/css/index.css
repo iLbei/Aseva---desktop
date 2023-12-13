@@ -1,0 +1,90 @@
+[language="result_path"] {
+  vertical-align: 4px;
+}
+
+[name="gt_data_path"] {
+  display: inline-block;
+  max-width: 195px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.container>div:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+.container>div:not(:nth-child(1)) {
+  position: relative;
+  padding: 10px 10px 5px;
+  border: 1px solid #dddddd;
+  margin-top: 10px;
+}
+
+.container>div>p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+}
+
+ul>li {
+  margin: 10px 0px 10px;
+}
+
+button {
+  padding: 3px 30px;
+  background-color: rgb(235, 210, 164);
+  border: 1px solid grey;
+}
+
+.container>div:nth-child(2) input[type=text] {
+  width: 130px;
+  margin-left: 5px;
+}
+
+.container>div:nth-child(2) input[type=number] {
+  width: 57px;
+  margin-left: 5px;
+}
+
+select {
+  width: 45%;
+}
+
+.processing>div {
+  margin-top: 47px;
+}
+
+.processing>div p {
+  margin-right: 6px;
+}
+
+.processing>div p:nth-child(1) {
+  margin-top: 27px;
+}
+
+.processing>div p:nth-child(2) {
+  margin-top: 77px;
+}
+
+.processing>div input {
+  margin-bottom: 3px;
+  width: 58px;
+  margin-left: 4px;
+}
+
+.processing>div>div>div.right>div:nth-child(3) {
+  margin-bottom: 8px;
+}
+
+.processing>ul>li>span {
+  padding-top: 2px;
+}
+
+#canvas {
+  width: 160px;
+  height: 180px;
+}
+.myCanvas{
+  background-color: #fff;
+}

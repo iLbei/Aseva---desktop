@@ -1,0 +1,120 @@
+.container{
+  width: 626px;
+  height: 691px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.container>div:nth-child(2),
+.container>div:nth-child(4),
+.container>div:nth-child(5),
+.container>div:nth-child(6),
+.container>div:nth-child(7),
+.container>div:nth-child(8){
+    margin-top: 15px;
+}
+
+.container>div:nth-of-type(1)>label:not(:last-child) {
+    margin-right: 13.7px;
+}
+
+.container>div:nth-of-type(2)>.left {
+    width: 50%;
+    text-align: right;
+    font-size: 10px;
+}
+.container>div:nth-of-type(2)>.right{
+    text-align: right;
+}
+.container>div:nth-of-type(2)>.right>select {
+    width: 152px;
+    margin-bottom: 5px;
+}
+
+.container>div:nth-of-type(3)>.left,
+.container>div:nth-of-type(4),
+.container>div:nth-of-type(5),
+.container>div:nth-of-type(7),
+.container>div:nth-of-type(6),
+.container>div:nth-of-type(8) {
+    position: relative;
+    border: 1px solid rgb(220, 220, 220);
+    padding: 20px 10px;
+}
+
+.container>div:nth-of-type(3)>.left {
+    width: 36%;
+}
+
+.container>div:nth-of-type(3)>div>p,
+.container>div:nth-of-type(4)>p,
+.container>div:nth-of-type(5)>p,
+.container>div:nth-of-type(7)>p,
+.container>div:nth-of-type(6)>p,
+.container>div:nth-of-type(8)>p {
+    position: absolute;
+    left: 14px;
+    padding: 0 2px;
+    top: -10px;
+}
+
+.container>div:nth-of-type(3)>.right>div {
+    text-align: right;
+    margin-top: 17px;
+}
+
+.container>div:nth-of-type(3)>.right input {
+    width: 55px;
+}
+
+.container>div:nth-of-type(4),
+.container>div:nth-of-type(5),
+.container>div:nth-of-type(6),
+.container>div:nth-of-type(7),
+.container>div:nth-of-type(8)  {
+    padding: 10px 0px;
+}
+
+.container>div:nth-of-type(4)>div>ul>li>div,
+.container>div:nth-of-type(5)>div>ul>li>div,
+.container>div:nth-of-type(6)>div>ul>li>div,
+.container>div:nth-of-type(7)>div>ul>li>div,
+.container>div:nth-of-type(8)>div>ul>li>div  {
+    width: 19px;
+    height: 25px;
+    text-align: center;
+    line-height: 2;
+}
+
+.container>div:nth-of-type(4)>div>ul>li,
+.container>div:nth-of-type(5)>div>ul>li,
+.container>div:nth-of-type(6)>div>ul>li,
+.container>div:nth-of-type(7)>div>ul>li,
+.container>div:nth-of-type(8)>div>ul>li  {
+    float: left;
+    margin: 5px 0px 4px 5px;
+}
+
+.container>div:nth-of-type(4) select {
+    width: 78px;
+    height: 25px;
+}
+
+.container>div:nth-of-type(5) input,
+.container>div:nth-of-type(6) input,
+.container>div:nth-of-type(7) input,
+.container>div:nth-of-type(8) input {
+    width: 78px;
+}
+
+.red {
+    color: red;
+}
+[language="frequency"]{
+    margin-top: 10px;
+    margin-right: 2px;
+}
+[language="output_channel"]{
+    margin-top: 3px;
+}

@@ -1,0 +1,37 @@
+.container {
+  width: 326px;
+  height: 413px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -208.5px 0 0 -163px;
+}
+
+.container>ul>li {
+  margin-top: 10px;
+}
+
+.container>ul>li>span:nth-child(1) {
+  width: 180px;
+}
+
+.container>ul>li>input[type=number],
+.container select {
+  width: 133px;
+}
+
+.container>ul>li:nth-child(6)>span:nth-child(1),
+.container>ul>li:nth-child(7)>span:nth-child(1) {
+  width: 72px;
+}
+
+.container>ul>li:nth-child(6)>input,
+.container>ul>li:nth-child(7)>input {
+  width: 88.2px;
+}
+
+[language="end"],
+.container>ul>li>span:nth-child(1) {
+  padding-top: 3px;
+  margin-right: 5px;
+}

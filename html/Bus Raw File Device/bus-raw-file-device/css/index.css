@@ -1,0 +1,59 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 615px;
+  height: 352px;
+  margin: -176px 0px 0px -307.5px;
+  border: 1px solid #ccc;
+  padding: 9px 4px 3px;
+}
+
+img {
+  width: 19px;
+}
+
+.content {
+  background-color: #cfcfcf;
+  padding: 2px;
+  height: 230px;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.content>.box {
+  padding:5px;
+  margin-bottom: 2px;
+  background-color: #dae0f5;
+}
+
+.container>p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+}
+
+a {
+  max-width: 511px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+button {
+  width: 100px;
+  height: 27px;
+  margin-right: 20px;
+}
+.container>div:nth-child(5) {
+  height: 26px;
+  line-height: 26px;
+  margin-top: 10px;
+}
+input[type="number"]{
+  margin-left: 5px;
+}
+[language="bus_files_path"]{
+  vertical-align: 9px;
+  margin: 0px 8px 0px 0px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lanes Fusion</title>
+  <link rel="stylesheet" href="lanes-fusion/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="lanes-fusion/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="lfEnable" id="lfEnable">
+      <label for="lfEnable" language="lfEnable"></label>
+    </div>
+    <ul>
+      <li class="fixclear">
+        <span language="datumLanesChannel"></span>
+        <select name="datumLanesChannel" class="right">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+          <option value="6">Channel G</option>
+          <option value="7">Channel H</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="fusionLanesChannel"></span>
+        <select name="fusionLanesChannel" class="right">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+          <option value="6">Channel G</option>
+          <option value="7">Channel H</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="matchMode"></span>
+        <select name="matchMode" class="right">
+          <option value="0">Equation Coefficient</option>
+          <option value="1">Scatter Points</option>
+          <option value="2">Merge Lines</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="matchThresh"></span>
+        <input type="number" name="matchThresh" value="1" step="0.01" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="absZeroPowerLimit"></span>
+        <input type="number" name="absZeroPowerLimit" value="1" step="0.000001" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="absFirstPowerLimit"></span>
+        <input type="number" name="absFirstPowerLimit" value="20" step="0.000001" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="absSecondPowerLimit"></span>
+        <input type="number" name="absSecondPowerLimit" value="1" step="0.000001" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="absThirdPowerLimit"></span>
+        <input type="number" name="absThirdPowerLimit" value="0" step="0.000001" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="fusedLanesChannel"></span>
+        <select name="fusedLanesChannel" class="right">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Channel A</option>
+          <option value="1">Channel B</option>
+          <option value="2">Channel C</option>
+          <option value="3">Channel D</option>
+          <option value="4">Channel E</option>
+          <option value="5">Channel F</option>
+          <option value="6">Channel G</option>
+          <option value="7">Channel H</option>
+        </select>
+      </li>
+    </ul>
+  </div>
+  <script src="lanes-fusion/js/jquery-2.14.js"></script>
+  <script src="lanes-fusion/js/bi-common.js"></script>
+  <script src="lanes-fusion/js/text.js"></script>
+  <script src="lanes-fusion/js/index.js"></script>
+</body>
+
+</html>

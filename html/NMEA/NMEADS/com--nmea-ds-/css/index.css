@@ -1,0 +1,163 @@
+.container {
+  width: 345px;
+  height: 648px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -331.5px 0 0 -172.5px;
+}
+
+.container>div {
+  position: relative;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 10px;
+  margin: 15px auto;
+}
+
+.container>button:nth-child(1) {
+  position: absolute;
+  left: 1px;
+  top: 8px;
+  width: 60px;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.container>button:nth-child(2) {
+  position: absolute;
+  left: 61px;
+  top: 8px;
+  width: 71px;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.container>div>p {
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  padding: 0px 2px;
+}
+
+#canvas {
+  margin-top: 5px;
+  height: 140px;
+}
+
+#myCanvas {
+  background-color: #fff;
+}
+
+[type="text"] {
+  width: 142px;
+}
+
+li ,
+.bottom>div>div {
+  margin-top: 5px;
+}
+
+select {
+  width: 193px;
+}
+
+[name="pitch_offset"],
+[name="roll_offset"],
+[name="orientation_offset"] {
+  width:118.5px !important;
+}
+
+[name="antenna_x"],
+[name="antenna_y"] {
+  width: 60px !important;
+}
+
+[name="alias"] {
+  height: 23px;
+  width: 100%;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.primary {
+  display: block;
+}
+
+.secondary {
+  display: none;
+}
+
+.fixclear>span,
+.fixclear>label {
+  margin-top: 3px;
+}
+
+input {
+  padding-left: 3px;
+}
+
+.margin_t1 {
+  margin-top: 5px;
+}
+
+.margin_l2 {
+  margin-left: 18px;
+}
+
+.margin_t2 ul li:nth-child(5) {
+  position: relative;
+}
+
+.margin_t2 ul li:nth-child(5)>span {
+  position: absolute;
+  top: 28px;
+}
+
+.w200 {
+  width: 249px;
+}
+
+.h_line1 {
+  line-height: 40px;
+}
+
+#displayLabel {
+  text-align: center;
+  display: block;
+  height: 26px;
+  line-height: 27px;
+}
+
+._antenna {
+  width: 123px;
+}
+
+.offset {
+  width: 138px;
+}
+
+[name="connect_command"] {
+  width: 186px;
+}
+
+[name="com2_port"],
+[name="com_port"] {
+  width: 53px;
+}
+
+.bottom>div {
+  padding: 0 5px;
+}
+
+.pos {
+  width: 322px;
+}
+
+.pos>div {
+  margin-top: 40px;
+}
+
+.pos>div>div span {
+  margin-right: 12px;
+}
+[name="com2_port"]{
+  margin-top: -3px;
+}

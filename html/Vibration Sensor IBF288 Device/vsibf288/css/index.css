@@ -1,0 +1,50 @@
+.VSIBF288 {
+  width: 310px;
+  height: 406px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.VSIBF288>ul {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.VSIBF288>ul>li {
+  height: 26px;
+  line-height: 26px;
+}
+
+.VSIBF288>ul>li>span:last-of-type {
+  display: inline-block;
+  width: 30px;
+  height: 26px;
+  margin-left: 5px;
+}
+
+.VSIBF288 input[type=text],
+.VSIBF288 input[type=number],
+.VSIBF288 select {
+  width: 120px;
+}
+
+.id{
+  max-width: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* IP验证，不再需要js，通过css结合pattern就能验证 */
+[name="ip"]:valid,
+[name="id"]:valid {
+  color: green;
+}
+
+[name="ip"]:invalid,
+[name="id"]:invalid {
+  color: red;
+}

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<python_template name="Pseudo Location Generation" name_ch="伪定位生成" version="1.0.0" depend_api="3.0" deprecated_api="" signature="3sCAlVDxx7plcoNKe71nEiz/KMPGkHFN1AaiWA9h/H8=" can_overwrite_freq="yes" freq="10">
+  <use_api>bi.interval</use_api>
+  <use_api>bi.Util.output_sample</use_api>
+  <sample_in>vehicle-sample-v4</sample_in>
+  <sample_out id="gnssimu-sample-v7@{output_channel}" name="Pseudo location">
+  </sample_out>
+  <param name="origin_lng" value="120">Origin longitude[°]</param>
+  <param name="origin_lat" value="30">Origin latitude[°]</param>
+  <param name="origin_hd" value="0">Origin heading[°]，0 as north，positive as CCW</param>
+  <param name="output_channel" value="0">Output GNSS-IMU channel [0~5]</param>
+  <cmd>aW1wb3J0IHZlaGljbGVfc2FtcGxlIGFzIHZz</cmd>
+  <cmd>aW1wb3J0IGduc3NpbXVfc2FtcGxlIGFzIGdz</cmd>
+  <cmd>aW1wb3J0IG1hdGg=</cmd>
+  <cmd>dmVoaV9zYW1wbGUgPSB2cy5nZXRfdmVoaWNsZV9zYW1wbGUoKQ==</cmd>
+  <cmd>ZGVnMnJhZCA9IG1hdGgucGkgLyAxODA=</cmd>
+  <cmd>cmFkMmRlZyA9IDE4MC4wIC8gbWF0aC5waQ==</cmd>
+  <cmd>aWYgdmVoaV9zYW1wbGUgaXMgbm90IE5vbmUgYW5kIHZlaGlfc2FtcGxlLmN1cnZhdHVyZV92YWxpZDoKCXNwZWVkID0gdmVoaV9zYW1wbGUuc3BlZWQgLyAzLjYgICMgbS9zCgljdXJ2ID0gdmVoaV9zYW1wbGUuY3VydmF0dXJlICAjIDEvbQoJZGVsdGFfbiA9IDAgICMgbQoJZGVsdGFfdyA9IDAgICMgbQoJZGVsdGFfaCA9IDAgICMgZGVnCgljb3NfaGQgPSBtYXRoLmNvcyhoZCAqIGRlZzJyYWQpCglzaW5faGQgPSBtYXRoLnNpbihoZCAqIGRlZzJyYWQpCglpZiBhYnMoY3VydikgPCAwLjAwMDAwMToKCQlkZWx0YV9uID0gc3BlZWQgKiBiaS5pbnRlcnZhbCAqIGNvc19oZAoJCWRlbHRhX3cgPSBzcGVlZCAqIGJpLmludGVydmFsICogc2luX2hkCgkJZGVsdGFfaCA9IDAKCWVsc2U6CgkJdmVoaV9yYWRpdXMgPSAxLjAgLyBjdXJ2ICAjIG0KCQlkZWx0YV9yYWQgPSBzcGVlZCAqIGJpLmludGVydmFsIC8gdmVoaV9yYWRpdXMKCQlkZWx0YV94ID0gdmVoaV9yYWRpdXMgKiBtYXRoLnNpbihkZWx0YV9yYWQpICAjIG0KCQlkZWx0YV95ID0gdmVoaV9yYWRpdXMgKiAoMS4wIC0gbWF0aC5jb3MoZGVsdGFfcmFkKSkgICMgbQoJCWRlbHRhX24gPSBkZWx0YV94ICogY29zX2hkIC0gZGVsdGFfeSAqIHNpbl9oZAoJCWRlbHRhX3cgPSBkZWx0YV94ICogc2luX2hkICsgZGVsdGFfeSAqIGNvc19oZAoJCWRlbHRhX2ggPSBkZWx0YV9yYWQgKiByYWQyZGVnCglsbmcgPSBsbmcgLSBkZWx0YV93IC8gKHJhZGl1cyAqIG1hdGguY29zKGxhdCAqIGRlZzJyYWQpKSAqIHJhZDJkZWcKCWxhdCA9IGxhdCArIGRlbHRhX24gLyByYWRpdXMgKiByYWQyZGVnCgloZCA9IGhkICsgZGVsdGFfaAoJZ2lfc2FtcGxlID0gZ3MuR25zc0ltdVNhbXBsZSgpCglnaV9zYW1wbGUudGltZSA9IHZlaGlfc2FtcGxlLnRpbWUKCWdpX3NhbXBsZS5sb25naXR1ZGVfdmFsaWQgPSBUcnVlCglnaV9zYW1wbGUubG9uZ2l0dWRlID0gbG5nCglnaV9zYW1wbGUubGF0aXR1ZGVfdmFsaWQgPSBUcnVlCglnaV9zYW1wbGUubGF0aXR1ZGUgPSBsYXQKCWdpX3NhbXBsZS5oZWFkaW5nX3ZhbGlkID0gVHJ1ZQoJZ2lfc2FtcGxlLmhlYWRpbmcgPSBoZAoJYmkuVXRpbC5vdXRwdXRfc2FtcGxlKGdpX3NhbXBsZS50b19nZW5lcmFsX3NhbXBsZShvdXRwdXRfY2hhbm5lbCkp</cmd>
+  <cmd_start>bG5nID0gb3JpZ2luX2xuZwpsYXQgPSBvcmlnaW5fbGF0CmhkID0gb3JpZ2luX2hkCnJhZGl1cyA9IDYzNzEzOTMgICMgbQoKCgo=</cmd_start>
+</python_template>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yolo Detection</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="yolo-detection-reference/css/common.css">
+  <link rel="stylesheet" href="yolo-detection-reference/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="referenceEnable" id="referenceEnable">
+      <label for="referenceEnable" language="referenceEnable"></label>
+    </div>
+    <ul>
+      <li>
+        <span language="detectionVideoChannel"></span>
+        <select name="detectionVideoChannel">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Video Frame A</option>
+          <option value="1">Video Frame B</option>
+          <option value="2">Video Frame C</option>
+          <option value="3">Video Frame D</option>
+          <option value="4">Video Frame E</option>
+          <option value="5">Video Frame F</option>
+          <option value="6">Video Frame G</option>
+          <option value="7">Video Frame H</option>
+          <option value="8">Video Frame I</option>
+          <option value="9">Video Frame J</option>
+          <option value="10">Video Frame K</option>
+          <option value="11">Video Frame L</option>
+          <option value="12">Video Frame M</option>
+          <option value="13">Video Frame N</option>
+          <option value="14">Video Frame O</option>
+          <option value="15">Video Frame P</option>
+          <option value="16">Video Frame Q</option>
+          <option value="17">Video Frame R</option>
+          <option value="18">Video Frame S</option>
+          <option value="19">Video Frame T</option>
+          <option value="20">Video Frame U</option>
+          <option value="21">Video Frame V</option>
+          <option value="22">Video Frame W</option>
+          <option value="23">Video Frame X</option>
+        </select>
+      </li>
+      <li>
+        <span language="confidenceThresh"></span>
+        <input type="number" name="confidenceThresh" value="0.7" step="0.1">
+      </li>
+      <li>
+        <span language="nmsThresh"></span>
+        <input type="number" name="nmsThresh" value="0.5" step="0.1">
+      </li>
+      <li>
+        <span language="objectThresh"></span>
+        <input type="number" name="objectThresh" value="0.01" step="0.1">
+      </li>
+      <li>
+        <span language="imageWidth"></span>
+        <input type="number" name="imageWidth" value="0" step="1">
+      </li>
+      <li>
+        <span language="imageHeight"></span>
+        <input type="number" name="imageHeight" value="100" step="1">
+      </li>
+      <li>
+        <span language="outputBatch"></span>
+        <input type="number" name="outputBatch" value="1" step="1">
+      </li>
+      <li>
+        <span language="outputHeight"></span>
+        <input type="number" name="outputHeight" value="1" step="1">
+      </li>
+      <li>
+        <span language="outputWidth"></span>
+        <input type="number" name="outputWidth" value="1" step="1">
+      </li>
+      <li>
+        <span language="modelPath"></span>
+        <a href="javascript:;" language="not_config" name="modelPath"></a>
+      </li>
+      <li>
+        <span language="classNamesPath"></span>
+        <a href="javascript:;" language="not_config" name="classNamesPath"></a>
+      </li>
+      <li>
+        <label language="usingCUDA" for="usingCUDA"></label>
+        <input type="checkbox" name="usingCUDA" id="usingCUDA">
+      </li>
+      <li>
+        <label language="mosaicProcess" for="mosaicProcess"></label>
+        <input type="checkbox" name="mosaicProcess" id="mosaicProcess">
+      </li>
+      <li>
+        <span language="inputPath"></span>
+        <a href="javascript:;" language="not_config" name="inputPath"></a>
+      </li>
+      <li><button language="confirm"></button></li>
+    </ul>
+  </div>
+  <script src="yolo-detection-reference/js/jquery-2.14.js"></script>
+  <script src="yolo-detection-reference/js/bi-common.js"></script>
+  <script src="yolo-detection-reference/js/text.js"></script>
+  <script src="yolo-detection-reference/js/index.js"></script>
+</body>
+
+</html>

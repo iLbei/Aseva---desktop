@@ -1,0 +1,30 @@
+var cn = {
+  calib_channel: "点阵输出通道:",
+  add: "添加标定板",
+  remove: "删除标定板",
+  set_parameter: "设置参数",
+  model: "平面模式:",
+  split: "间隔:",
+  left_position: "左上角位置(m):",
+  right_top_position: "右上角位置(m):",
+  right_bottom_position: "右下角位置(m):",
+  count: "点个数:",
+  confirm: "确定",
+  width:"横向",
+  height:"纵向"
+},
+  en = {
+    calib_channel: "Point Matrix Channel:",
+    add: "Add",
+    remove: "Remove",
+    set_parameter: "Set Parameters",
+    model: "Flat Model:",
+    split: "Gap:",
+    left_position: "Left top position(m):",
+    right_top_position: "Right top position(m):",
+    right_bottom_position: "Right bottom position(m):",
+    count: "Point Count:",
+    confirm: "OK",
+    width:"Widthwise",
+    height:"Heightwise"
+  };

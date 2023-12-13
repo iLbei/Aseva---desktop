@@ -1,0 +1,171 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 296px;
+  height: 683px;
+  transform: translate(-50%, -50%);
+}
+
+fieldset {
+  border-color: #eee;
+}
+
+fieldset>ul,
+.common,
+.raeb_signals,
+.bottom>ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a,
+table tr>td:not(:nth-child(1)) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.common {
+  height: 48px;
+}
+
+.common>li input {
+  width: 67px;
+}
+
+.common>li>span{
+  width: 103px;
+}
+
+.common select {
+  width: 140px;
+}
+
+.common a {
+  max-width: 188px;
+}
+
+.container>fieldset {
+  margin: 5px 0px 10px;
+}
+
+.raeb_signals {
+  height: 183px;
+}
+
+.container>fieldset>.raeb_signals span {
+  width: 141px;
+  vertical-align: 4px;
+}
+
+.raeb_signals a {
+  max-width: 128px;
+}
+
+.raeb_signals input[type=text] {
+  width: 128px;
+}
+
+[language="raeb_gt_signal_checked"] {
+  vertical-align: 2px;
+}
+
+[language="relative"] {
+  margin-right: 20px;
+}
+
+.caption {
+  position: relative;
+}
+
+.caption>span {
+  position: absolute;
+}
+
+.caption>span:nth-child(1) {
+  left: 52px;
+}
+
+.caption>span:nth-child(2) {
+  left: 142px;
+}
+
+.caption>span:nth-child(3) {
+  left: 223px;
+}
+
+.th {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+table tr>td:nth-child(1) {
+  width: 30px;
+}
+
+table tr>td:not(:nth-child(1)) {
+  width: 77px;
+}
+
+table tr {
+  height: 18px;
+}
+
+table tr>td {
+  max-width: 94px;
+  outline: none;
+}
+
+.tbody {
+  height: 80px;
+  overflow: overlay;
+}
+
+.top>ul>li span,
+.top>ul>li label {
+  width: 100px;
+}
+
+[name="raeb_gt_signal"] {
+  max-width: 168px;
+}
+
+[name="raeb_gt_values"] {
+  width: 150px;
+}
+
+.bottom>ul {
+  height: 168px;
+  margin-top: 5px;
+}
+
+.bottom input[type=number] {
+  width: 119px;
+}
+.bottom span{
+  padding-top: 2px;
+}
+[name="raeb_gt_signal_checked"] {
+  margin-top: 4px;
+}
+[language="message_id"]{
+  vertical-align: 3px;
+}
+/* IP验证，不再需要js，通过css结合pattern就能验证 */
+[type="text"]:valid {
+  color: green;
+}
+
+[type="text"]:invalid {
+  color: red;
+}
+
+.bgblue {
+  background-color: #0078D7;
+  color: white;
+}

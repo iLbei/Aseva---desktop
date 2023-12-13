@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatic Scene Extraction</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="automatic-scene-extraction/css/common.css">
+  <link rel="stylesheet" href="automatic-scene-extraction/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="enabled">
+      <input type="checkbox" id="enable" name="enable">
+      <label for="enable" language="enabled"></label>
+    </div>
+    <div>
+      <p language="vehicle_start_stop"></p>
+      <div class="fixclear">
+        <div class="left">
+          <input type="checkbox" id="vehicle-start" name="vehicle-start">
+          <label for="vehicle-start" language="vehicle_start"></label>
+        </div>
+        <div class="left">
+          <input type="checkbox" id="vehicle-stop" name="vehicle-stop">
+          <label for="vehicle-stop" language="vehicle_stop"></label>
+        </div>
+        <div class="left">
+          <input type="checkbox" id="reversing" name="reversing">
+          <label for="reversing" language="reversing"></label>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p language="emergency_break"></p>
+      <div class="fixclear">
+        <div class="left">
+          <input type="checkbox" id="emergency-brake" name="emergency-brake">
+          <label for="emergency-brake" language="emergency_break"></label>
+        </div>
+        <div class="left">
+          <span language="decel"></span>
+          <input type="number" value="0.00" name="eb_decel" min="0" max="20" step="0.01">
+        </div>
+      </div>
+    </div>
+    <div>
+      <p language="curve"></p>
+      <div class="fixclear">
+        <div class="left">
+          <input type="checkbox" id="curve" name="curve">
+          <label for="curve" language="curve"></label>
+        </div>
+        <div class="left">
+          <span language="curv_time"></span>
+          <input type="number" value="0.00" name="curv_time" min="0" max="50" step="0.01">
+        </div>
+        <div class="left">
+          <span language="max_cure"></span>
+          <input type="number" value="0.00" name="curv_max" min="0" max="50" step="0.01">
+        </div>
+        <div class="right">
+          <span language="min_cure"></span>
+          <input type="number" value="0.000" name="curv_min" min="0" max="1" step="0.001">
+        </div>
+      </div>
+    </div>
+    <div>
+      <p language="up_down_slope"></p>
+      <div class="fixclear">
+        <div class="left">
+          <input type="checkbox" id="up_slope" name="up-slope">
+          <label for="up_slope" language="up_slope"></label>
+        </div>
+        <div class="left">
+          <input type="checkbox" id="down_slope" name="down-slope">
+          <label for="down_slope" language="down_slope"></label>
+        </div>
+      </div>
+      <div class="fixclear">
+        <div class="left">
+          <span language="gnss_imu"></span>
+          <select name="slope_channel" id="">
+            <option value="0" selected language="gnss_imu_sen_a"></option>
+            <option value="1" language="gnss_imu_sen_b"></option>
+            <option value="2" language="gnss_imu_sen_c"></option>
+            <option value="3" language="gnss_imu_sen_d"></option>
+            <option value="4" language="gnss_imu_sen_e"></option>
+            <option value="5" language="gnss_imu_sen_f"></option>
+          </select>
+        </div>
+        <div class="right fixclear">
+          <div class="left">
+            <span language="pitch"></span>
+            <input type="number" value="0.00" name="slope_pitch" min="0" max="50" step="0.01">
+          </div>
+          <div class="left">
+            <span language="time"></span>
+            <input type="number" value="0.00" name="slope_time" min="0" max="50" step="0.01">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p language="sport">Spot</p>
+      <table>
+        <tr>
+          <td>
+            <input type="checkbox" id="tollgate" name="tollgate">
+            <label for="tollgate" language="tollgate"></label>
+          </td>
+          <td>
+            <span language="distance"></span>
+            <input type="number" value="0" name="tollgate_distance" min="0" max="100" step="1">
+          </td>
+          <td>
+            <input type="checkbox" id="service-area" name="service-area">
+            <label for="service-area" language="service_area"></label>
+          </td>
+          <td>
+            <span language="distance"></span>
+            <input type="number" value="0" name="service_area_distance" min="0" max="100" step="1">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="crossing" name="crossing">
+            <label for="crossing" language="crossing"></label>
+          </td>
+          <td>
+            <span language="distance"></span>
+            <input type="number" value="0" name="crossing_distance" min="0" max="100" step="1">
+          </td>
+          <td>
+            <input type="checkbox" id="roundabout" name="roundabout">
+            <label for="roundabout" language="roundabout"></label>
+          </td>
+          <td>
+            <span language="distance"></span>
+            <input type="number" value="0" name="roundabout_distance" min="0" max="100" step="1">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="bridge" name="bridge">
+            <label for="bridge" language="bridge"></label>
+          </td>
+          <td>
+            <span language="distance"></span>
+            <input type="number" value="0" name="bridge_distance" min="0" max="100" step="1">
+          </td>
+          <td>
+            <input type="checkbox" id="tunnel" name="tunnel">
+            <label for="tunnel" language="tunnel"></label>
+          </td>
+          <td>
+            <span language="distance"></span>
+            <input type="number" value="0" name="tunnel_distance" min="0" max="100" step="1">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="automatic-scene-extraction/js/jquery-2.14.min.js"></script>
+  <script src="automatic-scene-extraction/js/text.js"></script>
+  <script src="automatic-scene-extraction/js/bi-common.js"></script>
+  <script src="automatic-scene-extraction/js/index.js"></script>
+</body>
+
+</html>

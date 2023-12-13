@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data reinjection</title>
+  <link rel="stylesheet" href="data-reinjection/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="data-reinjection/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="bus left">
+      <p language="bus"></p>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_0">
+          <label for="enabled_0" language="enable"></label>
+          <select name="busDeviceType" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">Kvaser</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <input type="checkbox" name="enableCanFD" id="enableCanFD_0">
+          <label for="enableCanFD_0" language="enableCanFD"></label>
+          <input type="number" name="bus_channel" class="right" value="0" max="24" min="1" step="1">
+          <span language="bus_channel" class="right"></span>
+        </li>
+        <li>
+          <span language="canBitrate"></span>
+          <select name="canBitrate">
+            <option value="0">Invalid</option>
+            <option value="1">5K</option>
+            <option value="2">10K</option>
+            <option value="3">20K</option>
+            <option value="18">33K</option>
+            <option value="4">40K</option>
+            <option value="5">50K</option>
+            <option value="6">62K</option>
+            <option value="7">80K</option>
+            <option value="8">83K</option>
+            <option value="9">100K</option>
+            <option value="10">125K</option>
+            <option value="11">200K</option>
+            <option value="12">250K</option>
+            <option value="13">400K</option>
+            <option value="14">500K</option>
+            <option value="15">666K</option>
+            <option value="16">800K</option>
+            <option value="17">1M</option>
+          </select>
+          <span language="canFDBitrate"></span>
+          <select name="canFDBitrate" class="right">
+            <option value="0">Invalid</option>
+            <option value="101">500K</option>
+            <option value="102">1M</option>
+            <option value="103">2M</option>
+            <option value="104">4M</option>
+            <option value="105">8M</option>
+            <option value="106">6M</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_1">
+          <label for="enabled_1" language="enable"></label>
+          <select name="busDeviceType" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">Kvaser</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <input type="checkbox" name="enableCanFD" id="enableCanFD_1">
+          <label for="enableCanFD_1" language="enableCanFD"></label>
+          <input type="number" name="bus_channel" class="right" value="0" max="24" min="1" step="1">
+          <span language="bus_channel" class="right"></span>
+        </li>
+        <li>
+          <span language="canBitrate"></span>
+          <select name="canBitrate">
+            <option value="0">Invalid</option>
+            <option value="1">5K</option>
+            <option value="2">10K</option>
+            <option value="3">20K</option>
+            <option value="18">33K</option>
+            <option value="4">40K</option>
+            <option value="5">50K</option>
+            <option value="6">62K</option>
+            <option value="7">80K</option>
+            <option value="8">83K</option>
+            <option value="9">100K</option>
+            <option value="10">125K</option>
+            <option value="11">200K</option>
+            <option value="12">250K</option>
+            <option value="13">400K</option>
+            <option value="14">500K</option>
+            <option value="15">666K</option>
+            <option value="16">800K</option>
+            <option value="17">1M</option>
+          </select>
+          <span language="canFDBitrate"></span>
+          <select name="canFDBitrate" class="right">
+            <option value="0">Invalid</option>
+            <option value="101">500K</option>
+            <option value="102">1M</option>
+            <option value="103">2M</option>
+            <option value="104">4M</option>
+            <option value="105">8M</option>
+            <option value="106">6M</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_2">
+          <label for="enabled_2" language="enable"></label>
+          <select name="busDeviceType" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">Kvaser</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <input type="checkbox" name="enableCanFD" id="enableCanFD_2">
+          <label for="enableCanFD_2" language="enableCanFD"></label>
+          <input type="number" name="bus_channel" class="right" value="0" max="24" min="1" step="1">
+          <span language="bus_channel" class="right"></span>
+        </li>
+        <li>
+          <span language="canBitrate"></span>
+          <select name="canBitrate">
+            <option value="0">Invalid</option>
+            <option value="1">5K</option>
+            <option value="2">10K</option>
+            <option value="3">20K</option>
+            <option value="18">33K</option>
+            <option value="4">40K</option>
+            <option value="5">50K</option>
+            <option value="6">62K</option>
+            <option value="7">80K</option>
+            <option value="8">83K</option>
+            <option value="9">100K</option>
+            <option value="10">125K</option>
+            <option value="11">200K</option>
+            <option value="12">250K</option>
+            <option value="13">400K</option>
+            <option value="14">500K</option>
+            <option value="15">666K</option>
+            <option value="16">800K</option>
+            <option value="17">1M</option>
+          </select>
+          <span language="canFDBitrate"></span>
+          <select name="canFDBitrate" class="right">
+            <option value="0">Invalid</option>
+            <option value="101">500K</option>
+            <option value="102">1M</option>
+            <option value="103">2M</option>
+            <option value="104">4M</option>
+            <option value="105">8M</option>
+            <option value="106">6M</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_3">
+          <label for="enabled_3" language="enable"></label>
+          <select name="busDeviceType" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">Kvaser</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <input type="checkbox" name="enableCanFD" id="enableCanFD_3">
+          <label for="enableCanFD_3" language="enableCanFD"></label>
+          <input type="number" name="bus_channel" class="right" value="0" max="24" min="1" step="1">
+          <span language="bus_channel" class="right"></span>
+        </li>
+        <li>
+          <span language="canBitrate"></span>
+          <select name="canBitrate">
+            <option value="0">Invalid</option>
+            <option value="1">5K</option>
+            <option value="2">10K</option>
+            <option value="3">20K</option>
+            <option value="18">33K</option>
+            <option value="4">40K</option>
+            <option value="5">50K</option>
+            <option value="6">62K</option>
+            <option value="7">80K</option>
+            <option value="8">83K</option>
+            <option value="9">100K</option>
+            <option value="10">125K</option>
+            <option value="11">200K</option>
+            <option value="12">250K</option>
+            <option value="13">400K</option>
+            <option value="14">500K</option>
+            <option value="15">666K</option>
+            <option value="16">800K</option>
+            <option value="17">1M</option>
+          </select>
+          <span language="canFDBitrate"></span>
+          <select name="canFDBitrate" class="right">
+            <option value="0">Invalid</option>
+            <option value="101">500K</option>
+            <option value="102">1M</option>
+            <option value="103">2M</option>
+            <option value="104">4M</option>
+            <option value="105">8M</option>
+            <option value="106">6M</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_4">
+          <label for="enabled_4" language="enable"></label>
+          <select name="busDeviceType" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">Kvaser</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <input type="checkbox" name="enableCanFD" id="enableCanFD_4">
+          <label for="enableCanFD_4" language="enableCanFD"></label>
+          <input type="number" name="bus_channel" class="right" value="0" max="24" min="1" step="1">
+          <span language="bus_channel" class="right"></span>
+        </li>
+        <li>
+          <span language="canBitrate"></span>
+          <select name="canBitrate">
+            <option value="0">Invalid</option>
+            <option value="1">5K</option>
+            <option value="2">10K</option>
+            <option value="3">20K</option>
+            <option value="18">33K</option>
+            <option value="4">40K</option>
+            <option value="5">50K</option>
+            <option value="6">62K</option>
+            <option value="7">80K</option>
+            <option value="8">83K</option>
+            <option value="9">100K</option>
+            <option value="10">125K</option>
+            <option value="11">200K</option>
+            <option value="12">250K</option>
+            <option value="13">400K</option>
+            <option value="14">500K</option>
+            <option value="15">666K</option>
+            <option value="16">800K</option>
+            <option value="17">1M</option>
+          </select>
+          <span language="canFDBitrate"></span>
+          <select name="canFDBitrate" class="right">
+            <option value="0">Invalid</option>
+            <option value="101">500K</option>
+            <option value="102">1M</option>
+            <option value="103">2M</option>
+            <option value="104">4M</option>
+            <option value="105">8M</option>
+            <option value="106">6M</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_5">
+          <label for="enabled_5" language="enable"></label>
+          <select name="busDeviceType" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">Kvaser</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <input type="checkbox" name="enableCanFD" id="enableCanFD_5">
+          <label for="enableCanFD_5" language="enableCanFD"></label>
+          <input type="number" name="bus_channel" class="right" value="0" max="24" min="1" step="1">
+          <span language="bus_channel" class="right"></span>
+        </li>
+        <li>
+          <span language="canBitrate"></span>
+          <select name="canBitrate">
+            <option value="0">Invalid</option>
+            <option value="1">5K</option>
+            <option value="2">10K</option>
+            <option value="3">20K</option>
+            <option value="18">33K</option>
+            <option value="4">40K</option>
+            <option value="5">50K</option>
+            <option value="6">62K</option>
+            <option value="7">80K</option>
+            <option value="8">83K</option>
+            <option value="9">100K</option>
+            <option value="10">125K</option>
+            <option value="11">200K</option>
+            <option value="12">250K</option>
+            <option value="13">400K</option>
+            <option value="14">500K</option>
+            <option value="15">666K</option>
+            <option value="16">800K</option>
+            <option value="17">1M</option>
+          </select>
+          <span language="canFDBitrate"></span>
+          <select name="canFDBitrate" class="right">
+            <option value="0">Invalid</option>
+            <option value="101">500K</option>
+            <option value="102">1M</option>
+            <option value="103">2M</option>
+            <option value="104">4M</option>
+            <option value="105">8M</option>
+            <option value="106">6M</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_6">
+          <label for="enabled_6" language="enable"></label>
+          <select name="busDeviceType" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">Kvaser</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <input type="checkbox" name="enableCanFD" id="enableCanFD_6">
+          <label for="enableCanFD_6" language="enableCanFD"></label>
+          <input type="number" name="bus_channel" class="right" value="0" max="24" min="1" step="1">
+          <span language="bus_channel" class="right"></span>
+        </li>
+        <li>
+          <span language="canBitrate"></span>
+          <select name="canBitrate">
+            <option value="0">Invalid</option>
+            <option value="1">5K</option>
+            <option value="2">10K</option>
+            <option value="3">20K</option>
+            <option value="18">33K</option>
+            <option value="4">40K</option>
+            <option value="5">50K</option>
+            <option value="6">62K</option>
+            <option value="7">80K</option>
+            <option value="8">83K</option>
+            <option value="9">100K</option>
+            <option value="10">125K</option>
+            <option value="11">200K</option>
+            <option value="12">250K</option>
+            <option value="13">400K</option>
+            <option value="14">500K</option>
+            <option value="15">666K</option>
+            <option value="16">800K</option>
+            <option value="17">1M</option>
+          </select>
+          <span language="canFDBitrate"></span>
+          <select name="canFDBitrate" class="right">
+            <option value="0">Invalid</option>
+            <option value="101">500K</option>
+            <option value="102">1M</option>
+            <option value="103">2M</option>
+            <option value="104">4M</option>
+            <option value="105">8M</option>
+            <option value="106">6M</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_7">
+          <label for="enabled_7" language="enable"></label>
+          <select name="busDeviceType" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">Kvaser</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <input type="checkbox" name="enableCanFD" id="enableCanFD_7">
+          <label for="enableCanFD_7" language="enableCanFD"></label>
+          <input type="number" name="bus_channel" class="right" value="0" max="24" min="1" step="1">
+          <span language="bus_channel" class="right"></span>
+        </li>
+        <li>
+          <span language="canBitrate"></span>
+          <select name="canBitrate">
+            <option value="0">Invalid</option>
+            <option value="1">5K</option>
+            <option value="2">10K</option>
+            <option value="3">20K</option>
+            <option value="18">33K</option>
+            <option value="4">40K</option>
+            <option value="5">50K</option>
+            <option value="6">62K</option>
+            <option value="7">80K</option>
+            <option value="8">83K</option>
+            <option value="9">100K</option>
+            <option value="10">125K</option>
+            <option value="11">200K</option>
+            <option value="12">250K</option>
+            <option value="13">400K</option>
+            <option value="14">500K</option>
+            <option value="15">666K</option>
+            <option value="16">800K</option>
+            <option value="17">1M</option>
+          </select>
+          <span language="canFDBitrate"></span>
+          <select name="canFDBitrate" class="right">
+            <option value="0">Invalid</option>
+            <option value="101">500K</option>
+            <option value="102">1M</option>
+            <option value="103">2M</option>
+            <option value="104">4M</option>
+            <option value="105">8M</option>
+            <option value="106">6M</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+    <div class="video left">
+      <p language="video"></p>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_8">
+          <label for="enabled_8" language="enable"></label>
+          <select name="video_device_type" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">NUVO</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <span language="video_channel"></span>
+          <span language="videoResolution"></span>
+          <span language="rawFormat"></span>
+        </li>
+        <li>
+          <input type="number" name="video_channel" value="0" min="0" max="24" step="1" class="left">
+          <select name="videoResolution" class="left">
+            <option value="0">Invalid</option>
+            <option value="1">1280 x 720</option>
+            <option value="2">1920 x 1080</option>
+            <option value="3">3840 x 2160</option>
+          </select>
+          <select name="rawFormat" class="right">
+            <option value="0">Disabled</option>
+            <option value="1">YUV420</option>
+            <option value="2">YUV422</option>
+            <option value="3">H264</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_9">
+          <label for="enabled_9" language="enable"></label>
+          <select name="video_device_type" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">NUVO</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <span language="video_channel"></span>
+          <span language="videoResolution"></span>
+          <span language="rawFormat"></span>
+        </li>
+        <li>
+          <input type="number" name="video_channel" value="0" min="0" max="24" step="1" class="left">
+          <select name="videoResolution" class="left">
+            <option value="0">Invalid</option>
+            <option value="1">1280 x 720</option>
+            <option value="2">1920 x 1080</option>
+            <option value="3">3840 x 2160</option>
+          </select>
+          <select name="rawFormat" class="right">
+            <option value="0">Disabled</option>
+            <option value="1">YUV420</option>
+            <option value="2">YUV422</option>
+            <option value="3">H264</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_10">
+          <label for="enabled_10" language="enable"></label>
+          <select name="video_device_type" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">NUVO</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <span language="video_channel"></span>
+          <span language="videoResolution"></span>
+          <span language="rawFormat"></span>
+        </li>
+        <li>
+          <input type="number" name="video_channel" value="0" min="0" max="24" step="1" class="left">
+          <select name="videoResolution" class="left">
+            <option value="0">Invalid</option>
+            <option value="1">1280 x 720</option>
+            <option value="2">1920 x 1080</option>
+            <option value="3">3840 x 2160</option>
+          </select>
+          <select name="rawFormat" class="right">
+            <option value="0">Disabled</option>
+            <option value="1">YUV420</option>
+            <option value="2">YUV422</option>
+            <option value="3">H264</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_11">
+          <label for="enabled_11" language="enable"></label>
+          <select name="video_device_type" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">NUVO</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <span language="video_channel"></span>
+          <span language="videoResolution"></span>
+          <span language="rawFormat"></span>
+        </li>
+        <li>
+          <input type="number" name="video_channel" value="0" min="0" max="24" step="1" class="left">
+          <select name="videoResolution" class="left">
+            <option value="0">Invalid</option>
+            <option value="1">1280 x 720</option>
+            <option value="2">1920 x 1080</option>
+            <option value="3">3840 x 2160</option>
+          </select>
+          <select name="rawFormat" class="right">
+            <option value="0">Disabled</option>
+            <option value="1">YUV420</option>
+            <option value="2">YUV422</option>
+            <option value="3">H264</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_12">
+          <label for="enabled_12" language="enable"></label>
+          <select name="video_device_type" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">NUVO</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <span language="video_channel"></span>
+          <span language="videoResolution"></span>
+          <span language="rawFormat"></span>
+        </li>
+        <li>
+          <input type="number" name="video_channel" value="0" min="0" max="24" step="1" class="left">
+          <select name="videoResolution" class="left">
+            <option value="0">Invalid</option>
+            <option value="1">1280 x 720</option>
+            <option value="2">1920 x 1080</option>
+            <option value="3">3840 x 2160</option>
+          </select>
+          <select name="rawFormat" class="right">
+            <option value="0">Disabled</option>
+            <option value="1">YUV420</option>
+            <option value="2">YUV422</option>
+            <option value="3">H264</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_13">
+          <label for="enabled_13" language="enable"></label>
+          <select name="video_device_type" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">NUVO</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <span language="video_channel"></span>
+          <span language="videoResolution"></span>
+          <span language="rawFormat"></span>
+        </li>
+        <li>
+          <input type="number" name="video_channel" value="0" min="0" max="24" step="1" class="left">
+          <select name="videoResolution" class="left">
+            <option value="0">Invalid</option>
+            <option value="1">1280 x 720</option>
+            <option value="2">1920 x 1080</option>
+            <option value="3">3840 x 2160</option>
+          </select>
+          <select name="rawFormat" class="right">
+            <option value="0">Disabled</option>
+            <option value="1">YUV420</option>
+            <option value="2">YUV422</option>
+            <option value="3">H264</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_14">
+          <label for="enabled_14" language="enable"></label>
+          <select name="video_device_type" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">NUVO</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <span language="video_channel"></span>
+          <span language="videoResolution"></span>
+          <span language="rawFormat"></span>
+        </li>
+        <li>
+          <input type="number" name="video_channel" value="0" min="0" max="24" step="1" class="left">
+          <select name="videoResolution" class="left">
+            <option value="0">Invalid</option>
+            <option value="1">1280 x 720</option>
+            <option value="2">1920 x 1080</option>
+            <option value="3">3840 x 2160</option>
+          </select>
+          <select name="rawFormat" class="right">
+            <option value="0">Disabled</option>
+            <option value="1">YUV420</option>
+            <option value="2">YUV422</option>
+            <option value="3">H264</option>
+          </select>
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_15">
+          <label for="enabled_15" language="enable"></label>
+          <select name="video_device_type" class="right">
+            <option value="0">Invalid</option>
+            <option value="1">ARM IO</option>
+            <option value="2">NUVO</option>
+          </select>
+          <span language="busDeviceType" class="right"></span>
+        </li>
+        <li>
+          <span language="video_channel"></span>
+          <span language="videoResolution"></span>
+          <span language="rawFormat"></span>
+        </li>
+        <li>
+          <input type="number" name="video_channel" value="0" min="0" max="24" step="1" class="left">
+          <select name="videoResolution" class="left">
+            <option value="0">Invalid</option>
+            <option value="1">1280 x 720</option>
+            <option value="2">1920 x 1080</option>
+            <option value="3">3840 x 2160</option>
+          </select>
+          <select name="rawFormat" class="right">
+            <option value="0">Disabled</option>
+            <option value="1">YUV420</option>
+            <option value="2">YUV422</option>
+            <option value="3">H264</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+    <div class="ethernet left">
+      <p language="ethernet"></p>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_16">
+          <label for="enabled_16" language="enable"></label>
+        </li>
+        <li>
+          <span language="bus_channel"></span>
+          <input type="number" name="bus_channel" value="1" max="24" min="1" step="1">
+          <span language="bus_msgid"></span>
+          <input type="text" name="bus_msgid" value="0">
+        </li>
+        <li>
+          <span language="local_ip"></span>
+          <input type="text" name="local_ip" value="192.168.1.102">
+          <span language="local_port_num"></span>
+          <input type="number" name="local_port_num" id="local_port_num" value="5002" max="65535" min="0" step="1">
+        </li>
+        <li>
+          <span language="server_ip"></span>
+          <input type="text" name="server_ip" value="192.168.1.100">
+          <span language="server_port_num"></span>
+          <input type="number" name="server_port_num" id="server_port_num" value="5001" max="65535" min="0" step="1">
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_17">
+          <label for="enabled_17" language="enable"></label>
+        </li>
+        <li>
+          <span language="bus_channel"></span>
+          <input type="number" name="bus_channel" value="1" max="24" min="1" step="1">
+          <span language="bus_msgid"></span>
+          <input type="text" name="bus_msgid" value="0">
+        </li>
+        <li>
+          <span language="local_ip"></span>
+          <input type="text" name="local_ip" value="192.168.1.102">
+          <span language="local_port_num"></span>
+          <input type="number" name="local_port_num" id="local_port_num" value="5002" max="65535" min="0" step="1">
+        </li>
+        <li>
+          <span language="server_ip"></span>
+          <input type="text" name="server_ip" value="192.168.1.100">
+          <span language="server_port_num"></span>
+          <input type="number" name="server_port_num" id="server_port_num" value="5001" max="65535" min="0" step="1">
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_18">
+          <label for="enabled_18" language="enable"></label>
+        </li>
+        <li>
+          <span language="bus_channel"></span>
+          <input type="number" name="bus_channel" value="1" max="24" min="1" step="1">
+          <span language="bus_msgid"></span>
+          <input type="text" name="bus_msgid" value="0">
+        </li>
+        <li>
+          <span language="local_ip"></span>
+          <input type="text" name="local_ip" value="192.168.1.102">
+          <span language="local_port_num"></span>
+          <input type="number" name="local_port_num" id="local_port_num" value="5002" max="65535" min="0" step="1">
+        </li>
+        <li>
+          <span language="server_ip"></span>
+          <input type="text" name="server_ip" value="192.168.1.100">
+          <span language="server_port_num"></span>
+          <input type="number" name="server_port_num" id="server_port_num" value="5001" max="65535" min="0" step="1">
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_19">
+          <label for="enabled_19" language="enable"></label>
+        </li>
+        <li>
+          <span language="bus_channel"></span>
+          <input type="number" name="bus_channel" value="1" max="24" min="1" step="1">
+          <span language="bus_msgid"></span>
+          <input type="text" name="bus_msgid" value="0">
+        </li>
+        <li>
+          <span language="local_ip"></span>
+          <input type="text" name="local_ip" value="192.168.1.102">
+          <span language="local_port_num"></span>
+          <input type="number" name="local_port_num" id="local_port_num" value="5002" max="65535" min="0" step="1">
+        </li>
+        <li>
+          <span language="server_ip"></span>
+          <input type="text" name="server_ip" value="192.168.1.100">
+          <span language="server_port_num"></span>
+          <input type="number" name="server_port_num" id="server_port_num" value="5001" max="65535" min="0" step="1">
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_20">
+          <label for="enabled_20" language="enable"></label>
+        </li>
+        <li>
+          <span language="bus_channel"></span>
+          <input type="number" name="bus_channel" value="1" max="24" min="1" step="1">
+          <span language="bus_msgid"></span>
+          <input type="text" name="bus_msgid" value="0">
+        </li>
+        <li>
+          <span language="local_ip"></span>
+          <input type="text" name="local_ip" value="192.168.1.102">
+          <span language="local_port_num"></span>
+          <input type="number" name="local_port_num" id="local_port_num" value="5002" max="65535" min="0" step="1">
+        </li>
+        <li>
+          <span language="server_ip"></span>
+          <input type="text" name="server_ip" value="192.168.1.100">
+          <span language="server_port_num"></span>
+          <input type="number" name="server_port_num" id="server_port_num" value="5001" max="65535" min="0" step="1">
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_21">
+          <label for="enabled_21" language="enable"></label>
+        </li>
+        <li>
+          <span language="bus_channel"></span>
+          <input type="number" name="bus_channel" value="1" max="24" min="1" step="1">
+          <span language="bus_msgid"></span>
+          <input type="text" name="bus_msgid" value="0">
+        </li>
+        <li>
+          <span language="local_ip"></span>
+          <input type="text" name="local_ip" value="192.168.1.102">
+          <span language="local_port_num"></span>
+          <input type="number" name="local_port_num" id="local_port_num" value="5002" max="65535" min="0" step="1">
+        </li>
+        <li>
+          <span language="server_ip"></span>
+          <input type="text" name="server_ip" value="192.168.1.100">
+          <span language="server_port_num"></span>
+          <input type="number" name="server_port_num" id="server_port_num" value="5001" max="65535" min="0" step="1">
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_22">
+          <label for="enabled_22" language="enable"></label>
+        </li>
+        <li>
+          <span language="bus_channel"></span>
+          <input type="number" name="bus_channel" value="1" max="24" min="1" step="1">
+          <span language="bus_msgid"></span>
+          <input type="text" name="bus_msgid" value="0">
+        </li>
+        <li>
+          <span language="local_ip"></span>
+          <input type="text" name="local_ip" value="192.168.1.102">
+          <span language="local_port_num"></span>
+          <input type="number" name="local_port_num" id="local_port_num" value="5002" max="65535" min="0" step="1">
+        </li>
+        <li>
+          <span language="server_ip"></span>
+          <input type="text" name="server_ip" value="192.168.1.100">
+          <span language="server_port_num"></span>
+          <input type="number" name="server_port_num" id="server_port_num" value="5001" max="65535" min="0" step="1">
+        </li>
+      </ul>
+      <ul class="fixclear">
+        <li>
+          <input type="checkbox" name="enable" id="enabled_23">
+          <label for="enabled_23" language="enable"></label>
+        </li>
+        <li>
+          <span language="bus_channel"></span>
+          <input type="number" name="bus_channel" value="1" max="24" min="1" step="1">
+          <span language="bus_msgid"></span>
+          <input type="text" name="bus_msgid" value="0">
+        </li>
+        <li>
+          <span language="local_ip"></span>
+          <input type="text" name="local_ip" value="192.168.1.102">
+          <span language="local_port_num"></span>
+          <input type="number" name="local_port_num" id="local_port_num" value="5002" max="65535" min="0" step="1">
+        </li>
+        <li>
+          <span language="server_ip"></span>
+          <input type="text" name="server_ip" value="192.168.1.100">
+          <span language="server_port_num"></span>
+          <input type="number" name="server_port_num" id="server_port_num" value="5001" max="65535" min="0" step="1">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="data-reinjection/js/jquery-2.14.js"></script>
+  <script src="data-reinjection/js/bi-common.js"></script>
+  <script src="data-reinjection/js/text.js"></script>
+  <script src="data-reinjection/js/index.js"></script>
+</body>
+
+</html>

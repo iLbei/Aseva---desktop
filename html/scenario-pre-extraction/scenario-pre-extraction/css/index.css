@@ -1,0 +1,67 @@
+.container{
+width: 472px;
+height: 502px;
+position: absolute;
+top: 50%;
+left: 50%;
+margin: -251px 0 0 -236px;
+}
+.container>div:not(:first-of-type) {
+  position: relative;
+  margin-top: 15px;
+  padding: 0 10px;
+  border: 1px solid rgb(220, 220, 220) !important;
+  padding: 15px 10px !important;
+}
+
+
+.container>div:not(:first-of-type)>p {
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  padding: 0 2px;
+}
+.container>div:nth-of-type(2)>div>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container>div:nth-of-type(2)>div>ul>li>div:nth-of-type(2) {
+  margin-top: 7px;
+}
+
+.container>div:nth-of-type(5)>div>div>div {
+  width: 45%;
+}
+
+.container>div:nth-of-type(6)>div>div>div:nth-of-type(1) {
+  width: 40%;
+}
+
+.container>div:nth-of-type(7)>div>div>div:nth-of-type(2) {
+  width: 53%;
+}
+
+.container>div:not(#box4)>div>div:not(:last-child){
+  margin-bottom: 10px;
+}
+
+select {
+  width: 120px;
+  height: 25px;
+}
+
+[type=number] {
+  width: 62px;
+}
+
+[name=tube_width]~div,
+[name=max_curvature]~div,
+[name=range_distance]~div {
+  right: -1px !important;
+}
+
+[name=range_distance]~div>div>div {
+  left: -1px !important;
+}

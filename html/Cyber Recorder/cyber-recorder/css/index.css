@@ -1,0 +1,41 @@
+.container {
+  width: 261px;
+  height: 138px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container>ul {
+  margin-top: 15px;
+  height: 106px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container>ul>li {
+  width: 261px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.container>ul>li>span {
+  margin-top: 3px;
+}
+
+.container>ul>li>input {
+  width: 170px;
+}
+
+/* IP验证，不再需要js，通过css结合pattern就能验证 */
+input[type=text]:valid {
+  color: green;
+}
+
+input[type=text]:invalid {
+  color: red;
+}

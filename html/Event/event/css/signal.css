@@ -1,0 +1,56 @@
+.signal {
+  width: 228px;
+  height: 123px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -61.5px 0 0 -114px;
+}
+
+.signal>.content {
+  height: 123px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.signal>.content>div:last-of-type {
+  text-align: center;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+.signal [type=text] {
+  width: 175px;
+  float: right;
+}
+
+.signal button {
+  width: 108px;
+  height: 24px;
+}
+
+.signal select {
+  width: 42px;
+}
+
+.signal>.content>div:nth-of-type(2)>div:last-of-type {
+  margin-left: 7px;
+}
+
+.signal>.content>div>div:first-of-type {
+  width: 45px;
+}
+
+[language="name"] {
+  padding-top: 3px;
+}
+
+a {
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

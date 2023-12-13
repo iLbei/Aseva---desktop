@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>SRR3 I/O</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="srr3-i-o/css/common.css">
+  <link rel="stylesheet" href="srr3-i-o/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <input type="radio" name="rad" id="r1" checked>
+    <input type="radio" name="rad" id="r2">
+    <input type="radio" name="rad" id="r3">
+    <input type="radio" name="rad" id="r4">
+    <div class="top fixclear">
+      <label for="r1" class="label1" language="rear_left"></label>
+      <label for="r2" class="label2" language="rear_right"></label>
+      <label for="r3" class="label3" language="front_left"></label>
+      <label for="r4" class="label4" language="front_right"></label>
+    </div>
+    <div class="content">
+      <div class="rear_left">
+        <div class="fixclear">
+          <span class="left" language="output_channel"></span>
+          <select class="right" name="out_channel" id="">
+            <option value="-1" selected language="disabled"></option>
+            <option value="0" language="obj_sen_a"></option>
+            <option value="1" language="obj_sen_b"></option>
+            <option value="2" language="obj_sen_c"></option>
+            <option value="3" language="obj_sen_d"></option>
+            <option value="4" language="obj_sen_e"></option>
+            <option value="5" language="obj_sen_f"></option>
+            <option value="6" language="obj_sen_g"></option>
+            <option value="7" language="obj_sen_h"></option>
+            <option value="8" language="obj_sen_i"></option>
+            <option value="9" language="obj_sen_j"></option>
+            <option value="10" language="obj_sen_k"></option>
+            <option value="11" language="obj_sen_l"></option>
+          </select>
+        </div>
+        <div class="fixclear center">
+          <div class="left">
+            <div class="can fixclear">
+              <div class="left">
+                <span language="can_channel"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>RX</span>
+                  <input type="number" name="can_channel" value="1" min="1" max="16" step="1" id="">
+                </div>
+                <div>
+                  <span>TX</span>
+                  <input type="number" name="can_channel_tx" value="1" min="1" max="16" step="1" id="">
+                </div>
+              </div>
+            </div>
+            <div class="origin fixclear">
+              <div class="left">
+                <span language="origin"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>X</span>
+                  <input type="number" name="origin_x" onblur="xyChange(this)" oninput="xyChangeInput(this)"
+                    value="0.00" min="-12" max="1" step="0.01" id="">
+                </div>
+                <div>
+                  <span>Y</span>
+                  <input type="number" name="origin_y" onblur="xyChange(this)" oninput="xyChangeInput(this)"
+                    value="0.00" min="-3" max="3" step="0.01" id="">
+                </div>
+              </div>
+            </div>
+            <div class="position fixclear">
+              <div class="left">
+                <span language="position"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>X</span>
+                  <input type="number" name="pos_x" oninput="xyChangeInput(this)" onblur="xyChange(this)" value="0.00"
+                    min="-12" max="1" step="0.01" id="">
+                </div>
+                <div>
+                  <span>Y</span>
+                  <input type="number" name="pos_y" oninput="xyChangeInput(this)" onblur="xyChange(this)" value="0.00"
+                    min="-3" max="3" step="0.01" id="">
+                </div>
+              </div>
+            </div>
+            <div class="orie fixclear">
+              <span class="left" language="orie"></span>
+              <input class="right" type="number" name="orient" onblur="lChange(this)" oninput="xyChangeInput(this)"
+                value="0.0" min="-180" max="180" step="0.1" id="">
+            </div>
+          </div>
+          <div class="right">
+            <canvas class="canvas" width="535" height="364"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="rear_right">
+        <div class="fixclear">
+          <span class="left" language="output_channel"></span>
+          <select class="right" name="out_channel" id="">
+            <option value="-1" selected language="disabled"></option>
+            <option value="0" language="obj_sen_a"></option>
+            <option value="1" language="obj_sen_b"></option>
+            <option value="2" language="obj_sen_c"></option>
+            <option value="3" language="obj_sen_d"></option>
+            <option value="4" language="obj_sen_e"></option>
+            <option value="5" language="obj_sen_f"></option>
+            <option value="6" language="obj_sen_g"></option>
+            <option value="7" language="obj_sen_h"></option>
+            <option value="8" language="obj_sen_i"></option>
+            <option value="9" language="obj_sen_j"></option>
+            <option value="10" language="obj_sen_k"></option>
+            <option value="11" language="obj_sen_l"></option>
+          </select>
+        </div>
+        <div class="fixclear center">
+          <div class="left">
+            <div class="can fixclear">
+              <div class="left">
+                <span language="can_channel"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>RX</span>
+                  <input type="number" name="can_channel" value="1" min="1" max="16" step="1" id="">
+                </div>
+                <div>
+                  <span>TX</span>
+                  <input type="number" name="can_channel_tx" value="2" min="1" max="16" step="1" id="">
+                </div>
+              </div>
+            </div>
+            <div class="origin fixclear">
+              <div class="left">
+                <span language="origin"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>X</span>
+                  <input type="number" name="origin_x" onblur="xyChange(this)" oninput="xyChangeInput(this)"
+                    value="0.00" min="-12" max="1" step="0.01" id="">
+                </div>
+                <div>
+                  <span>Y</span>
+                  <input type="number" name="origin_y" onblur="xyChange(this)" oninput="xyChangeInput(this)"
+                    value="0.00" min="-3" max="3" step="0.01" id="">
+                </div>
+              </div>
+            </div>
+            <div class="position fixclear">
+              <div class="left">
+                <span language="position"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>X</span>
+                  <input type="number" name="pos_x" oninput="xyChangeInput(this)" onblur="xyChange(this)" value="0.00"
+                    min="-12" max="1" step="0.01" id="">
+                </div>
+                <div>
+                  <span>Y</span>
+                  <input type="number" name="pos_y" oninput="xyChangeInput(this)" onblur="xyChange(this)" value="0.00"
+                    min="-3" max="3" step="0.01" id="">
+                </div>
+              </div>
+            </div>
+            <div class="orie fixclear">
+              <span class="left" language="orie"></span>
+              <input class="right" type="number" name="orient" onblur="lChange(this)" oninput="lChangeInput(this)"
+                value="0.0" min="-180" max="180" step="0.1" id="">
+            </div>
+          </div>
+          <div class="right">
+            <canvas class="canvas" width="535" height="364"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="front_left">
+        <div class="fixclear">
+          <span class="left" language="output_channel"></span>
+          <select class="right" name="out_channel" id="">
+            <option value="-1" selected language="disabled"></option>
+            <option value="0" language="obj_sen_a"></option>
+            <option value="1" language="obj_sen_b"></option>
+            <option value="2" language="obj_sen_c"></option>
+            <option value="3" language="obj_sen_d"></option>
+            <option value="4" language="obj_sen_e"></option>
+            <option value="5" language="obj_sen_f"></option>
+            <option value="6" language="obj_sen_g"></option>
+            <option value="7" language="obj_sen_h"></option>
+            <option value="8" language="obj_sen_i"></option>
+            <option value="9" language="obj_sen_j"></option>
+            <option value="10" language="obj_sen_k"></option>
+            <option value="11" language="obj_sen_l"></option>
+          </select>
+        </div>
+        <div class="fixclear center">
+          <div class="left">
+            <div class="can fixclear">
+              <div class="left">
+                <span language="can_channel"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>RX</span>
+                  <input type="number" name="can_channel" value="1" min="1" max="16" step="1" id="">
+                </div>
+                <div>
+                  <span>TX</span>
+                  <input type="number" name="can_channel_tx" value="3" min="1" max="16" step="1" id="">
+                </div>
+              </div>
+            </div>
+            <div class="origin fixclear">
+              <div class="left">
+                <span language="origin"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>X</span>
+                  <input type="number" onblur="xyChange(this)" oninput="xyChangeInput(this)" name="origin_x"
+                    value="0.00" min="-12" max="1" step="0.01" id="">
+                </div>
+                <div>
+                  <span>Y</span>
+                  <input type="number" onblur="xyChange(this)" oninput="xyChangeInput(this)" name="origin_y"
+                    value="0.00" min="-3" max="3" step="0.01" id="">
+                </div>
+              </div>
+            </div>
+            <div class="position fixclear">
+              <div class="left">
+                <span language="position"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>X</span>
+                  <input type="number" name="pos_x" oninput="xyChangeInput(this)" onblur="xyChange(this)" value="0.00"
+                    min="-12" max="1" step="0.01" id="">
+                </div>
+                <div>
+                  <span>Y</span>
+                  <input type="number" name="pos_y" oninput="xyChangeInput(this)" onblur="xyChange(this)" value="0.00"
+                    min="-3" max="3" step="0.01" id="">
+                </div>
+              </div>
+            </div>
+            <div class="orie fixclear">
+              <span class="left" language="orie"></span>
+              <input class="right" type="number" name="orient" onblur="lChange(this)" oninput="lChangeInput(this)"
+                value="0.0" min="-180" max="180" step="0.1" id="">
+            </div>
+          </div>
+          <div class="right">
+            <canvas class="canvas" width="535" height="364"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="front_right">
+        <div class="fixclear">
+          <span class="left" language="output_channel"></span>
+          <select class="right" name="out_channel" id="">
+            <option value="-1" selected language="disabled"></option>
+            <option value="0" language="obj_sen_a"></option>
+            <option value="1" language="obj_sen_b"></option>
+            <option value="2" language="obj_sen_c"></option>
+            <option value="3" language="obj_sen_d"></option>
+            <option value="4" language="obj_sen_e"></option>
+            <option value="5" language="obj_sen_f"></option>
+            <option value="6" language="obj_sen_g"></option>
+            <option value="7" language="obj_sen_h"></option>
+            <option value="8" language="obj_sen_i"></option>
+            <option value="9" language="obj_sen_j"></option>
+            <option value="10" language="obj_sen_k"></option>
+            <option value="11" language="obj_sen_l"></option>
+          </select>
+        </div>
+        <div class="fixclear center">
+          <div class="left">
+            <div class="can fixclear">
+              <div class="left">
+                <span language="can_channel"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>RX</span>
+                  <input type="number" name="can_channel" value="1" min="1" max="16" step="1" id="">
+                </div>
+                <div>
+                  <span>TX</span>
+                  <input type="number" name="can_channel_tx" value="4" min="1" max="16" step="1" id="">
+                </div>
+              </div>
+            </div>
+            <div class="origin fixclear">
+              <div class="left">
+                <span language="origin"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>X</span>
+                  <input type="number" name="origin_x" onblur="xyChange(this)" oninput="xyChangeInput(this)"
+                    value="0.00" min="-12" max="1" step="0.01" id="">
+                </div>
+                <div>
+                  <span>Y</span>
+                  <input type="number" name="origin_y" onblur="xyChange(this)" oninput="xyChangeInput(this)"
+                    value="0.00" min="-3" max="3" step="0.01" id="">
+                </div>
+              </div>
+            </div>
+            <div class="position fixclear">
+              <div class="left">
+                <span language="position"></span>
+              </div>
+              <div class="right">
+                <div>
+                  <span>X</span>
+                  <input type="number" name="pos_x" oninput="xyChangeInput(this)" onblur="xyChange(this)" value="0.00"
+                    min="-12" max="1" step="0.01" id="">
+                </div>
+                <div>
+                  <span>Y</span>
+                  <input type="number" name="pos_y" oninput="xyChangeInput(this)" onblur="xyChange(this)" value="0.00"
+                    min="-3" max="3" step="0.01" id="">
+                </div>
+              </div>
+            </div>
+            <div class="orie fixclear">
+              <span class="left" language="orie"></span>
+              <input class="right" type="number" name="orient" onblur="lChange(this)" oninput="lChangeInput(this)"
+                value="0.0" min="-180" max="180" step="0.1" id="">
+            </div>
+          </div>
+          <div class="right">
+            <canvas class="canvas" width="535" height="364"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <input type="checkbox" name="output_raw_vel" id="output_raw_vel">
+      <label for="output_raw_vel" language="output_raw_vel"></label>
+    </div>
+  </div>
+  <script src="srr3-i-o/js/jquery-2.14.js "></script>
+  <script src="srr3-i-o/js/bi-common.js "></script>
+  <script src="srr3-i-o/js/text.js "></script>
+  <script src="srr3-i-o/js/index.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 565px;
+  height: 291px;
+  margin: -145.5px 0 0 -282.5px;
+}
+
+div>div {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px 10px 0px;
+  width: 266px;
+}
+div>div:nth-child(1){
+  width: 295px;
+}
+div>div>p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+}
+
+div>div>ul>li {
+  height: 26px;
+  margin-bottom: 5px;
+}
+
+input[type=text] {
+  width: 126px;
+}
+
+div>div>ul>li>span:not([language="transmit_mode"]) {
+  padding-top: 3.5px;
+}
+
+div>div>ul>li:first-child,
+div>div>ul>li:nth-child(8) {
+  height: 26px;
+  line-height: 26px;
+}
+
+a {
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+[name="transmit_mode"]{
+  width: 100px;
+}

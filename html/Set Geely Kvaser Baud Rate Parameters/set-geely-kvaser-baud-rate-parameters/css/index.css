@@ -1,0 +1,25 @@
+.container {
+  height: 770px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container>div:not(:nth-child(1)) {
+  padding: 7px 10px;
+  background-color: #FFE4B5;
+}
+
+.container input[type='number'] {
+  width: 50px;
+  margin: 0 10px 0px 5px;
+}
+
+.container span {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.container>div>span:nth-child(1) {
+  width: 80px;
+}

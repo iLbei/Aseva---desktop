@@ -1,0 +1,47 @@
+.container {
+  padding: 15px 10px 0px;
+}
+
+.container>div,
+.container>div:nth-of-type(2)>div {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.container>div:nth-of-type(2) {
+  margin-top: 15px;
+}
+
+.container>div:nth-of-type(2)>div:nth-of-type(1) {
+  margin: 5px 0px 10px;
+}
+
+.container>div>p,
+.container>div:nth-of-type(2)>div>p {
+  position: absolute;
+  left: 14px;
+  padding: 0 2px;
+  top: -10px;
+}
+
+.container>div:nth-of-type(2)>div>div:last-of-type {
+  margin-top: 10px;
+}
+
+[language=not_config] {
+  max-width: 151px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+select,[name=TargetSlotId] {
+  width: 143px;
+}
+[language="park_slot_file_path"]{
+  width: 177px;
+}
+.container>div:nth-child(2) span{
+  padding-top: 3px;
+}

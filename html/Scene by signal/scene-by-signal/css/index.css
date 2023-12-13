@@ -1,0 +1,319 @@
+.container {
+  width: 740px;
+  height: 371px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -185.5px 0 0 -370px;
+}
+
+.container>.content {
+  width: 100%;
+  overflow: auto;
+  height: 346px;
+  padding: 0px 5px;
+  overflow-x: hidden;
+  background-color: #fffff0;
+}
+
+.container>.top {
+  padding-bottom: 5px;
+}
+
+.container>.content>.box {
+  position: relative;
+  margin-top: 12px;
+}
+
+.container>.content>div:first-of-type {
+  display: none;
+}
+
+.container>.content>.box>p {
+  position: absolute;
+  top: -9px;
+  left: 9px;
+  background-color: #fffff0;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  cursor: default;
+}
+
+.container>.content>.box>div {
+  border: 1px solid #dcdcdc;
+  padding: 8px 5px 2px 7px;
+}
+
+.container>.content>.box>div>div.left>div {
+  height: 26px;
+  line-height: 26px;
+}
+
+.container>.content>.box>div>div.right>div>div {
+  height: 26px;
+  line-height: 26px;
+}
+
+.container>.content>.box>div>div>div {
+  margin-bottom: 2px;
+}
+
+.container>.content>.box>div>div:last-of-type>div>div {
+  margin-bottom: 2px;
+}
+
+.container>.content>.box>div>div:nth-of-type(2) {
+  margin-left: 20px;
+}
+
+.container>.shadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.edit_scene {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 216px;
+  height: 92px;
+  margin: -46px 0 0 -108px;
+}
+
+.edit_scene span {
+  width: 45px;
+}
+
+.edit_scene>.content>div>div {
+  margin-bottom: 10px;
+}
+
+#id {
+  max-width: 164px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.id {
+  width: 135px;
+  margin-left: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+
+.edit_scene button {
+  width: 109px;
+  height: 27px;
+  margin-left: 55px;
+}
+
+.signal_condition {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 218px;
+  height: 100px;
+  margin: -50px 0 0 -109px;
+}
+
+
+.signal_condition select {
+  width: 41px;
+}
+
+.signal_condition button {
+  width: 109px;
+  height: 25px;
+  margin-left: 51px;
+}
+
+.signal_condition>.content>div>div {
+  margin-bottom: 15px;
+}
+
+.signal_condition input[name="input"],
+.edit_scene [name="name"] {
+  width: 170px;
+}
+
+.config {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 406px;
+  height: 249px;
+  margin: -124.5px 0 0 -203px;
+}
+
+.config>.content>.table {
+  width: 406px;
+  height: 208px;
+  background-color: #fff;
+  border: 1px solid #808079;
+}
+
+.config>.content button {
+  width: 75px;
+  height: 27px;
+  float: right;
+  margin-top: 10px;
+}
+
+.config>.content>.table>.top>div:first-of-type,
+.config>.content>.table>.body>div>div:first-of-type {
+  width: 40px;
+  height: 27px;
+  border-bottom: 1px solid black;
+}
+
+.config>.content>.table>.top>div:first-of-type:hover,
+.config>.content>.table>.body>div>div:first-of-type:hover {
+  background-color: blue;
+  opacity: 0.2;
+}
+
+.config>.content>.table>.top>div:not(:first-of-type) {
+  width: 139.8px;
+  height: 27px;
+  line-height: 27px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  text-indent: 6px;
+}
+
+.config>.content>.table>.top>div:last-of-type,
+.config>.content>.table>.body>div>div:last-of-type {
+  width: 224.1px !important;
+}
+
+.config>.content>.table>.body>div>div:not(:first-of-type) {
+  width: 139.7px;
+  height: 27px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.config>.content>.table>.body input {
+  border: 0;
+  width: 139.7px;
+  text-indent: 2px;
+}
+
+.config>.content>.table>.body>div:first-of-type {
+  display: none;
+}
+
+.config>.content>.table>.body {
+  height: 179px;
+  width: 404px;
+    overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.config>.content>.table>.body::-webkit-scrollbar {
+  width: 0;
+}
+
+.config [name=value] {
+  width: 224px !important;
+}
+
+.config>.error {
+  position: absolute;
+  top: 70px;
+  left: 125px;
+  width: 213px;
+  height: 153px;
+  border: 1px solid black;
+  background-color: #f0f0f0;
+  display: none;
+}
+
+.config>.error>.content {
+  height: 73px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 73px;
+}
+
+.config>.error>.bottom>button {
+  width: 88px;
+  height: 28px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.w120 {
+  width: 134px;
+  margin-right: 3px;
+}
+
+.w120>[type=checkbox] {
+  margin-right: 5px;
+  margin-top: 6px;
+}
+
+.img {
+  width: 28px;
+  height: 82.5px;
+  line-height: 87.5px;
+  background-color: #e6e6fa;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.img:hover {
+  background-color: #b0c4de;
+}
+
+.img>img {
+  margin-top: 28px;
+}
+
+.pik {
+  color: #a6a600 !important;
+  text-decoration: none;
+}
+
+[type=number],
+[type=_number] {
+  width: 51px;
+  height: 23px;
+}
+
+.blue1 {
+  background-color: #107de4;
+  color: white;
+}
+
+.blue2 {
+  background-color: rgba(31, 119, 179, 0.4);
+}
+
+.space_a {
+  position: relative;
+}
+
+.space_a>a {
+  max-width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.w50 {
+  margin-right: 5px;
+}

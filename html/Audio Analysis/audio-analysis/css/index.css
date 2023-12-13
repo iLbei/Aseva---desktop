@@ -1,0 +1,162 @@
+.container {
+  width: 360px;
+  height: 512px;
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content>div:nth-of-type(1)>span:last-of-type {
+  margin-left: 13px;
+}
+
+.content>div:nth-of-type(2) {
+  border: 1px solid #868686;
+  height: 168px;
+  padding: 5px;
+  overflow: auto;
+  margin: 5px 0px;
+}
+
+.content>div:last-of-type>input[type=text] {
+  width: 60px;
+}
+
+.content>.border>div>img {
+  margin-top: 2.5px;
+  padding: 1px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.content>.border>div:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.content>.border>div>input:nth-of-type(1) {
+  width: 106px;
+  margin-right: 40px;
+}
+
+.content>.border>div>input:not(:first-of-type) {
+  width: 64px;
+  margin: 0 5px;
+}
+
+.content>.border>div>[type=button] {
+  width: 21px !important;
+  vertical-align: bottom;
+  background-image: url('../image/x.png');
+}
+
+.content>.border>div:first-of-type {
+  display: none;
+}
+
+.bottom,
+.content>div:nth-child(4)>div,
+.bottom>li:nth-child(1),
+.freq>ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom {
+  height: 169px;
+  flex-direction: column;
+}
+
+.content>div:nth-child(4)>div,
+.bottom>li:nth-child(1) {
+  flex-direction: row;
+}
+
+.content>div:nth-child(4)>div>div:nth-child(1) input {
+  width: 43px;
+}
+
+.bottom>li:nth-of-type(1) {
+  margin-top: 5px;
+}
+
+.content>div:nth-child(4)>div>div:nth-child(2) input {
+  width: 50px;
+}
+
+.content>div:nth-child(4)>div>div:nth-child(3) input {
+  width: 40px;
+}
+
+.bottom input[type=number] {
+  width: 50px;
+}
+
+.bottom button {
+  width: 50px;
+  padding: 0;
+}
+
+.bottom [name=EnhanceTimes] {
+  margin: -3px 0 0 8px;
+}
+
+[language="add"] {
+  margin-right: 20px;
+}
+
+[language="frequency"] {
+  width: 138px;
+  margin-left: 6px;
+}
+
+/* 弹窗：Add */
+.freq {
+  width: 218px;
+  height: 130px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -65px 0 0 -109px;
+}
+
+.freq input[name="freq"] {
+  width: 98px;
+}
+
+.freq [language=freq],
+.freq [language=trigger] {
+  width: 86px;
+}
+
+.freq>ul {
+  flex-direction: column;
+  height: 130px;
+}
+
+.freq>ul>li:nth-child(2) input {
+  width: 42px;
+}
+
+.freq [language=lower] {
+  width: 43px;
+  margin-left: 90px;
+  margin-right: 9px;
+}
+
+.freq [language=upper],
+.freq [language=lower] {
+  font-size: 12px;
+}
+
+.freq>ul>li:nth-child(3) {
+  text-align: center;
+}
+
+fieldset {
+  border: 1px solid #868686;
+}
+
+fieldset:nth-child(2) {
+  margin-top: 8px;
+}

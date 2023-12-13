@@ -1,0 +1,14 @@
+.container{
+    margin:20px 10px;
+}
+.container div{
+    margin-bottom: 10px;
+}
+.container div:nth-child(1) span{
+    vertical-align: 1.5px;
+    margin-left: 5px;
+}
+.container div:nth-child(2) select{
+    width: 110px;
+    margin-left: 3px;
+}

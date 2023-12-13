@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="bus/css/common.css">
+  <link rel="stylesheet" href="bus/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container validation_parameters">
+    <ul>
+      <li>
+        <span language="origin"></span> <input type="number" max="255" min="0" value="0" name="origin"
+          step="1"><span>0x0</span>
+      </li>
+      <li>
+        <span language="poly">Poly:</span> <input type="number" max="255" min="0" value="0" name="poly"
+          step="1"><span>0x0</span>
+      </li>
+      <li>
+        <input type="checkbox" name="inversion" id="inversion">
+        <label for="inversion" language="inversion"></label>
+      </li>
+    </ul>
+  </div>
+  <script src="bus/js/jquery-2.14.js"></script>
+  <script src="bus/js/bi-common.js"></script>
+  <script src="bus/js/text.js"></script>
+  <script src="bus/js/bus.validation.js"></script>
+</body>
+
+</html>

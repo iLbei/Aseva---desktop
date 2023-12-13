@@ -1,0 +1,52 @@
+.container>div:not(:first-of-type) {
+  border: 1px solid rgb(220, 220, 220);
+  position: relative;
+  padding: 15px 10px;
+  margin-top: 15px;
+}
+
+.container>div:not(:first-of-type)>p {
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  padding: 0 2px;
+}
+
+.container>div:not(:first-of-type)>div>div:not(:last-child) {
+  margin-right: 13px;
+}
+
+.container>div:last-of-type>table {
+  width: 518px;
+}
+
+.container>div:nth-child(3)>div>div:nth-child(1),
+.container>div:nth-child(4)>div>div:nth-child(1){
+  padding-top: 4px;
+}
+
+.container>div:nth-child(5)>div {
+  margin-bottom: 10px;
+}
+
+.container>div:nth-of-type(6)>div:last-of-type>div:nth-of-type(2)>div {
+  margin-left: 5px;
+}
+
+[type=number] {
+  width: 50px;
+}
+
+[name="slope_pitch"] {
+  margin-right: 28px;
+}
+
+[name=min_cure] {
+  width: 55px;
+}
+
+[name=slope_channel] {
+  width: 140px;
+  height: 25px;
+  margin-left: 5px;
+}

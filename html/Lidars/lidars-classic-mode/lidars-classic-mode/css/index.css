@@ -1,0 +1,223 @@
+.container {
+  position: relative;
+  padding: 0;
+}
+
+[name=lidar],
+.re_value,
+.rs_value {
+  display: none;
+}
+
+label {
+  display: block;
+  float: left;
+  width: 70px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.label>.right {
+  margin-right: 20px;
+  color: orange;
+  margin-top: 3px;
+}
+
+#lidar1:checked~.label .l1 {
+  background-color: #fff;
+}
+
+#lidar2:checked~.label .l2 {
+  background-color: #fff;
+}
+
+#lidar1:checked~.content .lidar1,
+#lidar2:checked~.content .lidar2 {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.content {
+  border: 3px solid white;
+}
+
+.content>div {
+  display: none;
+  padding: 0 10px;
+}
+
+.content>div>div {
+  padding: 10px 10px 0px;
+}
+
+.content>div>div {
+  position: relative;
+  border: 1px solid rgb(220, 220, 220);
+  margin-top: 12px;
+}
+
+.content>div>div>p {
+  position: absolute;
+  left: 14px;
+  background-color: #fff;
+  padding: 0 2px;
+  background-color: #f0f0f0;
+  top: -10px;
+}
+
+[type=checkbox] {
+  vertical-align: middle;
+}
+
+[name=filter_ip] {
+  width: 159px;
+  height: 23px;
+  margin-left: 10px;
+}
+
+[name=adaptor] {
+  width: 306px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+[name=model] {
+  vertical-align: -2px;
+}
+
+[name=split],
+[name=out_channel_pts],
+[name=out_channel_map] {
+  width: 183px;
+  margin-left: 10px;
+}
+
+.content>div>.top>div>div {
+  margin-bottom: 5px;
+}
+
+.model>form>.left {
+  margin-left: 14px;
+}
+
+.model>form>.right {
+  margin-left: 10px;
+}
+
+[type=number]{
+  width: 68px;
+}
+
+.bottom>div>div:first-of-type {
+  margin: 10px 0;
+}
+
+[name=out_channel_pts] {
+  margin-bottom: 7px;
+}
+
+.bottom>div>div:last-of-type {
+  margin: 15px 0;
+}
+
+.bottom>div>div:last-of-type>.right {
+  position: relative;
+  width: 183px;
+  height: 224px;
+  background-color: #fff;
+}
+
+.bottom>div>div:last-of-type>.right>a {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+.bottom>div>div:last-of-type>.left {
+  margin-top: 60px;
+  width: 200px;
+}
+
+.bottom>div>div:last-of-type>.left>div {
+  margin-bottom: 5px;
+}
+
+.bottom>div>div:last-of-type>.left>div>div>span {
+  margin-right: 3px;
+}
+
+.ve64 {
+  position: absolute;
+  left: 25px;
+  top: 130px;
+  width: 387px;
+  height: 397px;
+  border: 1px solid black;
+  background-color: #f0f0f0;
+  display: none;
+}
+
+.title {
+  height: 27px;
+  background-color: black;
+  color: white;
+  line-height: 2;
+}
+
+.title>span:first-of-type {
+  margin-left: 20px;
+}
+
+.title>div {
+  width: 30px;
+  height: 27px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 27px;
+  cursor: default;
+}
+
+.title>div:hover {
+  background-color: red;
+}
+
+.ve_bottome>div:first-of-type {
+  width: 357px;
+  height: 319px;
+  background-color: #fff;
+  margin: 10px auto;
+  overflow: auto;
+}
+
+.ve_bottome>div:last-of-type>a {
+  display: block;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  cursor: default;
+  border: 1px solid #bfb6b6;
+  margin: -2px auto;
+  background-color: #dedede;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: none;
+}
+
+.table>div>div {
+  float: left;
+  width: 25%;
+  height: 15px;
+  line-height: 15px;
+  text-indent: 6px;
+}

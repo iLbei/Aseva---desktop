@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>DOW Evaluation</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="dow-evaluation/css/common.css">
+  <link rel="stylesheet" href="dow-evaluation/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="enabled">
+      <input type="checkbox" name="enabled" id="enabled">
+      <label for="enabled" language="enabled"></label>
+    </div>
+    <div class="content fixclear">
+      <div class="left">
+        <fieldset>
+          <legend language="common"></legend>
+          <div>
+            <div>
+              <span language="final_msg"></span>
+              <a href="javascript:;" name="final_msg" language="not_config"></a>
+            </div>
+            <div>
+              <span language="object_sensor"></span>
+              <span language="l"></span>
+              <select name="left_sensor_source">
+                <option value="Object sensor A" selected language="obj_sen_a">Object sensor A</option>
+                <option value="Object sensor B" language="obj_sen_b">Object sensor B</option>
+                <option value="Object sensor C" language="obj_sen_c">Object sensor C</option>
+                <option value="Object sensor D" language="obj_sen_d">Object sensor D</option>
+                <option value="Object sensor E" language="obj_sen_e">Object sensor E</option>
+                <option value="Object sensor F" language="obj_sen_f">Object sensor F</option>
+                <option value="Object sensor G" language="obj_sen_g">Object sensor G</option>
+                <option value="Object sensor H" language="obj_sen_h">Object sensor H</option>
+                <option value="Object sensor I" language="obj_sen_i">Object sensor I</option>
+                <option value="Object sensor J" language="obj_sen_j">Object sensor J</option>
+                <option value="Object sensor K" language="obj_sen_k">Object sensor K</option>
+                <option value="Object sensor L" language="obj_sen_l">Object sensor L</option>
+              </select>
+              <span language="r">R</span>
+              <select name="right_sensor_source">
+                <option value="Object sensor A" selected language="obj_sen_a">Object sensor A</option>
+                <option value="Object sensor B" language="obj_sen_b">Object sensor B</option>
+                <option value="Object sensor C" language="obj_sen_c">Object sensor C</option>
+                <option value="Object sensor D" language="obj_sen_d">Object sensor D</option>
+                <option value="Object sensor E" language="obj_sen_e">Object sensor E</option>
+                <option value="Object sensor F" language="obj_sen_f">Object sensor F</option>
+                <option value="Object sensor G" language="obj_sen_g">Object sensor G</option>
+                <option value="Object sensor H" language="obj_sen_h">Object sensor H</option>
+                <option value="Object sensor I" language="obj_sen_i">Object sensor I</option>
+                <option value="Object sensor J" language="obj_sen_j">Object sensor J</option>
+                <option value="Object sensor K" language="obj_sen_k">Object sensor K</option>
+                <option value="Object sensor L" language="obj_sen_l">Object sensor L</option>
+              </select>
+            </div>
+            <div>
+              <span language="vehicle_width"></span>
+              <input type="number" name="vehicle_width" value="1" min="1" max="5" step="0.01">
+              <span language="length"></span>
+              <input type="number" name="vehicle_length" value="3" min="3" max="20" step="0.01">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>DOW</legend>
+          <div>
+            <ul class="top fixclear">
+              <li>
+                <input type="checkbox" name="dow_always_enable" id="always_enable">
+                <label for="always_enable" language="always_enable"></label>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="left" language="dow_ign_on_enable_signal"></span>
+                  <a href="javascript:;" name="dow_ign_on_enable_signal" language="not_config"></a>
+                </div>
+                <div class="right">
+                  <span class="left" language="dow_ign_off_enable_signal"></span>
+                  <a href="javascript:;" name="dow_ign_off_enable_signal" language="not_config"></a>
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="left" language="value"></span>
+                  <input type="text" class="green" name="dow_ign_on_enable_value" value="0"
+                    pattern="[,0-9]+$">
+                </div>
+                <div class="right">
+                  <span class="left" language="value"></span>
+                  <input type="text" class="green" name="dow_ign_off_enable_value" value="0"
+                    pattern="[,0-9]+$">
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="left" language="dow_gear_signal"></span>
+                  <a href="javascript:;" name="dow_gear_signal" language="not_config"></a>
+                </div>
+                <div class="right">
+                  <span class="left" language="dow_non_reverse_gear_signal_value"></span>
+                  <input type="text" name="dow_non_reverse_gear_signal_value" pattern="[,0-9]+$">
+                </div>
+              </li>
+              <li>
+                <div class="right">
+                  <span class="left" language="dow_forward_gear_signal_value"></span>
+                  <input type="text" class="green" name="dow_forward_gear_signal_value" value="0"
+                    pattern="[,0-9]+$">
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="left" language="left_warn_signal"></span>
+                  <a href="javascript:;" name="dow_left_warn_signal" language="not_config"></a>
+                </div>
+                <div class="right">
+                  <span class="left" language="right_warn_signal"></span>
+                  <a href="javascript:;" name="dow_right_warn_signal" language="not_config"></a>
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="left" language="value"></span>
+                  <input type="text" class="green" name="dow_left_warn_value" value="0"
+                    pattern="[,0-9]+$">
+                </div>
+                <div class="right">
+                  <span class="left" language="value"></span>
+                  <input type="text" class="green" name="dow_right_warn_value" value="0"
+                    pattern="[,0-9]+$">
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <input type="checkbox" name="dow_gt_signal_checked" onclick="clickDowGtSignalChecked(this)"
+                    id="dow_gt_signal_checked">
+                  <label for="dow_gt_signal_checked" language="dow_left_gt_signal"></label>
+                  <a href="javascript:;" name="dow_left_gt_signal" language="not_config"></a>
+                </div>
+                <div class="right">
+                  <span class="left" language="dow_right_gt_signal"></span>
+                  <a href="javascript:;" name="dow_right_gt_signal" language="not_config"></a>
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="left" language="value"></span>
+                  <input type="text" class="green" name="dow_left_gt_value" value="0"
+                    pattern="[,0-9]+$">
+                </div>
+                <div class="right">
+                  <span class="left" language="value"></span>
+                  <input type="text" class="green" name="dow_right_gt_value" value="0"
+                    pattern="[,0-9]+$">
+                </div>
+              </li>
+            </ul>
+            <div class="bottom">
+              <fieldset>
+                <legend language="dow_algorithm">DOW Algorithm</legend>
+                <div>
+                  <div>
+                    <span>N to C [m]:</span>
+                    <input type="number" name="dow_area_n_to_c" value="0" min="0" max="100" step="0.01">
+                    <span>,B to N [m]:</span>
+                    <input type="number" name="dow_area_b_to_n" value="0" min="0" max="100" step="0.01">
+                    <span>, A to B [m]:</span>
+                    <input type="number" name="dow_area_a_to_b" value="10" min="0" max="100" step="0.01">
+                  </div>
+                  <div>
+                    <span>E to G [m]:</span>
+                    <input type="number" name="dow_area_e_to_g"  min="0" max="100" value="2" step="0.01">
+                    <input type="number" name="dow_ego_low_speed" min="0" max="1000" step="0.01" class="right">
+                    <span class="right" language="dow_ego_low_speed">11</span>
+                  </div>
+                  <div>
+                    <span language="dow_closing_speed_level2"></span>
+                    <input type="number" class="bar" name="dow_closing_speed_level2" value="15" min="0" max="20"
+                      step="0.01">
+                    <span language="dow_ttc_level2"></span>
+                    <input type="number" class="bar" name="dow_ttc_level2" value="3" min="0" max="10" step="0.01">
+                    <span language="sec"></span>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="bottom2">
+              <div class="fixclear">
+                <div class="fixclear left">
+                  <span class="left" language="dow_range_fd"></span>
+                  <input class="right" type="number" name="dow_range_fd" value="0" min="-5" max="5" step="0.01">
+                </div>
+                <div class="fixclear right ">
+                  <span class="left" language="dow_ttc_fd"></span>
+                  <input class="right" type="number" name="dow_ttc_fd" value="0" min="-1" max="1" step="0.01">
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="fixclear left">
+                  <span class="left" language="dow_range_md"></span>
+                  <input class="right" type="number" name="dow_range_md" value="0" min="-5" max="5" step="0.01">
+                </div>
+                <div class="fixclear right">
+                  <span class="left" language="dow_ttc_md"></span>
+                  <input class="right" type="number" name="dow_ttc_md" value="0" min="-1" max="1" step="0.01">
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="right">
+        <img src="dow-evaluation/images/dow_area.png" alt="">
+      </div>
+    </div>
+  </div>
+  <script src="dow-evaluation/js/jquery-2.14.min.js"></script>
+  <script src="dow-evaluation/js/text.js"></script>
+  <script src="dow-evaluation/js/bi-common.js"></script>
+  <script src="dow-evaluation/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 797px;
+  height: 586px;
+  transform: translate(-50%, -50%);
+}
+
+fieldset {
+  border-color: #eee;
+}
+
+fieldset>ul,
+.common,
+.RCW_signals,
+.bottom>ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a,
+table tr>td:not(:nth-child(1)) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.container>.content>.left {
+  width: 344px;
+  height: 568px;
+  overflow: auto;
+}
+
+.container>.content>.right {
+  width: 441px;
+}
+
+.common {
+  height: 120px;
+}
+
+.common>li input {
+  width: 70px;
+}
+
+.common>li>span:nth-child(1) {
+  width: 113px;
+}
+
+.common>li>span:nth-child(3) {
+  width: 75px;
+}
+
+.common select {
+  width: 140px;
+}
+
+.common a {
+  max-width: 222px;
+}
+
+.content>div>fieldset {
+  margin: 10px 0px;
+}
+
+.RCW_signals {
+  height: 120px;
+}
+
+.content>div>fieldset>.RCW_signals span {
+  width: 90px;
+}
+
+.RCW_signals a {
+  max-width: 225px;
+}
+
+.RCW_signals input[type=text] {
+  width: 150px;
+}
+
+[language="rcw_gt_signal_checked"] {
+  vertical-align: 2px;
+}
+
+[language="relative"] {
+  margin-right: 20px;
+}
+
+.caption {
+  position: relative;
+}
+
+.caption>span {
+  position: absolute;
+}
+
+.caption>span:nth-child(1) {
+  left: 58px;
+}
+
+.caption>span:nth-child(2) {
+  left: 162px;
+}
+
+.caption>span:nth-child(3) {
+  left: 255px;
+}
+
+.th {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+table tr>td:nth-child(1) {
+  width: 30px;
+}
+
+table tr>td:not(:nth-child(1)) {
+  width: 100px;
+}
+
+table tr {
+  height: 20px;
+}
+
+table tr>td {
+  max-width: 94px;
+  outline: none;
+}
+
+.tbody {
+  height: 100px;
+  overflow: overlay;
+}
+
+div.right img {
+  width: 100%;
+}
+
+.top>ul>li span,
+.top>ul>li label {
+  width: 100px;
+}
+
+[name="rcw_gt_signal"] {
+  max-width: 218px;
+}
+
+[name="rcw_gt_values"] {
+  width: 150px;
+}
+
+.bottom>ul {
+  height: 178px;
+  margin-top: 7px;
+}
+
+.bottom input[type=number] {
+  width: 150px;
+}
+
+[name="rcw_gt_signal_checked"] {
+  margin-top: 4px;
+}
+
+/* IP验证，不再需要js，通过css结合pattern就能验证 */
+[type="text"]:valid {
+  color: green;
+}
+
+[type="text"]:invalid {
+  color: red;
+}
+
+.bgblue {
+  background-color: #0078D7;
+  color: white;
+}

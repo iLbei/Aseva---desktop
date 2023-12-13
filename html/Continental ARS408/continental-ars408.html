@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="continental-ars408/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="continental-ars408/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <input type="radio" name="r" id="r1" checked>
+    <input type="radio" name="r" id="r2">
+    <input type="radio" name="r" id="r3">
+    <input type="radio" name="r" id="r4">
+    <input type="radio" name="r" id="r5">
+    <input type="radio" name="r" id="r6">
+    <div class="label fixclear">
+      <label for="r1" class="l1">1</label>
+      <label for="r2" class="l2">2</label>
+      <label for="r3" class="l3">3</label>
+      <label for="r4" class="l4">4</label>
+      <label for="r5" class="l5">5</label>
+      <label for="r6" class="l6">6</label>
+    </div>
+    <div class="content1">
+      <div>
+        <input type="checkbox" name="Enabled" id="enabled1">
+        <label for="enabled1" language="enabled"></label>
+      </div>
+      <div class="fixclear">
+        <div class="left">
+          <div class="fixclear">
+            <span class="left" language="out_channel"></span>
+            <select class="right" name="out_channel">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="obj_sen_a"></option>
+              <option value="1" language="obj_sen_b"></option>
+              <option value="2" language="obj_sen_c"></option>
+              <option value="3" language="obj_sen_d"></option>
+              <option value="4" language="obj_sen_e"></option>
+              <option value="5" language="obj_sen_f"></option>
+              <option value="6" language="obj_sen_g"></option>
+              <option value="7" language="obj_sen_h"></option>
+              <option value="8" language="obj_sen_i"></option>
+              <option value="9" language="obj_sen_j"></option>
+              <option value="10" language="obj_sen_k"></option>
+              <option value="11" language="obj_sen_l"></option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_x_scale"></span>
+            <select class="right" name="valueXScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="classFilter" id="classFilter1">
+              <label for="classFilter1" language="class_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="object_class">
+            </div>
+          </div>
+          <div class="fixclear bottom bto1">
+            <div class="left" language="select_in_signal"></div>
+            <div class="left">
+              <input type="checkbox" name="checkCon"  id="checkCon1">
+              <label for="checkCon1">0x6XC</label>
+            </div>
+          </div>
+          <div class="fixclear bottom bto2">
+            <div class="left" language="signal_id_offset"></div>
+            <div class="left">
+              <input type="number" name="signalIDOffset" value="0" min="0" max="15" step="1">
+            </div>
+          </div>
+          <div class="fixclear bottom bto3">
+            <div class="left fixclear">
+              <div class="left" language="oringin"></div>
+              <div class="right">
+                <div>X</div>
+                <div class="y">Y</div>
+              </div>
+            </div>
+            <div class="left">
+              <div>
+                <input type="number" name="offset_x" value="0.00" min="-20.00" max="1.00" step="0.01">
+              </div>
+              <div class="yy">
+                <input type="number" name="offset_y" value="0.00" min="-3.00" max="3.00" step="0.01">
+              </div>
+            </div>
+          </div>
+          <div class="fixclear bottom bto4">
+            <div class="left" language="yaw_offset"></div>
+            <div class="left">
+              <input type="number" name="yaw_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <span class="left" language="can_channel"></span>
+            <div class="right">
+              <input type="number" name="can_channel" value="1" min="1" max="16" step="1">
+            </div>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_y_scale"></span>
+            <select class="right" name="valueYScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="confidenceFilter" id="confidenceFilter1">
+              <label for="confidenceFilter1" language="conf_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="class_confidence" value="0">
+            </div>
+          </div>
+          <div class="bto1">
+            <div>
+              <input type="checkbox" name="checkClas" id="checkClas1">
+              <label for="checkClas1">0x6XD</label>
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="right canvas">
+              <canvas width="138" height="128"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content2">
+      <div>
+        <input type="checkbox" name="Enabled" id="enabled2">
+        <label for="enabled2" language="enabled"></label>
+      </div>
+      <div class="fixclear">
+        <div class="left">
+          <div class="fixclear">
+            <span class="left" language="out_channel"></span>
+            <select class="right" name="out_channel">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="obj_sen_a"></option>
+              <option value="1" language="obj_sen_b"></option>
+              <option value="2" language="obj_sen_c"></option>
+              <option value="3" language="obj_sen_d"></option>
+              <option value="4" language="obj_sen_e"></option>
+              <option value="5" language="obj_sen_f"></option>
+              <option value="6" language="obj_sen_g"></option>
+              <option value="7" language="obj_sen_h"></option>
+              <option value="8" language="obj_sen_i"></option>
+              <option value="9" language="obj_sen_j"></option>
+              <option value="10" language="obj_sen_k"></option>
+              <option value="11" language="obj_sen_l"></option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_x_scale"></span>
+            <select class="right" name="valueXScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="classFilter" id="classFilter2">
+              <label for="classFilter2" language="class_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="object_class">
+            </div>
+          </div>
+          <div class="fixclear bottom bto1">
+            <div class="left" language="select_in_signal"></div>
+            <div class="left">
+              <input type="checkbox" name="checkCon" id="checkCon2">
+              <label for="checkCon2">0x6XC</label>
+            </div>
+          </div>
+          <div class="fixclear bottom bto2">
+            <div class="left" language="signal_id_offset"></div>
+            <div class="left">
+              <input type="number" name="signalIDOffset" value="0" min="0" max="15" step="1">
+            </div>
+          </div>
+          <div class="fixclear bottom bto3">
+            <div class="left fixclear">
+              <div class="left" language="oringin"></div>
+              <div class="right">
+                <div>X</div>
+                <div class="y">Y</div>
+              </div>
+            </div>
+            <div class="left">
+              <div>
+                <input type="number" name="offset_x" value="0.00" min="-20.00" max="1.00" step="0.01">
+              </div>
+              <div class="yy">
+                <input type="number" name="offset_y" value="0.00" min="-3.00" max="3.00" step="0.01">
+              </div>
+            </div>
+          </div>
+          <div class="fixclear bottom bto4">
+            <div class="left" language="yaw_offset"></div>
+            <div class="left">
+              <input type="number" name="yaw_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <span class="left" language="can_channel"></span>
+            <div class="right">
+              <input type="number" name="can_channel" value="1" min="1" max="16" step="1">
+            </div>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_y_scale"></span>
+            <select class="right" name="valueYScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="confidenceFilter" id="confidenceFilter2">
+              <label for="confidenceFilter2" language="conf_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="class_confidence" value="0">
+            </div>
+          </div>
+          <div class="bto1">
+            <div>
+              <input type="checkbox" name="checkClas" id="checkClas2">
+              <label for="checkClas2">0x6XD</label>
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="right canvas">
+              <canvas width="138" height="128"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content3">
+      <div>
+        <input type="checkbox" name="Enabled" id="enabled3">
+        <label for="enabled3" language="enabled"></label>
+      </div>
+      <div class="fixclear">
+        <div class="left">
+          <div class="fixclear">
+            <span class="left" language="out_channel"></span>
+            <select class="right" name="out_channel">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="obj_sen_a"></option>
+              <option value="1" language="obj_sen_b"></option>
+              <option value="2" language="obj_sen_c"></option>
+              <option value="3" language="obj_sen_d"></option>
+              <option value="4" language="obj_sen_e"></option>
+              <option value="5" language="obj_sen_f"></option>
+              <option value="6" language="obj_sen_g"></option>
+              <option value="7" language="obj_sen_h"></option>
+              <option value="8" language="obj_sen_i"></option>
+              <option value="9" language="obj_sen_j"></option>
+              <option value="10" language="obj_sen_k"></option>
+              <option value="11" language="obj_sen_l"></option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_x_scale"></span>
+            <select class="right" name="valueXScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="classFilter" id="classFilter3">
+              <label for="classFilter3" language="class_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="object_class">
+            </div>
+          </div>
+          <div class="fixclear bottom bto1">
+            <div class="left" language="select_in_signal"></div>
+            <div class="left">
+              <input type="checkbox" name="checkCon" id="checkCon3">
+              <label for="checkCon3">0x6XC</label>
+            </div>
+          </div>
+          <div class="fixclear bottom bto2">
+            <div class="left" language="signal_id_offset"></div>
+            <div class="left">
+              <input type="number" name="signalIDOffset" value="0" min="0" max="15" step="1">
+            </div>
+          </div>
+          <div class="fixclear bottom bto3">
+            <div class="left fixclear">
+              <div class="left" language="oringin"></div>
+              <div class="right">
+                <div>X</div>
+                <div class="y">Y</div>
+              </div>
+            </div>
+            <div class="left">
+              <div>
+                <input type="number" name="offset_x" value="0.00" min="-20.00" max="1.00" step="0.01">
+              </div>
+              <div class="yy">
+                <input type="number" name="offset_y" value="0.00" min="-3.00" max="3.00" step="0.01">
+              </div>
+            </div>
+          </div>
+          <div class="fixclear bottom bto4">
+            <div class="left" language="yaw_offset"></div>
+            <div class="left">
+              <input type="number" name="yaw_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <span class="left" language="can_channel"></span>
+            <div class="right">
+              <input type="number" name="can_channel" value="1" min="1" max="16" step="1">
+            </div>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_y_scale"></span>
+            <select class="right" name="valueYScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="confidenceFilter" id="confidenceFilter3">
+              <label for="confidenceFilter3" language="conf_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="class_confidence" value="0">
+            </div>
+          </div>
+          <div class="bto1">
+            <div>
+              <input type="checkbox" name="checkClas" id="checkClas3">
+              <label for="checkClas3">0x6XD</label>
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="right canvas">
+              <canvas width="138" height="128"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content4">
+      <div>
+        <input type="checkbox" name="Enabled" id="enabled4">
+        <label for="enabled4" language="enabled"></label>
+      </div>
+      <div class="fixclear">
+        <div class="left">
+          <div class="fixclear">
+            <span class="left" language="out_channel"></span>
+            <select class="right" name="out_channel">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="obj_sen_a"></option>
+              <option value="1" language="obj_sen_b"></option>
+              <option value="2" language="obj_sen_c"></option>
+              <option value="3" language="obj_sen_d"></option>
+              <option value="4" language="obj_sen_e"></option>
+              <option value="5" language="obj_sen_f"></option>
+              <option value="6" language="obj_sen_g"></option>
+              <option value="7" language="obj_sen_h"></option>
+              <option value="8" language="obj_sen_i"></option>
+              <option value="9" language="obj_sen_j"></option>
+              <option value="10" language="obj_sen_k"></option>
+              <option value="11" language="obj_sen_l"></option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_x_scale"></span>
+            <select class="right" name="valueXScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="classFilter" id="classFilter4">
+              <label for="classFilter4" language="class_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="object_class">
+            </div>
+          </div>
+          <div class="fixclear bottom bto1">
+            <div class="left" language="select_in_signal"></div>
+            <div class="left">
+              <input type="checkbox" name="checkCon" id="checkCon4">
+              <label for="checkCon4">0x6XC</label>
+            </div>
+          </div>
+          <div class="fixclear bottom bto2">
+            <div class="left" language="signal_id_offset"></div>
+            <div class="left">
+              <input type="number" name="signalIDOffset" value="0" min="0" max="15" step="1">
+            </div>
+          </div>
+          <div class="fixclear bottom bto3">
+            <div class="left fixclear">
+              <div class="left" language="oringin"></div>
+              <div class="right">
+                <div>X</div>
+                <div class="y">Y</div>
+              </div>
+            </div>
+            <div class="left">
+              <div>
+                <input type="number" name="offset_x" value="0.00" min="-20.00" max="1.00" step="0.01">
+              </div>
+              <div class="yy">
+                <input type="number" name="offset_y" value="0.00" min="-3.00" max="3.00" step="0.01">
+              </div>
+            </div>
+          </div>
+          <div class="fixclear bottom bto4">
+            <div class="left" language="yaw_offset"></div>
+            <div class="left">
+              <input type="number" name="yaw_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <span class="left" language="can_channel"></span>
+            <div class="right">
+              <input type="number" name="can_channel" value="1" min="1" max="16" step="1">
+            </div>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_y_scale"></span>
+            <select class="right" name="valueYScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="confidenceFilter" id="confidenceFilter4">
+              <label for="confidenceFilter4" language="conf_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="class_confidence" value="0">
+            </div>
+          </div>
+          <div class="bto1">
+            <div>
+              <input type="checkbox" name="checkClas" id="checkClas4">
+              <label for="checkClas4">0x6XD</label>
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="right canvas">
+              <canvas width="138" height="128"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content5">
+      <div>
+        <input type="checkbox" name="Enabled"  id="enabled5">
+        <label language="enabled" for="enabled5"></label>
+      </div>
+      <div class="fixclear">
+        <div class="left">
+          <div class="fixclear">
+            <span class="left" language="out_channel"></span>
+            <select class="right" name="out_channel">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="obj_sen_a"></option>
+              <option value="1" language="obj_sen_b"></option>
+              <option value="2" language="obj_sen_c"></option>
+              <option value="3" language="obj_sen_d"></option>
+              <option value="4" language="obj_sen_e"></option>
+              <option value="5" language="obj_sen_f"></option>
+              <option value="6" language="obj_sen_g"></option>
+              <option value="7" language="obj_sen_h"></option>
+              <option value="8" language="obj_sen_i"></option>
+              <option value="9" language="obj_sen_j"></option>
+              <option value="10" language="obj_sen_k"></option>
+              <option value="11" language="obj_sen_l"></option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_x_scale"></span>
+            <select class="right" name="valueXScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="classFilter" id="classFilter5">
+              <label for="classFilter5" language="class_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="object_class">
+            </div>
+          </div>
+          <div class="fixclear bottom bto1">
+            <div class="left" language="select_in_signal"></div>
+            <div class="left">
+              <input type="checkbox" name="checkCon" id="checkCon5">
+              <label for="checkCon5">0x6XC</label>
+            </div>
+          </div>
+          <div class="fixclear bottom bto2">
+            <div class="left" language="signal_id_offset"></div>
+            <div class="left">
+              <input type="number" name="signalIDOffset" value="0" min="0" max="15" step="1">
+            </div>
+          </div>
+          <div class="fixclear bottom bto3">
+            <div class="left fixclear">
+              <div class="left" language="oringin"></div>
+              <div class="right">
+                <div>X</div>
+                <div class="y">Y</div>
+              </div>
+            </div>
+            <div class="left">
+              <div>
+                <input type="number" name="offset_x" value="0.00" min="-20.00" max="1.00" step="0.01">
+              </div>
+              <div class="yy">
+                <input type="number" name="offset_y" value="0.00" min="-3.00" max="3.00" step="0.01">
+              </div>
+            </div>
+          </div>
+          <div class="fixclear bottom bto4">
+            <div class="left" language="yaw_offset"></div>
+            <div class="left">
+              <input type="number" name="yaw_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <span class="left" language="can_channel"></span>
+            <div class="right">
+              <input type="number" name="can_channel" value="1" min="1" max="16" step="1">
+            </div>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_y_scale"></span>
+            <select class="right" name="valueYScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="confidenceFilter" id="confidenceFilter5">
+              <label for="confidenceFilter5" language="conf_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="class_confidence" value="0">
+            </div>
+          </div>
+          <div class="bto1">
+            <div>
+              <input type="checkbox" name="checkClas" id="checkClas5">
+              <label for="checkClas5">0x6XD</label>
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="right canvas">
+              <canvas width="138" height="128"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content6">
+      <div>
+        <input type="checkbox" name="Enabled" id="enabled6">
+        <span language="enabled" for="enabled6"></span>
+      </div>
+      <div class="fixclear">
+        <div class="left">
+          <div class="fixclear">
+            <span class="left" language="out_channel"></span>
+            <select class="right" name="out_channel">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="obj_sen_a"></option>
+              <option value="1" language="obj_sen_b"></option>
+              <option value="2" language="obj_sen_c"></option>
+              <option value="3" language="obj_sen_d"></option>
+              <option value="4" language="obj_sen_e"></option>
+              <option value="5" language="obj_sen_f"></option>
+              <option value="6" language="obj_sen_g"></option>
+              <option value="7" language="obj_sen_h"></option>
+              <option value="8" language="obj_sen_i"></option>
+              <option value="9" language="obj_sen_j"></option>
+              <option value="10" language="obj_sen_k"></option>
+              <option value="11" language="obj_sen_l"></option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_x_scale"></span>
+            <select class="right" name="valueXScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="classFilter" id="classFilter6">
+              <label for="classFilter6" language="class_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="object_class">
+            </div>
+          </div>
+          <div class="fixclear bottom bto1">
+            <div class="left" language="select_in_signal"></div>
+            <div class="left">
+              <input type="checkbox" name="checkCon" id="checkCon6">
+              <label for="checkCon6">0x6XC</label>
+            </div>
+          </div>
+          <div class="fixclear bottom bto2">
+            <div class="left" language="signal_id_offset"></div>
+            <div class="left">
+              <input type="number" name="signalIDOffset" value="0" min="0" max="15" step="1">
+            </div>
+          </div>
+          <div class="fixclear bottom bto3">
+            <div class="left fixclear">
+              <div class="left" language="oringin"></div>
+              <div class="right">
+                <div>X</div>
+                <div class="y">Y</div>
+              </div>
+            </div>
+            <div class="left">
+              <div>
+                <input type="number" name="offset_x" value="0.00" min="-20.00" max="1.00" step="0.01">
+              </div>
+              <div class="yy">
+                <input type="number" name="offset_y" value="0.00" min="-3.00" max="3.00" step="0.01">
+              </div>
+            </div>
+          </div>
+          <div class="fixclear bottom bto4">
+            <div class="left" language="yaw_offset"></div>
+            <div class="left">
+              <input type="number" name="yaw_offset" value="0.00" min="-180.00" max="180.00" step="0.01">
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <span class="left" language="can_channel"></span>
+            <div class="right">
+              <input type="number" name="can_channel" value="1" min="1" max="16" step="1">
+            </div>
+          </div>
+          <div class="fixclear">
+            <span class="left" language="value_y_scale"></span>
+            <select class="right" name="valueYScale">
+              <option value="-1" selected>-1</option>
+              <option value="1">1</option>
+            </select>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <input type="checkbox" name="confidenceFilter" id="confidenceFilter6">
+              <label for="confidenceFilter6" language="conf_filter"></label>
+            </div>
+            <div class="right">
+              <input type="text" name="class_confidence" value="0">
+            </div>
+          </div>
+          <div class="bto1">
+            <div>
+              <input type="checkbox" name="checkClas" id="checkClas6">
+              <label for="checkClas6">0x6XD</label>
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="right canvas">
+              <canvas width="138" height="128"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="continental-ars408/js/jquery-2.14.min.js"></script>
+  <script src="continental-ars408/js/bi-common.js"></script>
+  <script src="continental-ars408/js/text.js"></script>
+  <script src="continental-ars408/js/index.js"></script>
+</body>
+
+</html>

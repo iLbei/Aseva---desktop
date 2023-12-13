@@ -1,0 +1,154 @@
+.container {
+  padding: 2px;
+}
+
+.container>div {
+  width: 369px;
+  position: absolute;
+  top: 24px;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.container>div>div {
+  width: 360px;
+  position: relative;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 12px 10px 10px;
+  margin: 10px auto 3px;
+}
+
+.container>div>div>p {
+  position: absolute;
+  left: 9px;
+  top: -9px;
+  padding: 0 2px;
+}
+
+.container>div>div:nth-of-type(2)>div:nth-of-type(2)>.left {
+  margin-top: 0px;
+}
+
+.container>div>div:nth-of-type(2)>div:nth-of-type(2)>.left>div>div {
+  height: 50px;
+}
+
+.container>div>div:nth-of-type(2)>div:nth-of-type(2)>.left>div>div:nth-of-type(1) {
+  margin-top: 31px;
+  margin-right: 4px;
+}
+
+.container>div>div:nth-of-type(2)>div:nth-of-type(2)>.left>div>.right>div {
+  margin-bottom: 3.6px;
+}
+
+.container>div>div:nth-of-type(2)>div:nth-of-type(2)>.left>div>.right {
+  width: 77px;
+}
+
+.container>div>div:nth-of-type(2)>div:nth-of-type(2)>.left>div:nth-of-type(1) {
+  margin-bottom: 8px;
+}
+
+#myCanvas {
+  background-color: #fff;
+}
+
+#p-right {
+  position: relative;
+}
+
+#myCanvas2 {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+}
+
+[type=text] {
+  width: 142px;
+}
+
+select {
+  width: 147px;
+}
+
+li {
+  margin-top: 4.7px;
+}
+
+[name=port] {
+  width: 60px;
+}
+
+[name=offset_x_0],
+[name=offset_y_0],
+[name=height_0],
+[name=yaw_0],
+[name=offset_x_1],
+[name=offset_y_1],
+[name=height_1],
+[name=yaw_1] {
+  width: 56px !important;
+}
+
+.ip {
+  width: 102px !important;
+}
+
+[name=port_0],
+[name=port_1] {
+  width: 70px !important;
+}
+
+.primary {
+  display: block;
+}
+
+.secondary {
+  display: none;
+}
+
+input {
+  padding-left: 3px;
+}
+
+.container>button {
+  position: relative;
+  outline: none;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 0px;
+  height: 23px;
+  width: 90px;
+  padding: 0px;
+}
+
+.container>button:nth-child(1) {
+  border-right: none;
+}
+
+.container>div>div>ul>li:nth-of-type(2)>div>.left {
+  margin-right: 30px;
+}
+
+[name^=time_sync_mode] {
+  width: 138px;
+}
+
+
+#image {
+  width: 693px;
+  display: none;
+}
+
+.active {
+  background-color: rgb(255, 255, 255);
+}
+
+span.left,
+span.right {
+  padding-top: 3px;
+  margin-right: 3px;
+}
+[name^="two_frame_merge"]{
+  margin-top: 2px;
+}

@@ -1,0 +1,19 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 125px;
+  margin: -62.5px 0 0 -125px;
+}
+
+select {
+  width: 140px;
+  float: right;
+}
+
+.container>div>ul>li {
+  height: 26px;
+  line-height: 26px;
+  margin-top: 10px;
+}

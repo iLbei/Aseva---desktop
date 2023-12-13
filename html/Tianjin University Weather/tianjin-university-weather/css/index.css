@@ -1,0 +1,36 @@
+.container {
+  width: 228px;
+  height: 140px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container>div:nth-child(1) {
+  margin-bottom: 15px;
+}
+
+.container>ul {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-between;
+}
+
+.container>ul>li>span {
+  width: 109px;
+}
+
+.container>ul [name] {
+  width: 115px;
+}
+
+/* IP验证，不再需要js，通过css结合pattern就能验证 */
+[name="address"]:valid {
+  color: green;
+}
+
+[name="address"]:invalid {
+  color: red;
+}

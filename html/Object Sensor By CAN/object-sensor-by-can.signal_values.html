@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Sensor By Can</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="object-sensor-by-can/css/common.css">
+  <link rel="stylesheet" href="object-sensor-by-can/css/signal_values.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="signal_values">
+    <div class="border">
+      <p language="general_category"></p>
+      <div>
+        <span language="general_small"></span>
+        <input class="class_signal_value" value="" type="text" name="11">
+        <span language="general_big"></span>
+        <input class="class_signal_value" value="" type="text" name="12">
+        <span language="barrier"></span>
+        <input class="class_signal_value" value="" type="text" name="13">
+      </div>
+    </div>
+    <div class="border">
+      <p language="car_category"></p>
+      <div>
+        <span language="van"></span>
+        <input class="class_signal_value" value="" type="text" name="21">
+        <span language="minibus"></span>
+        <input class="class_signal_value" value="" type="text" name="22">
+        <span language="bus"></span>
+        <input class="class_signal_value" value="" type="text" name="23">
+        <span language="battery_cart"></span>
+        <input class="class_signal_value" value="" type="text" name="24">
+        <span language="tiny_car"></span>
+        <input class="class_signal_value" value="" type="text" name="25">
+        <span>SUV:</span>
+        <input class="class_signal_value" value="" type="text" name="26">
+      </div>
+    </div>
+    <div class="border">
+      <p language="pedestrian_category"></p>
+      <div>
+        <span language="adult"></span>
+        <input class="class_signal_value" value="" type="text" name="31">
+        <span language="child"></span>
+        <input class="class_signal_value" value="" type="text" name="32">
+        <span language="scooter"></span>
+        <input class="class_signal_value" value="" type="text" name="33">
+        <span language="wheel_chair"></span>
+        <input class="class_signal_value" value="" type="text" name="34">
+      </div>
+    </div>
+    <div class="border">
+      <p language="truck_category"></p>
+      <div>
+        <span language="minitruck"></span>
+        <input class="class_signal_value" value="" type="text" name="41">
+        <span language="cintainer_truck"></span>
+        <input class="class_signal_value" value="" type="text" name="42">
+        <span language="special_car"></span>
+        <input class="class_signal_value" value="" type="text" name="43">
+        <span language="trailer"></span>
+        <input class="class_signal_value" value="" type="text" name="44">
+      </div>
+    </div>
+    <div class="border">
+      <p language="bike_category"></p>
+      <div>
+        <span language="motorbike"></span>
+        <input class="class_signal_value" value="" type="text" name="51">
+        <span language="bicycle"></span>
+        <input class="class_signal_value" value="" type="text" name="52">
+        <span language="electric_bike"></span>
+        <input class="class_signal_value" value="" type="text" name="53">
+        <span language="tricycle"></span>
+        <input class="class_signal_value" value="" type="text" name="54">
+      </div>
+    </div>
+    <div>
+      <span language="rail_car_category"></span>
+      <input class="class_signal_value" type="text" value="" name="6">
+    </div>
+    <div class="border">
+      <p language="rail_car_category"></p>
+      <div>
+        <span language="train"></span>
+        <input class="class_signal_value" type="text" value="" name="61">
+        <span language="tram"></span>
+        <input class="class_signal_value" type="text" value="" name="62">
+      </div>
+    </div>
+    <div>
+      <span language="special_category"></span>
+      <input class="class_signal_value" type="text" value="" name="7">
+    </div>
+    <div class="border">
+      <p language="special_category"></p>
+      <div>
+        <span language="animal"></span>
+        <input class="class_signal_value" type="text" value="" name="71">
+        <span language="ball"></span>
+        <input class="class_signal_value" type="text" value="" name="72">
+        <span language="litter"></span>
+        <input class="class_signal_value" type="text" value="" name="73">
+      </div>
+    </div>
+    <div>
+      <span language="on_road_static_category"></span>:
+      <input class="class_signal_value" type="text" name="8" value="">
+    </div>
+    <div class="border">
+      <p language="on_road_static_category"></p>
+      <div>
+        <span language="cone"></span>
+        <input class="class_signal_value" type="text" value="" name="81">
+        <span language="manhole_cover"></span>
+        <input class="class_signal_value" type="text" value="" name="82">
+        <span language="patch"></span>
+        <input class="class_signal_value" type="text" value="" name="83">
+        <span language="gantry"></span>
+        <input class="class_signal_value" type="text" value="" name="84">
+      </div>
+    </div>
+    <div>
+      <span language="road_side_static_category"></span>:
+      <input class="class_signal_value" type="text" value="" name="9">
+    </div>
+    <div class="border">
+      <p language="road_side_static_category"></p>
+      <div>
+        <span language="pole"></span>
+        <input class="class_signal_value" type="text" value="" name="91">
+        <span language="tree"></span>
+        <input class="class_signal_value" type="text" value="" name="92">
+        <span language="vegetation"></span>
+        <input class="class_signal_value" type="text" value="" name="93">
+        <span language="building"></span>
+        <input class="class_signal_value" type="text" value="" name="94">
+      </div>
+    </div>
+  </div>
+  <script src="object-sensor-by-can/js/jquery-2.14.min.js"></script>
+  <script src="object-sensor-by-can/js/bi-common.js"></script>
+  <script src="object-sensor-by-can/js/text.js"></script>
+  <script src="object-sensor-by-can/js/signal_values.js"></script>
+</body>
+
+</html>

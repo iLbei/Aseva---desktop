@@ -1,0 +1,32 @@
+var cn = {
+    falcon: "Falcon ",
+    bus_channel: "总线通道:",
+    process: "过程",
+    message_id: "报文ID:",
+    obj_output: "目标物输出通道:",
+    point_cloud_output: "点云输出通道:",
+    origin: "原点[m]: Y",
+    pitch: "倾斜度",
+    yaw: "偏航",
+    input: "输入",
+    output: "输出",
+    processing: "进程",
+    roll: "翻滚",
+    scale: "比例:缩小"
+  },
+  en = {
+    falcon: "Falcon ",
+    bus_channel: "Bus Channel:",
+    process: "Process",
+    message_id: "Message ID:",
+    obj_output: "Objects Output:",
+    point_cloud_output: "Point Cloud Output Channel:",
+    origin: "Origin [m]: Y",
+    yaw: "Yaw",
+    pitch: "Pitch",
+    input: "Input",
+    output: "Output",
+    processing: "Processing",
+    roll: "Roll",
+    scale: "Scale:Small"
+  };

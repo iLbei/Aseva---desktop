@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="road-planeness/css/common.css">
+  <link rel="stylesheet" href="road-planeness/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li>
+        <input type="checkbox" name="rpEnable" id="rpEnable">
+        <label for="rpEnable" language="rpEnable"></label>
+      </li>
+      <li>
+        <span language="staticObjectsJsonFile"></span>
+        <a href="javascript:;" name="staticObjectsJsonFile" language="not_config"></a>
+      </li>
+      <li>
+        <span language="gnssImuInputChannel"></span>
+        <select name="gnssImuInputChannel" id="">
+          <option value="-1">(Disabled)</option>
+          <option value="0">GNSS IMU A</option>
+          <option value="1">GNSS IMU B</option>
+          <option value="2">GNSS IMU C</option>
+          <option value="3">GNSS IMU D</option>
+          <option value="4">GNSS IMU E</option>
+          <option value="5">GNSS IMU F</option>
+        </select>
+      </li>
+    </ul>
+
+  </div>
+  <script src="road-planeness/js/jquery-2.14.js"></script>
+  <script src="road-planeness/js/bi-common.js"></script>
+  <script src="road-planeness/js/text.js"></script>
+  <script src="road-planeness/js/index.js"></script>
+</body>
+
+</html>

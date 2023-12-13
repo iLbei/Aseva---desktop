@@ -1,0 +1,116 @@
+.container {
+  position: absolute;
+  width: 520px;
+  height: 507px;
+  top: 50%;
+  left: 50%;
+  margin: -253.5px 0 0 -260px;
+}
+
+button {
+  background-color: #3399FF;
+  color: white;
+  border: 1px solid #ccc;
+  padding: 5px 0px;
+  width: 100%;
+}
+
+.button {
+  padding: 2px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  margin: 10px auto 0px;
+  width: 260px;
+}
+
+.container .button {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.container .processing {
+  border: 1px solid #ccc;
+}
+
+.processing {
+  position: relative;
+  padding: 5px 10px 0px;
+}
+
+.processing>ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.processing>ul {
+  height: 358px;
+}
+
+.container .processing>ul {
+  height: 448px;
+}
+
+.processing>ul>li>.right {
+  width: 363px;
+}
+
+.processing>ul>li>.right>ul>li:first-child {
+  margin-bottom: 6px;
+}
+
+.processing>ul>li>.right>ul>li:nth-child(1) span {
+  vertical-align: -4px;
+}
+
+.processing>ul>li>.right>ul>li:nth-child(2) {
+  height: 26px;
+  line-height: 26px;
+}
+
+.processing>ul>li a {
+  vertical-align: -8px;
+}
+
+.processing>p {
+  position: absolute;
+  top: -10px;
+}
+
+select {
+  width: 180px;
+}
+
+input[type=number] {
+  width: 60px;
+}
+
+.processing>ul>li {
+  padding: 5px;
+}
+
+.processing>ul>li {
+  background-color: #ffffe9;
+}
+
+.container .processing>ul>li:first-child {
+  background-color: transparent;
+}
+
+.container .processing>ul>li:first-child {
+  padding-bottom: 0px;
+}
+
+.processing>ul>li>div.left {
+  margin-top: 4px;
+}
+
+a {
+  max-width: 294px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container .processing{
+  padding-bottom: 10px;
+}

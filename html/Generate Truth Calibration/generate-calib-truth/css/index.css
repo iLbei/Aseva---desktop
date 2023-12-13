@@ -1,0 +1,74 @@
+select {
+  width: 130px;
+  margin-bottom: 15px;
+}
+
+.container>ul>li:nth-child(2)>button {
+  width: 108px;
+  text-align: center;
+}
+
+.content {
+  padding: 2px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  height: 230px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.content>li {
+  border: 1px solid #ccc;
+  padding: 3px;
+  background-color: #f9f8d4;
+  margin-bottom: 3px;
+}
+
+.content>li>span {
+  padding-top: 3px;
+  width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.active {
+  background: #ffed97 !important;
+  box-shadow: 1px 1px 3px #bbb;
+}
+
+.calib>ul>li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.calib input[type=number] {
+  width: 60px;
+  margin-left:3px;
+}
+
+.calib>ul>li:nth-child(5)>ul,
+.calib>ul>li:nth-child(6)>ul,
+.calib>ul>li:nth-child(7)>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.calib>ul>li span {
+  padding-top: 4px;
+}
+
+.calib>ul>li>label {
+  display: inline-block;
+  margin-top: -3px;
+  margin-right: 5px;
+}
+
+.calib>ul>li:nth-child(1),
+.calib>ul>li:nth-child(2) {
+  margin-right: 46px;
+}
+
+.calib>ul>li:nth-child(1)>span {
+  margin-top: -6px;
+}

@@ -1,0 +1,30 @@
+var cn = {
+  pcap_path: "PCAP路径",
+  pcap_channel: "PCAP通道:",
+  add: "添加",
+  clear: "清空",
+  output: "输出",
+  output_data_path: "数据输出路径:",
+  convert: "转换",
+  pcap_interval:"Pcap间隔:",
+  not_config:"<未配置>",
+  pcap_files_path:"Pcap文件路径:",
+  load_speed:"读取倍率:",
+  time_ratio:"时间比例:",
+  loop_count:"循环次数:"
+},
+  en = {
+    pcap_path: "Pcap Path",
+    pcap_channel: "Pcap Channel:",
+    add: "Add",
+    clear: "Clear",
+    output: "Output",
+    output_data_path: "Output Data Path:",
+    convert: "Convert",
+    pcap_interval:"Pcap Interval:",
+    pcap_files_path:"Pcap Files Path:",
+    not_config:"<Not Configured>",
+    load_speed:"Load Speed:",
+    time_ratio:"Time ratio:",
+    loop_count:"Loop count:"
+  };

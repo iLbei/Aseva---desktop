@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="event/css/common.css" />
+  <link rel="stylesheet" href="event/css/mail.css" />
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="mail">
+    <div class="content">
+      <div>
+        <input type="checkbox" name="enabled" id="enabled" />
+        <label for="enabled" language="enabled">Enabled</label>
+      </div>
+      <div>
+        <p language="basic_info">Basic information</p>
+        <div>
+          <div class="fixclear">
+            <span class="red left" language="from">From:</span>
+            <input class="right" type="text" name="from" />
+          </div>
+          <div class="fixclear">
+            <span class="red left" language="to">To:</span>
+            <input class="right" type="text" name="to" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <p language="title_set">Title settings</p>
+        <div>
+          <div class="fixclear">
+            <span class="red left" language="title">Title:</span>
+            <input class="right" type="text" name="title" />
+          </div>
+          <div class="fixclear">
+            <div class="right fixclear toRight">
+              <div class="left">
+                <input type="checkbox" name="add_event_type" id="add_event_type" />
+                <label for="add_event_type" language="add_event_type">Add event type</label>
+              </div>
+              <div class="right">
+                <input type="checkbox" name="add_date_time" id="add_data_and_time" />
+                <label for="add_data_and_time" language="add_data_and_time">Add date and time</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p language="smtp_set">SMTP settings</p>
+        <div>
+          <div class="fixclear">
+            <span class="red left" language="server">Server:</span>
+            <input class="right" type="text" name="server" />
+          </div>
+          <div class="fixclear">
+            <div class="right toRight">
+              <input type="checkbox" name="using_ssl" class="left" id="us_ssl" />
+              <label for="us_ssl" language="us_ssl" class="left">Using SSL</label>
+            </div>
+          </div>
+          <div class="fixclear">
+            <span class="red left" language="user">User:</span>
+            <input class="right" type="text" name="user" />
+          </div>
+          <div class="fixclear">
+            <span class="red left" language="password">Password:</span>
+            <input class="right" type="text" name="password" />
+          </div>
+          <div class="fixclear">
+            <div class="right toRight">
+              <input type="checkbox" name="remember" class="left" id="remember" />
+              <label for="remember" language="remember" class="left"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="event/js/jquery-2.14.min.js"></script>
+  <script src="event/js/text.js"></script>
+  <script src="event/js/bi-common.js"></script>
+  <script src="event/js/mail.js"></script>
+</body>
+
+</html>

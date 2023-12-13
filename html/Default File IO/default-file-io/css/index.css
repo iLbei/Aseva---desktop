@@ -1,0 +1,145 @@
+.container {
+  width: 896px;
+  height: 389px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container>div>div {
+  position: relative;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding: 18px 10px 20px;
+}
+
+.container>div>div.left {
+  width: 384px;
+}
+
+.top>div>div {
+  width: 120px;
+}
+
+.top>div>div:nth-child(2) {
+  margin-top: 37px;
+  width: 120px;
+}
+
+p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 3px;
+}
+
+ul>li {
+  cursor: default;
+}
+
+ul>li:not(:last-child) {
+  height: 37px;
+  cursor: default;
+}
+
+.video ul>li {
+  height: 34px;
+}
+
+select {
+  width: 145px;
+}
+
+input[type=checkbox] {
+  margin-right: 5px;
+}
+
+button {
+  margin-left: 20px;
+  padding: 2px 10px;
+}
+
+.video ul {
+  width: 220px;
+}
+
+.video ul.left {
+  margin-right: 116px;
+}
+
+.video>div {
+  position: relative;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 15px 10px 6px;
+}
+
+.video>div.pos {
+  margin-bottom: 0px;
+}
+
+.bus {
+  width: 600px;
+  height: 237px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bus input {
+  margin-left: 10px;
+}
+
+.bus select {
+  width: 331px;
+}
+
+.bus li>span:nth-child(1) {
+  display: inline-block;
+  width: 56px;
+  text-align: right;
+  margin-right: 7px;
+}
+
+.audio {
+  width: 260px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.audio span {
+  margin-right: 10px;
+}
+
+input[type=radio] {
+  margin-left: 10px;
+}
+
+.video {
+  width: 920px;
+  height: 464px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video span {
+  padding-top: 3px;
+}
+
+[language="data_password"] {
+  margin-left: 40px;
+}
+
+[name="record_legacy_style"] {
+  margin-top: 2px;
+}
+
+#blf {
+  margin-left: 20px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signal Parking</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="signal-packing/css/common.css">
+  <link rel="stylesheet" href="signal-packing/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="fixclear">
+      <a href="javascript:;" class="left" language="add_park" onclick="addPark()"></a>
+      <div class="right fixclear">
+        <div class="left" language="title_option"></div>
+        <div class="left">
+          <span language="prefix"></span>
+          <input type="text" name="add_name_prefix" value="MainCAN" id="">
+        </div>
+        <div class="left">
+          <input type="checkbox" name="add_name_with_msgname" id="">
+          <span language="message_name"></span>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="box">
+        <div class="fixclear">
+          <div class="left">
+            <div>
+              <input type="checkbox" name="enabled" id="">
+              <span language="enabled_with"></span>
+              <input type="text" name="protocol" value="unknown-sample" id="">
+            </div>
+            <div class="fixclear">
+              <form action="">
+                <div class="left fixclear">
+                  <div class="left">
+                    <input type="radio" onclick="changeRadio(this)" name="interpolation" value="yes" checked="checked">
+                    <label for="in1" language="interpolation_mode"></label>
+                    <input type="number" onclick="numChange(this)" name="sampling_rate" value="10" min="1" max="100" step="1" id="">
+                  </div>
+                </div>
+                <div class="left fixclear">
+                  <div class="left">
+                    <input type="radio" onclick="changeRadio(this)" name="interpolation" value="no">
+                  </div>
+                  <label for="in2" class="left" language="raw_mode"></label>
+                  <div class="left space_a">
+                    <a href="javascript:;" class="c4 sampling_msg_id" onclick="selectBus(this)"
+                      language="not_config"></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="right" onclick="removePark(this)">
+            <div><img src="./signal-packing/image/delete item.png" alt=""></div>
+          </div>
+        </div>
+        <div>
+          <span language="packing_signal"></span>
+          <a href="javascript:;" language="add_signal" onclick="openSignal(this)"></a>
+          <a href="javascript:;" language="add_msg" onclick="openBus(this)"></a>
+        </div>
+        <div class="bottom">
+          <div class="son fixclear">
+            <div class="left">
+              <span language="title"></span>
+              <input type="text" name="title" value="unknown-signal" id="">
+            </div>
+            <div class="left">
+              <span language="timeout"></span>
+              <input type="number" onclick="numChange(this)" name="timeout" value="1200" min="10" max="10000" step="1"
+                id="">
+            </div>
+            <div class="left">
+              <span language="interpolation"></span>
+              <select name="nearest" id="">
+                <option value="yes" language="linear"></option>
+                <option value="no" language="nearest" selected></option>
+              </select>
+            </div>
+            <div class="left fixclear">
+              <span class="left" language="signal"></span>
+              <div class="space_a left">
+                <a href="javascript:;" class="red id" onclick="onClick(this)" scale="1" sbid="null"
+                  language="not_config"></a>
+              </div>
+            </div>
+            <div class="right" onclick="removeSon(this)">
+              <div><img src="./signal-packing/image/delete item.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="signal-packing/js/jquery-2.14.min.js"></script>
+  <script src="signal-packing/js/bi-common.js"></script>
+  <script src="signal-packing/js/text.js"></script>
+  <script src="signal-packing/js/index.js"></script>
+</body>
+
+</html>

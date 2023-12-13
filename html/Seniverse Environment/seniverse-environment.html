@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seniverse Environment</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="seniverse-environment/css/common.css">
+  <link rel="stylesheet" href="seniverse-environment/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li>
+        <input type="checkbox" name="enabled" id="enabled">
+        <label for="enabled" language="enabled"></label>
+      </li>
+      <li>
+        <span language="location_source"></span>
+        <select name="location_source">
+          <option value="0" language="location_source_0"></option>
+          <option value="1" language="location_source_1"></option>
+          <option value="2" language="location_source_2"></option>
+          <option value="3" language="location_source_3"></option>
+          <option value="4" language="location_source_4"></option>
+          <option value="5" language="location_source_5"></option>
+        </select>
+      </li>
+    </ul>
+    <div class="data">
+      <p language="data"></p>
+      <input type="checkbox" name="weather" id="weather">
+      <label for="weather" language="weather"></label>
+      <input type="checkbox" name="air" id="air">
+      <label for="air" language="air"></label>
+      <input type="checkbox" name="alarm" id="alarm">
+      <label for="alarm" language="alarm"></label>
+      <input type="checkbox" name="moon" id="moon">
+      <label for="moon" language="moon"></label>
+      <input type="checkbox" name="sun" id="sun">
+      <label for="sun" language="sun"></label>
+      <input type="checkbox" name="driving_restriction" id="driving_restriction">
+      <label for="driving_restriction" language="driving_restriction"></label>
+      <input type="checkbox" name="road_condition" id="road_condition">
+      <label for="road_condition" language="road_condition"></label>
+    </div>
+  </div>
+  <script src="seniverse-environment/js/jquery-2.14.js"></script>
+  <script src="seniverse-environment/js/bi-common.js"></script>
+  <script src="seniverse-environment/js/text.js"></script>
+  <script src="seniverse-environment/js/index.js"></script>
+</body>
+
+</html>

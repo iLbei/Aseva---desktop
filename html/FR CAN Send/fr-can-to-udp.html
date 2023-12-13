@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>FR CAN Send</title>
+  <style>
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -313px 0 0 -156px;
+      height: 626px;
+      width: 312px;
+    }
+
+    ul {
+      height: 626px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    [name="port"] {
+      width: 65px;
+    }
+
+    [name="ip"] {
+      width: 135px;
+    }
+
+    [name="frequency"] {
+      width: 82px;
+    }
+
+    [language="frequency"] {
+      width: 68px;
+    }
+
+    ul>li:not(:first-child) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li:nth-child(4)>input[type=number],
+    li:nth-child(5)>input[type=number],
+    li:nth-child(6)>input[type=number],
+    li:nth-child(7)>input[type=number],
+    li:nth-child(8)>input[type=number],
+    li:nth-child(9)>input[type=number],
+    li:nth-child(10)>input[type=number],
+    li:nth-child(12)>input[type=number],
+    li:nth-child(11)>input[type=number],
+    li:nth-child(13)>input[type=number] {
+      width: 180px;
+    }
+
+    li:nth-child(13)>div:nth-child(1) span,
+    li:nth-child(14)>div:nth-child(1) span {
+      width: 96px;
+    }
+
+    li:nth-child(15)>input[type=number],
+    li:nth-child(16)>input[type=number],
+    li:nth-child(17)>input[type=number],
+    li:nth-child(18)>input[type=number],
+    li:nth-child(19)>input[type=number],
+    li:nth-child(20)>input[type=number],
+    li:nth-child(21)>input[type=number],
+    li:nth-child(22)>input[type=number] {
+      width: 125px;
+    }
+
+    div>input[type="number"] {
+      width: 60px;
+    }
+  </style>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="fr-can-to-udp/css/common.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li><input type="checkbox" name="connect" id="connect">
+        <label for="connect" language="connect"></label></li>
+      <li>
+        <div>
+          <span>IP:</span>
+          <input type="text" name="ip">
+        </div>
+        <div>
+          <span language="port"></span>
+          <input type="number" min="0" max="65535" step="1" value="0" name="port">
+        </div>
+      </li>
+      <li>
+        <div>
+          <span language="frequency"></span>
+          <input type="number" min="1" max="120" step="1" value="1" name="frequency">
+        </div>
+        <div>
+          <span>Plug Orientation:</span>
+          <input type="number" name="PlugOrientation" max="255" min="0" step="1" value="0">
+        </div>
+      </li>
+      <li>
+        <span>Longitudinal:</span>
+        <!-- <input type="number" name="Longitudinal" max="20"
+          min="-20" step="0.000000001" value="0"> -->
+        <input type="number" name="Longitudinal" max="3400000000000000000000000000000000000000"
+          min="-3400000000000000000000000000000000000000" step="0.000000001" value="0">
+      </li>
+      <li>
+        <span>Lateral:</span>
+        <input type="number" name="Lateral" max="3400000000000000000000000000000000000000"
+          min="-3400000000000000000000000000000000000000" step="0.000000001" value="0">
+      </li>
+      <li>
+        <span>Vertical:</span>
+        <input type="number" name="Vertical" max="3400000000000000000000000000000000000000"
+          min="-3400000000000000000000000000000000000000" step="0.000000001" value="0">
+      </li>
+      <li>
+        <span>Yaw:</span>
+        <input type="number" name="Yaw" max="3400000000000000000000000000000000000000"
+          min="-3400000000000000000000000000000000000000" step="0.000000001" value="0">
+      </li>
+      <li>
+        <span>Pitch:</span>
+        <input type="number" name="Pitch" max="3400000000000000000000000000000000000000"
+          min="-3400000000000000000000000000000000000000" step="0.000000001" value="0">
+      </li>
+
+      <li>
+        <span>Length:</span>
+        <input type="number" name="Length" max="3400000000000000000000000000000000000000"
+          min="-3400000000000000000000000000000000000000" step="0.000000001" value="0">
+      </li>
+      <li>
+        <span>Width:</span>
+        <input type="number" name="Width" max="3400000000000000000000000000000000000000"
+          min="-3400000000000000000000000000000000000000" step="0.000000001" value="0">
+      </li>
+      <li>
+        <span>Height:</span>
+        <input type="number" name="Height" max="3400000000000000000000000000000000000000"
+          min="-3400000000000000000000000000000000000000" step="0.000000001" value="0">
+      </li>
+      <li>
+        <span>Wheelbase:</span>
+        <input type="number" name="Wheelbase" max="3400000000000000000000000000000000000000"
+          min="-3400000000000000000000000000000000000000" step="0.000000001" value="0">
+      </li>
+      <li>
+        <div>
+          <span>Frequency Slot:</span>
+          <input type="number" name="FrequencySlot" max="255" min="0" step="1" value="0">
+        </div>
+        <div>
+          <span>HCC:</span>
+          <input type="number" name="HCC" max="255" min="0" step="1" value="0">
+        </div>
+      </li>
+      <li>
+        <div>
+          <span>IME Slot:</span>
+          <input type="number" name="imeSlot" max="255" min="0" step="1" value="0">
+        </div>
+        <div>
+          <span>Cycle Time:</span>
+          <input type="number" name="CycleTime" max="255" min="0" step="1" value="0">
+        </div>
+      </li>
+      <li>
+        <span>Maximum Distance:</span>
+        <input type="number" name="MaximumDistance" max="65535" min="0" step="1" value="0">
+      </li>
+      <li>
+        <span>Powersave Standstill:</span>
+        <input type="number" name="Powersave_Standstill" max="255" min="0" step="1" value="0">
+      </li>
+      <li>
+        <span>Sensor IP Address 0:</span>
+        <input type="number" name="SensorIPAddress_0" max="4294967295" min="0" step="1" value="0">
+      </li>
+      <li>
+        <span>Sensor IP Address 1:</span>
+        <input type="number" name="SensorIPAddress_1" max="4294967295" min="0" step="1" value="0">
+      </li>
+      <li>
+        <span>New Sensor Mounting:</span>
+        <input type="number" name="NewSensorMounting" max="255" min="0" step="1" value="0">
+      </li>
+      <li>
+        <span>New Vehicle Parameters:</span>
+        <input type="number" name="NewVehicleParameters" max="255" min="0" step="1" value="0">
+      </li>
+      <li>
+        <span>New Radar Parameters:</span>
+        <input type="number" name="NewRadarParameters" max="255" min="0" step="1" value="0">
+      </li>
+      <li>
+        <span>New Network Configuration:</span>
+        <input type="number" name="NewNetworkConfiguration" max="255" min="0" step="1" value="0">
+      </li>
+    </ul>
+  </div>
+  <script src="fr-can-to-udp/js/jquery-2.14.min.js"></script>
+  <script src="fr-can-to-udp/js/bi-common.js"></script>
+  <script src="fr-can-to-udp/js/text.js"></script>
+  <script src="fr-can-to-udp/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html language="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="video/css/common.css" />
+    <link rel="stylesheet" href="video/css/index.css" />
+  </head>
+
+  <body
+    oncontextmenu="return false"
+    ondragstart="return false"
+    onselectstart="return false"
+    onbeforecopy="return false"
+  >
+    <div class="switch">
+        <span language="camera_type"></span>
+        <input type="radio" name="param_type" value="normal" id="normal" checked />
+        <label for="normal" language="normal"></label>
+        <input type="radio" name="param_type" value="line" id="lane_line"/>
+        <label for="lane_line" language="lane_line"></label>
+        <input type="radio" name="param_type" value="bs" id="blind_spot"/>
+        <label for="blind_spot" language="blind_spot"></label>
+        <input type="radio" name="param_type" value="fisheye" id="fisheye"/>
+        <label for="fisheye" language="fisheye"></label>
+        <button class="ok right">ok</button>
+    </div>
+    <script src="video/js/jquery-2.14.js"></script>
+    <script src="video/js/bi-common.js"></script>
+    <script src="video/js/text.js"></script>
+    <script src="video/js/switch.js"></script>
+  </body>
+</html>

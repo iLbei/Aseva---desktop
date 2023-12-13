@@ -1,0 +1,70 @@
+.container {
+  width: 450px;
+  padding: 3px;
+}
+
+.container>ul>li {
+  float: left;
+  width: 70px;
+  cursor: default;
+  text-align: center;
+  padding: 3px 0px;
+  border: 1px solid #ccc;
+}
+
+.container>ul>li:not(:last-child) {
+  border-right: none;
+}
+
+.white {
+  background-color: #fff;
+  border-bottom: 1px solid white !important;
+}
+
+.content {
+  background-color: #fff;
+  padding: 15px 10px 0px;
+  border: 1px solid #ccc;
+  margin-top: -1px;
+}
+
+.content>div {
+  position: relative;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.content>div>p {
+  position: absolute;
+  top: -10px;
+  background-color: #fff;
+}
+
+.processing input {
+  width: 100px;
+  margin-bottom: 5px;
+}
+
+.processing span,
+[language=message_id],
+[language=point_cloud_output] {
+  padding-top: 4px;
+  margin-right: 5px;
+}
+
+select {
+  width: 200px;
+}
+
+canvas {
+  border: 1px solid #ccc;
+}
+#canvas{
+  position: relative;
+}
+#canvas a{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}

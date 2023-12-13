@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Gaode Env Query</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="gaode-env-query/css/common.css">
+  <link rel="stylesheet" href="gaode-env-query/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="enable" id="enable">
+      <label for="enable" language="enable"></label>
+    </div>
+    <div>
+      <span language="gps_channel"></span>
+      <select name="channel">
+        <option value="0" selected language="gnss_a"></option>
+        <option value="1" language="gnss_b"></option>
+        <option value="2" language="gnss_c"></option>
+        <option value="3" language="gnss_d"></option>
+        <option value="4" language="gnss_e"></option>
+        <option value="5" language="gnss_f"></option>
+      </select>
+    </div>
+  </div>
+  <script src="gaode-env-query/js/jquery-2.14.min.js"></script>
+  <script src="gaode-env-query/js/bi-common.js"></script>
+  <script src="gaode-env-query/js/text.js"></script>
+  <script src="gaode-env-query/js/index.js"></script>
+</body>
+
+</html>

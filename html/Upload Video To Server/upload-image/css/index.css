@@ -1,0 +1,21 @@
+.container{
+  padding-right: 0px !important;
+}
+input[name=send_ip] {
+  width: 110px;
+  margin-right: 15px;
+}
+
+input[name=send_port] {
+  width: 60px;
+}
+
+div:nth-child(3) label {
+  display: inline-block;
+  width: 27px;
+  height: 25px;
+}
+.container p {
+  margin: 10px 0px;
+  background-color: transparent;
+}

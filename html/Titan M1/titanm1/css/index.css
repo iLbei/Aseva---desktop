@@ -1,0 +1,107 @@
+.container {
+  width: 372px;
+  height: 412px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -206px 0 0 -186px;
+}
+
+label[language="connect"] {
+  background-color: #fff;
+}
+
+.device {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.device p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+  background-color: #fff;
+}
+
+.device ul {
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+[language=ip],
+[language="local_ip"] {
+  width: 56px;
+}
+
+[language=port],
+[language="local_port"] {
+  width: 71px;
+}
+
+[name=ip],
+[name=local_ip] {
+  width: 107px;
+}
+
+input[name=port],
+input[name=local_port] {
+  width: 63px;
+}
+
+select {
+  width: 189px;
+  margin-bottom: 10px;
+}
+
+.content span {
+  padding-top: 3px;
+}
+
+.angle {
+  background-color: #f0f0f0;
+  padding: 10px 40px 5px;
+}
+
+.angle span {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+.angle input {
+  width: 125px;
+  margin-bottom: 5px;
+}
+
+.content {
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin-top: -1px;
+  background: #fff;
+}
+
+.item>li {
+  float: left;
+  width: 60px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  background-color: #F0F0F0;
+}
+
+.item>li:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.active {
+  border-bottom: 1px solid #fff !important;
+  background-color: #fff !important;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WHST Radar</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="whst-radar/css/common.css">
+  <link rel="stylesheet" href="whst-radar/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container fixclear">
+    <ul class="fixclear">
+      <li class="white" id="lidar1"><span language="radar"></span>1</li>
+      <li id="lidar2"><span language="radar"></span>2</li>
+      <li id="lidar3"><span language="radar"></span>3</li>
+      <li id="lidar4"><span language="radar"></span>4</li>
+      <li id="lidar5"><span language="radar"></span>5</li>
+      <li id="lidar6"><span language="radar"></span>6</li>
+    </ul>
+    <div class="content">
+      <div class="left">
+        <ul>
+          <li>
+            <input type="checkbox" name="process" id="process">
+            <label for="process" language="process"></label>
+          </li>
+          <li>
+            <span language="bus_channel"></span>
+          </li>
+          <li>
+            <input type="number" name="busMsgChannel" max="16" min="1" value="1" step="1" id="">
+          </li>
+          <li>
+            <span language="message_id"></span>
+          </li>
+          <li>
+            <input type="text" name="busMsgId" id="">
+          </li>
+          <li>
+            <span language="obj_output"></span>
+          </li>
+          <li>
+            <select name="output_objects_channel" id="">
+              <option value="-1">(Disabled)</option>
+              <option value="0">Object Sensor A</option>
+              <option value="1">Object Sensor B</option>
+              <option value="2">Object Sensor C</option>
+              <option value="3">Object Sensor D</option>
+              <option value="4">Object Sensor E</option>
+              <option value="5">Object Sensor F</option>
+              <option value="6">Object Sensor G</option>
+              <option value="7">Object Sensor H</option>
+              <option value="8">Object Sensor I</option>
+              <option value="9">Object Sensor J</option>
+              <option value="10">Object Sensor K</option>
+              <option value="11">Object Sensor L</option>
+            </select>
+          </li>
+          <li>
+            <span language="point_cloud_output"></span>
+          </li>
+          <li>
+            <select name="output_point_cloud_channel" id="">
+              <option value="-1">(Disabled)</option>
+              <option value="0">Channel A</option>
+              <option value="1">Channel B</option>
+              <option value="2">Channel C</option>
+              <option value="3">Channel D</option>
+              <option value="4">Channel E</option>
+              <option value="5">Channel F</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <div class="left">
+          <div class="fixclear">
+            <input class="right" type="number" name="origin_x" value="0.00" min="-6" max="1" step="0.01">
+            <span class="right" language="origin"></span> </div>
+          <div class="fixclear">
+            <input class="right" type="number" name="origin_y" value="0.00" min="-3" max="3" step="0.01">
+            <span class="right">Y</span>
+          </div>
+          <div class="fixclear">
+            <input class="right" type="number" name="origin_h" value="0.00" min="-3" max="3" step="0.01">
+            <span class="right">H</span>
+          </div>
+          <div class="fixclear">
+            <input class="right" type="number" name="yaw_angle" value="0.0" min="-180" max="180" step="0.1">
+            <span class="right" language="yaw"></span>
+          </div>
+          <div class="fixclear">
+            <input class="right" type="number" name="pitch_angle" value="0.0" min="-30" max="30" step="0.1">
+            <span class="right" language="pitch"></span>
+          </div>
+        </div>
+        <div class="right" id="canvas1">
+          <canvas class="myCanvas" width="160" height="173"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="whst-radar/js/jquery-2.14.js"></script>
+    <script src="whst-radar/js/bi-common.js"></script>
+    <script src="whst-radar/js/text.js"></script>
+    <script src="whst-radar/js/index.js"></script>
+</body>
+
+</html>

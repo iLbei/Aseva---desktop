@@ -1,0 +1,28 @@
+- 2.0模块规范
+  - 浏览器兼容
+    - 不使用let
+    - 不使用class
+    - 不使用sessionStorage
+    - xml相关API不使用：Element.getAttributeNames,可以使用attributes
+	- xml dom.append() 不能append字符串,需要转成element
+	- xml dom转字符串时，使用(new XMLSerializer()).serializeToString()方法
+	- (new XMLSerializer()).serializeToString()转字符串时会在节点上加xmlns固定属性,replace掉即可
+	- ES6语法不要用
+  - 统一背景色
+    - Winform: (240,240,240)
+    - Wpf: (255,255,255)
+    - Gtk及其他: (250,250,250)
+  - Linux一行控件间的高度对齐问题
+  - 链接上浮文本框回车不退出
+  - 英文界面开始时闪现中文
+  - 英文界面显示中文: 如lidar-simple
+  - 无需黑色边框: 如vehicle
+  - 字体颜色统一
+    - 黑(0,0,0)
+    - 红(255,0,0)
+    - 绿(50,205,50)
+    - 橙(255,140,0)
+    - 蓝(30,144,255)
+  - 按钮使用原生风格
+  - 文本布局宽度自适应？如不能自适应按115%预留宽度
+  - 使用biAlert显示消息，使用biConfirm弹出确认框，使用biOpenChildDialog弹出子对话框

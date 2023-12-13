@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZS8M Camera</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="zhuishi-8m-cameras/css/common.css">
+  <link rel="stylesheet" href="zhuishi-8m-cameras/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="connect" id="connect">
+      <label for="connect" language="connect"></label>
+    </div>
+    <div>
+      <span language="ip"></span>
+      <input type="text" name="ip">
+      <span language="port"></span>
+      <input type="number" name="port" value="0" step="1" max="65535" min="0">
+    </div>
+  </div>
+  <script src="zhuishi-8m-cameras/js/jquery-2.14.js"></script>
+  <script src="zhuishi-8m-cameras/js/bi-common.js"></script>
+  <script src="zhuishi-8m-cameras/js/text.js"></script>
+  <script src="zhuishi-8m-cameras/js/index.js"></script>
+</body>
+
+</html>

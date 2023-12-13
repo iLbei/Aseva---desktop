@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="rear-object-extraction/css/common.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="rear-object-extraction/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="content1">
+      <p>I/O</p>
+      <div class="content">
+        <div class="box1">
+          <div class="fixclear">
+            <div class="left width">
+              <span language="in_point_map"></span>
+            </div>
+            <div class="right">
+              <select name="in_channel_1" id="">
+                <option value="-1" selected language="disabled"></option>
+                <option value="0">A:(Not available)</option>
+                <option value="1">B:(Not available)</option>
+                <option value="2">C:(Not available)</option>
+                <option value="3">D:(Not available)</option>
+                <option value="4">E:(Not available)</option>
+                <option value="5">F:(Not available)</option>
+              </select>
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <span language="no1"></span>
+            </div>
+            <div class="left">
+              <span language="output_obj"></span>
+            </div>
+            <div class="right">
+              <select name="out_channel_obj_1" id="">
+                <option value="-1" selected language="disabled"></option>
+                <option value="0" language="chan_a"></option>
+                <option value="1" language="chan_b"></option>
+                <option value="2" language="chan_c"></option>
+                <option value="3" language="chan_d"></option>
+                <option value="4" language="chan_e"></option>
+                <option value="5" language="chan_f"></option>
+                <option value="6" language="chan_g"></option>
+                <option value="7" language="chan_h"></option>
+                <option value="8" language="chan_i"></option>
+                <option value="9" language="chan_j"></option>
+                <option value="10" language="chan_k"></option>
+                <option value="11" language="chan_l"></option>
+              </select>
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="left width">
+              <span language="output_free"></span>
+            </div>
+            <div class="right">
+              <select name="out_channel_fs_1" id="">
+                <option value="-1" selected language="disabled"></option>
+                <option value="0" language="chan_a"></option>
+                <option value="1" language="chan_b"></option>
+                <option value="2" language="chan_c"></option>
+                <option value="3" language="chan_d"></option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="box2">
+          <div class="fixclear">
+            <div class="left width">
+              <span language="in_point_map"></span>
+            </div>
+            <div class="right">
+              <select name="in_channel_2" id="">
+                <option value="-1" selected language="disabled"></option>
+                <option value="0">A:(Not available)</option>
+                <option value="1">B:(Not available)</option>
+                <option value="2">C:(Not available)</option>
+                <option value="3">D:(Not available)</option>
+                <option value="4">E:(Not available)</option>
+                <option value="5">F:(Not available)</option>
+              </select>
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="left">
+              <span language="no2"></span>
+            </div>
+            <div class="left">
+              <span language="output_obj"></span>
+            </div>
+            <div class="right">
+              <select name="out_channel_obj_2" id="">
+                <option value="-1" selected language="disabled"></option>
+                <option value="0" language="chan_a"></option>
+                <option value="1" language="chan_b"></option>
+                <option value="2" language="chan_c"></option>
+                <option value="3" language="chan_d"></option>
+                <option value="4" language="chan_e"></option>
+                <option value="5" language="chan_f"></option>
+                <option value="6" language="chan_g"></option>
+                <option value="7" language="chan_h"></option>
+                <option value="8" language="chan_i"></option>
+                <option value="9" language="chan_j"></option>
+                <option value="10" language="chan_k"></option>
+                <option value="11" language="chan_l"></option>
+              </select>
+            </div>
+          </div>
+          <div class="fixclear">
+            <div class="left width">
+              <span language="output_free"></span>
+            </div>
+            <div class="right">
+              <select name="out_channel_fs_2" id="">
+                <option value="-1" selected language="disabled"></option>
+                <option value="0" language="chan_a"></option>
+                <option value="1" language="chan_b"></option>
+                <option value="2" language="chan_c"></option>
+                <option value="3" language="chan_d"></option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content2">
+      <p language="param"></p>
+      <div class="content">
+        <div class="fixclear">
+          <div class="left" language="min_point_dist"></div>
+          <div class="right">
+            <input type="number" name="extract_min_point_dist" value="0.00" min="0.00" max="3.00" step="0.01" id="">
+            <span>[m]</span>
+          </div>
+        </div>
+        <div class="fixclear">
+          <div class="left" language="max_relat_speed"></div>
+          <div class="right">
+            <input type="number" name="extract_max_relative_speed" value="30" min="30" max="150" step="1" id="">
+            <span>[KPH]</span>
+          </div>
+        </div>
+        <div class="fixclear">
+          <div class="left" language="max_lat_clear"></div>
+          <div class="right">
+            <input type="number" name="extract_max_lc" value="3.0" min="3.0" max="100.0" step="0.1" id="">
+            <span>[m]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="rear-object-extraction/js/bi-common.js"></script>
+  <script src="rear-object-extraction/js/jquery-2.14.min.js"></script>
+  <script src="rear-object-extraction/js/text.js"></script>
+  <script src="rear-object-extraction/js/index.js"></script>
+</body>
+
+</html>

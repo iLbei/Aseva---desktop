@@ -1,0 +1,66 @@
+body,
+div,
+p,
+input,
+li,
+ul,
+button,
+tr,
+td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button:hover{
+    border-color: rgb(126,180,234) !important;
+    background-color: rgb(231,242,252) !important;
+    cursor: default !important;
+    -moz-user-select: none !important;
+    -khtml-user-select: none !important;
+    user-select: none !important;
+}
+
+._inc:hover{
+    border-color: rgb(126,180,234) !important;
+    background-color: rgb(231,242,252) !important;
+    cursor: default !important;
+    -moz-user-select: none !important;
+    -khtml-user-select: none !important;
+    user-select: none !important;
+}
+
+._dec:hover{
+    border-color: rgb(126,180,234) !important;
+    background-color: rgb(231,242,252) !important;
+    cursor: default !important;
+    -moz-user-select: none !important;
+    -khtml-user-select: none !important;
+    user-select: none !important;
+}
+
+[type=_number]{
+    margin: 0px !important;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.fixclear::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif
+}

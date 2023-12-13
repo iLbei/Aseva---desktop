@@ -1,0 +1,80 @@
+.container>div{
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.container>div:nth-child(1){
+  margin-bottom: 10px;
+}
+.container>div>p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+}
+
+.container>div:nth-child(1)>ul>li:nth-child(2)>div label {
+  display: inline-block;
+  width: 63px;
+}
+
+.container>div:nth-child(1) input[type=radio] {
+  margin-left: 15px;
+}
+
+.container>div:nth-child(1) input[type=text] {
+  width: 137px;
+  margin-right: 17px;
+  margin-left: 5px;
+}
+
+.container>div:nth-child(1) input[type=number] {
+  width: 69px;
+  margin-left: 5px;
+}
+
+.container>div:nth-child(1)>ul>li,
+.container>div:nth-child(2)>ul>li {
+  margin-bottom: 4px;
+}
+
+.container>div:nth-child(2)>ul>li>span {
+  padding-top: 4px;
+}
+
+.container>div:nth-child(2)>ul>li>select {
+  width: 45%;
+}
+.processing>div span{
+padding-top: 2px;
+}
+.processing>div p {
+  margin-right: 5px;
+}
+
+.processing>div p:nth-child(1) {
+  margin-top: 28px;
+}
+
+.processing>div p:nth-child(2) {
+  margin-top: 69px;
+}
+
+.processing>div input {
+  margin-bottom: 2px;
+  width: 64px;
+  margin-left: 2px;
+}
+
+.processing>div>div>div.right>div:nth-child(3) {
+  margin-bottom: 2px;
+}
+
+#canvas {
+  width: 130px;
+  height: 150px;
+  margin-top: 10px;
+}
+
+#myCanvas {
+  background-color: #fff;
+}

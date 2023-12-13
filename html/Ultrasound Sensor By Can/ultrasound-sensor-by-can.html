@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Ultrasound Sensor By Can</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="ultrasound-sensor-by-can/css/common.css">
+  <link rel="stylesheet" href="ultrasound-sensor-by-can/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container fixclear">
+    <div class="left">
+      <div class="top">
+        <a href="javascript:;" class="sensor_alias show">1</a>
+        <input class="hide" type="text" value="1" name="sensor_alias" id="">
+      </div>
+      <div>
+        <input type="checkbox" name="enabled" id="enabled">
+        <label for="enabled" language="enabled"></label>
+      </div>
+      <div>
+        <span language="final_msg"> </span>
+        <a href="javascript:;" class="red" id="final_msg" language="not_config"></a>
+      </div>
+      <div class="fixclear">
+        <span class="left" language="sensors"></span>
+        <div class="right">
+          <a href="javascript:;" language="add" class="add"></a>
+          <a href="javascript:;" language="remove_all" class="remove_all not_a"></a>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="box">
+          <div class="fixclear">
+            <span class="left identify">ID:1</span>
+            <div class="right">
+              <a href="javascript:;" language="move_up" onclick="moveUp(this)"></a>
+              <a href="javascript:;" language="move_down" onclick="moveDown(this)" class="down"></a>
+              <a href="javascript:;" language="remove" onclick="remove(this)"></a>
+            </div>
+          </div>
+          <div>
+            <div>
+              <span language="dis_signal"></span>
+              <a href="javascript:;" class="red signal" unit="m" scaleVal="1" onclick="selectSignal(this)"
+                language="not_config"></a>
+            </div>
+            <div>
+              <div class="fixclear">
+                <div class="left">
+                  <span language="origin_x"></span>
+                  <input type="number" name="origin_x" onblur="drawInput()" oninput="drawInput()" onchange="drawInput()"
+                    value="0.00" min="-20.00" max="1.00" step="0.01" id="">
+                </div>
+                <div class="right">
+                  <span language="origin_y"> </span>
+                  <input type="number" name="origin_y" value="0.00" onblur="drawInput()" oninput="drawInput()"
+                    onchange="drawInput()" min="-3.00" max="3.00" step="0.01" id="">
+                </div>
+              </div>
+              <div>
+                <span language="orient"> </span>
+                <input type="number" name="orientation" value="0.0" onblur="drawInput()" oninput="drawInput()"
+                  onchange="drawInput()" min="-180.0" max="180.0" step="0.1" id="">
+              </div>
+            </div>
+            <div>
+              <div class="fixclear">
+                <div class="left fixclear angle">
+                  <span class="left" language="angle_alpha"> </span>
+                  <input class="right" type="number" name="angle_alpha" onblur="drawInput()" oninput="drawInput()"
+                    onchange="drawInput()" value="100.0" min="60.0" max="150.0" step="0.1" id="">
+                </div>
+                <div class="right">
+                  <span language="angle_beta"></span>
+                  <input type="number" name="angle_beta" value="15.0" onblur="drawInput()" oninput="drawInput()"
+                    onchange="drawInput()" min="0.0" max="30.0" step="0.1" id="">
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left fixclear angle">
+                  <span class="left" language="range_alpha"></span>
+                  <input class="right" type="number" name="dist_alpha" onblur="drawInput()" oninput="drawInput()"
+                    onchange="drawInput()" value="0.50" min="0.10" max="2.50" step="0.01" id="">
+                </div>
+                <div class="right">
+                  <span language="range_beta"></span>
+                  <input type="number" name="dist_beta" value="2.50" onblur="drawInput()" oninput="drawInput()"
+                    onchange="drawInput()" min="1.00" max="10.00" step="0.01" id="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <canvas id="canvas" width="580" height="475"></canvas>
+      <!-- <div class="fixclear">
+                <div class="left">
+                    <span language="veh_width">Vehicle Width:</span>
+                    <input type="number" name="display_vehi_width" onchange="widthChange()" value="1" min="1" max="5" step="0.01" id="">
+                </div>
+                <div class="right">
+                    <span language="veh_length">Vehicle Length:</span>
+                    <input type="number" name="display_vehi_length" onchange="lengthChange()" value="2" min="2" max="10" step="0.01" id="">
+                </div>
+            </div> -->
+    </div>
+  </div>
+  <script src="ultrasound-sensor-by-can/js/jquery-2.14.min.js"></script>
+  <script src="ultrasound-sensor-by-can/js/bi-common.js"></script>
+  <script src="ultrasound-sensor-by-can/js/text.js"></script>
+  <script src="ultrasound-sensor-by-can/js/index.js"></script>
+</body>
+
+</html>

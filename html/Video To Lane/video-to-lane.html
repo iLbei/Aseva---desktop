@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video To Lane</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="video-to-lane/css/common.css">
+  <style>
+    .container {
+      width: 346px;
+      height: 263px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -131.5px 0 0 -173px;
+    }
+
+    .container>ul>li {
+      margin-bottom: 15px;
+      height: 26px;
+      line-height: 26px;
+    }
+
+    select {
+      width: 165px;
+    }
+
+    p {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li class="fixclear"><span class="left" language="front_left_video_channel"></span>
+        <select class="right" name="front_left_video_channel" id="">
+          <option value="-1" selected language="disabled"></option>
+          <option value="0" language="video_frame_a"></option>
+          <option value="1" language="video_frame_b"></option>
+          <option value="2" language="video_frame_c"></option>
+          <option value="3" language="video_frame_d"></option>
+          <option value="4" language="video_frame_e"></option>
+          <option value="5" language="video_frame_f"></option>
+          <option value="6" language="video_frame_g"></option>
+          <option value="7" language="video_frame_h"></option>
+          <option value="8" language="video_frame_i"></option>
+          <option value="9" language="video_frame_j"></option>
+          <option value="10" language="video_frame_k"></option>
+          <option value="11" language="video_frame_l"></option>
+          <option value="12" language="video_frame_m"></option>
+          <option value="13" language="video_frame_n"></option>
+          <option value="14" language="video_frame_o"></option>
+          <option value="15" language="video_frame_p"></option>
+          <option value="16" language="video_frame_q"></option>
+          <option value="17" language="video_frame_r"></option>
+          <option value="18" language="video_frame_s"></option>
+          <option value="19" language="video_frame_t"></option>
+          <option value="20" language="video_frame_u"></option>
+          <option value="21" language="video_frame_v"></option>
+          <option value="22" language="video_frame_w"></option>
+          <option value="23" language="video_frame_x"></option>
+        </select>
+      </li>
+      <li class="fixclear"><span class="left" language="front_right_video_channel"></span>
+        <select class="right" name="front_right_video_channel" id="">
+          <option value="-1" selected language="disabled"></option>
+          <option value="0" language="video_frame_a"></option>
+          <option value="1" language="video_frame_b"></option>
+          <option value="2" language="video_frame_c"></option>
+          <option value="3" language="video_frame_d"></option>
+          <option value="4" language="video_frame_e"></option>
+          <option value="5" language="video_frame_f"></option>
+          <option value="6" language="video_frame_g"></option>
+          <option value="7" language="video_frame_h"></option>
+          <option value="8" language="video_frame_i"></option>
+          <option value="9" language="video_frame_j"></option>
+          <option value="10" language="video_frame_k"></option>
+          <option value="11" language="video_frame_l"></option>
+          <option value="12" language="video_frame_m"></option>
+          <option value="13" language="video_frame_n"></option>
+          <option value="14" language="video_frame_o"></option>
+          <option value="15" language="video_frame_p"></option>
+          <option value="16" language="video_frame_q"></option>
+          <option value="17" language="video_frame_r"></option>
+          <option value="18" language="video_frame_s"></option>
+          <option value="19" language="video_frame_t"></option>
+          <option value="20" language="video_frame_u"></option>
+          <option value="21" language="video_frame_v"></option>
+          <option value="22" language="video_frame_w"></option>
+          <option value="23" language="video_frame_x"></option>
+        </select>
+      </li>
+      <li class="fixclear"><span class="left" language="front_out_channel"></span>
+        <select class="right" name="front_out_channel" id="">
+          <option value="-1" selected language="disabled"></option>
+          <option value="0" language="lane_sen_a"></option>
+          <option value="1" language="lane_sen_b"></option>
+          <option value="2" language="lane_sen_c"></option>
+          <option value="3" language="lane_sen_d"></option>
+          <option value="4" language="lane_sen_e"></option>
+          <option value="5" language="lane_sen_f"></option>
+          <option value="6" language="lane_sen_g"></option>
+          <option value="7" language="lane_sen_h"></option>
+        </select>
+      </li>
+      <li class="fixclear"><span class="left" language="rear_left_video_channel"></span>
+        <select class="right" name="rear_left_video_channel" id="">
+          <option value="-1" selected language="disabled"></option>
+          <option value="0" language="video_frame_a"></option>
+          <option value="1" language="video_frame_b"></option>
+          <option value="2" language="video_frame_c"></option>
+          <option value="3" language="video_frame_d"></option>
+          <option value="4" language="video_frame_e"></option>
+          <option value="5" language="video_frame_f"></option>
+          <option value="6" language="video_frame_g"></option>
+          <option value="7" language="video_frame_h"></option>
+          <option value="8" language="video_frame_i"></option>
+          <option value="9" language="video_frame_j"></option>
+          <option value="10" language="video_frame_k"></option>
+          <option value="11" language="video_frame_l"></option>
+          <option value="12" language="video_frame_m"></option>
+          <option value="13" language="video_frame_n"></option>
+          <option value="14" language="video_frame_o"></option>
+          <option value="15" language="video_frame_p"></option>
+          <option value="16" language="video_frame_q"></option>
+          <option value="17" language="video_frame_r"></option>
+          <option value="18" language="video_frame_s"></option>
+          <option value="19" language="video_frame_t"></option>
+          <option value="20" language="video_frame_u"></option>
+          <option value="21" language="video_frame_v"></option>
+          <option value="22" language="video_frame_w"></option>
+          <option value="23" language="video_frame_x"></option>
+        </select>
+      </li>
+      <li class="fixclear"><span class="left" language="rear_right_video_channel"></span>
+        <select class="right" name="rear_right_video_channel" id="">
+          <option value="-1" selected language="disabled"></option>
+          <option value="0"  language="video_frame_a"></option>
+          <option value="1"  language="video_frame_b"></option>
+          <option value="2"  language="video_frame_c"></option>
+          <option value="3"  language="video_frame_d"></option>
+          <option value="4"  language="video_frame_e"></option>
+          <option value="5"  language="video_frame_f"></option>
+          <option value="6"  language="video_frame_g"></option>
+          <option value="7"  language="video_frame_h"></option>
+          <option value="8"  language="video_frame_i"></option>
+          <option value="9"  language="video_frame_j"></option>
+          <option value="10" language="video_frame_k"></option>
+          <option value="11" language="video_frame_l"></option>
+          <option value="12" language="video_frame_m"></option>
+          <option value="13" language="video_frame_n"></option>
+          <option value="14" language="video_frame_o"></option>
+          <option value="15" language="video_frame_p"></option>
+          <option value="16" language="video_frame_q"></option>
+          <option value="17" language="video_frame_r"></option>
+          <option value="18" language="video_frame_s"></option>
+          <option value="19" language="video_frame_t"></option>
+          <option value="20" language="video_frame_u"></option>
+          <option value="21" language="video_frame_v"></option>
+          <option value="22" language="video_frame_w"></option>
+          <option value="23" language="video_frame_x"></option>
+        </select>
+      </li>
+      <li class="fixclear"><span class="left" language="rear_out_channel"></span>
+        <select class="right" name="rear_out_channel" id="">
+          <option value="-1" selected language="disabled"></option>
+          <option value="0" language="lane_sen_a"></option>
+          <option value="1" language="lane_sen_b"></option>
+          <option value="2" language="lane_sen_c"></option>
+          <option value="3" language="lane_sen_d"></option>
+          <option value="4" language="lane_sen_e"></option>
+          <option value="5" language="lane_sen_f"></option>
+          <option value="6" language="lane_sen_g"></option>
+          <option value="7" language="lane_sen_h"></option>
+        </select>
+      </li>
+    </ul>
+    <p language="Performance"></p>
+  </div>
+  <script src="video-to-lane/js/jquery-2.14.js"></script>
+  <script src="video-to-lane/js/bi-common.js"></script>
+  <script src="video-to-lane/js/text.js"></script>
+  <script src="video-to-lane/js/index.js"></script>
+</body>
+
+</html>

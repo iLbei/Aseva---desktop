@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RS Data Export Ros</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="rs-data-export-ros/css/common.css">
+  <link rel="stylesheet" href="rs-data-export-ros/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="Enabled" id="Enabled"><label for="Enabled" language="Enabled"></label>
+    </div>
+    <ul>
+      <li class="fixclear">
+        <p language="typeandangle"></p>
+      </li>
+      <li class="fixclear">
+        <span language="lidarBagType" class="left"></span>
+        <select name="lidarBagType" class="left">
+          <option value="0" language="completeframes"></option>
+          <option value="1" language="completepackets"></option>
+        </select>
+        <select name="RosType" class="right">
+          <option value="0">Ros</option>
+          <option value="1">Ros2</option>
+        </select>
+        <span language="RosType" class="right"></span>
+      </li>
+      <li class="fixclear">
+        <span language="frameSplitAngle" class="left"></span>
+        <select name="frameSplitAngle" class="left">
+          <option value="0">0</option>
+          <option value="1">90</option>
+          <option value="2">180</option>
+          <option value="3">270</option>
+        </select>
+        <select name="bpearlTimeType" class="right">
+          <option value="0">UTC-Date</option>
+          <option value="1">UTC-Unix</option>
+        </select>
+        <span language="bpearlTimeType" class="right"></span>
+      </li>
+      <li class="fixclear">
+        <span language="syncTimeOffset" class="left"></span>
+        <input type="number" name="syncTimeOffset" max="20" min="-20" value="1" step="0.001" class="left">
+        <input type="number" name="timeSourceOffset" max="1000" min="-1000" value="0" step="1" class="right">
+        <span language="timeSourceOffset" class="right"></span>
+      </li>
+    </ul>
+    <ul>
+      <li class="fixclear">
+        <p language="lidarIP"></p>
+      </li>
+      <li class="fixclear">
+        <span language="middleLidarIP" class="left"></span>
+        <input type="text" name="middleLidarIP"
+          pattern="^(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|[0-9])\.((1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)\.){2}(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)$"
+          class="left">
+      </li>
+      <li class="fixclear">
+        <span language="leftLidarIP" class="left"></span>
+        <input type="text" name="leftLidarIP"
+          pattern="^(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|[0-9])\.((1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)\.){2}(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)$"
+          class="left">
+        <input type="text" name="rightLidarIP"
+          pattern="^(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|[0-9])\.((1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)\.){2}(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)$"
+          class="right">
+        <span language="rightLidarIP" class="right"></span>
+      </li>
+      <li class="fixclear">
+        <span language="frontLidarIP" class="left"></span>
+        <input type="text" name="frontLidarIP"
+          pattern="^(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|[0-9])\.((1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)\.){2}(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)$"
+          class="left">
+        <input type="text" name="rearLidarIP"
+          pattern="^(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|[0-9])\.((1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)\.){2}(1\d{2}|2[0-4]\d|25[0-5]|[1-9]\d|\d)$"
+          class="right">
+        <span language="rearLidarIP" class="right"></span>
+      </li>
+    </ul>
+    <ul>
+      <li class="fixclear">
+        <p language="sample"></p>
+      </li>
+      <li class="fixclear"><span language="gnssimuChannel" class="left"></span>
+        <select name="gnssimuChannel" class="left">
+          <option value="-1">(Disabled)</option>
+          <option value="0">GNSS-IMU sensor A</option>
+          <option value="1">GNSS-IMU sensor B</option>
+          <option value="2">GNSS-IMU sensor C</option>
+          <option value="3">GNSS-IMU sensor D</option>
+          <option value="4">GNSS-IMU sensor E</option>
+          <option value="5">GNSS-IMU sensor F</option>
+          <option value="6">GNSS-IMU sensor G</option>
+          <option value="7">GNSS-IMU sensor H</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="frontobjectChannel" class="left"></span>
+        <select name="frontobjectChannel" class="left">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Object sensor A</option>
+          <option value="1">Object sensor B</option>
+          <option value="2">Object sensor C</option>
+          <option value="3">Object sensor D</option>
+          <option value="4">Object sensor E</option>
+          <option value="5">Object sensor F</option>
+          <option value="6">Object sensor G</option>
+          <option value="7">Object sensor H</option>
+          <option value="8">Object sensor I</option>
+          <option value="9">Object sensor J</option>
+          <option value="10">Object sensor K</option>
+          <option value="11">Object sensor L</option>
+        </select>
+        <select name="rearobjectChannel" class="right">
+          <option value="-1">(Disabled)</option>
+          <option value="0">Object sensor A</option>
+          <option value="1">Object sensor B</option>
+          <option value="2">Object sensor C</option>
+          <option value="3">Object sensor D</option>
+          <option value="4">Object sensor E</option>
+          <option value="5">Object sensor F</option>
+          <option value="6">Object sensor G</option>
+          <option value="7">Object sensor H</option>
+          <option value="8">Object sensor I</option>
+          <option value="9">Object sensor J</option>
+          <option value="10">Object sensor K</option>
+          <option value="11">Object sensor L</option>
+        </select>
+        <span language="rearobjectChannel" class="right"></span>
+      </li>
+    </ul>
+  </div>
+  <script src="rs-data-export-ros/js/jquery-2.14.js"></script>
+  <script src="rs-data-export-ros/js/bi-common.js"></script>
+  <script src="rs-data-export-ros/js/text.js"></script>
+  <script src="rs-data-export-ros/js/index.js"></script>
+</body>
+
+</html>

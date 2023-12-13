@@ -1,0 +1,54 @@
+.container {
+  position: absolute;
+  width: 808px;
+  height: 549px;
+  top: 50%;
+  left: 50%;
+  margin: -274.5px 0 0 -404px;
+}
+
+.container>div>div.left {
+  width: 413px;
+}
+.container>div>div.right{
+  width: 384px;
+}
+.container>div>div>div {
+  
+  position: relative;
+  border: 1px solid #868686;
+  padding: 12px 10px 10px;
+  margin-top: 15px;
+}
+
+.container>div>div>div>p {
+  position: absolute;
+  top: -10px;
+}
+
+.container>div>div>div>ul {
+  height: 130px;
+}
+
+.container>div>div>div.target>ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container>div>div.right>div:last-child>ul>li {
+  padding-top: 10px;
+}
+
+select {
+  width: 160px;
+}
+
+input[type=number] {
+  width: 60px;
+}
+
+input[type=text] {
+  width: 113px;
+  margin-left: 3px;
+}

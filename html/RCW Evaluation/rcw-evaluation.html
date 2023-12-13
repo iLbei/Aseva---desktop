@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>RCW Evaluation</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="rcw-evaluation/css/common.css">
+  <link rel="stylesheet" href="rcw-evaluation/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="enabled">
+      <input type="checkbox" name="enabled" id="enabled">
+      <label for="enabled" language="enabled"></label>
+    </div>
+    <div class="content fixclear">
+      <div class="left">
+        <ul class="common">
+          <li>
+            <span language="message_id"></span>
+            <a href="javascript:;" name="message_id" language="not_config"></a>
+          </li>
+          <li>
+            <span language="sensor_source"></span>
+            <select name="sensor_source">
+              <option value="Object sensor A" selected language="obj_sen_a">Object sensor A</option>
+              <option value="Object sensor B" language="obj_sen_b">Object sensor B</option>
+              <option value="Object sensor C" language="obj_sen_c">Object sensor C</option>
+              <option value="Object sensor D" language="obj_sen_d">Object sensor D</option>
+              <option value="Object sensor E" language="obj_sen_e">Object sensor E</option>
+              <option value="Object sensor F" language="obj_sen_f">Object sensor F</option>
+              <option value="Object sensor G" language="obj_sen_g">Object sensor G</option>
+              <option value="Object sensor H" language="obj_sen_h">Object sensor H</option>
+              <option value="Object sensor I" language="obj_sen_i">Object sensor I</option>
+              <option value="Object sensor J" language="obj_sen_j">Object sensor J</option>
+              <option value="Object sensor K" language="obj_sen_k">Object sensor K</option>
+              <option value="Object sensor L" language="obj_sen_l">Object sensor L</option>
+            </select>
+          </li>
+          <li>
+            <span language="vehicle_width"></span>
+            <input type="number" name="vehicle_width" value="1" min="0" max="5" step="0.01">
+            <span language="length"></span>
+            <input type="number" name="vehicle_length" value="3" min="0" max="20" step="0.01">
+          </li>
+          <li>
+            <span>B to N [m]:</span>
+            <input type="number" name="reab_area_BtoN" value="0.30" min="0" max="100" step="0.01">
+            <span>,A to B [m]:</span>
+            <input type="number" name="reab_area_AtoB" value="3.00" min="0" max="100" step="0.01">
+          </li>
+        </ul>
+        <fieldset>
+          <legend>RCW <span language="signal"></span></legend>
+          <ul class="RCW_signals">
+            <li>
+              <input type="checkbox" name="rcw_always_enable" id="rcw_always_enable">
+              <label for="rcw_always_enable" language="alwaysEnable"></label>
+            </li>
+            <li>
+              <span language="rcw_enable_id"></span>
+              <a href="javascript:;" name="rcw_enable_id" language="not_config"></a>
+            </li>
+            <li>
+              <span language="rcw_enable_values"></span>
+              <input type="text" pattern="[,0-9]+$" name="rcw_enable_values">
+            </li>
+            <li>
+              <span language="rcw_active_id"></span>
+              <a href="javascript:;" name="rcw_active_id" language="not_config"></a>
+            </li>
+            <li>
+              <span language="rcw_active_values"></span>
+              <input type="text" pattern="[,0-9]+$" name="rcw_active_values">
+            </li>
+          </ul>
+        </fieldset>
+        <div>
+          <div class="top fixclear">
+            <input type="checkbox" name="rcw_gt_signal_checked" class="left" id="rcw_gt_signal_checked">
+            <ul class="left">
+              <li>
+                <label language="rcw_gt_signal_checked" for="rcw_gt_signal_checked"></label>
+                <a href="javascript:;" language="not_config" name="rcw_gt_signal"></a>
+              </li>
+              <li>
+                <span language="rcw_gt_values"></span>
+                <input type="text" pattern="[,0-9]+$" name="rcw_gt_values">
+              </li>
+            </ul>
+          </div>
+          <div class="bottom">
+            <fieldset>
+              <legend>RCW <span language="algorithm"></span></legend>
+              <div>
+                <span>VX:</span>
+                <input type="radio" name="rcw_vx_rel" id="rcw_vx_rel1" checked>
+                <label for="rcw_vx_rel1" language="relative"></label>
+                <input type="radio" name="rcw_vx_rel" id="rcw_vx_rel2">
+                <label for="rcw_vx_rel2" language="absolute"></label>
+              </div>
+              <div class="caption">
+                <span>[KPH]</span>
+                <span>[s]</span>
+                <span>[s]</span>
+              </div>
+              <div class="th">
+                <table border="1" style="border-collapse:collapse;">
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td align="center">VX ≥</td>
+                      <td align="center">TTC1 ≤</td>
+                      <td align="center">TTC2 ≤</td>
+                    </tr>
+                  </tbody>
+
+                </table>
+              </div>
+              <div class="tbody">
+                <table border="1" style="border-collapse:collapse;">
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td contenteditable></td>
+                      <td contenteditable></td>
+                      <td contenteditable></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </fieldset>
+            <ul>
+              <li class="fixclear">
+                <span language="range_fd"></span><input type="number" name="rcw_range_fd" min="0" max="1" step="0.01"
+                  class="right">
+              </li>
+              <li class="fixclear">
+                <span language="range_md"></span><input type="number" name="rcw_range_md" min="-1" max="0" step="0.01"
+                  class="right">
+              </li>
+              <li class="fixclear">
+                <span>TCC1</span>
+                <span language="fd"></span><input type="number" name="rcw_ttc1_fd" min="0" max="1" step="0.01"
+                  class="right">
+              </li>
+              <li class="fixclear">
+                <span>TCC1</span>
+                <span language="md"></span><input type="number" name="rcw_ttc1_md" min="-1" max="0" step="0.01"
+                  class="right">
+              </li>
+              <li class="fixclear">
+                <span>TCC2</span>
+                <span language="fd"></span><input type="number" name="rcw_ttc2_fd" min="0" max="1" step="0.01"
+                  class="right">
+              </li>
+              <li class="fixclear">
+                <span>TCC2</span>
+                <span language="md"></span><input type="number" name="rcw_ttc2_md" min="-1" max="0" step="0.01"
+                  class="right">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="rcw-evaluation//images/rcw_area.png" alt="">
+      </div>
+    </div>
+  </div>
+  <script src="rcw-evaluation/js/jquery-2.14.min.js"></script>
+  <script src="rcw-evaluation/js/text.js"></script>
+  <script src="rcw-evaluation/js/bi-common.js"></script>
+  <script src="rcw-evaluation/js/index.js"></script>
+</body>
+
+</html>

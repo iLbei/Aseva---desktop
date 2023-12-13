@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo Location Generation</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="pseudo-loc-generation/css/common.css">
+  <style>
+    .container {
+      height: 160px;
+      width: 285px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -80px 0 0 -142.5px;
+    }
+
+    ul {
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    ul>li>span {
+      padding-top: 3px;
+    }
+
+    input[type=text] {
+      width: 136px;
+    }
+
+    span.right {
+      width: 26px;
+      margin-left: 4px;
+    }
+
+    select.right {
+      width: 166px;
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li>
+        <input type="checkbox" name="enabled" id="enabled">
+        <label for="enabled" language="enabled"></label>
+      </li>
+      <li class="fixclear">
+        <span language="output_channel" class="left"></span>
+        <select name="output_channel" class="right">
+          <!-- <option value="-1">(Disabled)</option> -->
+          <option value="0" language="IMU_A">GNSS-IMU Channel A</option>
+          <option value="1" language="IMU_B">GNSS-IMU Channel B</option>
+          <option value="2" language="IMU_C">GNSS-IMU Channel C</option>
+          <option value="3" language="IMU_D">GNSS-IMU Channel D</option>
+          <option value="4" language="IMU_E">GNSS-IMU Channel E</option>
+          <option value="5" language="IMU_F">GNSS-IMU Channel F</option>
+        </select>
+      </li>
+      <li class="fixclear">
+        <span language="origin_lng" class="left"></span>
+        <span class="right">[°E]</span>
+        <input type="text" value="120" name="origin_lng" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="origin_lat" class="left"></span>
+        <span class="right">[°N]</span>
+        <input type="text" value="30" name="origin_lat" class="right">
+      </li>
+      <li class="fixclear">
+        <span language="origin_hd" class="left"></span>
+        <span class="right">[°]</span>
+        <input type="text" value="0" name="origin_hd" class="right">
+      </li>
+    </ul>
+  </div>
+  <script src="pseudo-loc-generation/js/jquery-2.14.js"></script>
+  <script src="pseudo-loc-generation/js/bi-common.js"></script>
+  <script src="pseudo-loc-generation/js/text.js"></script>
+  <script src="pseudo-loc-generation/js/index.js"></script>
+</body>
+
+</html>

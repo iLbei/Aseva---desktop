@@ -1,0 +1,43 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1246px;
+  height: 770px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: -385px 0 0 -623px;
+}
+
+.container>ul {
+  padding: 7px 0px;
+  background-color: #ffefc1;
+}
+
+.container input[type='number'] {
+  width: 50px;
+}
+
+.container span {
+  margin-right: 3px;
+}
+
+.container ul>li:nth-child(1) span:nth-child(1) {
+  width: 74px;
+  padding-top: 3px;
+}
+
+.container>div:nth-child(1) input:nth-child(3) {
+  margin-left: 40px;
+}
+
+.container ul>li {
+  float: left;
+}
+
+.container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

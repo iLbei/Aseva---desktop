@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lidars (simple mode)</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="lidars-simple-mode/css/common.css">
+  <link rel="stylesheet" href="lidars-simple-mode/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container fixclear">
+    <input type="radio" name="ll" id="l1" checked>
+    <input type="radio" name="ll" id="l2">
+    <input type="radio" name="ll" id="l3">
+    <input type="radio" name="ll" id="l4">
+    <input type="radio" name="ll" id="l5">
+    <input type="radio" name="ll" id="l6">
+    <div class="label fixclear">
+      <label for="l1" class="l1" language="lidar1"></label>
+      <label for="l2" class="l2" language="lidar2"></label>
+      <label for="l3" class="l3" language="lidar3"></label>
+      <label for="l4" class="l4" language="lidar4"></label>
+      <label for="l5" class="l5" language="lidar5"></label>
+      <label for="l6" class="l6" language="lidar6"></label>
+    </div>
+    <div class="lidar1 lidar">
+      <div class="fixclear">
+        <div class="left">
+          <div class="output">
+            <p language="output"></p>
+            <div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_cloud_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_pts">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_map_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_map">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input">
+            <p language="input"></p>
+            <div>
+              <span language="bus_channel"></span>
+              <input type="number" name="bus_channel" value="1" step="1">
+              <input type="text" name="bus_msgid" value="0" class="right">
+              <span language="message_id" class="right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="monitor">
+            <p language="monitor"></p>
+            <div>
+              <ul>
+                <li class="fixclear">
+                  <input type="checkbox" name="lidar_packet_monitor" class="left" id="lidar_packet_monitor1">
+                  <label for="lidar_packet_monitor1" language="lidar_packet_monitor" class="left"></label>
+                  <input type="number" name="delta_offset_thresh" value="0" step="0.1" class="right">
+                  <span class="right" language="delta_offset_thresh"></span>
+                </li>
+                <li class="fixclear">
+                  <span language="delta_posix_thresh" class="left"></span>
+                  <input type="number" name="delta_posix_thresh" value="0" step="0.1" class="left">
+                  <input type="number" name="delta_angle_thresh" value="0" step="0.1" class="right">
+                  <span language="delta_angle_thresh" class="right"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="process fixclear">
+        <p language="processing"></p>
+        <div class="left">
+          <div class="fixclear">
+            <span language="device_type"></span>
+            <br>
+            <form>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="1" id="m1" checked>
+                  <label for="m1" class="m1" language="velodyne_16_normal">VLD 16L Normal</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="20" id="m20">
+                  <label for="m20" class="m20">VLD 32C</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="3" id="m3">
+                  <label for="m3" class="m3" language="rs_lidar_16">RS LiDAR 16</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="7" id="m7">
+                  <a href="javascript:;" class="rsLidarLe">RS LiDAR 32 Legacy</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="22" id="m22">
+                  <label for="m22" class="m22">RS Ruby Lite</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="8" id="m8">
+                  <label for="m8" class="m8" language="pandar_40_latest">Pandar 40 Latest</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="19" id="m19">
+                  <label for="m19" class="m19">Pandar QT</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="11" id="m11">
+                  <label for="m11" class="m11">Leishen C16-2°</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="27" id="m27">
+                  <label for="m27" class="m27">LeishenC32</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="21" id="m21">
+                  <label for="m21" class="m21">Ouster 128 Dual</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="6" id="m6">
+                  <label for="m6" class="m6">VLD 16L Hi-res</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="4" id="m4">
+                  <a href="javascript:;" class="calib">VLD 64L</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="17" id="m17">
+                  <a href="javascript:;" class="rsHelios">RS Helios 32</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="13" id="m13">
+                  <label for="m13" class="m13" language="rs_ruby_128">RS Ruby(128L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="14" id="m14">
+                  <label for="m14" class="m14">RS Bpearl (32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="5" id="m5">
+                  <label for="m5" class="m5">Pandar 40 Legacy</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="18" id="m18">
+                  <label for="m18" class="m18" language="pandar_18">Pandar 128</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="10" id="m10">
+                  <label for="m10" class="m10">Leishen C32-A</label>
+                </div>
+                <br />
+                <div>
+                  <input type="radio" name="model" value="24" id="m24">
+                  <label for="m24" class="m24">Ouster 128 Legacy</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="2" id="m2">
+                  <label for="m2" class="m2" language="velodyne_32">VLD 32L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="9" id="m9">
+                  <label for="m9" class="m9" language="velodyne_128">VLD 128L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="15" id="m15">
+                  <a href="javascript:;" class="rsLidarLa">RS LiDAR 32 Latest</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="23" id="m23">
+                  <label for="m23" class="m23" language="rs_ruby_plus">RS Ruby Plus</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="26" id="m26">
+                  <label for="m26" class="m26">RS Bpearl2(32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="16" id="m16">
+                  <label for="m16" class="m16" language="pandar_64">Pandar 64</label>
+                </div>
+                <br>
+                <div>
+                  <input type="radio" name="model" value="12" id="m12">
+                  <label for="m12" class="m12">Leishen C16-1.33°</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="fixclear">
+            <ul class="left">
+              <li><input type="checkbox" name="utc_time_sync" id="utc_time_sync1">
+                <label for="utc_time_sync1" language="utc_time_sync"></label>
+              </li>
+              <li><input type="checkbox" name="clip_point_cloud" id="clip_point_cloud1">
+                <label for="clip_point_cloud1" language="clip_point_cloud"></label>
+              </li>
+            </ul>
+            <div class="right">
+              <ul>
+                <li class="fixclear"><span language="frame_timestamp_ratio" class="left"></span>
+                  <input type="number" name="frame_timestamp_ratio" value="0.0" step="0.1" class="right">
+                </li>
+                <!-- <li class="fixclear">
+                  <span language="sync_time_offset" class="left">Sync time offset[ms]:</span>
+                  <input type="number" name="sync_time_offset" max="100000000.0" min="-100000000.0" value="0.0"
+                    step="0.1" class="right">
+                </li> -->
+                <li>
+                  <span language="time_sync_type"></span>
+                  <select name="time_sync_type" class="right">
+                    <option value="0">GNSS</option>
+                    <option value="1">Guest</option>
+                  </select>
+                </li>
+                <li class="fixclear">
+                  <span language="clip_min_height" class="left"></span>
+                  <input type="number" name="clip_min_height" value="0.00" step="0.1" class="right">
+                </li>
+                <li class="fixclear">
+                  <span language="clip_max_height" class="left"></span>
+                  <input type="number" name="clip_max_height" value="100" step="0.1" class="right">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <input type="number" name="split" min="0" max="360" step="1" class="right">
+            <span class="right" language="frame_split_angle"></span>
+          </div>
+          <div class="fixclear bottom">
+            <div class="left fixclear w200">
+              <ul class="left">
+                <li><span>X</span></li>
+                <li>
+                  <span language="origin"></span><span>Y</span>
+                </li>
+                <li><span language="height"></span></li>
+                <li>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="posture"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="roll"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="roll"></span>
+                </li>
+              </ul>
+              <ul class="right">
+                <li><input type="text" name="offset_x" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="offset_y" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="height" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01"></li>
+                <li><input type="text" name="yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="fine_yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+              </ul>
+            </div>
+            <div class="right" id="canvas">
+              <canvas class="myCanvas" width="190" height="258"></canvas>
+              <a href="javascript:;" onclick="scaleCanvas(this)" class="scale_change" scale="large"
+                language="scale_small"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lidar2 lidar">
+      <div class="fixclear">
+        <div class="left">
+          <div class="output">
+            <p language="output"></p>
+            <div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_cloud_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_pts">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_map_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_map">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input">
+            <p language="input"></p>
+            <div>
+              <span language="bus_channel"></span>
+              <input type="number" name="bus_channel" value="1" step="1">
+              <input type="text" name="bus_msgid" value="0" class="right">
+              <span language="message_id" class="right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="monitor">
+            <p language="monitor"></p>
+            <div>
+              <ul>
+                <li class="fixclear">
+                  <input type="checkbox" name="lidar_packet_monitor" class="left" id="lidar_packet_monitor2">
+                  <label for="lidar_packet_monitor2" language="lidar_packet_monitor" class="left"></label>
+                  <input type="number" name="delta_offset_thresh" value="0" step="0.1" class="right">
+                  <span class="right" language="delta_offset_thresh"></span>
+                </li>
+                <li class="fixclear">
+                  <span language="delta_posix_thresh" class="left"></span>
+                  <input type="number" name="delta_posix_thresh" value="0" step="0.1" class="left">
+                  <input type="number" name="delta_angle_thresh" value="0" step="0.1" class="right">
+                  <span language="delta_angle_thresh" class="right"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="process fixclear">
+        <p language="processing"></p>
+        <div class="left">
+          <div class="fixclear">
+            <span language="device_type"></span>
+            <br>
+            <form>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="1" id="m1_2" checked>
+                  <label for="m1_2" class="m1" language="velodyne_16_normal">VLD 16L Normal</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="20" id="m20_2">
+                  <label for="m20_2" class="m20">VLD 32C</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="3" id="m3_2">
+                  <label for="m3_2" class="m3" language="rs_lidar_16">RS LiDAR 16</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="7" id="m7_2">
+                  <a href="javascript:;" class="rsLidarLe">RS LiDAR 32 Legacy</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="22" id="m22_2">
+                  <label for="m22_2" class="m22">RS Ruby Lite</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="8" id="m8_2">
+                  <label for="m8_2" class="m8" language="pandar_40_latest">Pandar 40 Latest</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="19" id="m19_2">
+                  <label for="m19_2" class="m19">Pandar QT</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="11" id="m11_2">
+                  <label for="m11_2" class="m11">Leishen C16-2°</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="27" id="m27_2">
+                  <label for="m27_2" class="m27">LeishenC32</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="21" id="m21_2">
+                  <label for="m21_2" class="m21">Ouster 128 Dual</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="6" id="m6_2">
+                  <label for="m6_2" class="m6">VLD 16L Hi-res</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="4" id="m4_2">
+                  <a href="javascript:;" class="calib">VLD 64L</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="17" id="m17_2">
+                  <a href="javascript:;" class="rsHelios">RS Helios 32</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="13" id="m13_2">
+                  <label for="m13_2" class="m13" language="rs_ruby_128">RS Ruby(128L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="14" id="m14_2">
+                  <label for="m14_2" class="m14">RS Bpearl (32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="5" id="m5_2">
+                  <label for="m5_2" class="m5">Pandar 40 Legacy</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="18" id="m18_2">
+                  <label for="m18_2" class="m18" language="pandar_18">Pandar 128</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="10" id="m10_2">
+                  <label for="m10_2" class="m10">Leishen C32-A</label>
+                </div>
+                <br />
+                <div>
+                  <input type="radio" name="model" value="24" id="m24_2">
+                  <label for="m24_2" class="m24">Ouster 128 Legacy</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="2" id="m2_2">
+                  <label for="m2_2" class="m2" language="velodyne_32">VLD 32L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="9" id="m9_2">
+                  <label for="m9_2" class="m9" language="velodyne_128">VLD 128L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="15" id="m15_2">
+                  <a href="javascript:;" class="rsLidarLa">RS LiDAR 32 Latest</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="23" id="m23_2">
+                  <label for="m23_2" class="m23" language="rs_ruby_plus">RS Ruby Plus</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="26" id="m26_2">
+                  <label for="m26_2" class="m26">RS Bpearl2(32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="16" id="m16_2">
+                  <label for="m16_2" class="m16" language="pandar_64">Pandar 64</label>
+                </div>
+                <br>
+                <div>
+                  <input type="radio" name="model" value="12" id="m12_2">
+                  <label for="m12_2" class="m12">Leishen C16-1.33°</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="fixclear">
+            <ul class="left">
+              <li><input type="checkbox" name="utc_time_sync" id="utc_time_sync2">
+                <label for="utc_time_sync2" language="utc_time_sync"></label>
+              </li>
+              <li><input type="checkbox" name="clip_point_cloud" id="clip_point_cloud2">
+                <label for="clip_point_cloud2" language="clip_point_cloud"></label>
+              </li>
+            </ul>
+            <div class="right">
+              <ul>
+                <li class="fixclear"><span language="frame_timestamp_ratio" class="left"></span>
+                  <input type="number" name="frame_timestamp_ratio" value="0.0" step="0.1" class="right">
+                </li>
+                <!--  <li class="fixclear">
+                 <span language="sync_time_offset" class="left">Sync time offset[ms]:</span>
+                  <input type="number" name="sync_time_offset" max="100000000.0" min="-100000000.0" value="0.0"
+                    step="0.1" class="right">
+                </li> -->
+                <li>
+                  <span language="time_sync_type"></span>
+                  <select name="time_sync_type" class="right">
+                    <option value="0">GNSS</option>
+                    <option value="1">Guest</option>
+                  </select>
+                </li>
+                <li class="fixclear">
+                  <span language="clip_min_height" class="left"></span>
+                  <input type="number" name="clip_min_height" value="0.00" step="0.1" class="right">
+                </li>
+                <li class="fixclear">
+                  <span language="clip_max_height" class="left"></span>
+                  <input type="number" name="clip_max_height" value="100" step="0.1" class="right">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <input type="number" name="split" min="0" max="360" step="1" class="right">
+            <span class="right" language="frame_split_angle"></span>
+          </div>
+          <div class="fixclear bottom">
+            <div class="left fixclear w200">
+              <ul class="left">
+                <li><span>X</span></li>
+                <li>
+                  <span language="origin"></span><span>Y</span>
+                </li>
+                <li><span language="height"></span></li>
+                <li>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="posture"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="roll"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="roll"></span>
+                </li>
+              </ul>
+              <ul class="right">
+                <li><input type="text" name="offset_x" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="offset_y" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="height" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01"></li>
+                <li><input type="text" name="yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="fine_yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+              </ul>
+            </div>
+            <div class="right" id="canvas">
+              <canvas class="myCanvas" width="190" height="258"></canvas>
+              <a href="javascript:;" onclick="scaleCanvas(this)" class="scale_change" scale="large"
+                language="scale_small"></a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="lidar3 lidar">
+      <div class="fixclear">
+
+        <div class="left">
+          <div class="output">
+            <p language="output"></p>
+            <div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_cloud_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_pts">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_map_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_map">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input">
+            <p language="input"></p>
+            <div>
+              <span language="bus_channel"></span>
+              <input type="number" name="bus_channel" value="1" step="1">
+              <input type="text" name="bus_msgid" value="0" class="right">
+              <span language="message_id" class="right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="monitor">
+            <p language="monitor"></p>
+            <div>
+              <ul>
+                <li class="fixclear">
+                  <input type="checkbox" name="lidar_packet_monitor" class="left" id="lidar_packet_monitor3">
+                  <label for="lidar_packet_monitor3" language="lidar_packet_monitor" class="left"></label>
+                  <input type="number" name="delta_offset_thresh" value="0" step="0.1" class="right">
+                  <span class="right" language="delta_offset_thresh"></span>
+                </li>
+                <li class="fixclear">
+                  <span language="delta_posix_thresh" class="left"></span>
+                  <input type="number" name="delta_posix_thresh" value="0" step="0.1" class="left">
+                  <input type="number" name="delta_angle_thresh" value="0" step="0.1" class="right">
+                  <span language="delta_angle_thresh" class="right"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="process fixclear">
+        <p language="processing"></p>
+        <div class="left">
+          <div class="fixclear">
+            <span language="device_type"></span>
+            <br>
+            <form>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="1" id="m1_3" checked>
+                  <label for="m1_3" class="m1" language="velodyne_16_normal">VLD 16L Normal</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="20" id="m20_3">
+                  <label for="m20_3" class="m20">VLD 32C</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="3" id="m3_3">
+                  <label for="m3_3" class="m3" language="rs_lidar_16">RS LiDAR 16</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="7" id="m7_3">
+                  <a href="javascript:;" class="rsLidarLe">RS LiDAR 32 Legacy</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="22" id="m22_3">
+                  <label for="m22_3" class="m22">RS Ruby Lite</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="8" id="m8_3">
+                  <label for="m8_3" class="m8" language="pandar_40_latest">Pandar 40 Latest</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="19" id="m19_3">
+                  <label for="m19_3" class="m19">Pandar QT</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="11" id="m11_3">
+                  <label for="m11_3" class="m11">Leishen C16-2°</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="27" id="m27_3">
+                  <label for="m27_3" class="m27">LeishenC32</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="21" id="m21_3">
+                  <label for="m21_3" class="m21">Ouster 128 Dual</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="6" id="m6_3">
+                  <label for="m6_3" class="m6">VLD 16L Hi-res</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="4" id="m4_3">
+                  <a href="javascript:;" class="calib">VLD 64L</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="17" id="m17_3">
+                  <a href="javascript:;" class="rsHelios">RS Helios 32</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="13" id="m13_3">
+                  <label for="m13_3" class="m13" language="rs_ruby_128">RS Ruby(128L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="14" id="m14_3">
+                  <label for="m14_3" class="m14">RS Bpearl (32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="5" id="m5_3">
+                  <label for="m5_3" class="m5">Pandar 40 Legacy</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="18" id="m18_3">
+                  <label for="m18_3" class="m18" language="pandar_18">Pandar 128</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="10" id="m10_3">
+                  <label for="m10_3" class="m10">Leishen C32-A</label>
+                </div>
+                <br />
+                <div>
+                  <input type="radio" name="model" value="24" id="m24_3">
+                  <label for="m24_3" class="m24">Ouster 128 Legacy</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="2" id="m2_3">
+                  <label for="m2_3" class="m2" language="velodyne_32">VLD 32L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="9" id="m9_3">
+                  <label for="m9_3" class="m9" language="velodyne_128">VLD 128L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="15" id="m15_3">
+                  <a href="javascript:;" class="rsLidarLa">RS LiDAR 32 Latest</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="23" id="m23_3">
+                  <label for="m23_3" class="m23" language="rs_ruby_plus">RS Ruby Plus</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="26" id="m26_3">
+                  <label for="m26_3" class="m26">RS Bpearl2(32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="16" id="m16_3">
+                  <label for="m16_3" class="m16" language="pandar_64">Pandar 64</label>
+                </div>
+                <br>
+                <div>
+                  <input type="radio" name="model" value="12" id="m12_3">
+                  <label for="m12_3" class="m12">Leishen C16-1.33°</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="fixclear">
+            <ul class="left">
+              <li><input type="checkbox" name="utc_time_sync" id="utc_time_sync3">
+                <label for="utc_time_sync3" language="utc_time_sync"></label>
+              </li>
+              <li><input type="checkbox" name="clip_point_cloud" id="clip_point_cloud3">
+                <label for="clip_point_cloud3" language="clip_point_cloud"></label>
+              </li>
+            </ul>
+            <div class="right">
+              <ul>
+                <li class="fixclear"><span language="frame_timestamp_ratio" class="left"></span>
+                  <input type="number" name="frame_timestamp_ratio" value="0.0" step="0.1" class="right">
+                </li>
+                <!-- <li class="fixclear">
+                  <span language="sync_time_offset" class="left">Sync time offset[ms]:</span>
+                  <input type="number" name="sync_time_offset" max="100000000.0" min="-100000000.0" value="0.0"
+                    step="0.1" class="right">
+                </li> -->
+                <li>
+                  <span language="time_sync_type"></span>
+                  <select name="time_sync_type" class="right">
+                    <option value="0">GNSS</option>
+                    <option value="1">Guest</option>
+                  </select>
+                </li>
+                <li class="fixclear">
+                  <span language="clip_min_height" class="left"></span>
+                  <input type="number" name="clip_min_height" value="0.00" step="0.1" class="right">
+                </li>
+                <li class="fixclear">
+                  <span language="clip_max_height" class="left"></span>
+                  <input type="number" name="clip_max_height" value="100" step="0.1" class="right">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <input type="number" name="split" min="0" max="360" step="1" class="right">
+            <span class="right" language="frame_split_angle"></span>
+          </div>
+          <div class="fixclear bottom">
+            <div class="left fixclear w200">
+              <ul class="left">
+                <li><span>X</span></li>
+                <li>
+                  <span language="origin"></span><span>Y</span>
+                </li>
+                <li><span language="height"></span></li>
+                <li>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="posture"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="roll"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="roll"></span>
+                </li>
+              </ul>
+              <ul class="right">
+                <li><input type="text" name="offset_x" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="offset_y" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="height" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01"></li>
+                <li><input type="text" name="yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="fine_yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+              </ul>
+            </div>
+            <div class="right" id="canvas">
+              <canvas class="myCanvas" width="190" height="258"></canvas>
+              <a href="javascript:;" onclick="scaleCanvas(this)" class="scale_change" scale="large"
+                language="scale_small"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lidar4 lidar">
+      <div class="fixclear">
+        <div class="left">
+          <div class="output">
+            <p language="output"></p>
+            <div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_cloud_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_pts">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_map_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_map">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input">
+            <p language="input"></p>
+            <div>
+              <span language="bus_channel"></span>
+              <input type="number" name="bus_channel" value="1" step="1">
+              <input type="text" name="bus_msgid" value="0" class="right">
+              <span language="message_id" class="right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="monitor">
+            <p language="monitor"></p>
+            <div>
+              <ul>
+                <li class="fixclear">
+                  <input type="checkbox" name="lidar_packet_monitor" class="left" id="lidar_packet_monitor4">
+                  <label for="lidar_packet_monitor4" language="lidar_packet_monitor" class="left"></label>
+                  <input type="number" name="delta_offset_thresh" value="0" step="0.1" class="right">
+                  <span class="right" language="delta_offset_thresh"></span>
+                </li>
+                <li class="fixclear">
+                  <span language="delta_posix_thresh" class="left"></span>
+                  <input type="number" name="delta_posix_thresh" value="0" step="0.1" class="left">
+                  <input type="number" name="delta_angle_thresh" value="0" step="0.1" class="right">
+                  <span language="delta_angle_thresh" class="right"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="process fixclear">
+        <p language="processing"></p>
+        <div class="left">
+          <div class="fixclear">
+            <span language="device_type"></span>
+            <br>
+            <form>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="1" id="m1_4" checked>
+                  <label for="m1_4" class="m1" language="velodyne_16_normal">VLD 16L Normal</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="20" id="m20_4">
+                  <label for="m20_4" class="m20">VLD 32C</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="3" id="m3_4">
+                  <label for="m3_4" class="m3" language="rs_lidar_16">RS LiDAR 16</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="7" id="m7_4">
+                  <a href="javascript:;" class="rsLidarLe">RS LiDAR 32 Legacy</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="22" id="m22_4">
+                  <label for="m22_4" class="m22">RS Ruby Lite</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="8" id="m8_4">
+                  <label for="m8_4" class="m8" language="pandar_40_latest">Pandar 40 Latest</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="19" id="m19_4">
+                  <label for="m19_4" class="m19">Pandar QT</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="11" id="m11_4">
+                  <label for="m11_4" class="m11">Leishen C16-2°</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="27" id="m27_4">
+                  <label for="m27_4" class="m27">LeishenC32</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="21" id="m21_4">
+                  <label for="m21_4" class="m21">Ouster 128 Dual</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="6" id="m6_4">
+                  <label for="m6_4" class="m6">VLD 16L Hi-res</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="4" id="m4_4">
+                  <a href="javascript:;" class="calib">VLD 64L</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="17" id="m17_4">
+                  <a href="javascript:;" class="rsHelios">RS Helios 32</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="13" id="m13_4">
+                  <label for="m13_4" class="m13" language="rs_ruby_128">RS Ruby(128L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="14" id="m14_4">
+                  <label for="m14_4" class="m14">RS Bpearl (32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="5" id="m5_4">
+                  <label for="m5_4" class="m5">Pandar 40 Legacy</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="18" id="m18_4">
+                  <label for="m18_4" class="m18" language="pandar_18">Pandar 128</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="10" id="m10_4">
+                  <label for="m10_4" class="m10">Leishen C32-A</label>
+                </div>
+                <br />
+                <div>
+                  <input type="radio" name="model" value="24" id="m24_4">
+                  <label for="m24_4" class="m24">Ouster 128 Legacy</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="2" id="m2_4">
+                  <label for="m2_4" class="m2" language="velodyne_32">VLD 32L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="9" id="m9_4">
+                  <label for="m9_4" class="m9" language="velodyne_128">VLD 128L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="15" id="m15_4">
+                  <a href="javascript:;" class="rsLidarLa">RS LiDAR 32 Latest</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="23" id="m23_4">
+                  <label for="m23_4" class="m23" language="rs_ruby_plus">RS Ruby Plus</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="26" id="m26_4">
+                  <label for="m26_4" class="m26">RS Bpearl2(32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="16" id="m16_4">
+                  <label for="m16_4" class="m16" language="pandar_64">Pandar 64</label>
+                </div>
+                <br>
+                <div>
+                  <input type="radio" name="model" value="12" id="m12_4">
+                  <label for="m12_4" class="m12">Leishen C16-1.33°</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="fixclear">
+            <ul class="left">
+              <li><input type="checkbox" name="utc_time_sync" id="utc_time_sync4">
+                <label for="utc_time_sync4" language="utc_time_sync"></label>
+              </li>
+              <li><input type="checkbox" name="clip_point_cloud" id="clip_point_cloud4">
+                <label for="clip_point_cloud4" language="clip_point_cloud"></label>
+              </li>
+            </ul>
+            <div class="right">
+              <ul>
+                <li class="fixclear"><span language="frame_timestamp_ratio" class="left"></span>
+                  <input type="number" name="frame_timestamp_ratio" value="0.0" step="0.1" class="right">
+                </li>
+                <!-- <li class="fixclear">
+                  <span language="sync_time_offset" class="left">Sync time offset[ms]:</span>
+                  <input type="number" name="sync_time_offset" max="100000000.0" min="-100000000.0" value="0.0"
+                    step="0.1" class="right">
+                </li> -->
+                <li>
+                  <span language="time_sync_type"></span>
+                  <select name="time_sync_type" class="right">
+                    <option value="0">GNSS</option>
+                    <option value="1">Guest</option>
+                  </select>
+                </li>
+                <li class="fixclear">
+                  <span language="clip_min_height" class="left"></span>
+                  <input type="number" name="clip_min_height" value="0.00" step="0.1" class="right">
+                </li>
+                <li class="fixclear">
+                  <span language="clip_max_height" class="left"></span>
+                  <input type="number" name="clip_max_height" value="100" step="0.1" class="right">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <input type="number" name="split" min="0" max="360" step="1" class="right">
+            <span class="right" language="frame_split_angle"></span>
+          </div>
+          <div class="fixclear bottom">
+            <div class="left fixclear w200">
+              <ul class="left">
+                <li><span>X</span></li>
+                <li>
+                  <span language="origin"></span><span>Y</span>
+                </li>
+                <li><span language="height"></span></li>
+                <li>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="posture"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="roll"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="roll"></span>
+                </li>
+              </ul>
+              <ul class="right">
+                <li><input type="text" name="offset_x" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="offset_y" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="height" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01"></li>
+                <li><input type="text" name="yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="fine_yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+              </ul>
+            </div>
+            <div class="right" id="canvas">
+              <canvas class="myCanvas" width="190" height="258"></canvas>
+              <a href="javascript:;" onclick="scaleCanvas(this)" class="scale_change" scale="large"
+                language="scale_small"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lidar5 lidar">
+      <div class="fixclear">
+        <div class="left">
+          <div class="output">
+            <p language="output"></p>
+            <div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_cloud_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_pts">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_map_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_map">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input">
+            <p language="input"></p>
+            <div>
+              <span language="bus_channel"></span>
+              <input type="number" name="bus_channel" value="1" step="1">
+              <input type="text" name="bus_msgid" value="0" class="right">
+              <span language="message_id" class="right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="monitor">
+            <p language="monitor"></p>
+            <div>
+              <ul>
+                <li class="fixclear">
+                  <input type="checkbox" name="lidar_packet_monitor" class="left" id="lidar_packet_monitor5">
+                  <label for="lidar_packet_monitor5" language="lidar_packet_monitor" class="left"></label>
+                  <input type="number" name="delta_offset_thresh" value="0" step="0.1" class="right">
+                  <span class="right" language="delta_offset_thresh"></span>
+                </li>
+                <li class="fixclear">
+                  <span language="delta_posix_thresh" class="left"></span>
+                  <input type="number" name="delta_posix_thresh" value="0" step="0.1" class="left">
+                  <input type="number" name="delta_angle_thresh" value="0" step="0.1" class="right">
+                  <span language="delta_angle_thresh" class="right"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="process fixclear">
+        <p language="processing"></p>
+        <div class="left">
+          <div class="fixclear">
+            <span language="device_type"></span>
+            <br>
+            <form>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="1" id="m1_5" checked>
+                  <label for="m1_5" class="m1" language="velodyne_16_normal">VLD 16L Normal</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="20" id="m20_5">
+                  <label for="m20_5" class="m20">VLD 32C</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="3" id="m3_5">
+                  <label for="m3_5" class="m3" language="rs_lidar_16">RS LiDAR 16</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="7" id="m7_5">
+                  <a href="javascript:;" class="rsLidarLe">RS LiDAR 32 Legacy</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="22" id="m22_5">
+                  <label for="m22_5" class="m22">RS Ruby Lite</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="8" id="m8_5">
+                  <label for="m8_5" class="m8" language="pandar_40_latest">Pandar 40 Latest</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="19" id="m19_5">
+                  <label for="m19_5" class="m19">Pandar QT</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="11" id="m11_5">
+                  <label for="m11_5" class="m11">Leishen C16-2°</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="27" id="m27_5">
+                  <label for="m27_5" class="m27">LeishenC32</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="21" id="m21_5">
+                  <label for="m21_5" class="m21">Ouster 128 Dual</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="6" id="m6_5">
+                  <label for="m6_5" class="m6">VLD 16L Hi-res</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="4" id="m4_5">
+                  <a href="javascript:;" class="calib">VLD 64L</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="17" id="m17_5">
+                  <a href="javascript:;" class="rsHelios">RS Helios 32</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="13" id="m13_5">
+                  <label for="m13_5" class="m13" language="rs_ruby_128">RS Ruby(128L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="14" id="m14_5">
+                  <label for="m14_5" class="m14">RS Bpearl (32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="5" id="m5_5">
+                  <label for="m5_5" class="m5">Pandar 40 Legacy</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="18" id="m18_5">
+                  <label for="m18_5" class="m18" language="pandar_18">Pandar 128</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="10" id="m10_5">
+                  <label for="m10_5" class="m10">Leishen C32-A</label>
+                </div>
+                <br />
+                <div>
+                  <input type="radio" name="model" value="24" id="m24_5">
+                  <label for="m24_5" class="m24">Ouster 128 Legacy</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="2" id="m2_5">
+                  <label for="m2_5" class="m2" language="velodyne_32">VLD 32L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="9" id="m9_5">
+                  <label for="m9_5" class="m9" language="velodyne_128">VLD 128L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="15" id="m15_5">
+                  <a href="javascript:;" class="rsLidarLa">RS LiDAR 32 Latest</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="23" id="m23_5">
+                  <label for="m23_5" class="m23" language="rs_ruby_plus">RS Ruby Plus</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="26" id="m26_5">
+                  <label for="m26_5" class="m26">RS Bpearl2(32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="16" id="m16_5">
+                  <label for="m16_5" class="m16" language="pandar_64">Pandar 64</label>
+                </div>
+                <br>
+                <div>
+                  <input type="radio" name="model" value="12" id="m12_5">
+                  <label for="m12_5" class="m12">Leishen C16-1.33°</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="fixclear">
+            <ul class="left">
+              <li><input type="checkbox" name="utc_time_sync" id="utc_time_sync5">
+                <label for="utc_time_sync5" language="utc_time_sync"></label>
+              </li>
+              <li><input type="checkbox" name="clip_point_cloud" id="clip_point_cloud5">
+                <label for="clip_point_cloud5" language="clip_point_cloud"></label>
+              </li>
+            </ul>
+            <div class="right">
+              <ul>
+                <li class="fixclear"><span language="frame_timestamp_ratio" class="left"></span>
+                  <input type="number" name="frame_timestamp_ratio" value="0.0" step="0.1" class="right">
+                </li>
+                <!-- <li class="fixclear">
+                  <span language="sync_time_offset" class="left">Sync time offset[ms]:</span>
+                  <input type="number" name="sync_time_offset" max="100000000.0" min="-100000000.0" value="0.0"
+                    step="0.1" class="right">
+                </li> -->
+                <li>
+                  <span language="time_sync_type"></span>
+                  <select name="time_sync_type" class="right">
+                    <option value="0">GNSS</option>
+                    <option value="1">Guest</option>
+                  </select>
+                </li>
+                <li class="fixclear">
+                  <span language="clip_min_height" class="left"></span>
+                  <input type="number" name="clip_min_height" value="0.00" step="0.1" class="right">
+                </li>
+                <li class="fixclear">
+                  <span language="clip_max_height" class="left"></span>
+                  <input type="number" name="clip_max_height" value="100" step="0.1" class="right">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <input type="number" name="split" min="0" max="360" step="1" class="right">
+            <span class="right" language="frame_split_angle"></span>
+          </div>
+          <div class="fixclear bottom">
+            <div class="left fixclear w200">
+              <ul class="left">
+                <li><span>X</span></li>
+                <li>
+                  <span language="origin"></span><span>Y</span>
+                </li>
+                <li><span language="height"></span></li>
+                <li>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="posture"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="roll"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="roll"></span>
+                </li>
+              </ul>
+              <ul class="right">
+                <li><input type="text" name="offset_x" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="offset_y" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="height" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01"></li>
+                <li><input type="text" name="yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="fine_yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+              </ul>
+            </div>
+            <div class="right" id="canvas">
+              <canvas class="myCanvas" width="190" height="258"></canvas>
+              <a href="javascript:;" onclick="scaleCanvas(this)" class="scale_change" scale="large"
+                language="scale_small"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lidar6 lidar">
+      <div class="fixclear">
+
+        <div class="left">
+          <div class="output">
+            <p language="output"></p>
+            <div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_cloud_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_pts">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+              <div class="fixclear">
+                <div class="left fixclear w180">
+                  <span class="right" language="point_map_output_channel"></span>
+                </div>
+                <select class="right" name="out_channel_map">
+                  <option value="-1" selected language="disabled"></option>
+                  <option value="0" language="channel_a"></option>
+                  <option value="1" language="channel_b"></option>
+                  <option value="2" language="channel_c"></option>
+                  <option value="3" language="channel_d"></option>
+                  <option value="4" language="channel_e"></option>
+                  <option value="5" language="channel_f"></option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input">
+            <p language="input"></p>
+            <div>
+              <span language="bus_channel"></span>
+              <input type="number" name="bus_channel" value="1" step="1">
+              <input type="text" name="bus_msgid" value="0" class="right">
+              <span language="message_id" class="right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="monitor">
+            <p language="monitor"></p>
+            <div>
+              <ul>
+                <li class="fixclear">
+                  <input type="checkbox" name="lidar_packet_monitor" class="left" id="lidar_packet_monitor6">
+                  <label for="lidar_packet_monitor6" language="lidar_packet_monitor" class="left"></label>
+                  <input type="number" name="delta_offset_thresh" value="0" step="0.1" class="right">
+                  <span class="right" language="delta_offset_thresh"></span>
+                </li>
+                <li class="fixclear">
+                  <span language="delta_posix_thresh" class="left"></span>
+                  <input type="number" name="delta_posix_thresh" value="0" step="0.1" class="left">
+                  <input type="number" name="delta_angle_thresh" value="0" step="0.1" class="right">
+                  <span language="delta_angle_thresh" class="right"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="process fixclear">
+        <p language="processing"></p>
+        <div class="left">
+          <div class="fixclear">
+            <span language="device_type"></span>
+            <br>
+            <form>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="1" id="m1_6" checked>
+                  <label for="m1_6" class="m1" language="velodyne_16_normal">VLD 16L Normal</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="20" id="m20_6">
+                  <label for="m20_6" class="m20">VLD 32C</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="3" id="m3_6">
+                  <label for="m3_6" class="m3" language="rs_lidar_16">RS LiDAR 16</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="7" id="m7_6">
+                  <a href="javascript:;" class="rsLidarLe">RS LiDAR 32 Legacy</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="22" id="m22_6">
+                  <label for="m22_6" class="m22">RS Ruby Lite</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="8" id="m8_6">
+                  <label for="m8_6" class="m8" language="pandar_40_latest">Pandar 40 Latest</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="19" id="m19_6">
+                  <label for="m19_6" class="m19">Pandar QT</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="11" id="m11_6">
+                  <label for="m11_6" class="m11">Leishen C16-2°</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="27" id="m27_6">
+                  <label for="m27_6" class="m27">LeishenC32</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="21" id="m21_6">
+                  <label for="m21_6" class="m21">Ouster 128 Dual</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="6" id="m6_6">
+                  <label for="m6_6" class="m6">VLD 16L Hi-res</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="4" id="m4_6">
+                  <a href="javascript:;" class="calib">VLD 64L</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="17" id="m17_6">
+                  <a href="javascript:;" class="rsHelios">RS Helios 32</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="13" id="m13_6">
+                  <label for="m13_6" class="m13" language="rs_ruby_128">RS Ruby(128L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="14" id="m14_6">
+                  <label for="m14_6" class="m14">RS Bpearl (32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="5" id="m5_6">
+                  <label for="m5_6" class="m5">Pandar 40 Legacy</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="18" id="m18_6">
+                  <label for="m18_6" class="m18" language="pandar_18">Pandar 128</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="10" id="m10_6">
+                  <label for="m10_6" class="m10">Leishen C32-A</label>
+                </div>
+                <br />
+                <div>
+                  <input type="radio" name="model" value="24" id="m24_6">
+                  <label for="m24_6" class="m24">Ouster 128 Legacy</label>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <input type="radio" name="model" value="2" id="m2_6">
+                  <label for="m2_6" class="m2" language="velodyne_32">VLD 32L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="9" id="m9_6">
+                  <label for="m9_6" class="m9" language="velodyne_128">VLD 128L</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="15" id="m15_6">
+                  <a href="javascript:;" class="rsLidarLa">RS LiDAR 32 Latest</a>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="23" id="m23_6">
+                  <label for="m23_6" class="m23" language="rs_ruby_plus">RS Ruby Plus</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="26" id="m26_6">
+                  <label for="m26_6" class="m26">RS Bpearl2(32L)</label>
+                </div>
+                <div>
+                  <input type="radio" name="model" value="16" id="m16_6">
+                  <label for="m16_6" class="m16" language="pandar_64">Pandar 64</label>
+                </div>
+                <br>
+                <div>
+                  <input type="radio" name="model" value="12" id="m12_6">
+                  <label for="m12_6" class="m12">Leishen C16-1.33°</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="fixclear">
+            <ul class="left">
+              <li><input type="checkbox" name="utc_time_sync" id="utc_time_sync6">
+                <label for="utc_time_sync6" language="utc_time_sync"></label>
+              </li>
+              <li><input type="checkbox" name="clip_point_cloud" id="clip_point_cloud6">
+                <label for="clip_point_cloud6" language="clip_point_cloud"></label>
+              </li>
+            </ul>
+            <div class="right">
+              <ul>
+                <li class="fixclear"><span language="frame_timestamp_ratio" class="left"></span>
+                  <input type="number" name="frame_timestamp_ratio" value="0.0" step="0.1" class="right">
+                </li>
+                <!-- <li class="fixclear">
+                  <span language="sync_time_offset" class="left">Sync time offset[ms]:</span>
+                  <input type="number" name="sync_time_offset" max="100000000.0" min="-100000000.0" value="0.0"
+                    step="0.1" class="right">
+                </li> -->
+                <li>
+                  <span language="time_sync_type"></span>
+                  <select name="time_sync_type" class="right">
+                    <option value="0">GNSS</option>
+                    <option value="1">Guest</option>
+                  </select>
+                </li>
+                <li class="fixclear">
+                  <span language="clip_min_height" class="left"></span>
+                  <input type="number" name="clip_min_height" value="0.00" step="0.1" class="right">
+                </li>
+                <li class="fixclear">
+                  <span language="clip_max_height" class="left"></span>
+                  <input type="number" name="clip_max_height" value="100" step="0.1" class="right">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="fixclear">
+            <input type="number" name="split" min="0" max="360" step="1" class="right">
+            <span class="right" language="frame_split_angle"></span>
+          </div>
+          <div class="fixclear bottom">
+            <div class="left fixclear w200">
+              <ul class="left">
+                <li><span>X</span></li>
+                <li>
+                  <span language="origin"></span><span>Y</span>
+                </li>
+                <li><span language="height"></span></li>
+                <li>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="posture"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="roll"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="yaw"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="pitch"></span>
+                </li>
+                <li>
+                  <span language="fine"></span>
+                  <span language="roll"></span>
+                </li>
+              </ul>
+              <ul class="right">
+                <li><input type="text" name="offset_x" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="offset_y" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01">
+                </li>
+                <li><input type="text" name="height" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.01"></li>
+                <li><input type="text" name="yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1"></li>
+                <li><input type="text" name="fine_yaw" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_pitch" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+                <li><input type="text" name="fine_roll" pattern="-?[0-9]+(\.[0-9]+)?$" title="" value="0" step="0.1">
+                </li>
+              </ul>
+            </div>
+            <div class="right" id="canvas">
+              <canvas class="myCanvas" width="190" height="258"></canvas>
+              <a href="javascript:;" onclick="scaleCanvas(this)" class="scale_change" scale="large"
+                language="scale_small"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="lidars-simple-mode/js/jquery-2.14.js"></script>
+  <script src="lidars-simple-mode/js/decimal.js"></script>
+  <script src="lidars-simple-mode/js/bi-common.js"></script>
+  <script src="lidars-simple-mode/js/text.js"></script>
+  <script src="lidars-simple-mode/js/index.js"></script>
+</body>
+
+</html>

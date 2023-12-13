@@ -1,0 +1,62 @@
+.container {
+  padding: 3px;
+  background-color: #f0f0f0;
+  font-size: 13px;
+}
+
+.container>ul>li {
+  float: left;
+  cursor: default;
+  text-align: center;
+  padding: 3px 8px;
+  border: 1px solid #ccc;
+}
+
+.container>ul>li:not(:last-child) {
+  border-right: none;
+}
+
+.content>.left input[type=number],
+.content>.left input[type=text],
+.content>.left select {
+  width: 135px;
+}
+
+.white {
+  background-color: #fff;
+  border-bottom: 1px solid white !important;
+}
+
+.content {
+  margin-top: -1px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  height: 250px;
+  padding: 10px;
+}
+
+.content li>span {
+  margin-top: 10px;
+}
+
+.content>.right {
+  background-color: #F0F0F0;
+  padding: 10px;
+  margin-top: 33px;
+}
+
+.content>.right>.left>div {
+  margin-top: 6px;
+  margin-right: 25px;
+}
+.content>.right>.left>div span{
+padding-top: 4px;
+}
+.content>.right>.left>div:nth-child(4) {
+  margin-top: 13px;
+}
+
+.content>.right>.left>div input {
+  width: 70px;
+  margin-left: 5px;
+}

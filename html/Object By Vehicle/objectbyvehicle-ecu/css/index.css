@@ -1,0 +1,62 @@
+.container>div:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+.container>div:nth-child(1) input[type=text] {
+  width: 137px;
+  margin-right: 17px;
+  margin-left: 5px;
+}
+
+.container>div:nth-child(1) input[type=number] {
+  width: 69px;
+  margin-left: 5px;
+}
+
+.content span {
+  padding-top: 3px;
+}
+
+.container>div:nth-child(2) select {
+  width: 57%;
+}
+
+[language="port"] {
+  padding-top: 3px;
+}
+
+.content>div p {
+  margin-right: 5px;
+}
+
+.content>div p:nth-child(1) {
+  margin-top: 30px;
+}
+
+.content>div p:nth-child(2) {
+  margin-top: 75px;
+}
+
+.content>.left>.right>div:nth-child(3) {
+  margin-bottom: 7px;
+}
+
+.content>div input {
+  margin-bottom: 3px;
+  width: 64px;
+  margin-left: 2px;
+}
+
+.content>div:first-child {
+  margin-bottom: 10px;
+}
+
+#canvas {
+  width: 130px;
+  height: 150px;
+  margin-top: 10px;
+}
+
+#myCanvas {
+  background-color: #fff;
+}

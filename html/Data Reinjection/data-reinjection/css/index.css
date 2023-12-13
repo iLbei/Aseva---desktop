@@ -1,0 +1,150 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ethernet input[type=number],
+.ethernet input[type=text] {
+  height: 23px;
+}
+
+.bus,
+.video,
+.ethernet {
+  position: relative;
+  border: 1px solid #C8C8C8;
+  padding: 10px 6px 0px;
+  margin-right: 8px;
+}
+
+.bus p,
+.video p,
+.ethernet p {
+  position: absolute;
+  top: -10px;
+  padding: 0px 2px;
+}
+
+.container>div>ul {
+  background-color: #C8C8C8;
+  margin-bottom: 5px;
+  padding: 5px 5px 0px;
+  width: 359px;
+  height: 102px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container>div>ul>li {
+  background-color: #C8C8C8;
+}
+
+div.bus>ul>li:not(:nth-child(3)) {
+  height: 26px;
+  line-height: 26px;
+}
+
+.bus span[name="canBitrate"] {
+  margin-right: 14px;
+}
+
+.bus>ul>li span {
+  margin-right: 5px;
+}
+
+.bus [name="canBitrate"] {
+  margin-right: 10px;
+}
+
+.bus select,
+.video select,
+.bus input[name="bus_channel"] {
+  width: 30%;
+}
+
+.video li>span:not([language=enable], [language=rawFormat]) {
+  width: 100px;
+}
+
+[language="local_ip"],
+[language="server_ip"] {
+  width: 52px !important;
+}
+
+.video li>span[language=busDeviceType] {
+  width: 80px;
+}
+
+.video li>span[language="largeCodec"] {
+  width: 72px;
+  margin-left: 46px;
+}
+
+.video li>span[language=enable] {
+  width: 137px;
+}
+
+[language="rawFormat"] {
+  margin-left: 18px;
+}
+
+[name=VideoDeviceType] {
+  margin-left: 4px;
+}
+
+.video li>span[language=video_channel],
+input[name="video_channel"] {
+
+  margin-right: 17px;
+}
+
+input[name="video_channel"] {
+  width: 30%;
+}
+
+/* .ethernet>ul>li {
+  margin-bottom: 6.3px;
+} */
+
+.ethernet span:not([language="server_ip"], [language="local_ip"]) {
+  width: 78px;
+}
+
+.ethernet input[type=number] {
+  width: 28%;
+}
+
+[name="server_port_num"] {
+  width: 76px !important;
+}
+
+.ethernet>ul>li:nth-child(2) input[type=text],
+.ethernet>ul>li:nth-child(3) input {
+  width: 22%;
+}
+
+.ethernet>ul>li>span:nth-child(3) {
+  margin-left: 4px;
+}
+
+.ethernet>ul>li input[name="server_ip"],
+.ethernet>ul>li input[name="local_ip"] {
+  width: 124px;
+}
+
+.video>ul>li:nth-child(1) {
+  height: 26px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.video>ul>li:nth-child(2) {
+  margin-bottom: 3px;
+}
+
+.container span {
+  background-color: #C8C8C8;
+}

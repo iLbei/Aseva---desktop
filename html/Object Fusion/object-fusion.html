@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0">
+  <title>Object Fusion</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="object-fusion/css/common.css">
+  <link rel="stylesheet" href="object-fusion/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <span language="input_chan"></span>
+      <input type="checkbox" name="in_channels" id="A">
+      <label for="A">A</label>
+      <input type="checkbox" name="in_channels" id="B">
+      <label for="B">B</label>
+      <input type="checkbox" name="in_channels" id="C">
+      <label for="C">C</label>
+      <input type="checkbox" name="in_channels" id="D">
+      <label for="D">D</label>
+      <input type="checkbox" name="in_channels" id="E">
+      <label for="E">E</label>
+      <input type="checkbox" name="in_channels" id="F">
+      <label for="F">F</label>
+      <input type="checkbox" name="in_channels" id="G">
+      <label for="G">G</label>
+      <input type="checkbox" name="in_channels" id="H">
+      <label for="H">H</label>
+      <input type="checkbox" name="in_channels" id="I">
+      <label for="I">I</label>
+      <input type="checkbox" name="in_channels" id="J">
+      <label for="J">J</label>
+      <input type="checkbox" name="in_channels" id="K">
+      <label for="K">K</label>
+      <input type="checkbox" name="in_channels" id="L">
+      <label for="L">L</label>
+    </div>
+    <div class="fixclear">
+      <div class="left">
+        <span language="acti_at_least"></span>
+      </div>
+      <div class="right">
+        <span language="output_channel"></span>
+        <select name="out_channel" onchange="changeOutChannel(this)" id="">
+          <option value="-1" selected language="disabled"></option>
+          <option value="0" language="obj_a"></option>
+          <option value="1" language="obj_b"></option>
+          <option value="2" language="obj_c"></option>
+          <option value="3" language="obj_d"></option>
+          <option value="4" language="obj_e"></option>
+          <option value="5" language="obj_f"></option>
+          <option value="6" language="obj_g"></option>
+          <option value="7" language="obj_h"></option>
+          <option value="8" language="obj_i"></option>
+          <option value="9" language="obj_j"></option>
+          <option value="10" language="obj_k"></option>
+          <option value="11" language="obj_l"></option>
+        </select>
+        <br>
+        <span language="frequency"></span>
+        <select name="frequency" id="">
+          <option value="1">1</option>
+          <option value="10" selected>10</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+        </select>
+      </div>
+    </div>
+    <div class="fixclear">
+      <div class="left">
+        <p language="out_mode"></p>
+        <div class="fixclear">
+          <div class="left">
+            <input type="radio" name="output_mode" value="ClosestPoint" checked id="close">
+            <label language="close_point" for="close"></label>
+          </div>
+          <div class="right">
+            <input type="radio" name="output_mode" value="BoxCenter" id="box">
+            <label language="box_center" for="box"></label>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div>
+          <span language="fusion_distance"></span>
+          <input type="number" name="fusion_distance" value="0" min="0" max="5" step="0.1" id="">
+          <span language="separation_distance"></span>
+          <input type="number" name="separation_distance" value="0" min="0" max="5" step="0.1" id="">
+        </div>
+      </div>
+    </div>
+    <div>
+      <p language="obj_exis"></p>
+      <div>
+        <ul class="fixclear">
+          <li class="fixclear">
+            <div class="left">A</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <div class="left">B</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <div class="left">C</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <div class="left">D</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <div class="left">E</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <div class="left">F</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <div class="left">G</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <div class="left">H</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <div class="left">I</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <div class="left">J</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <div class="left">K</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <div class="left">L</div>
+            <select class="right" name="exist_selected_index" id="">
+              <option value="-1" selected language="disabled"></option>
+              <option value="0" language="none"></option>
+              <option value="1" language="half"></option>
+              <option value="2" language="full"></option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="classification_weight">
+      <p language="classification_weight"></p>
+      <div>
+        <ul class="fixclear">
+          <li class="fixclear">
+            <div class="left">A</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">B</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">C</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">D</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">E</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">F</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">G</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">H</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">I</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">J</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">k</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">L</div>
+            <input class="right" type="text" name="classification_weight" value="0" id="">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="position_weight">
+      <p language="pos_weight"></p>
+      <div>
+        <ul class="fixclear">
+          <li class="fixclear">
+            <div class="left">A</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">B</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">C</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">D</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">E</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">F</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">G</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">H</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">I</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">J</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">K</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">L</div>
+            <input class="right" type="text" name="position_weight" value="0" id="">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="size_weight">
+      <p language="size_weight"></p>
+      <div>
+        <ul class="fixclear">
+          <li class="fixclear">
+            <div class="left">A</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">B</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">C</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">D</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">E</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">F</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">G</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">H</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">I</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">J</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">K</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">L</div>
+            <input class="right" type="text" name="size_weight" value="0" disabled id="">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="velocity_weight">
+      <p language="velocity_weight"></p>
+      <div>
+        <ul class="fixclear">
+          <li class="fixclear">
+            <div class="left">A</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">B</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">C</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">D</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">E</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">F</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">G</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">H</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">I</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">J</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">K</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+          <li class="fixclear">
+            <div class="left">L</div>
+            <input class="right" type="text" name="velocity_weight" value="0" id="">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="object-fusion/js/jquery-2.14.js"></script>
+  <script src="object-fusion/js/bi-common.js"></script>
+  <script src="object-fusion/js/text.js"></script>
+  <script src="object-fusion/js/index.js"></script>
+</body>
+
+</html>

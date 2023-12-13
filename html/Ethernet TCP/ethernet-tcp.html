@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethernet TCP</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="ethernet-tcp/css/common.css">
+  <style>
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 98px;
+      margin: -49px 0 0 -150px;
+    }
+
+    .container>ul {
+      height: 98px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .container>ul>li:not(:first-child) span {
+    padding-top: 4px;
+    margin-right: 8px;
+}
+    [name="ip"] {
+      width: 112px;
+    }
+
+    [name="port"] {
+      width: 68px;
+    }
+
+    [name=bus_channel]{
+      width: 210px;
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <ul>
+      <li><input type="checkbox" name="Enabled" id="Enabled"><label for="Enabled" language="Enabled"></label></li>
+      <li>
+        <span language="ip" class="left"></span>
+        <input type="text" name="ip" class="left">
+        <input type="number" name="port" max="65535" min="1000" step="1" language="port" class="right">
+        <span language="port" class="right"></span>
+      </li>
+      <li>
+        <span language="bus_channel"></span>
+        <input type="number" max="16" min="1" step="1" name="bus_channel" class="right">
+      </li>
+    </ul>
+  </div>
+  <script src="ethernet-tcp/js/jquery-2.14.js"></script>
+  <script src="ethernet-tcp/js/bi-common.js"></script>
+  <script src="ethernet-tcp/js/text.js"></script>
+  <script src="ethernet-tcp/js/index.js"></script>
+</body>
+
+</html>

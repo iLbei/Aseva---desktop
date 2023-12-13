@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>v2v offline sync</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="v2v-offline-sync/css/common.css">
+  <link rel="stylesheet" href="v2v-offline-sync/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="button">
+      <button language="import_tool"></button>
+    </div>
+    <div class="processing">
+      <p language="processing"></p>
+      <ul>
+        <li class="fixclear" id="0">
+          <div class="left">
+            <input type="checkbox" name="Enabled" id="Enabled">
+            <label for="Enabled" language="enabled"></label>
+          </div>
+          <div class="right">
+            <ul>
+              <li class="fixclear">
+                <span language="subject_gnss"></span>
+                <select class="right" name="SubjectGNSS_IMUChannel">
+                </select>
+              </li>
+              <li class="fixclear">
+                <span language="output_channel"></span>
+                <select name="OutputObjectsChannel" class="right">
+                  <option value="0">(Disabled)</option>
+                  <option value="1">Channel A</option>
+                  <option value="2">Channel B</option>
+                  <option value="3">Channel C</option>
+                  <option value="4">Channel D</option>
+                  <option value="5">Channel E</option>
+                  <option value="6">Channel F</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="fixclear" id="1">
+          <div class="left">
+            <input type="checkbox" name="Sync" id="sync_object1">
+            <label for="sync_object1"><span language="sync_object"></span> #1</label>
+          </div>
+          <div class="right">
+            <ul>
+              <li class="fixclear">
+                <span language="output_channel"></span>
+                <select class="right" name="CNSS_IMUOutputChannel">
+                  <option value="0">(Disabled)</option>
+                  <option value="1">Channel A</option>
+                  <option value="2">Channel B</option>
+                  <option value="3">Channel C</option>
+                  <option value="4">Channel D</option>
+                  <option value="5">Channel E</option>
+                  <option value="6">Channel F</option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <div class="left">
+                  <span language="length"></span>
+                  <input type="number" name="vehicleLength" step="0.01" value="5" max="20" min="1">
+                </div>
+                <div class="right">
+                  <span language="width"></span>
+                  <input type="number" name="vehicleWidth" step="0.01" value="2" max="10" min="1">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="fixclear" id="2">
+          <div class="left">
+            <input type="checkbox" name="Sync" id="sync_object2">
+            <label for="sync_object2"><span language="sync_object"></span> #2</label>
+          </div>
+          <div class="right">
+            <ul>
+              <li class="fixclear">
+                <span language="output_channel"></span>
+                <select class="right" name="CNSS_IMUOutputChannel">
+                  <option value="0">(Disabled)</option>
+                  <option value="1">Channel A</option>
+                  <option value="2">Channel B</option>
+                  <option value="3">Channel C</option>
+                  <option value="4">Channel D</option>
+                  <option value="5">Channel E</option>
+                  <option value="6">Channel F</option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <div class="left">
+                  <span language="length"></span>
+                  <input type="number" name="vehicleLength" step="0.01" value="5" max="20" min="1">
+                </div>
+                <div class="right">
+                  <span language="width"></span>
+                  <input type="number" name="vehicleWidth" step="0.01" value="2" max="10" min="1">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="fixclear" id="3">
+          <div class="left">
+            <input type="checkbox" name="Sync" id="sync_object3">
+            <label for="sync_object3"><span language="sync_object"></span> #3</label>
+          </div>
+          <div class="right">
+            <ul>
+              <li class="fixclear">
+                <span language="output_channel"></span>
+                <select class="right" name="CNSS_IMUOutputChannel">
+                  <option value="0">(Disabled)</option>
+                  <option value="1">Channel A</option>
+                  <option value="2">Channel B</option>
+                  <option value="3">Channel C</option>
+                  <option value="4">Channel D</option>
+                  <option value="5">Channel E</option>
+                  <option value="6">Channel F</option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <div class="left">
+                  <span language="length"></span>
+                  <input type="number" name="vehicleLength" step="0.01" value="5" max="20" min="1">
+                </div>
+                <div class="right">
+                  <span language="width"></span>
+                  <input type="number" name="vehicleWidth" step="0.01" value="2" max="10" min="1">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="fixclear" id="4">
+          <div class="left">
+            <input type="checkbox" name="Sync" id="sync_object4">
+            <label for="sync_object4"><span language="sync_object"></span> #4</label>
+          </div>
+          <div class="right">
+            <ul>
+              <li class="fixclear">
+                <span language="output_channel"></span>
+                <select class="right" name="CNSS_IMUOutputChannel">
+                  <option value="0">(Disabled)</option>
+                  <option value="1">Channel A</option>
+                  <option value="2">Channel B</option>
+                  <option value="3">Channel C</option>
+                  <option value="4">Channel D</option>
+                  <option value="5">Channel E</option>
+                  <option value="6">Channel F</option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <div class="left">
+                  <span language="length"></span>
+                  <input type="number" name="vehicleLength" step="0.01" value="5" max="20" min="1">
+                </div>
+                <div class="right">
+                  <span language="width"></span>
+                  <input type="number" name="vehicleWidth" step="0.01" value="2" max="10" min="1">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="fixclear" id="5">
+          <div class="left">
+            <input type="checkbox" name="Sync" id="sync_object5">
+            <label for="sync_object5"><span language="sync_object"></span> #5</label>
+          </div>
+          <div class="right">
+            <ul>
+              <li class="fixclear">
+                <span language="output_channel"></span>
+                <select class="right" name="CNSS_IMUOutputChannel">
+                  <option value="0">(Disabled)</option>
+                  <option value="1">Channel A</option>
+                  <option value="2">Channel B</option>
+                  <option value="3">Channel C</option>
+                  <option value="4">Channel D</option>
+                  <option value="5">Channel E</option>
+                  <option value="6">Channel F</option>
+                </select>
+              </li>
+              <li class="fixclear">
+                <div class="left">
+                  <span language="length"></span>
+                  <input type="number" name="vehicleLength" step="0.01" value="5" max="20" min="1">
+                </div>
+                <div class="right">
+                  <span language="width"></span>
+                  <input type="number" name="vehicleWidth" step="0.01" value="2" max="10" min="1">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <script src="v2v-offline-sync/js/jquery-2.14.js"></script>
+  <script src="v2v-offline-sync/js/bi-common.js"></script>
+  <script src="v2v-offline-sync/js/text.js"></script>
+  <script src="v2v-offline-sync/js/index.js"></script>
+</body>
+
+</html>

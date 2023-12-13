@@ -1,0 +1,118 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 794px;
+  height: 613px;
+  margin: -306.5px 0 0 -397px;
+}
+
+.content>.left {
+  width: 405px;
+  height: 567px;
+}
+
+.content>.right {
+  width: 355px;
+  height: 388px;
+}
+
+.container>.top>button {
+  float: left;
+  background-color: transparent;
+  border-radius: 0px;
+  border-right: none;
+  padding: 4px 25px;
+  border-color: #ccc;
+}
+
+.container>.top>button:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.content>.left>ul>li>input[type=checkbox]:not(:first-child) {
+  margin-left: 15px;
+}
+
+.content>div>div {
+  position: relative;
+  padding: 10px 10px 13px;
+  border: 1px solid #ccc;
+}
+
+.content>div>div>p {
+  position: absolute;
+  top: -10px;
+  background-color: #fff;
+}
+
+.content>div>div>ul>li {
+  margin-top: 10px;
+  height: 26px;
+}
+
+input[type=text] {
+  width: 120px;
+}
+
+input[type=number] {
+  margin-left: 3px;
+  width: 65px;
+}
+
+[name="events_per_sec"],
+[name="diff_thresh_us"] {
+  width: 81px !important;
+}
+
+input[type=checkbox].left,
+input[type=checkbox].right,
+label.left,
+span.right,
+span.left {
+  display: inline-block;
+  margin-top: 3px;
+}
+
+input[type=checkbox].left {
+  margin-top: 6px;
+}
+
+label {
+  display: inline-block;
+}
+
+.content {
+  margin-top: -1px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.content>div>ul {
+  height: 50px;
+}
+
+.content>.right>ul>li>span {
+  width: 68px;
+}
+
+.content>.right>ul>li>a {
+  max-width: 228px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: -4px;
+  margin-top: 4px;
+}
+
+.active {
+  background-color: #fff !important;
+  border-bottom: 1px solid #fff !important;
+}
+
+.content>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

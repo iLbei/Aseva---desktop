@@ -1,0 +1,119 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1097px;
+  height: 551px;
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+}
+
+fieldset {
+  border-color: #eee;
+}
+
+.container>.content>.left {
+  width: 601px;
+  height: 534px;
+  overflow: auto;
+}
+
+.container>.content>.right {
+  width: 496px;
+}
+
+.content>div.left>fieldset:nth-child(2)>div>ul>li span {
+  width: 147px;
+}
+
+.content>div>fieldset:nth-child(1) div:not(:nth-child(1)) {
+  margin-top: 5px;
+}
+
+.bottom>fieldset>div>div:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.bottom2>div:nth-child(1) {
+  margin: 10px 0px;
+}
+
+.bottom>fieldset>div>div,
+.bottom2>div {
+  height: 26px;
+  line-height: 26px;
+}
+
+.bottom>fieldset>div>div:not(:last-child)>span:nth-child(1) {
+  width: 69px;
+}
+
+.bottom2 span {
+  width: 175px;
+}
+
+.top>li>.left,
+.top>li>.right {
+  width: 48%;
+}
+
+.top {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top>li {
+  height: 26px;
+  line-height: 26px;
+}
+
+.top>div {
+  width: 50%;
+}
+
+select {
+  width: 150px;
+}
+
+a {
+  max-width: 127px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+[type=text] {
+  width: 116px;
+}
+
+[type=number] {
+  width: 64px;
+}
+
+.container div.right img {
+  width: 100%;
+}
+
+[language="final_msg"] {
+  vertical-align: 3px;
+}
+
+[language="dow_left_gt_signal"] {
+  vertical-align: 8px;
+  width: 123px;
+}
+
+div [name="dow_gt_signal_checked"] {
+  vertical-align: 7px;
+}
+
+/* IP验证，不再需要js，通过css结合pattern就能验证 */
+[type="text"]:valid {
+  color: green;
+}
+
+[type="text"]:invalid {
+  color: red;
+}

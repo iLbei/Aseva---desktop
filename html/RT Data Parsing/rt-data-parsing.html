@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1,maximum-scale=1">
+  <title>RT Data Parsing</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="rt-data-parsing/css/common.css">
+  <link rel="stylesheet" href="rt-data-parsing/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="left">
+      <div class="input fixclear">
+        <p language="input"></p>
+        <ul class="left">
+          <li class="fixclear">
+            <span class="left" language="busChannel"></span>
+            <input type="number" name="busChannel" value="1" max="16" min="1" step="1" class="right">
+          </li>
+          <li class="fixclear">
+            <span class="left" language="targetBusChannel"></span>
+            <input type="number" name="targetBusChannel" value="2" max="16" min="1" step="1" class="right">
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target1BusChannel"></span>
+            <input type="number" name="target1BusChannel" value="3" max="16" min="1" step="1" class="right">
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target2BusChannel"></span>
+            <input type="number" name="target2BusChannel" value="4" max="16" min="1" step="1" class="right">
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target3BusChannel"></span>
+            <input type="number" name="target3BusChannel" value="5" max="16" min="1" step="1" class="right">
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target4BusChannel"></span>
+            <input type="number" name="target4BusChannel" value="6" max="16" min="1" step="1" class="right">
+          </li>
+        </ul>
+        <ul class="right">
+          <li class="fixclear">
+            <span class="left" language="subMsgID"></span>
+            <input type="text" name="subMsgID" class="right">
+          </li>
+          <li class="fixclear">
+            <span class="left" language="targetMsgID"></span>
+            <input type="text" value="0" name="targetMsgID" class="right">
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target1MsgID"></span>
+            <input type="text" value="0" name="target1MsgID" class="right">
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target2MsgID"></span>
+            <input type="text" value="0" name="target2MsgID" class="right">
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target3MsgID"></span>
+            <input type="text" value="0" name="target3MsgID" class="right">
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target4MsgID"></span>
+            <input type="text" value="0" name="target4MsgID" class="right">
+          </li>
+        </ul>
+      </div>
+      <div class="output">
+        <p language="output"></p>
+        <input type="checkbox" name="Enabled" id="Enabled"> 
+        <label for="Enabled" language="enabled"></label>
+        <ul>
+          <li class="fixclear">
+            <span class="left" language="subGnssImuChannel"></span>
+            <select name="subGnssImuChannel" class="right">
+              <option value="0">(Disabled)</option>
+              <option value="1">Channe A</option>
+              <option value="2">Channe B</option>
+              <option value="3">Channe C</option>
+              <option value="4">Channe D</option>
+              <option value="5">Channe E</option>
+              <option value="6">Channe F</option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <span class="left" language="targetGnssImuChannel"></span>
+            <select name="targetGnssImuChannel" class="right">
+              <option value="0">(Disabled)</option>
+              <option value="1">Channe A</option>
+              <option value="2">Channe B</option>
+              <option value="3">Channe C</option>
+              <option value="4">Channe D</option>
+              <option value="5">Channe E</option>
+              <option value="6">Channe F</option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target1GnssImuChannel"></span>
+            <select name="target1GnssImuChannel" class="right">
+              <option value="0">(Disabled)</option>
+              <option value="1">Channe A</option>
+              <option value="2">Channe B</option>
+              <option value="3">Channe C</option>
+              <option value="4">Channe D</option>
+              <option value="5">Channe E</option>
+              <option value="6">Channe F</option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target2GnssImuChannel"></span>
+            <select name="target2GnssImuChannel" class="right">
+              <option value="0">(Disabled)</option>
+              <option value="1">Channe A</option>
+              <option value="2">Channe B</option>
+              <option value="3">Channe C</option>
+              <option value="4">Channe D</option>
+              <option value="5">Channe E</option>
+              <option value="6">Channe F</option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target3GnssImuChannel"></span>
+            <select name="target3GnssImuChannel" class="right">
+              <option value="0">(Disabled)</option>
+              <option value="1">Channe A</option>
+              <option value="2">Channe B</option>
+              <option value="3">Channe C</option>
+              <option value="4">Channe D</option>
+              <option value="5">Channe E</option>
+              <option value="6">Channe F</option>
+            </select>
+          </li>
+          <li class="fixclear">
+            <span class="left" language="target4GnssImuChannel"></span>
+            <select name="target4GnssImuChannel" class="right">
+              <option value="0">(Disabled)</option>
+              <option value="1">Channe A</option>
+              <option value="2">Channe B</option>
+              <option value="3">Channe C</option>
+              <option value="4">Channe D</option>
+              <option value="5">Channe E</option>
+              <option value="6">Channe F</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="processing right">
+      <p language="processing"></p>
+      <button class="openPage" language="configure"></button>
+      <div class="subject">
+        <p language="sub"></p>
+        <div class="fixclear">
+          <ul class="left">
+            <li class="fixclear">
+              <span class="left" language="origin_x"></span>
+              <input type="number" name="antennaPosX" value="0.000" max="10.000" min="-10.000" step="0.001" class="right">
+            </li>
+            <li class="fixclear">
+              <span class="left" language="origin_x"></span>
+              <input type="number" name="antennaPosY" value="0.000" max="10.000" min="-10.000" step="0.001" class="right">
+            </li>
+            <li class="fixclear">
+              <span class="left" language="origin_z"></span>
+              <input type="number" name="antennaPosZ" value="0.000" max="10.000" min="-10.000" step="0.001" class="right">
+            </li>
+            <li class="fixclear">
+              <span class="left" language="origin_offset"></span>
+              <input type="number" name="SubOrientationOffset" value="0.000" max="20.000" min="-20.000" step="0.001" class="right">
+            </li>
+          </ul>
+          <div class="right" id="canvas">
+            <canvas class="myCanvas" width="100" height="133"></canvas>
+            <a href="javascript:;" onclick="scaleCanvas(this)" class="scale_change" scale="small" language="scale_small"></a>
+          </div>
+        </div>
+      </div>
+      <div class="cal">
+        <p language="cal"></p>
+        <ul>
+          <li>
+            <span>Dx:</span>
+            <input type="text">
+            <span>Dy:</span>
+            <input type="text">
+          </li>
+          <li>
+            <button class="angle" language="angle"></button>
+            <input type="text" name="angle">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="rt-data-parsing/js/jquery-2.14.js"></script>
+  <script src="rt-data-parsing/js/bi-common.js"></script>
+  <script src="rt-data-parsing/js/text.js"></script>
+  <script src="rt-data-parsing/js/index.js"></script>
+</body>
+
+</html>

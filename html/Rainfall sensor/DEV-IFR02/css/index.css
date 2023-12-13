@@ -1,0 +1,28 @@
+.container {
+  width: 238px;
+  height: 102px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container>div:nth-child(1) {
+  margin-bottom: 17px;
+}
+
+.container>ul {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.container>ul>li>span {
+  width: 103px;
+}
+
+.container>ul>li>select,
+.container>ul>li>input {
+  width: 130px;
+}

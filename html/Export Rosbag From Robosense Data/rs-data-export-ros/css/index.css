@@ -1,0 +1,62 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 646px;
+  height: 420px;
+  margin: -210px 0 0 -323px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container>ul:nth-child(2),
+.container>ul:nth-child(3) {
+  height: 130px;
+}
+
+.container>ul:nth-child(4) {
+  height: 90px;
+}
+
+.container>ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.container>ul>li:nth-child(1) p {
+  position: absolute;
+  top: -10px;
+}
+
+ul>li>span.left {
+  width: 133px;
+}
+
+ul>li>span.right {
+  width: 153px;
+}
+
+ul>li>span {
+  padding-top: 3px;
+}
+
+input[type=text],
+select,
+input[type=number] {
+  width: 142px;
+}
+
+/* IP验证，不再需要js，通过css结合pattern就能验证 */
+[name$="LidarIP"]:valid {
+  color: green;
+}
+
+[name$="LidarIP"]:invalid {
+  color: red;
+}

@@ -1,0 +1,28 @@
+.container {
+  width: 313px;
+  height: 338px;
+  background-color: #f0f0f0;
+  padding: 3px 10px;
+  overflow: hidden;
+}
+.container>ul>li{
+  margin-top: 6px;
+}
+.container>ul>li>span:nth-child(1) {
+  width: 167px;
+}
+
+.container>ul>li>input[type=number],
+.container select {
+  width: 122px;
+}
+
+.container>ul>li:nth-child(5)>span:nth-child(1),
+.container>ul>li:nth-child(6)>span:nth-child(1) {
+  width: 69px;
+}
+
+.container>ul>li:nth-child(5)>input,
+.container>ul>li:nth-child(6)>input {
+  width: 80px;
+}

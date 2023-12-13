@@ -1,0 +1,2472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>object-sensor-by-can</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="object-sensor-by-can/css/common.css">
+  <link rel="stylesheet" href="object-sensor-by-can/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div class="label fixclear">
+      <div class="left">
+        <button name="rad" id="r1" class="white">1</button>
+        <button name="rad" id="r2">2</button>
+        <button name="rad" id="r3">3</button>
+        <button name="rad" id="r4">4</button>
+        <button name="rad" id="r5">5</button>
+        <button name="rad" id="r6">6</button>
+        <button name="rad" id="r7">7</button>
+        <button name="rad" id="r8">8</button>
+      </div>
+    </div>
+    <div class="c c1">
+      <div class="title">
+        <a href="javascript:;" class="alias">Object Sensor</a>
+        <input type="text" name="alias" value="Object Sensor">
+      </div>
+      <div class="fixclear">
+        <div class="left fixclear w187">
+          <div class="left">
+            <input type="checkbox" name="enabled" id="enabled_0">
+            <label for="enabled_0" language="enabled"></label>
+          </div>
+          <div class="right" language="out_channel"></div>
+        </div>
+        <div class="left w178">
+          <select name="out_channel">
+            <option value="0" selected language="object_a"></option>
+            <option value="1" language="object_b"></option>
+            <option value="2" language="object_c"></option>
+            <option value="3" language="object_d"></option>
+            <option value="4" language="object_e"></option>
+            <option value="5" language="object_f"></option>
+            <option value="6" language="object_g"></option>
+            <option value="7" language="object_h"></option>
+            <option value="8" language="object_i"></option>
+            <option value="9" language="object_j"></option>
+            <option value="10" language="object_k"></option>
+            <option value="11" language="object_l"></option>
+          </select>
+        </div>
+        <div class="right fixclear w373">
+          <div class="left">
+            <div class="left" language="sampling_msg"></div>
+            <div class="right space_a">
+              <a href="javascript:;" class="red sampling_msg" onclick="selectBus(this)" language="not_config">
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <button onclick="importAsmc(this)" language="import"></button>
+            <button onclick="exportAsmc(this)" language="export"></button>
+          </div>
+        </div>
+      </div>
+      <div class="fixclear">
+        <div class="left w187">
+          <div>
+            <p language="coordination"></p>
+            <div class="coordination">
+              <div class="fixclear">
+                <div class="left" language="origin"></div>
+                <div class="right">
+                  <div>
+                    <span>X</span>
+                    <input type="number" name="offset_x" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-20.00" max="1.00" step="0.01">
+                  </div>
+                  <div>
+                    <span>Y</span>
+                    <input type="number" name="offset_y" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-3.00" max="3.00" step="0.01">
+                  </div>
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left" language="yam_offset"></div>
+                <div class="right">
+                  <input type="number" name="yaw_angle" onchange="changeYaw(this)" oninput="changeYawInput(this)"
+                    onblur="changeYaw(this)" value="0.0" min="-180.0" max="180.0" step="0.1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p language="fov_setting"></p>
+            <div>
+              <div class="content con">
+                <div class="box">
+                  <p>Pos [m]:(0.000,0.000)</p>
+                  <p>Angle [°]:-45.00~45.00</p>
+                  <p>Dist [m]:0.00~100.00</p>
+                  <div class="fixclear">
+                    <a href="javascript:;" class="left" onclick="openChildDialog(this)" language="edit"></a>
+                    <a href="javascript:;" class="right" onclick="remove(this)" language="remove"></a>
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="add_fov"> </a>
+            </div>
+          </div>
+        </div>
+        <div class="left w178">
+          <div>
+            <div class="fixclear">
+              <span class="left" language="position"></span>
+              <select class="right" name="pos_mode">
+                <option value="ClosestPoint" selected language="ClosestPoint"></option>
+                <option value="BoxCenter" language="BoxCenter"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="d_value"></span>
+              <select class="right" name="d_value_mode" onchange="changeDMode(this)">
+                <option value="dx_dy" selected language="dx_dy"></option>
+                <option value="rng_azm" language="range_azimuth"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="va_value"></span>
+              <select class="right" name="va_value_mode">
+                <option value="absolute" language="absolute"></option>
+                <option value="relative" selected language="relative"></option>
+              </select>
+            </div>
+          </div>
+          <div class="canvas">
+            <canvas width="188" height="161"></canvas>
+          </div>
+        </div>
+        <div class="right w373">
+          <div class="fixclear">
+            <span class="left" language="object_signals"></span>
+            <div class="right">
+              <a href="javascript:;" onclick="addObject(this)" language="add"></a>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="duplicate"></a>
+              <a href="javascript:;" onclick="removeAll(this)" language="remove_all"> </a>
+            </div>
+          </div>
+          <div class="content">
+            <div class="box fixclear">
+              <div class="left">
+                <div>
+                  <span language="object"></span>
+                  <span class="number">1</span>
+                </div>
+                <a href="javascript:;" onclick="openChildDialog(this)" language="other_signals"></a>
+              </div>
+              <div class="left">
+                <div class="fixclear">
+                  <span class="left" language="dx"></span>
+                  <div class="right space_a">
+                    <a href="javascript:;" class="red dx_s" scaleName="dx_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="dy"></span>
+                  <div class="left space_a">
+                    <a href="javascript:;" class="red dy_s" scaleName="dy_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="right hide" onclick="removeBox(this)">
+                <div><img src="./object-sensor-by-can/image/delete item.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p language="object_classification"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="class_mode" onchange="changeClassMode(this)">
+                <option value="1" selected language="fix_class_2"></option>
+                <option value="2" language="by_class_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="car_value"></span>
+              <input type="text" name="2" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="pedestrian"></span>
+              <input type="text" name="3" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="truck"></span>
+              <input type="text" name="4" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="bike"></span>
+              <input type="text" name="5" value="" class="right class_signal_value">
+            </div>
+            <div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="other_classes">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="cipv"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_front_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2"></span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_front_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_front_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_front_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="left_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_left_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_left_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_left_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_left_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="right_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_right_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_right_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_right_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_right_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c c2">
+      <div class="title">
+        <a href="javascript:;" class="alias">Object Sensor</a>
+        <input type="text" name="alias" value="Object Sensor">
+      </div>
+      <div class="fixclear">
+        <div class="left fixclear w187">
+          <div class="left">
+            <input type="checkbox" name="enabled" id="enabled_1">
+            <label for="enabled_1" language="enabled"></label>
+          </div>
+          <div class="right" language="out_channel"></div>
+        </div>
+        <div class="left w178">
+          <select name="out_channel">
+            <option value="0" selected language="object_a"></option>
+            <option value="1" language="object_b"></option>
+            <option value="2" language="object_c"></option>
+            <option value="3" language="object_d"></option>
+            <option value="4" language="object_e"></option>
+            <option value="5" language="object_f"></option>
+            <option value="6" language="object_g"></option>
+            <option value="7" language="object_h"></option>
+            <option value="8" language="object_i"></option>
+            <option value="9" language="object_j"></option>
+            <option value="10" language="object_k"></option>
+            <option value="11" language="object_l"></option>
+          </select>
+        </div>
+        <div class="right fixclear w373">
+          <div class="left">
+            <div class="left" language="sampling_msg"></div>
+            <div class="right space_a">
+              <a href="javascript:;" class="red sampling_msg" onclick="selectBus(this)" language="not_config">
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <button onclick="importAsmc(this)" language="import"></button>
+            <button onclick="exportAsmc(this)" language="export"></button>
+          </div>
+        </div>
+      </div>
+      <div class="fixclear">
+        <div class="left w187">
+          <div>
+            <p language="coordination"></p>
+            <div class="coordination">
+              <div class="fixclear">
+                <div class="left" language="origin"></div>
+                <div class="right">
+                  <div>
+                    <span>X</span>
+                    <input type="number" name="offset_x" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-20.00" max="1.00" step="0.01">
+                  </div>
+                  <div>
+                    <span>Y</span>
+                    <input type="number" name="offset_y" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-3.00" max="3.00" step="0.01">
+                  </div>
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left" language="yam_offset"></div>
+                <div class="right">
+                  <input type="number" name="yaw_angle" onchange="changeYaw(this)" oninput="changeYawInput(this)"
+                    onblur="changeYaw(this)" value="0.0" min="-180.0" max="180.0" step="0.1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p language="fov_setting"></p>
+            <div>
+              <div class="content con">
+                <div class="box">
+                  <p>Pos [m]:(0.000,0.000)</p>
+                  <p>Angle [°]:-45.00~45.00</p>
+                  <p>Dist [m]:0.00~100.00</p>
+                  <div class="fixclear">
+                    <a href="javascript:;" class="left" onclick="openChildDialog(this)" language="edit"></a>
+                    <a href="javascript:;" class="right" onclick="remove(this)" language="remove"></a>
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="add_fov"> </a>
+            </div>
+          </div>
+        </div>
+        <div class="left w178">
+          <div>
+            <div class="fixclear">
+              <span class="left" language="position"></span>
+              <select class="right" name="pos_mode">
+                <option value="ClosestPoint" selected language="ClosestPoint"></option>
+                <option value="BoxCenter" language="BoxCenter"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="d_value"></span>
+              <select class="right" name="d_value_mode" onchange="changeDMode(this)">
+                <option value="dx_dy" selected language="dx_dy"></option>
+                <option value="rng_azm" language="range_azimuth"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="va_value"></span>
+              <select class="right" name="va_value_mode">
+                <option value="absolute" language="absolute"></option>
+                <option value="relative" selected language="relative"></option>
+              </select>
+            </div>
+          </div>
+          <div class="canvas">
+            <canvas width="188" height="161"></canvas>
+          </div>
+        </div>
+        <div class="right w373">
+          <div class="fixclear">
+            <span class="left" language="object_signals"></span>
+            <div class="right">
+              <a href="javascript:;" onclick="addObject(this)" language="add"></a>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="duplicate"></a>
+              <a href="javascript:;" onclick="removeAll(this)" language="remove_all"> </a>
+            </div>
+          </div>
+          <div class="content">
+            <div class="box fixclear">
+              <div class="left">
+                <div>
+                  <span language="object"></span>
+                  <span class="number">1</span>
+                </div>
+                <a href="javascript:;" onclick="openChildDialog(this)" language="other_signals"></a>
+              </div>
+              <div class="left">
+                <div class="fixclear">
+                  <span class="left" language="dx"></span>
+                  <div class="right space_a">
+                    <a href="javascript:;" class="red dx_s" scaleName="dx_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+                  </div>
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="dy"></span>
+                  <div class="left space_a">
+                    <a href="javascript:;" class="red dy_s" scaleName="dy_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="right hide" onclick="removeBox(this)">
+                <div><img src="./object-sensor-by-can/image/delete item.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p language="object_classification"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="class_mode" onchange="changeClassMode(this)">
+                <option value="1" selected language="fix_class_2"></option>
+                <option value="2" language="by_class_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="car_value"></span>
+              <input type="text" name="2" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="pedestrian"></span>
+              <input type="text" name="3" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="truck"></span>
+              <input type="text" name="4" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="bike"></span>
+              <input type="text" name="5" value="" class="right class_signal_value">
+            </div>
+            <div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="other_classes">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="cipv"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_front_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2"></span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_front_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div>
+                <a href="javascript:;" class="ko_front_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_front_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="left_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_left_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_left_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_left_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_left_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="right_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_right_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_right_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_right_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_right_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c c3">
+      <div class="title">
+        <a href="javascript:;" class="alias">Object Sensor</a>
+        <input type="text" name="alias" value="Object Sensor">
+      </div>
+      <div class="fixclear">
+        <div class="left fixclear w187">
+          <div class="left">
+            <input type="checkbox" name="enabled" id="enabled_2">
+            <label for="enabled_2" language="enabled"></label>
+          </div>
+          <div class="right" language="out_channel"></div>
+        </div>
+        <div class="left w178">
+          <select name="out_channel">
+            <option value="0" selected language="object_a"></option>
+            <option value="1" language="object_b"></option>
+            <option value="2" language="object_c"></option>
+            <option value="3" language="object_d"></option>
+            <option value="4" language="object_e"></option>
+            <option value="5" language="object_f"></option>
+            <option value="6" language="object_g"></option>
+            <option value="7" language="object_h"></option>
+            <option value="8" language="object_i"></option>
+            <option value="9" language="object_j"></option>
+            <option value="10" language="object_k"></option>
+            <option value="11" language="object_l"></option>
+          </select>
+        </div>
+        <div class="right fixclear w373">
+          <div class="left">
+            <div class="left" language="sampling_msg"></div>
+            <div class="right space_a">
+              <a href="javascript:;" class="red sampling_msg" onclick="selectBus(this)" language="not_config">
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <button onclick="importAsmc(this)" language="import"></button>
+            <button onclick="exportAsmc(this)" language="export"></button>
+          </div>
+        </div>
+      </div>
+      <div class="fixclear">
+        <div class="left w187">
+          <div>
+            <p language="coordination"></p>
+            <div class="coordination">
+              <div class="fixclear">
+                <div class="left" language="origin"></div>
+                <div class="right">
+                  <div>
+                    <span>X</span>
+                    <input type="number" name="offset_x" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-20.00" max="1.00" step="0.01">
+                  </div>
+                  <div>
+                    <span>Y</span>
+                    <input type="number" name="offset_y" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-3.00" max="3.00" step="0.01">
+                  </div>
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left" language="yam_offset"></div>
+                <div class="right">
+                  <input type="number" name="yaw_angle" onchange="changeYaw(this)" oninput="changeYawInput(this)"
+                    onblur="changeYaw(this)" value="0.0" min="-180.0" max="180.0" step="0.1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p language="fov_setting"></p>
+            <div>
+              <div class="content con">
+                <div class="box">
+                  <p>Pos [m]:(0.000,0.000)</p>
+                  <p>Angle [°]:-45.00~45.00</p>
+                  <p>Dist [m]:0.00~100.00</p>
+                  <div class="fixclear">
+                    <a href="javascript:;" class="left" onclick="openChildDialog(this)" language="edit"></a>
+                    <a href="javascript:;" class="right" onclick="remove(this)" language="remove"></a>
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="add_fov"> </a>
+            </div>
+          </div>
+        </div>
+        <div class="left w178">
+          <div>
+            <div class="fixclear">
+              <span class="left" language="position"></span>
+              <select class="right" name="pos_mode">
+                <option value="ClosestPoint" selected language="ClosestPoint"></option>
+                <option value="BoxCenter" language="BoxCenter"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="d_value"></span>
+              <select class="right" name="d_value_mode" onchange="changeDMode(this)">
+                <option value="dx_dy" selected language="dx_dy"></option>
+                <option value="rng_azm" language="range_azimuth"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="va_value"></span>
+              <select class="right" name="va_value_mode">
+                <option value="absolute" language="absolute"></option>
+                <option value="relative" selected language="relative"></option>
+              </select>
+            </div>
+          </div>
+          <div class="canvas">
+            <canvas width="188" height="161"></canvas>
+          </div>
+        </div>
+        <div class="right w373">
+          <div class="fixclear">
+            <span class="left" language="object_signals"></span>
+            <div class="right">
+              <a href="javascript:;" onclick="addObject(this)" language="add"></a>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="duplicate"></a>
+              <a href="javascript:;" onclick="removeAll(this)" language="remove_all"> </a>
+            </div>
+          </div>
+          <div class="content">
+            <div class="box fixclear">
+              <div class="left">
+                <div>
+                  <span language="object"></span>
+                  <span class="number">1</span>
+                </div>
+                <a href="javascript:;" onclick="openChildDialog(this)" language="other_signals"></a>
+              </div>
+              <div class="left">
+                <div class="fixclear">
+                  <span class="left" language="dx"></span>
+                  <div class="right space_a">
+                    <a href="javascript:;" class="red dx_s" scaleName="dx_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="dy"></span>
+                  <div class="left space_a">
+                    <a href="javascript:;" class="red dy_s" scaleName="dy_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+              </div>
+              <div class="right hide" onclick="removeBox(this)">
+                <div><img src="./object-sensor-by-can/image/delete item.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p language="object_classification"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="class_mode" onchange="changeClassMode(this)">
+                <option value="1" selected language="fix_class_2"></option>
+                <option value="2" language="by_class_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="car_value"></span>
+              <input type="text" name="2" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="pedestrian"></span>
+              <input type="text" name="3" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="truck"></span>
+              <input type="text" name="4" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="bike"></span>
+              <input type="text" name="5" value="" class="right class_signal_value">
+            </div>
+            <div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="other_classes">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="cipv"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_front_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2"></span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_front_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_front_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_front_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="left_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_left_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_left_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_left_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_left_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="right_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_right_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_right_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_right_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_right_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c c4">
+      <div class="title">
+        <a href="javascript:;" class="alias">Object Sensor</a>
+        <input type="text" name="alias" value="Object Sensor">
+      </div>
+      <div class="fixclear">
+        <div class="left fixclear w187">
+          <div class="left">
+            <input type="checkbox" name="enabled" id="enabled_3">
+            <label for="enabled_3" language="enabled"></label>
+          </div>
+          <div class="right" language="out_channel"></div>
+        </div>
+        <div class="left w178">
+          <select name="out_channel">
+            <option value="0" selected language="object_a"></option>
+            <option value="1" language="object_b"></option>
+            <option value="2" language="object_c"></option>
+            <option value="3" language="object_d"></option>
+            <option value="4" language="object_e"></option>
+            <option value="5" language="object_f"></option>
+            <option value="6" language="object_g"></option>
+            <option value="7" language="object_h"></option>
+            <option value="8" language="object_i"></option>
+            <option value="9" language="object_j"></option>
+            <option value="10" language="object_k"></option>
+            <option value="11" language="object_l"></option>
+          </select>
+        </div>
+        <div class="right fixclear w373">
+          <div class="left">
+            <div class="left" language="sampling_msg"></div>
+            <div class="right space_a">
+              <a href="javascript:;" class="red sampling_msg" onclick="selectBus(this)" language="not_config">
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <button onclick="importAsmc(this)" language="import"></button>
+            <button onclick="exportAsmc(this)" language="export"></button>
+          </div>
+        </div>
+      </div>
+      <div class="fixclear">
+        <div class="left w187">
+          <div>
+            <p language="coordination"></p>
+            <div class="coordination">
+              <div class="fixclear">
+                <div class="left" language="origin"></div>
+                <div class="right">
+                  <div>
+                    <span>X</span>
+                    <input type="number" name="offset_x" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-20.00" max="1.00" step="0.01">
+                  </div>
+                  <div>
+                    <span>Y</span>
+                    <input type="number" name="offset_y" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-3.00" max="3.00" step="0.01">
+                  </div>
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left" language="yam_offset"></div>
+                <div class="right">
+                  <input type="number" name="yaw_angle" onchange="changeYaw(this)" oninput="changeYawInput(this)"
+                    onblur="changeYaw(this)" value="0.0" min="-180.0" max="180.0" step="0.1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p language="fov_setting"></p>
+            <div>
+              <div class="content con">
+                <div class="box">
+                  <p>Pos [m]:(0.000,0.000)</p>
+                  <p>Angle [°]:-45.00~45.00</p>
+                  <p>Dist [m]:0.00~100.00</p>
+                  <div class="fixclear">
+                    <a href="javascript:;" class="left" onclick="openChildDialog(this)" language="edit"></a>
+                    <a href="javascript:;" class="right" onclick="remove(this)" language="remove"></a>
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="add_fov"> </a>
+            </div>
+          </div>
+        </div>
+        <div class="left w178">
+          <div>
+            <div class="fixclear">
+              <span class="left" language="position"></span>
+              <select class="right" name="pos_mode">
+                <option value="ClosestPoint" selected language="ClosestPoint"></option>
+                <option value="BoxCenter" language="BoxCenter"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="d_value"></span>
+              <select class="right" name="d_value_mode" onchange="changeDMode(this)">
+                <option value="dx_dy" selected language="dx_dy"></option>
+                <option value="rng_azm" language="range_azimuth"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="va_value"></span>
+              <select class="right" name="va_value_mode">
+                <option value="absolute" language="absolute"></option>
+                <option value="relative" selected language="relative"></option>
+
+              </select>
+            </div>
+          </div>
+          <div class="canvas">
+            <canvas width="188" height="161"></canvas>
+          </div>
+        </div>
+        <div class="right w373">
+          <div class="fixclear">
+            <span class="left" language="object_signals"></span>
+            <div class="right">
+              <a href="javascript:;" onclick="addObject(this)" language="add"></a>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="duplicate"></a>
+              <a href="javascript:;" onclick="removeAll(this)" language="remove_all"> </a>
+            </div>
+          </div>
+          <div class="content">
+            <div class="box fixclear">
+              <div class="left">
+                <div>
+                  <span language="object"></span>
+                  <span class="number">1</span>
+                </div>
+                <a href="javascript:;" onclick="openChildDialog(this)" language="other_signals">
+                </a>
+              </div>
+              <div class="left">
+                <div class="fixclear">
+                  <span class="left" language="dx"></span>
+                  <div class="right space_a">
+                    <a href="javascript:;" class="red dx_s" scaleName="dx_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="dy"></span>
+                  <div class="left space_a">
+                    <a href="javascript:;" class="red dy_s" scaleName="dy_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+              </div>
+              <div class="right hide" onclick="removeBox(this)">
+                <div><img src="./object-sensor-by-can/image/delete item.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p language="object_classification"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="class_mode" onchange="changeClassMode(this)">
+                <option value="1" selected language="fix_class_2"></option>
+                <option value="2" language="by_class_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="car_value"></span>
+              <input type="text" name="2" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="pedestrian"></span>
+              <input type="text" name="3" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="truck"></span>
+              <input type="text" name="4" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="bike"></span>
+              <input type="text" name="5" value="" class="right class_signal_value">
+            </div>
+            <div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="other_classes">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="cipv"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_front_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2"></span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_front_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_front_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_front_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="left_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_left_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_left_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_left_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_left_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="right_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_right_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_right_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_right_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_right_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c c5">
+      <div class="title">
+        <a href="javascript:;" class="alias">Object Sensor</a>
+        <input type="text" name="alias" value="Object Sensor">
+      </div>
+      <div class="fixclear">
+        <div class="left fixclear w187">
+          <div class="left">
+            <input type="checkbox" name="enabled" id="enabled_4">
+            <label for="enabled_4" language="enabled"></label>
+          </div>
+          <div class="right" language="out_channel"></div>
+        </div>
+        <div class="left w178">
+          <select name="out_channel">
+            <option value="0" selected language="object_a"></option>
+            <option value="1" language="object_b"></option>
+            <option value="2" language="object_c"></option>
+            <option value="3" language="object_d"></option>
+            <option value="4" language="object_e"></option>
+            <option value="5" language="object_f"></option>
+            <option value="6" language="object_g"></option>
+            <option value="7" language="object_h"></option>
+            <option value="8" language="object_i"></option>
+            <option value="9" language="object_j"></option>
+            <option value="10" language="object_k"></option>
+            <option value="11" language="object_l"></option>
+          </select>
+        </div>
+        <div class="right fixclear w373">
+          <div class="left">
+            <div class="left" language="sampling_msg"></div>
+            <div class="right space_a">
+              <a href="javascript:;" class="red sampling_msg" onclick="selectBus(this)" language="not_config">
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <button onclick="importAsmc(this)" language="import"></button>
+            <button onclick="exportAsmc(this)" language="export"></button>
+          </div>
+        </div>
+      </div>
+      <div class="fixclear">
+        <div class="left w187">
+          <div>
+            <p language="coordination"></p>
+            <div class="coordination">
+              <div class="fixclear">
+                <div class="left" language="origin"></div>
+                <div class="right">
+                  <div>
+                    <span>X</span>
+                    <input type="number" name="offset_x" onchange="changeXY(this)" onblur="changeXY(this)" value="0.00"
+                      min="-20.00" max="1.00" step="0.01">
+                  </div>
+                  <div>
+                    <span>Y</span>
+                    <input type="number" name="offset_y" onchange="changeXY(this)" onblur="changeXY(this)" value="0.00"
+                      min="-3.00" max="3.00" step="0.01">
+                  </div>
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left" language="yam_offset"></div>
+                <div class="right">
+                  <input type="number" name="yaw_angle" onchange="changeYaw(this)" onblur="changeYaw(this)" value="0.0"
+                    min="-180.0" max="180.0" step="0.1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p language="fov_setting"></p>
+            <div>
+              <div class="content con">
+                <div class="box">
+                  <p>Pos [m]:(0.000,0.000)</p>
+                  <p>Angle [°]:-45.00~45.00</p>
+                  <p>Dist [m]:0.00~100.00</p>
+                  <div class="fixclear">
+                    <a href="javascript:;" class="left" onclick="openChildDialog(this)" language="edit"></a>
+                    <a href="javascript:;" class="right" onclick="remove(this)" language="remove"></a>
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="add_fov"> </a>
+            </div>
+          </div>
+        </div>
+        <div class="left w178">
+          <div>
+            <div class="fixclear">
+              <span class="left" language="position"></span>
+              <select class="right" name="pos_mode">
+                <option value="ClosestPoint" selected language="ClosestPoint"></option>
+                <option value="BoxCenter" language="BoxCenter"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="d_value"></span>
+              <select class="right" name="d_value_mode" onchange="changeDMode(this)">
+                <option value="dx_dy" selected language="dx_dy"></option>
+                <option value="rng_azm" language="range_azimuth"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="va_value"></span>
+              <select class="right" name="va_value_mode">
+                <option value="absolute" language="absolute"></option>
+                <option value="relative" selected language="relative"></option>
+
+              </select>
+            </div>
+          </div>
+          <div class="canvas">
+            <canvas width="188" height="161"></canvas>
+          </div>
+        </div>
+        <div class="right w373">
+          <div class="fixclear">
+            <span class="left" language="object_signals"></span>
+            <div class="right">
+              <a href="javascript:;" onclick="addObject(this)" language="add"></a>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="duplicate"></a>
+              <a href="javascript:;" onclick="removeAll(this)" language="remove_all"> </a>
+            </div>
+          </div>
+          <div class="content">
+            <div class="box fixclear">
+              <div class="left">
+                <div>
+                  <span language="object"></span>
+                  <span class="number">1</span>
+                </div>
+                <a href="javascript:;" onclick="openChildDialog(this)" language="other_signals">
+                </a>
+              </div>
+              <div class="left">
+                <div class="fixclear">
+                  <span class="left" language="dx"></span>
+                  <div class="right space_a">
+                    <a href="javascript:;" class="red dx_s" scaleName="dx_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="dy"></span>
+                  <div class="left space_a">
+                    <a href="javascript:;" class="red dy_s" scaleName="dy_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+              </div>
+              <div class="right hide" onclick="removeBox(this)">
+                <div><img src="./object-sensor-by-can/image/delete item.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p language="object_classification"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="class_mode" onchange="changeClassMode(this)">
+                <option value="1" selected language="fix_class_2"></option>
+                <option value="2" language="by_class_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="car_value"></span>
+              <input type="text" name="2" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="pedestrian"></span>
+              <input type="text" name="3" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="truck"></span>
+              <input type="text" name="4" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="bike"></span>
+              <input type="text" name="5" value="" class="right class_signal_value">
+            </div>
+            <div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="other_classes">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="cipv"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_front_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2"></span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_front_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_front_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_front_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="left_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_left_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_left_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_left_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_left_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="right_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_right_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_right_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_right_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_right_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c c6">
+      <div class="title">
+        <a href="javascript:;" class="alias">Object Sensor</a>
+        <input type="text" name="alias" value="Object Sensor">
+      </div>
+      <div class="fixclear">
+        <div class="left fixclear w187">
+          <div class="left">
+            <input type="checkbox" name="enabled" id="enabled_5">
+            <label for="enabled_5" language="enabled"></label>
+          </div>
+          <div class="right" language="out_channel"></div>
+        </div>
+        <div class="left w178">
+          <select name="out_channel">
+            <option value="0" selected language="object_a"></option>
+            <option value="1" language="object_b"></option>
+            <option value="2" language="object_c"></option>
+            <option value="3" language="object_d"></option>
+            <option value="4" language="object_e"></option>
+            <option value="5" language="object_f"></option>
+            <option value="6" language="object_g"></option>
+            <option value="7" language="object_h"></option>
+            <option value="8" language="object_i"></option>
+            <option value="9" language="object_j"></option>
+            <option value="10" language="object_k"></option>
+            <option value="11" language="object_l"></option>
+          </select>
+        </div>
+        <div class="right fixclear w373">
+          <div class="left">
+            <div class="left" language="sampling_msg"></div>
+            <div class="right space_a">
+              <a href="javascript:;" class="red sampling_msg" onclick="selectBus(this)" language="not_config">
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <button onclick="importAsmc(this)" language="import"></button>
+            <button onclick="exportAsmc(this)" language="export"></button>
+          </div>
+        </div>
+      </div>
+      <div class="fixclear">
+        <div class="left w187">
+          <div>
+            <p language="coordination"></p>
+            <div class="coordination">
+              <div class="fixclear">
+                <div class="left" language="origin"></div>
+                <div class="right">
+                  <div>
+                    <span>X</span>
+                    <input type="number" name="offset_x" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-20.00" max="1.00" step="0.01">
+                  </div>
+                  <div>
+                    <span>Y</span>
+                    <input type="number" name="offset_y" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-3.00" max="3.00" step="0.01">
+                  </div>
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left" language="yam_offset"></div>
+                <div class="right">
+                  <input type="number" name="yaw_angle" onchange="changeYaw(this)" oninput="changeYawInput(this)"
+                    onblur="changeYaw(this)" value="0.0" min="-180.0" max="180.0" step="0.1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p language="fov_setting"></p>
+            <div>
+              <div class="content con">
+                <div class="box">
+                  <p>Pos [m]:(0.000,0.000)</p>
+                  <p>Angle [°]:-45.00~45.00</p>
+                  <p>Dist [m]:0.00~100.00</p>
+                  <div class="fixclear">
+                    <a href="javascript:;" class="left" onclick="openChildDialog(this)" language="edit"></a>
+                    <a href="javascript:;" class="right" onclick="remove(this)" language="remove"></a>
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="add_fov"> </a>
+            </div>
+          </div>
+        </div>
+        <div class="left w178">
+          <div>
+            <div class="fixclear">
+              <span class="left" language="position"></span>
+              <select class="right" name="pos_mode">
+                <option value="ClosestPoint" selected language="ClosestPoint"></option>
+                <option value="BoxCenter" language="BoxCenter"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="d_value"></span>
+              <select class="right" name="d_value_mode" onchange="changeDMode(this)">
+                <option value="dx_dy" selected language="dx_dy"></option>
+                <option value="rng_azm" language="range_azimuth"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="va_value"></span>
+              <select class="right" name="va_value_mode">
+                <option value="absolute" language="absolute"></option>
+                <option value="relative" selected language="relative"></option>
+              </select>
+            </div>
+          </div>
+          <div class="canvas">
+            <canvas width="188" height="161"></canvas>
+          </div>
+        </div>
+        <div class="right w373">
+          <div class="fixclear">
+            <span class="left" language="object_signals"></span>
+            <div class="right">
+              <a href="javascript:;" onclick="addObject(this)" language="add"></a>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="duplicate"></a>
+              <a href="javascript:;" onclick="removeAll(this)" language="remove_all"> </a>
+            </div>
+          </div>
+          <div class="content">
+            <div class="box fixclear">
+              <div class="left">
+                <div>
+                  <span language="object"></span>
+                  <span class="number">1</span>
+                </div>
+                <a href="javascript:;" onclick="openChildDialog(this)" language="other_signals">
+                </a>
+              </div>
+              <div class="left">
+                <div class="fixclear">
+                  <span class="left" language="dx"></span>
+                  <div class="right space_a">
+                    <a href="javascript:;" class="red dx_s" scaleName="dx_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="dy"></span>
+                  <div class="left space_a">
+                    <a href="javascript:;" class="red dy_s" scaleName="dy_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+              </div>
+              <div class="right hide" onclick="removeBox(this)">
+                <div><img src="./object-sensor-by-can/image/delete item.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p language="object_classification"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="class_mode" onchange="changeClassMode(this)">
+                <option value="1" selected language="fix_class_2"></option>
+                <option value="2" language="by_class_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="car_value"></span>
+              <input type="text" name="2" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="pedestrian"></span>
+              <input type="text" name="3" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="truck"></span>
+              <input type="text" name="4" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="bike"></span>
+              <input type="text" name="5" value="" class="right class_signal_value">
+            </div>
+            <div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="other_classes">Values of
+                other
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="cipv"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_front_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2"></span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_front_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_front_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_front_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="left_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_left_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_left_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div>
+                <a href="javascript:;" class="ko_left_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_left_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="right_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_right_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_right_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_right_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_right_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c c7">
+      <div class="title">
+        <a href="javascript:;" class="alias">Object Sensor</a>
+        <input type="text" name="alias" value="Object Sensor">
+      </div>
+      <div class="fixclear">
+        <div class="left fixclear w187">
+          <div class="left">
+            <input type="checkbox" name="enabled" id="enabled_6">
+            <label for="enabled_6" language="enabled"></label>
+          </div>
+          <div class="right" language="out_channel"></div>
+        </div>
+        <div class="left w178">
+          <select name="out_channel">
+            <option value="0" selected language="object_a"></option>
+            <option value="1" language="object_b"></option>
+            <option value="2" language="object_c"></option>
+            <option value="3" language="object_d"></option>
+            <option value="4" language="object_e"></option>
+            <option value="5" language="object_f"></option>
+            <option value="6" language="object_g"></option>
+            <option value="7" language="object_h"></option>
+            <option value="8" language="object_i"></option>
+            <option value="9" language="object_j"></option>
+            <option value="10" language="object_k"></option>
+            <option value="11" language="object_l"></option>
+          </select>
+        </div>
+        <div class="right fixclear w373">
+          <div class="left">
+            <div class="left" language="sampling_msg"></div>
+            <div class="right space_a">
+              <a href="javascript:;" class="red sampling_msg" onclick="selectBus(this)" language="not_config">
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <button onclick="importAsmc(this)" language="import"></button>
+            <button onclick="exportAsmc(this)" language="export"></button>
+          </div>
+        </div>
+      </div>
+      <div class="fixclear">
+        <div class="left w187">
+          <div>
+            <p language="coordination"></p>
+            <div class="coordination">
+              <div class="fixclear">
+                <div class="left" language="origin"></div>
+                <div class="right">
+                  <div>
+                    <span>X</span>
+                    <input type="number" name="offset_x" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-20.00" max="1.00" step="0.01">
+                  </div>
+                  <div>
+                    <span>Y</span>
+                    <input type="number" name="offset_y" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-3.00" max="3.00" step="0.01">
+                  </div>
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left" language="yam_offset"></div>
+                <div class="right">
+                  <input type="number" name="yaw_angle" onchange="changeYaw(this)" oninput="changeYawInput(this)"
+                    onblur="changeYaw(this)" value="0.0" min="-180.0" max="180.0" step="0.1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p language="fov_setting"></p>
+            <div>
+              <div class="content con">
+                <div class="box">
+                  <p>Pos [m]:(0.000,0.000)</p>
+                  <p>Angle [°]:-45.00~45.00</p>
+                  <p>Dist [m]:0.00~100.00</p>
+                  <div class="fixclear">
+                    <a href="javascript:;" class="left" onclick="openChildDialog(this)" language="edit"></a>
+                    <a href="javascript:;" class="right" onclick="remove(this)" language="remove"></a>
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="add_fov"> </a>
+            </div>
+          </div>
+        </div>
+        <div class="left w178">
+          <div>
+            <div class="fixclear">
+              <span class="left" language="position"></span>
+              <select class="right" name="pos_mode">
+                <option value="ClosestPoint" selected language="ClosestPoint"></option>
+                <option value="BoxCenter" language="BoxCenter"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="d_value"></span>
+              <select class="right" name="d_value_mode" onchange="changeDMode(this)">
+                <option value="dx_dy" selected language="dx_dy"></option>
+                <option value="rng_azm" language="range_azimuth"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="va_value"></span>
+              <select class="right" name="va_value_mode">
+                <option value="absolute" language="absolute"></option>
+                <option value="relative" selected language="relative"></option>
+              </select>
+            </div>
+          </div>
+          <div class="canvas">
+            <canvas width="188" height="161"></canvas>
+          </div>
+        </div>
+        <div class="right w373">
+          <div class="fixclear">
+            <span class="left" language="object_signals"></span>
+            <div class="right">
+              <a href="javascript:;" onclick="addObject(this)" language="add"></a>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="duplicate"></a>
+              <a href="javascript:;" onclick="removeAll(this)" language="remove_all"> </a>
+            </div>
+          </div>
+          <div class="content">
+            <div class="box fixclear">
+              <div class="left">
+                <div>
+                  <span language="object"></span>
+                  <span class="number">1</span>
+                </div>
+                <a href="javascript:;" onclick="openChildDialog(this)" language="other_signals">
+                </a>
+              </div>
+              <div class="left">
+                <div class="fixclear">
+                  <span class="left" language="dx"></span>
+                  <div class="right space_a">
+                    <a href="javascript:;" class="red dx_s" scaleName="dx_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="dy"></span>
+                  <div class="left space_a">
+                    <a href="javascript:;" class="red dy_s" scaleName="dy_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+              </div>
+              <div class="right hide" onclick="removeBox(this)">
+                <div><img src="./object-sensor-by-can/image/delete item.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p language="object_classification"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="class_mode" onchange="changeClassMode(this)">
+                <option value="1" selected language="fix_class_2"></option>
+                <option value="2" language="by_class_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="car_value"></span>
+              <input type="text" name="2" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="pedestrian"></span>
+              <input type="text" name="3" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="truck"></span>
+              <input type="text" name="4" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="bike"></span>
+              <input type="text" name="5" value="" class="right class_signal_value">
+            </div>
+            <div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="other_classes">Values of
+                other
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="cipv"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_front_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2"></span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_front_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_front_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_front_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="left_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_left_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_left_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_left_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_left_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="right_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_right_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_right_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_right_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_right_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c c8">
+      <div class="title">
+        <a href="javascript:;" class="alias">Object Sensor</a>
+        <input type="text" name="alias" value="Object Sensor">
+      </div>
+      <div class="fixclear">
+        <div class="left fixclear w187">
+          <div class="left">
+            <input type="checkbox" name="enabled" id="enabled_7">
+            <label for="enabled_7" language="enabled"></label>
+          </div>
+          <div class="right" language="out_channel"></div>
+        </div>
+        <div class="left w178">
+          <select name="out_channel">
+            <option value="0" selected language="object_a"></option>
+            <option value="1" language="object_b"></option>
+            <option value="2" language="object_c"></option>
+            <option value="3" language="object_d"></option>
+            <option value="4" language="object_e"></option>
+            <option value="5" language="object_f"></option>
+            <option value="6" language="object_g"></option>
+            <option value="7" language="object_h"></option>
+            <option value="8" language="object_i"></option>
+            <option value="9" language="object_j"></option>
+            <option value="10" language="object_k"></option>
+            <option value="11" language="object_l"></option>
+          </select>
+        </div>
+        <div class="right fixclear w373">
+          <div class="left">
+            <div class="left" language="sampling_msg"></div>
+            <div class="right space_a">
+              <a href="javascript:;" class="red sampling_msg" onclick="selectBus(this)" language="not_config">
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <button onclick="importAsmc(this)" language="import"></button>
+            <button onclick="exportAsmc(this)" language="export"></button>
+          </div>
+        </div>
+      </div>
+      <div class="fixclear">
+        <div class="left w187">
+          <div>
+            <p language="coordination"></p>
+            <div class="coordination">
+              <div class="fixclear">
+                <div class="left" language="origin"></div>
+                <div class="right">
+                  <div>
+                    <span>X</span>
+                    <input type="number" name="offset_x" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-20.00" max="1.00" step="0.01">
+                  </div>
+                  <div>
+                    <span>Y</span>
+                    <input type="number" name="offset_y" onchange="changeXY(this)" oninput="changeXYInput(this)"
+                      onblur="changeXY(this)" value="0.00" min="-3.00" max="3.00" step="0.01">
+                  </div>
+                </div>
+              </div>
+              <div class="fixclear">
+                <div class="left" language="yam_offset"></div>
+                <div class="right">
+                  <input type="number" name="yaw_angle" onchange="changeYaw(this)" oninput="changeYawInput(this)"
+                    onblur="changeYaw(this)" value="0.0" min="-180.0" max="180.0" step="0.1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p language="fov_setting"></p>
+            <div>
+              <div class="content con">
+                <div class="box">
+                  <p>Pos [m]:(0.000,0.000)</p>
+                  <p>Angle [°]:-45.00~45.00</p>
+                  <p>Dist [m]:0.00~100.00</p>
+                  <div class="fixclear">
+                    <a href="javascript:;" class="left" onclick="openChildDialog(this)" language="edit"></a>
+                    <a href="javascript:;" class="right" onclick="remove(this)" language="remove"></a>
+                  </div>
+                </div>
+              </div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="add_fov"> </a>
+            </div>
+          </div>
+        </div>
+        <div class="left w178">
+          <div>
+            <div class="fixclear">
+              <span class="left" language="position"></span>
+              <select class="right" name="pos_mode">
+                <option value="ClosestPoint" selected language="ClosestPoint"></option>
+                <option value="BoxCenter" language="BoxCenter"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="d_value"></span>
+              <select class="right" name="d_value_mode" onchange="changeDMode(this)">
+                <option value="dx_dy" selected language="dx_dy"></option>
+                <option value="rng_azm" language="range_azimuth"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="va_value"></span>
+              <select class="right" name="va_value_mode">
+                <option value="absolute" language="absolute"></option>
+                <option value="relative" selected language="relative"></option>
+
+              </select>
+            </div>
+          </div>
+          <div class="canvas">
+            <canvas width="188" height="161"></canvas>
+          </div>
+        </div>
+        <div class="right w373">
+          <div class="fixclear">
+            <span class="left" language="object_signals"></span>
+            <div class="right">
+              <a href="javascript:;" onclick="addObject(this)" language="add"></a>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="duplicate"></a>
+              <a href="javascript:;" onclick="removeAll(this)" language="remove_all"> </a>
+            </div>
+          </div>
+          <div class="content">
+            <div class="box fixclear">
+              <div class="left">
+                <div>
+                  <span language="object"></span>
+                  <span class="number">1</span>
+                </div>
+                <a href="javascript:;" onclick="openChildDialog(this)" language="other_signals">
+                </a>
+              </div>
+              <div class="left">
+                <div class="fixclear">
+                  <span class="left" language="dx"></span>
+                  <div class="right space_a">
+                    <a href="javascript:;" class="red dx_s" scaleName="dx_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+                <div class="fixclear">
+                  <span class="left" language="dy"></span>
+                  <div class="left space_a">
+                    <a href="javascript:;" class="red dy_s" scaleName="dy_l" scale="1" onclick="selectSignal(this,true)"
+                      language="not_config"> </a>
+
+                  </div>
+                </div>
+              </div>
+              <div class="right hide" onclick="removeBox(this)">
+                <div><img src="./object-sensor-by-can/image/delete item.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <p language="object_classification"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="class_mode" onchange="changeClassMode(this)">
+                <option value="1" selected language="fix_class_2"></option>
+                <option value="2" language="by_class_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="car_value"></span>
+              <input type="text" name="2" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="pedestrian"></span>
+              <input type="text" name="3" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="truck"></span>
+              <input type="text" name="4" value="" class="right class_signal_value">
+            </div>
+            <div class="fixclear">
+              <span class="left" language="bike"></span>
+              <input type="text" name="5" value="" class="right class_signal_value">
+            </div>
+            <div>
+              <a href="javascript:;" onclick="openChildDialog(this)" language="other_classes">Values of
+                other
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="cipv"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_front_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2"></span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_front_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_front_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_front_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="left_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_left_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_left_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_left_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_left_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p language="right_side"></p>
+          <div>
+            <div class="fixclear">
+              <span class="left" language="mode"></span>
+              <select class="right" name="ko_right_mode" onchange="changeKoFrontMode(this)">
+                <option value="0" selected language="automatic"></option>
+                <option value="1" language="fixed_index"></option>
+                <option value="2" language="by_index_signal"></option>
+                <option value="3" language="by_flag_signal"></option>
+              </select>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="fixed_index_2">:</span>
+              <div class="right">
+                <span>#</span>
+                <input type="number" name="ko_right_fixed_index" value="1" min="1" max="100" step="1">
+              </div>
+            </div>
+            <div>
+              <p language="index_signal"></p>
+              <div class="space_a">
+                <a href="javascript:;" class="ko_right_index_signal" scale="1" onclick="selectSignal(this,false)"
+                  language="not_config"> </a>
+
+              </div>
+            </div>
+            <div class="fixclear">
+              <span class="left" language="index_begin_from"></span>
+              <select class="right" name="ko_right_index_starts_from">
+                <option value="zero" selected>0</option>
+                <option value="one">1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="object-sensor-by-can/js/jquery-2.14.min.js"></script>
+  <script src="object-sensor-by-can/js/jquery.base64.js"></script>
+  <script src="object-sensor-by-can/js/bi-common.js"></script>
+  <script src="object-sensor-by-can/js/text.js"></script>
+  <script src="object-sensor-by-can/js/index.js"></script>
+</body>
+
+</html>

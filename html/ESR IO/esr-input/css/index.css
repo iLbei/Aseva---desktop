@@ -1,0 +1,86 @@
+.isActive {
+  background-color: #fff;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+.top input[type='number'] {
+  width: 40px;
+}
+
+.tabs>ul>li {
+  float: left;
+  padding: 5px 10px;
+  cursor: default;
+}
+
+.content {
+  background-color: #f0f0f0;
+  border: 2px solid #fff;
+}
+
+.content>div {
+  background-color: #f0f0f0;
+  padding: 0px 10px;
+}
+
+.content .top {
+  padding-top: 10px;
+}
+
+.out_channel,
+.yaw_offset {
+  margin-bottom: 17px;
+}
+
+.origin {
+  margin-bottom: 3px;
+  margin-top: 50px;
+}
+
+.out_channel>select {
+  width: 170px;
+}
+
+.main>.left {
+  width: 187px;
+}
+
+.canvas {
+  background-color: #fff;
+}
+
+.origin {
+  position: relative;
+}
+
+.origin>span {
+  position: absolute;
+  top: 10px;
+}
+
+.origin>.right>div>input {
+  width: 80px;
+  margin-left: 10px;
+
+}
+
+.yaw_offset input {
+  width: 80px;
+}
+
+.origin>.right>div:first-child {
+  margin-bottom: 10px;
+}
+
+.yaw_offset {
+  margin-top: 10px;
+}
+
+.object_merging {
+  margin-top: 38px;
+  margin-bottom: 8px;
+}

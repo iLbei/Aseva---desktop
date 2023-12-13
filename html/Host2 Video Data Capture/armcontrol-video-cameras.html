@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Host2 Video Data Capture</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="armcontrol-video-cameras/css/common.css">
+  <link rel="stylesheet" href="armcontrol-video-cameras/css/index.css">
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" onbeforecopy="return false">
+  <div class="container">
+    <div>
+      <input type="checkbox" name="enabled" id="enabled">
+      <label for="enabled" language="enabled"></label>
+    </div>
+    <div>
+      <ul>
+        <li class="fixclear"><span language="CameraFps"></span>
+          <select name="camera_fps">
+            <option value="-1" language="disabled">(Disabled)</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+          </select>
+        </li>
+        <li class="fixclear"><span language="TxMode"></span>
+          <select name="tx_mode">
+            <option value="-1" language="disabled">(Disabled)</option>
+            <option value="0" language="capture_mode">采集模式</option>
+            <option value="1" language="reinjection_mode">高精度回注模式</option>
+          </select>
+        </li>
+        <li class="fixclear"><span language="Gop"></span>
+          <select name="gop">
+            <option value="-1"  language="disabled">(Disabled)</option>
+            <option value="30">30</option>
+            <option value="60">60</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="armcontrol-video-cameras/js/jquery-2.14.js"></script>
+  <script src="armcontrol-video-cameras/js/bi-common.js"></script>
+  <script src="armcontrol-video-cameras/js/text.js"></script>
+  <script src="armcontrol-video-cameras/js/index.js"></script>
+</body>
+
+</html>

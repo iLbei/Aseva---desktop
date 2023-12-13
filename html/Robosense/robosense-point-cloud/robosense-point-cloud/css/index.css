@@ -1,0 +1,112 @@
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 456px;
+  height: 403px;
+  margin: -201.5px 0 0 -228px;
+}
+
+.container>ul>li {
+  float: left;
+  width: 70px;
+  padding: 4px 0px;
+  text-align: center;
+  cursor: default;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+
+.container>ul>li:last-child {
+  border-right: 1px solid #ccc;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.container>div>div {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.container>div>div:last-child {
+  margin-top: 12px;
+}
+
+.container>div>div>p {
+  position: absolute;
+  top: -10px;
+  background-color: #fff;
+  padding: 0px 2px;
+}
+
+.container>div>div:nth-child(1) input[type=text] {
+  width: 130px;
+  margin-left: 5px;
+}
+
+[language="point_cloud_channel"] {
+  padding-top: 2px;
+}
+
+.container>div>div:nth-child(1) input[type=number] {
+  width: 57px;
+  margin-left: 5px;
+}
+
+.container>div>div select {
+  width: 200px;
+}
+
+.processing>div {
+  margin-top: 35px;
+}
+
+.processing>div p {
+  margin-right: 10px;
+  background: transparent;
+}
+
+.processing>div p:nth-child(1) {
+  margin-top: 30px;
+}
+
+.processing>div p:nth-child(2) {
+  margin-top: 100px;
+}
+
+.processing>div input {
+  margin-bottom: 6px;
+  width: 61px;
+  margin-left: 7px;
+}
+
+.processing>div>div>div.right>div:nth-child(3) {
+  margin-bottom: 20px;
+}
+
+.myCanvas {
+  background-color: #fff;
+  width: 160px;
+  height: 206px;
+  border: 2px solid #e9e9e9;
+}
+
+[class^=lidar] {
+  display: none;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-top: -0.4px;
+}
+
+.lidar1 {
+  display: block;
+}
+
+input[type=radio][value = "1"] {
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
